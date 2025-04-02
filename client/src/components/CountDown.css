@@ -1,0 +1,13 @@
+h1 {
+    font-size: 72px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.title-countdown{
+  font-size: 45px;
+}
+.countdown {
+    display: flex;
+    gap: 50px;
+}

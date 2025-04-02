@@ -1,19 +1,41 @@
-import { useEffect } from 'react'
-import './App.css'
+import { BrowserRouter, Routes, Route} from 'react-router';
 import axios from 'axios'
 
-function App() {
-  const fetchAPI = async () => {
-    const response = await axios.get("http://localhost:8080/api");
-    console.log(response.data.fruits);
-  }
+//CSS
+import './App.css'
 
-  useEffect(() => {
-    fetchAPI();
-  }, [])
+//Pages
+import Cookies from './pages/Cookies.jsx';
+import Error from './pages/Error.jsx'
+import Home from './pages/Home.jsx';
+import Layout from './pages/Layout.jsx';
+import Privacy from './pages/Privacy.jsx';
+import Register from './pages/Register.jsx';
+
+function App() {
 
   return (
-    <h1>Welkom</h1>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={ <Layout /> }>
+
+            {/* Basic routes */}
+            <Route index element={ <Home />} />
+            <Route path='register' element={<Register />} /> 
+
+            {/* Error pages */}  
+            <Route path='*' element={ <Error />} />
+
+            {/* Policy routes */}
+            <Route path='/policies/'>
+              <Route path='privacy' element={<Privacy />} />
+              <Route path='cookies' element={<Cookies />} />
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
