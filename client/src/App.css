@@ -1,0 +1,47 @@
+@import url("https://use.typekit.net/rlw1flw.css");
+
+:root{
+  /* Colors */
+  ---yellow-color: #FFEB3B;
+  ---pink-color: #EB3492;
+  ---orange-color: #EB3492;
+  ---green-color: #5AB668;
+  ---blue-color: #66DDE6;
+
+  /* Font color */
+  ---font-color: #000;
+
+  /* Fonts */
+  ---main-font: "unbounded";
+  ---secundary-font: Arial;
+
+  /* Titles */
+  ---title-weight: 700;
+  ---title-size: 72pt;
+
+
+  /* Subtitles */
+  ---subtitle-weight: 600;
+  ---subtitle-size: 64pt;
+
+  
+}
+
+body{
+  margin: 0;
+  font-family: var(---secundary-font);
+}
+
+h1{
+  font-family: var(---main-font);
+  font-weight: var(---title-weight);
+  font-size: var(---title-size);
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+h2{
+  font-family: var(---main-font);
+  font-weight: var(---subtitle-weight);
+  font-size: var(---subtitle-size);
+}
