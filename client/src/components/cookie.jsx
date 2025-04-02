@@ -10,7 +10,7 @@ function Cookie() {
 		if (!cookies) {
 			setShowBanner(true);
 		}
-	}, []);
+	}, []);		
 
 	const acceptCookies = () => {
 		document.cookie = "cookiesAccepted=true; max-age=31536000; path=/";
