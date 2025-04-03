@@ -1,0 +1,25 @@
+/* Mobile.css */
+@media (max-width: 768px) {
+	:root {
+		--main-font-size: 16px;
+		--title-font-size: 24px;
+	}
+
+	body {
+		font-size: var(--main-font-size);
+	}
+
+	.navbar {
+		flex-direction: column;
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-size: var(--title-font-size);
+	}
+
+	.countdown h1 {
+		font-size: var(--title-font-size);
+	}
+}
