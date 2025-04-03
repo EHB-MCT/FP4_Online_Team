@@ -207,6 +207,15 @@ footer{
   img{
     width: 150px;
   }
+
+  .socials{
+    width: 50px;
+    margin: 10px;
+  }
+  .socials-ehb{
+    width: 90px;
+    margin-right: 10px;
+  }
 }
 
 
