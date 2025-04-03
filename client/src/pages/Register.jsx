@@ -41,9 +41,13 @@ const Register = () => {
     
         } catch (error) {
             console.error("Error submitting form:", error);
+
+            let errorMessage = error.response.request.response;
+            const parsedMessage = JSON.parse(errorMessage);
+ 
             Swal.fire({
                 title: 'Error',
-                text: 'There was an issue submitting your registration. Please try again.',
+                text: parsedMessage.message,
                 icon: 'error',
             });
         }

@@ -39,18 +39,30 @@ app.post("/api/submit-register-form", (req, res) => {
         return res.status(400).json({ message: "All fields are required" });
     }
 
-    const role = roles[0];
-    const roleName = role.role;
-    const companyName = role.companyName;
-    const sponsor = role.sponsorship;
-
-    const sql = "INSERT INTO event_registrations (first_name, last_name, email, num_attendees, message, wants_event_updates, role, company_name, wants_sponsorship) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    db.query(sql, [firstName, lastName, email, amount, message, [subscribeToUpdates ? 1 : 0], roleName, companyName, sponsor], (err, result) => {
+    const checkMailQuery = `SELECT COUNT(*) AS email_count FROM event_registrations WHERE email = ?`;
+    db.query(checkMailQuery, [email], (err, results) => {
         if (err) {
-            console.error("Error inserting data:", err);
-            return res.status(500).json({ message: "Database error" });
+            console.error("Error querying database:", err);
+            return res.status(500).json({ message: "Sorry something went wrong" });
         }
-        res.status(200).json({ message: "Data inserted successfully" });
+
+        if (results[0].email_count !== 0) {
+            return res.status(409).json({ message: "Email is reeds gebruikt" });
+        }
+
+        const role = roles[0];
+        const roleName = role.role;
+        const companyName = role.companyName;
+        const sponsor = role.sponsorship;
+    
+        const sql = "INSERT INTO event_registrations (first_name, last_name, email, num_attendees, message, wants_event_updates, role, company_name, wants_sponsorship) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        db.query(sql, [firstName, lastName, email, amount, message, [subscribeToUpdates ? 1 : 0], roleName, companyName, sponsor], (err, result) => {
+            if (err) {
+                console.error("Error inserting data:", err);
+                return res.status(500).json({ message: "Sorry somethin went wrong" });
+            }
+            res.status(200).json({ message: "Data inserted successfully" });
+        });
     });
 });
 
