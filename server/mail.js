@@ -1,14 +1,15 @@
 require("dotenv").config();
 const nodemailer = require("nodemailer");
-
+console.log(process.env.SMTP_USER, process.env.SMTP_PASS);
 const transporter = nodemailer.createTransport({
-	host: "ftp.shiftfestivalbe.webhosting.be",
-	port: 21,
-	secure: false,
+	host: "smtp-auth.mailprotect.be",
+	port: 465,
+	secure: true,
 	auth: {
 		user: process.env.SMTP_USER,
 		pass: process.env.SMTP_PASS,
 	},
+	logger: true,
 });
 
 const sendEmail = async (to, name) => {
