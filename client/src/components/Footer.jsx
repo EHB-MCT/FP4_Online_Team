@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import Image from '../../public/logo-placeholder-image.png';
+import Image from '../../public/Logo.svg';
 
 //Components
 import Button from './Button.jsx';
