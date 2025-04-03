@@ -3,7 +3,10 @@ import CountDown from "../components/CountDown.jsx";
 import Button from "../components/Button.jsx";
 import InfoLine from "../components/InfoLine.jsx";
 
+
 const Home = () => {
+    
+document.title = "Expo 2025 "
 
     return (
         <div>

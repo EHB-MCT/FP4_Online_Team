@@ -4,7 +4,12 @@ import { useState } from "react"
 import InputField from "../components/InputField.jsx"
 import Roles from "../components/Roles.jsx"
 
+
+
+
 const Register = () => {
+    
+    document.title = "Inschrijven | Expo 2025 ";
 
     const [formData, setFormData] = useState({
         firstName: "",
