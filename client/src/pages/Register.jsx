@@ -40,6 +40,7 @@ const Register = () => {
             <form onSubmit={handleSubmit}>
                 <InputField 
                     className={"firstName"}
+                    InputType={"text"}
                     InputName={"Voonaam"}
                     Mandatory={true}
                     Placeholder={"Michiel"}
@@ -52,6 +53,7 @@ const Register = () => {
                 />
                 <InputField 
                     className={"lastName"}
+                    InputType={"text"}
                     InputName={"Achernaam"}
                     Mandatory={true}
                     Placeholder={"Janssen"}
@@ -64,6 +66,7 @@ const Register = () => {
                 />
                 <InputField 
                     className={"email"}
+                    InputType={"email"}
                     InputName={"Email"}
                     Mandatory={true}
                     Placeholder={"michiel.janssen@example.com"}
@@ -83,6 +86,7 @@ const Register = () => {
                 />
                 <InputField 
                     className={"amount"}
+                    InputType={"number"}
                     InputName={"amount"}
                     Mandatory={true}
                     Placeholder={"2"}
@@ -95,6 +99,7 @@ const Register = () => {
                 />
                 <InputField 
                     className={"message"}
+                    InputType={"text"}
                     InputName={"message"}
                     Mandatory={false}
                     onChange={(e) =>
