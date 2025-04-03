@@ -67,7 +67,7 @@ const Register = () => {
 				<InputField
 					className={"firstName"}
 					InputType={"text"}
-					InputName={"Voonaam"}
+					InputName={"Voornaam"}
 					Mandatory={true}
 					Placeholder={"Michiel"}
 					onChange={(e) => {
@@ -80,7 +80,7 @@ const Register = () => {
 				<InputField
 					className={"lastName"}
 					InputType={"text"}
-					InputName={"Achernaam"}
+					InputName={"Achternaam"}
 					Mandatory={true}
 					Placeholder={"Janssen"}
 					onChange={(e) => {
@@ -105,7 +105,7 @@ const Register = () => {
 				/>
 				<Roles
 					className={"roles"}
-					InputName={"Role"}
+					InputName={"Rol"}
 					Mandatory={true}
 					Placeholder={"Select your role"}
 					onChange={handleRoleChange}
@@ -113,7 +113,7 @@ const Register = () => {
 				<InputField
 					className={"amount"}
 					InputType={"number"}
-					InputName={"amount"}
+					InputName={"Aantal"}
 					Mandatory={true}
 					Placeholder={"2"}
 					onChange={(e) =>
@@ -126,7 +126,7 @@ const Register = () => {
 				<InputField
 					className={"message"}
 					InputType={"text"}
-					InputName={"message"}
+					InputName={"Bericht"}
 					Mandatory={false}
 					onChange={(e) =>
 						setFormData((previousData) => ({
