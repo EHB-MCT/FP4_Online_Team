@@ -1,5 +1,7 @@
 import { Link } from 'react-router';
 
+import Image from '../../public/logo-placeholder-image.png'
+
 //Components
 import Button from './Button.jsx';
 
@@ -7,17 +9,12 @@ const Navigation = () => {
 
     return(
         <nav>
-            <ul>
-                <li>
-                    <Link to='/' ><img src="./" alt="logo event" /></Link>
-                </li>
-                <li>
+                <Link to='/' className='home-link'><img src={Image} alt="logo event" /></Link>
                 <Button
                     destinationUrl={'/register'}
                     copy={"Inschrijven"}
+                    className={"button"}
                 />
-                </li>
-            </ul>
         </nav>
     )
 

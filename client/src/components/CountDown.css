@@ -1,8 +1,15 @@
 .title-countdown{
   font-size: 42px;
 }
+
+h2{
+  font-size: 18pt;
+  margin: 0;
+}
+
 .countdown {
   display: flex;  
+  justify-content: center;
   gap: 16px;
 
   .time-wrapper{

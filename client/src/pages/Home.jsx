@@ -8,15 +8,20 @@ const Home = () => {
     return (
         <div>
             <section className="hero-wrapper">
-                <h2>Expo 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20 juni&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Anderlecht </h2>
-                <CountDown />
+                <div className="hero-inner-wrapper">
+                    <h2>Expo 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20 juni&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Anderlecht </h2>
+                    <CountDown />
+                    <Button
+                        destinationUrl={'/register'}
+                        copy={"Inschrijven"}
+                        className={"button"}
+                    />
+                </div>
+            </section>
+            <section className="info">
                 <p>
                     Kom de afstudeerprojecten van onze derdejaarsstudenten ontdekken tijdens dit unieke expo/festival. Laat je inspireren door innovatief design, technologie en creativiteit. Schrijf je vandaag nog in en verzeker jezelf van een plekje op dit bijzondere event.
                 </p>
-                <Button
-                    destinationUrl={'/register'}
-                    copy={"Inschrijven"}
-                />
             </section>
             <section className="practical-info-wrapper">
                 <h2>Praktische info</h2>
@@ -63,6 +68,7 @@ const Home = () => {
                 <Button 
                     destinationUrl={"register"}
                     copy={"Inschrijven"}
+                    className={"button"}
                 />
             </section>
             <section className="study-area-wrapper">
