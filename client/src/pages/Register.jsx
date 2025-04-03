@@ -1,4 +1,5 @@
 import { useState } from "react"
+import axios from "axios";
 
 //Components
 import InputField from "../components/InputField.jsx"
@@ -23,10 +24,14 @@ const Register = () => {
         }))
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
-    }
+        try {
+            await axios.post("http://localhost:8080/api/submit-register-form", formData);
+        } catch (error) {
+            console.error("Error submitting form:", error);
+        }
+    };
 
 
     return (
