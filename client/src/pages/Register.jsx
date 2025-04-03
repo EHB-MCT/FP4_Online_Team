@@ -1,11 +1,16 @@
 import { useState } from "react"
 import axios from "axios";
+import Swal from 'sweetalert2';
+
+
 
 //Components
 import InputField from "../components/InputField.jsx"
 import Roles from "../components/Roles.jsx"
 
 const Register = () => {
+
+    const [swalProps, setSwalProps] = useState({});
 
     const [formData, setFormData] = useState({
         firstName: "",
@@ -28,8 +33,19 @@ const Register = () => {
         e.preventDefault();
         try {
             await axios.post("http://localhost:8080/api/submit-register-form", formData);
+            Swal.fire({
+                title: 'Success',
+                text: 'Your registration was successful!',
+                icon: 'success',
+            });
+    
         } catch (error) {
             console.error("Error submitting form:", error);
+            Swal.fire({
+                title: 'Error',
+                text: 'There was an issue submitting your registration. Please try again.',
+                icon: 'error',
+            });
         }
     };
 
