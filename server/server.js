@@ -6,7 +6,7 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 const corsOptions = {
-	origin: ["http://localhost:5173"],
+	origin: "*",
 };
 
 app.use(express.json());
