@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 
-import Image from '../../public/logo.svg'
+import Image from '../../public/logo-placeholder-image.png'
 
 //Components
 import Button from './Button.jsx';
