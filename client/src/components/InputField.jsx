@@ -1,11 +1,11 @@
-const InputField = ( { className,  InputName, Mandatory, Placeholder, onChange } ) => {
+const InputField = ( { className, InputType,  InputName, Mandatory, Placeholder, onChange } ) => {
 
     if(Mandatory){
         return(
             <div className="input-item-wrapper">
                 <h4>{ InputName } *</h4>
                 <input 
-                    type="text" 
+                    type={ InputType } 
                     name={ className } 
                     id={ className } 
                     placeholder={ Placeholder } 

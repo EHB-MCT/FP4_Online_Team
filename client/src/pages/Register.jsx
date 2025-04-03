@@ -1,10 +1,16 @@
 import { useState } from "react"
+import axios from "axios";
+import Swal from 'sweetalert2';
+
+
 
 //Components
 import InputField from "../components/InputField.jsx"
 import Roles from "../components/Roles.jsx"
 
 const Register = () => {
+
+    const [swalProps, setSwalProps] = useState({});
 
     const [formData, setFormData] = useState({
         firstName: "",
@@ -23,10 +29,29 @@ const Register = () => {
         }))
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
-    }
+        try {
+            await axios.post("http://localhost:8080/api/submit-register-form", formData);
+            Swal.fire({
+                title: 'Success',
+                text: 'Your registration was successful!',
+                icon: 'success',
+            });
+    
+        } catch (error) {
+            console.error("Error submitting form:", error);
+
+            let errorMessage = error.response.request.response;
+            const parsedMessage = JSON.parse(errorMessage);
+ 
+            Swal.fire({
+                title: 'Error',
+                text: parsedMessage.message,
+                icon: 'error',
+            });
+        }
+    };
 
 
     return (
@@ -35,6 +60,7 @@ const Register = () => {
             <form onSubmit={handleSubmit}>
                 <InputField 
                     className={"firstName"}
+                    InputType={"text"}
                     InputName={"Voonaam"}
                     Mandatory={true}
                     Placeholder={"Michiel"}
@@ -47,6 +73,7 @@ const Register = () => {
                 />
                 <InputField 
                     className={"lastName"}
+                    InputType={"text"}
                     InputName={"Achernaam"}
                     Mandatory={true}
                     Placeholder={"Janssen"}
@@ -59,6 +86,7 @@ const Register = () => {
                 />
                 <InputField 
                     className={"email"}
+                    InputType={"email"}
                     InputName={"Email"}
                     Mandatory={true}
                     Placeholder={"michiel.janssen@example.com"}
@@ -78,6 +106,7 @@ const Register = () => {
                 />
                 <InputField 
                     className={"amount"}
+                    InputType={"number"}
                     InputName={"amount"}
                     Mandatory={true}
                     Placeholder={"2"}
@@ -90,6 +119,7 @@ const Register = () => {
                 />
                 <InputField 
                     className={"message"}
+                    InputType={"text"}
                     InputName={"message"}
                     Mandatory={false}
                     onChange={(e) =>
