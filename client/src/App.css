@@ -387,25 +387,26 @@ footer{
       width: 150px;
     }
   }
+  section.study-area-wrapper{
+    p{
+      max-width: 800px;
+    }
+  
+    .study-area{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .study-area{
+      img{
+        width: 100%;
+      };
+    }
+  }
 }
 
-section.study-area-wrapper{
-  p{
-    max-width: 800px;
-  }
 
-  .study-area{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .study-area{
-    img{
-      width: 100%;
-    };
-  }
-}
 
 @media (min-width: 1220px) {
   :root{
@@ -438,7 +439,7 @@ section.study-area-wrapper{
         max-width: 800px;
       }
     }
-    background-position: 0 73%;
+    background-position: 0 80%;
   }
 
   section.practical-info-wrapper{
@@ -493,6 +494,10 @@ section.study-area-wrapper{
     width: 1200px;
     margin: 0 auto;
   
+    h2{
+      color: #fff;
+    }
+
     .study-area{
       display: flex;
       flex-direction: row;
