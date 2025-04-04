@@ -65,10 +65,10 @@ const CountDown = () => {
                 <h1>{timeLeft.minutes}</h1>
                 <p>Minutes</p>
             </div>
-            <div>
+            <div id="seconds">
                 <h1>:</h1>
             </div>
-            <div className="time-wrapper">
+            <div id="seconds" className="time-wrapper">
                 <h1>{timeLeft.seconds}</h1>
                 <p>Seconds</p>
             </div>

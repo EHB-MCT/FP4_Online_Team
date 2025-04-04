@@ -28,7 +28,7 @@ document.title = "Expo 2025 "
                 <div className="inner-wrapper practical-info">
                     <h2>Praktische info</h2>
                     <p>
-                        Welkom bij [naam evenement], dé expo waar innovatie, design en creativiteit samenkomen! Dit unieke festival biedt een podium aan de afstudeerprojecten van onze derdejaarsstudenten, waarbij baanbrekende ideeën en vernieuwende technologieën worden gepresenteerd. Daarnaast worden ook de beste werken van studenten uit alle jaren tentoongesteld.
+                        Welkom bij Shift festival, dé expo waar innovatie, design en creativiteit samenkomen! Dit unieke festival biedt een podium aan de afstudeerprojecten van onze derdejaarsstudenten, waarbij baanbrekende ideeën en vernieuwende technologieën worden gepresenteerd. Daarnaast worden ook de beste werken van studenten uit alle jaren tentoongesteld.
                     </p>
                     <p id="more">
                         Het evenement is niet alleen een viering van talent, maar ook een inspiratiemoment voor toekomstige studenten. Overweeg je een studie in deze richting? Dan is dit de perfecte kans om de sfeer te proeven, in gesprek te gaan met studenten en docenten, en te ontdekken wat onze opleiding te bieden heeft.

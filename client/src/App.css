@@ -1,5 +1,8 @@
 @import url("https://use.typekit.net/rlw1flw.css");
 @import url("https://use.typekit.net/rlw1flw.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://use.typekit.net/rlw1flw.css");
+
 
 :root{
   /* Colors */
@@ -14,7 +17,8 @@
   /* Fonts */
   /* --main-font: "loose-extended"; */
   --main-font: "unbounded";
-  --secundary-font: Arial;
+  /* --main-font: "loos-extrawide" */
+  --secundary-font: "poppins";
 
   /* Titles */
   --title-weight: 800;
@@ -23,14 +27,15 @@
 
   /* Subtitles */
   --subtitle-weight: 600;
-  --subtitle-size: 17pt;    
+  --subtitle-size: 14pt;    
   --h3-size: 12pt;
 
   /* Button */
   --button-size: 14pt;
-  --button-padding: 20px 50px;
+  --button-padding: 10px 50px;
   --button-margin: 24px 0;
-  --border-radius: 50px;
+  --border-radius: 8px;
+  --button-color: #c169aa;
 
 
   /* Section margin */
@@ -46,6 +51,7 @@ body{
   color: var(--font-color);
   padding: 0;
   margin: 0;
+
 }
 
 h1{
@@ -57,7 +63,7 @@ h1{
 }
 
 h2{
-  font-family: var(--main-font);
+  font-family: var(--subtitle-font);
   font-weight: var(--subtitle-weight);
   font-size: var(--subtitle-size);
 }
@@ -72,11 +78,13 @@ h3{
 a.button{
   display: inline-block;
 
-  background-color: var(--green-color);
+  background-color: var(--button-color);
   padding: var(--button-padding);
   margin: var(--button-margin);
 
   border-radius: var(--border-radius);
+
+  color: #fff;
 
   font-family: var(--main-font);
   font-size: var(--button-size);
@@ -109,6 +117,14 @@ nav{
   .button{
     display: none;
   }
+}
+
+input[type="submit"]{
+  border-radius: var(--border-radius);
+  background-color: var(--button-color);
+  color: #fff;
+  padding: var(--button-padding);
+  font-family: var(--main-font);
 }
 
 section{
@@ -183,7 +199,11 @@ section.practical-info-wrapper{
 
 section.study-area-wrapper{
   background-image: none;
+
   .study-area{
+    display: flex;
+    flex-direction: column;
+
     img{
       width: 100%;
     };
@@ -191,9 +211,18 @@ section.study-area-wrapper{
 }
 
 footer{
+  background-color: var(--orange-color);
+  margin-bottom: 0;
+
+  color: #fff;
+
+  a{
+    color: #fff;
+  }
   .inner-wrapper{
 
-    margin-bottom: 64px;
+    padding-bottom: 64px;
+    padding-top: 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -209,15 +238,21 @@ footer{
   }
 
   .socials{
-    width: 50px;
+    width: 30px;
     margin: 10px;
   }
   .socials-ehb{
-    width: 90px;
+    width: 50px;
     margin-right: 10px;
   }
 }
 
+
+.countdown{
+  #seconds{
+    display: none;
+  }
+}
 
 @media (min-width: 768px) {
 
@@ -308,6 +343,13 @@ footer{
       height: 100%; /* Responsive height */
       border: 0;
     }
+
+    .countdown{
+      #seconds{
+        display: inline;
+      }
+    }
+    
   }
 
   footer {
@@ -360,7 +402,7 @@ section.study-area-wrapper{
 
   .study-area{
     img{
-      width: 40%;
+      width: 100%;
     };
   }
 }
@@ -453,8 +495,14 @@ section.study-area-wrapper{
   
     .study-area{
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
+
+      img{
+        width: 40%;
+        margin-right: 32px
+      };
     }
 
 
@@ -464,14 +512,6 @@ section.study-area-wrapper{
     }
     a,p{
       margin-left: 10px;
-    }
-  
-  
-    .study-area{
-      img{
-        width: 40%;
-        margin-right: 32px
-      };
     }
   }
 }

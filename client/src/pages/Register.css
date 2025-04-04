@@ -39,11 +39,8 @@ textarea {
 
 /* === SUBMIT BUTTON === */
 input[type="submit"] {
-	background-color: #cedc29;
 	border: none;
-	padding: 0.9rem 2rem;
 	font-weight: bold;
-	border-radius: 25px;
 	cursor: pointer;
 	width: fit-content;
 	align-self: center;
