@@ -16,8 +16,8 @@
 
   /* Fonts */
   /* --main-font: "loose-extended"; */
-  --main-font: "unbounded";
-  /* --main-font: "loos-extrawide" */
+  /* --main-font: "unbounded"; */
+  --main-font: "loos-extrawide", sans-serif;
   --secundary-font: "poppins";
 
   /* Titles */
@@ -306,6 +306,8 @@ footer{
     .practical-info-inner-wrapper{
       display: flex;
       justify-content: space-between;
+
+      margin-top: 64px;
     }
     p{
       max-width: 800px;
