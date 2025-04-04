@@ -164,6 +164,12 @@ section.hero-wrapper{
   p{
     max-width: 400px;
   }
+
+  .countdown{
+    #seconds{
+      display: none;
+    }
+  }
 }
 
 section.practical-info-wrapper{
@@ -248,11 +254,7 @@ footer{
 }
 
 
-.countdown{
-  #seconds{
-    display: none;
-  }
-}
+
 
 @media (min-width: 768px) {
 
@@ -297,6 +299,12 @@ footer{
     background-position: 0% 65% ;
     p{
       max-width: 600px;
+    }
+
+    .countdown{
+      #seconds{
+        display: inline-block;
+      }
     }
   }
 
@@ -346,13 +354,10 @@ footer{
       border: 0;
     }
 
-    .countdown{
-      #seconds{
-        display: inline;
-      }
-    }
+    
     
   }
+ 
 
   footer {
     background-color: var(--orange-color);
