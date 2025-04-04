@@ -45,7 +45,7 @@ const sendEmail = async (to, name) => {
 					We zijn enthousiast om je te verwelkomen op ons evenement.</p> 
 					
 					<h2>Waar en wanneer:</h2> 
-					<p><strong>Vrijdag 20 juni 2025</strong> van 16:00 tot 21:00 uur (doorlopend expo en workshops)</p> 
+					<p><strong>Vrijdag 20 juni 2025</strong> van 17:00 tot 21:00 uur (doorlopend expo en workshops)</p> 
 					<p>Award-uitreiking om 20:00 uur</p> 
 					<p><strong>Locatie:</strong> Erasmushogeschool Brussel, Nijverheidskaai 170, 1070 Anderlecht</p> 
 					<p>Alle info vind je op de <a href="https://shiftfestival.be" target="_blank">website</a></p> 
