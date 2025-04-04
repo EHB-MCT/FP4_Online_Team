@@ -72,7 +72,7 @@ input[type="submit"] {
 
 .blob-orange {
 	position: fixed;
-	top: 10vh;
+	top: 20vh;
 	right: 0vw;
 	width: 25vw;
 	z-index: -1;
