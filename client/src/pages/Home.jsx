@@ -43,7 +43,7 @@ document.title = "Expo 2025 "
                         <div className="specific-info">
                             <div className="specific-info-upper-wrapper">
                                 <h3>20 juni 2025</h3>
-                                <h3>16u - 21u</h3>
+                                <h3>17u - 21u</h3>
                                 <Button 
                                     destinationUrl={"register"}
                                     copy={"Inschrijven"}
