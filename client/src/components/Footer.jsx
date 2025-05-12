@@ -12,8 +12,8 @@ const Footer = () => {
                 <div className="footer-left-wrapper">
                     <Link to='/' ><img src={Image} className='logo' alt="Logo of the event" /></Link>
                     <p>Erasmus Hogeschool Brussel - 2025</p>
-                    <Link to={"/policies/privacy"}>Privacy policy</Link>
-                    <Link to={"/policies/cookies"}>Cookies policy</Link>
+                    {/*<Link to={"/policies/privacy"}>Privacy policy</Link>*/}
+                    {/*<Link to={"/policies/cookies"}>Cookies policy</Link>*/}
                 </div>
                 <div className="footer-right-wrapper">
                     <Button 
