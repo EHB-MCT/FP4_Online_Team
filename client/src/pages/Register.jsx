@@ -58,104 +58,105 @@ const Register = () => {
 	};
 
 	return (
-		<>
+		<div className="wrapper">
 			<img src="/public/figure_pink.png" alt="" className="blob-pink" />
 			<img src="/public/figure_orange.png" alt="" className="blob-orange" />
 
 			<h1>Save the date</h1>
-			<form onSubmit={handleSubmit}>
-				<InputField
-					className={"firstName"}
-					InputType={"text"}
-					InputName={"Voornaam"}
-					Mandatory={true}
-					Placeholder={"Michiel"}
-					onChange={(e) => {
-						setFormData((previousData) => ({
-							...previousData,
-							firstName: e.target.value,
-						}));
-					}}
-				/>
-				<InputField
-					className={"lastName"}
-					InputType={"text"}
-					InputName={"Achternaam"}
-					Mandatory={true}
-					Placeholder={"Janssen"}
-					onChange={(e) => {
-						setFormData((previousData) => ({
-							...previousData,
-							lastName: e.target.value,
-						}));
-					}}
-				/>
-				<InputField
-					className={"email"}
-					InputType={"email"}
-					InputName={"Email"}
-					Mandatory={true}
-					Placeholder={"michiel.janssen@example.com"}
-					onChange={(e) => {
-						setFormData((previousData) => ({
-							...previousData,
-							email: e.target.value,
-						}));
-					}}
-				/>
-				<Roles
-					className={"roles"}
-					InputName={"Rol"}
-					Mandatory={true}
-					Placeholder={"Select your role"}
-					onChange={handleRoleChange}
-				/>
-				<InputField
-					className={"amount"}
-					InputType={"number"}
-					InputName={"Aantal"}
-					Mandatory={true}
-					Placeholder={"2"}
-					onChange={(e) =>
-						setFormData((previousData) => ({
-							...previousData,
-							amount: e.target.value,
-						}))
-					}
-				/>
-				<InputField
-					className={"message"}
-					InputType={"text"}
-					InputName={"Bericht"}
-					Mandatory={false}
-					onChange={(e) =>
-						setFormData((previousData) => ({
-							...previousData,
-							message: e.target.value,
-						}))
-					}
-				/>
-				<div className="input-item-wrapper">
-					<label htmlFor="subscribeToUpdates">
-						<input
-							type="checkbox"
-							id="subscribeToUpdates"
-							name="subscribeToUpdates"
-							onChange={(e) => {
-								setFormData((previousData) => ({
-									...previousData,
-									subscribeToUpdates: e.target.checked,
-								}));
-							}}
-						/>
-						Ik wil graag op de hoogte blijven en updates ontvangen over dit
-						evenement
-					</label>
-				</div>
+			<h1 className="coming_soon">Coming soon</h1>
+			{/*<form onSubmit={handleSubmit}>*/}
+			{/*	<InputField*/}
+			{/*		className={"firstName"}*/}
+			{/*		InputType={"text"}*/}
+			{/*		InputName={"Voornaam"}*/}
+			{/*		Mandatory={true}*/}
+			{/*		Placeholder={"Michiel"}*/}
+			{/*		onChange={(e) => {*/}
+			{/*			setFormData((previousData) => ({*/}
+			{/*				...previousData,*/}
+			{/*				firstName: e.target.value,*/}
+			{/*			}));*/}
+			{/*		}}*/}
+			{/*	/>*/}
+			{/*	<InputField*/}
+			{/*		className={"lastName"}*/}
+			{/*		InputType={"text"}*/}
+			{/*		InputName={"Achternaam"}*/}
+			{/*		Mandatory={true}*/}
+			{/*		Placeholder={"Janssen"}*/}
+			{/*		onChange={(e) => {*/}
+			{/*			setFormData((previousData) => ({*/}
+			{/*				...previousData,*/}
+			{/*				lastName: e.target.value,*/}
+			{/*			}));*/}
+			{/*		}}*/}
+			{/*	/>*/}
+			{/*	<InputField*/}
+			{/*		className={"email"}*/}
+			{/*		InputType={"email"}*/}
+			{/*		InputName={"Email"}*/}
+			{/*		Mandatory={true}*/}
+			{/*		Placeholder={"michiel.janssen@example.com"}*/}
+			{/*		onChange={(e) => {*/}
+			{/*			setFormData((previousData) => ({*/}
+			{/*				...previousData,*/}
+			{/*				email: e.target.value,*/}
+			{/*			}));*/}
+			{/*		}}*/}
+			{/*	/>*/}
+			{/*	<Roles*/}
+			{/*		className={"roles"}*/}
+			{/*		InputName={"Rol"}*/}
+			{/*		Mandatory={true}*/}
+			{/*		Placeholder={"Select your role"}*/}
+			{/*		onChange={handleRoleChange}*/}
+			{/*	/>*/}
+			{/*	<InputField*/}
+			{/*		className={"amount"}*/}
+			{/*		InputType={"number"}*/}
+			{/*		InputName={"Aantal"}*/}
+			{/*		Mandatory={true}*/}
+			{/*		Placeholder={"2"}*/}
+			{/*		onChange={(e) =>*/}
+			{/*			setFormData((previousData) => ({*/}
+			{/*				...previousData,*/}
+			{/*				amount: e.target.value,*/}
+			{/*			}))*/}
+			{/*		}*/}
+			{/*	/>*/}
+			{/*	<InputField*/}
+			{/*		className={"message"}*/}
+			{/*		InputType={"text"}*/}
+			{/*		InputName={"Bericht"}*/}
+			{/*		Mandatory={false}*/}
+			{/*		onChange={(e) =>*/}
+			{/*			setFormData((previousData) => ({*/}
+			{/*				...previousData,*/}
+			{/*				message: e.target.value,*/}
+			{/*			}))*/}
+			{/*		}*/}
+			{/*	/>*/}
+			{/*	<div className="input-item-wrapper">*/}
+			{/*		<label htmlFor="subscribeToUpdates">*/}
+			{/*			<input*/}
+			{/*				type="checkbox"*/}
+			{/*				id="subscribeToUpdates"*/}
+			{/*				name="subscribeToUpdates"*/}
+			{/*				onChange={(e) => {*/}
+			{/*					setFormData((previousData) => ({*/}
+			{/*						...previousData,*/}
+			{/*						subscribeToUpdates: e.target.checked,*/}
+			{/*					}));*/}
+			{/*				}}*/}
+			{/*			/>*/}
+			{/*			Ik wil graag op de hoogte blijven en updates ontvangen over dit*/}
+			{/*			evenement*/}
+			{/*		</label>*/}
+			{/*	</div>*/}
 
-				<input type="submit" value="Inschrijven" />
-			</form>
-		</>
+			{/*	<input type="submit" value="Inschrijven" />*/}
+			{/*</form>*/}
+		</div>
 	);
 };
 
