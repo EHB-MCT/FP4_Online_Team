@@ -1,5 +1,5 @@
 {
-  "name": "fullstack",
+  "name": "backend-server",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "build": "npm ci",
-    "serve": "node server/index.js"
+    "serve": "node index.js"
   },
   "keywords": [],
   "author": "",
