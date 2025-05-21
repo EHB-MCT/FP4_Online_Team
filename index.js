@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors(corsOptions));
 
 app.use((req, res, next) => {
-	res.set("Content-Security-Policy",
+	res.setHeader("Content-Security-Policy",
 		"default-src 'none'; " +
 		"img-src 'self' data:; " +
 		"style-src 'self' 'unsafe-inline' fonts.googleapis.com use.typekit.net p.typekit.net;" +
