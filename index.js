@@ -16,16 +16,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors(corsOptions));
 
+app.use((req, res, next) => {
+	res.setHeader("Content-Security-Policy",
+		"default-src 'none'; " +
+		"img-src 'self'; " +
+		"style-src 'self' https://fonts.googleapis.com; " +
+		"font-src https://fonts.gstatic.com; " +
+		"script-src 'self'; " +
+		"connect-src 'self';"
+	);
+	next();
+});
+
 app.use(express.static(path.join(__dirname, '/client/dist')));
 
 app.get('/*\w', (req, res) => {
-    res.setHeader("Content-Security-Policy",
-        "default-src 'none'; " +
-        "img-src 'self'; " +
-        "style-src 'self' https://fonts.googleapis.com; " +
-        "font-src https://fonts.gstatic.com; " +
-        "script-src 'self'; "
-    );
     res.sendFile(path.join(__dirname, '/client/dist/index.html'));
 });
 
