@@ -19,9 +19,9 @@ app.use(cors(corsOptions));
 app.use((req, res, next) => {
 	res.set("Content-Security-Policy",
 		"default-src 'none'; " +
-		"img-src 'self'; " +
-		"style-src 'self' https://fonts.googleapis.com; " +
-		"font-src https://fonts.gstatic.com; " +
+		"img-src 'self' data:; " +
+		"style-src 'self' 'unsafe-inline' fonts.googleapis.com use.typekit.net p.typekit.net;" +
+		"font-src fonts.gstatic.com use.typekit.net; " +
 		"script-src 'self'; " +
 		"connect-src 'self';"
 	);
