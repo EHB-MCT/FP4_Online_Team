@@ -57,13 +57,13 @@ document.title = "Expo 2025 "
                             </div>
                         </div>
                         <div className="google-maps-wrapper">
-                            <iframe 
+                            {/* <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.4754936891018!2d4.322295361603742!3d50.84161158071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c40f19faf0f9%3A0x6a19083b298c5df0!2sNijverheidskaai%20170%2C%201070%20Anderlecht!5e0!3m2!1snl!2sbe!4v1743596139302!5m2!1snl!2sbe" 
                                 style={{ border: 0 }} 
                                 allowFullScreen="" 
                                 loading="lazy" 
                                 referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
+                            ></iframe> */}
                         </div>
                     </div>
                 
