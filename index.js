@@ -146,44 +146,44 @@ app.get("/api", (req, res) => {
 });
 
 // Form voor inschrijvingen
-// app.post("/api/submit-register-form", (req, res) => {
-//   SSHConnection.then(connection => {
-//     const { firstName, lastName, email, roles, amount, message, subscribeToUpdates } = req.body;
+app.post("/api/submit-register-form", (req, res) => {
+  SSHConnection.then(connection => {
+    const { firstName, lastName, email, roles, amount, message, subscribeToUpdates } = req.body;
 
-//     if (!firstName || !lastName || !email || !roles || !amount) {
-//       return res.status(400).json({ message: "All fields are required" });
-//     }
+    if (!firstName || !lastName || !email || !roles || !amount) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
 
-//     const checkMailQuery = `SELECT COUNT(*) AS email_count FROM event_registrations WHERE email = ?`;
-//     connection.query(checkMailQuery, [email], (err, results) => {
-//       if (err) {
-//         console.error("Error querying database:", err);
-//         return res.status(500).json({ message: "Sorry something went wrong" });
-//       }
+    const checkMailQuery = `SELECT COUNT(*) AS email_count FROM event_registrations WHERE email = ?`;
+    connection.query(checkMailQuery, [email], (err, results) => {
+      if (err) {
+        console.error("Error querying database:", err);
+        return res.status(500).json({ message: "Sorry something went wrong" });
+      }
 
-//       if (results[0].email_count !== 0) {
-//         return res.status(409).json({ message: "Email is reeds gebruikt" });
-//       }
+      if (results[0].email_count !== 0) {
+        return res.status(409).json({ message: "Email is reeds gebruikt" });
+      }
 
-//       const role = roles[0];
-//       const roleName = role.role;
-//       const companyName = role.companyName;
-//       const sponsor = role.sponsorship;
+      const role = roles[0];
+      const roleName = role.role;
+      const companyName = role.companyName;
+      const sponsor = role.sponsorship;
 
-//       const sql = "INSERT INTO event_registrations (first_name, last_name, email, num_attendees, message, wants_event_updates, role, company_name, wants_sponsorship) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-//       connection.query(sql, [firstName, lastName, email, amount, message, [subscribeToUpdates ? 1 : 0], roleName, companyName, sponsor], (err, result) => {
-//         if (err) {
-//           console.error("Error inserting data:", err);
-//           return res.status(500).json({ message: "Sorry something went wrong" });
-//         }
-//         res.status(200).json({ message: "Data inserted successfully" });
+      const sql = "INSERT INTO event_registrations (first_name, last_name, email, num_attendees, message, wants_event_updates, role, company_name, wants_sponsorship) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+      connection.query(sql, [firstName, lastName, email, amount, message, [subscribeToUpdates ? 1 : 0], roleName, companyName, sponsor], (err, result) => {
+        if (err) {
+          console.error("Error inserting data:", err);
+          return res.status(500).json({ message: "Sorry something went wrong" });
+        }
+        res.status(200).json({ message: "Data inserted successfully" });
 
-//         //sendmail function
-//         sendEmail(email, firstName);
-//       });
-//     });
-//   });
-// });
+        //sendmail function
+        sendEmail(email, firstName);
+      });
+    });
+  });
+});
 
 // Starten app
 app.listen(3000, () => {
