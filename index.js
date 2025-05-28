@@ -20,7 +20,7 @@ app.use(cors(corsOptions));
 app.use((req, res, next) => {
 	res.setHeader("Content-Security-Policy",
 		"default-src 'none'; " +
-		"img-src 'self' data:; " +
+		"img-src 'self' data: https://shiftfestival.be; " +
 		"style-src 'self' 'unsafe-inline' fonts.googleapis.com use.typekit.net p.typekit.net;" +
 		"font-src fonts.gstatic.com use.typekit.net; " +
 		"script-src 'self' 'unsafe-inline'; " +
