@@ -35,7 +35,7 @@ const Register = () => {
 		e.preventDefault();
 		try {
 			await axios.post(
-				"https://https://shiftfestival.be/api/submit-register-form",
+				"https://https://shiftfestival.be/api",
 				formData
 			);
 			Swal.fire({
