@@ -16,84 +16,88 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors(corsOptions));
 
+// CSP Headers (Momenteel fout?)
 app.use((req, res, next) => {
 	res.setHeader("Content-Security-Policy",
 		"default-src 'none'; " +
 		"img-src 'self' data:; " +
 		"style-src 'self' 'unsafe-inline' fonts.googleapis.com use.typekit.net p.typekit.net;" +
 		"font-src fonts.gstatic.com use.typekit.net; " +
-		"script-src 'self'; " +
+		"script-src 'self' 'unsafe-inline'; " +
 		"connect-src 'self';"
 	);
 	next();
 });
 
+// Frontend
 app.use(express.static(path.join(__dirname, '/client/dist')));
 
 app.get('/*\w', (req, res) => {
     res.sendFile(path.join(__dirname, '/client/dist/index.html'));
 });
 
-// const dbConfig = {
-//     host: process.env.DB_HOST,
-//     user: process.env.DB_USER,
-//     password: process.env.DB_PASSWORD,
-//     database: process.env.DB_DATABASE,
-//     port: 3306
-// };
+// Database volgens SSH
+const dbConfig = {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    port: 3306
+};
 
-// const tunnelConfig = {
-//     host: process.env.DB_SSH_HOST,
-//     port: 22,
-//     username: process.env.DB_SSH_USER,
-//     privateKey: process.env.SSH_PK
-// };
+const tunnelConfig = {
+    host: process.env.DB_SSH_HOST,
+    port: 22,
+    username: process.env.DB_SSH_USER,
+    privateKey: process.env.SSH_PK
+};
 
-// const forwardConfig = {
-//     srcHost: '127.0.0.1',
-//     srcPort: 3306,
-//     dstHost: dbConfig.host,
-//     dstPort: dbConfig.port
-// };
+const forwardConfig = {
+    srcHost: '127.0.0.1',
+    srcPort: 3306,
+    dstHost: dbConfig.host,
+    dstPort: dbConfig.port
+};
 
-// const SSHConnection = new Promise((resolve, reject) => {
-//     sshClient.on('ready', () => {
-//         console.log("SSH connection established.");
+const SSHConnection = new Promise((resolve, reject) => {
+    sshClient.on('ready', () => {
+        console.log("SSH connection established.");
         
-//         sshClient.forwardOut(
-//             forwardConfig.srcHost,
-//             forwardConfig.srcPort,
-//             forwardConfig.dstHost,
-//             forwardConfig.dstPort,
-//             (err, stream) => {
-//                 if (err) {
-//                     console.error("Error forwarding SSH tunnel:", err);
-//                     return reject(err);
-//                 }
+        sshClient.forwardOut(
+            forwardConfig.srcHost,
+            forwardConfig.srcPort,
+            forwardConfig.dstHost,
+            forwardConfig.dstPort,
+            (err, stream) => {
+                if (err) {
+                    console.error("Error forwarding SSH tunnel:", err);
+                    return reject(err);
+                }
 
-//                 const updatedDbConfig = {
-//                     ...dbConfig,
-//                     stream
-//                 };
+                const updatedDbConfig = {
+                    ...dbConfig,
+                    stream
+                };
 
-//                 const connection = mysql.createConnection(updatedDbConfig);
-//                 connection.connect(error => {
-//                     if (error) {
-//                         console.error("Failed to connect to the database:", error);
-//                         return reject(error);
-//                     }
+                const connection = mysql.createConnection(updatedDbConfig);
+                connection.connect(error => {
+                    if (error) {
+                        console.error("Failed to connect to the database:", error);
+                        return reject(error);
+                    }
 
-//                     console.log("Successfully connected to the database through SSH tunnel.");
-//                     resolve(connection);
-//                 });
-//             }
-//         );
-//     }).on('error', (err) => {
-//         console.error("SSH connection error:", err);
-//         reject(err);
-//     }).connect(tunnelConfig);
-// });
+                    console.log("Successfully connected to the database through SSH tunnel.");
+                    resolve(connection);
+                });
+            }
+        );
+    }).on('error', (err) => {
+        console.error("SSH connection error:", err);
+        reject(err);
+    }).connect(tunnelConfig);
+});
 
+// Automatic mails
 const transporter = nodemailer.createTransport({
 	host: "smtp-auth.mailprotect.be",
 	port: 465,
@@ -136,10 +140,12 @@ const sendEmail = async (to, name) => {
 	}
 };
 
+// Test api call
 app.get("/api", (req, res) => {
 	res.json({ fruits: ["apple", "banana", "grape"] });
 });
 
+// Form voor inschrijvingen
 // app.post("/api/submit-register-form", (req, res) => {
 //   SSHConnection.then(connection => {
 //     const { firstName, lastName, email, roles, amount, message, subscribeToUpdates } = req.body;
@@ -179,6 +185,7 @@ app.get("/api", (req, res) => {
 //   });
 // });
 
+// Starten app
 app.listen(3000, () => {
 	console.log("Server started on port 3000");
 });
