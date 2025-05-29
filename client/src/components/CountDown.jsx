@@ -40,13 +40,20 @@ const CountDown = () => {
     return (
         <div className="countdown">
             
-            <div className="time-wrapper">
-                <h1>{timeLeft.months}</h1>
-                <p>Months</p>
-            </div>
-            <div>
-                <h1>:</h1>
-            </div>
+            { 
+                timeLeft.months !== "00" ? (
+                    <>
+                        <div className="time-wrapper">
+                            <h1>{timeLeft.months}</h1>
+                            <p>Months</p>
+                        </div>
+                                <div>
+                            <h1>:</h1>
+                        </div>
+                    </>
+                ) : null
+            }
+            
             <div className="time-wrapper">
                 <h1>{timeLeft.days}</h1>
                 <p>Days</p>
