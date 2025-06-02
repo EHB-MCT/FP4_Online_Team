@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 export const Home = () => {
     
-document.title = "Expo 2025 "
+document.title = "Shift Festival - 2025 "
 
     useEffect(() => {
         fetch("https://shiftfestival.be/api")
