@@ -57,7 +57,7 @@ const tunnelConfig = {
     host: process.env.DB_SSH_HOST,
     port: 22,
     username: process.env.DB_SSH_USER,
-    privateKey: fs.readFileSync(process.env.SSH_PK_PATH)
+    privateKey: fs.readFileSync(path.join(__dirname, process.env.SSH_PK_PATH))
 };
 
 const forwardConfig = {
