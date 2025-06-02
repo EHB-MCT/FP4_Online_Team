@@ -20,6 +20,17 @@ document.title = "Shift Festival - 2025 "
             });
     }, []);
 
+    useEffect(() => {
+        fetch("https://shiftfestival.be/api")
+            .then(response => response.json())
+            .then(data => {
+                console.log("API Data:", data);
+            })
+            .catch(error => {
+                console.error("Error fetching API data:", error);
+            });
+    }, []);
+
     return (
         <>
             <section className="hero-wrapper">
