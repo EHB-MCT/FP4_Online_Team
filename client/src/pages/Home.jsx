@@ -2,11 +2,23 @@
 import CountDown from "../components/CountDown.jsx";
 import Button from "../components/Button.jsx";
 import InfoLine from "../components/InfoLine.jsx";
+import { useEffect } from "react";
 
 
 const Home = () => {
     
 document.title = "Expo 2025 "
+
+    useEffect(() => {
+        fetch("https://shiftfestival.be/api")
+            .then(response => response.json())
+            .then(data => {
+                console.log("API Data:", data);
+            })
+            .catch(error => {
+                console.error("Error fetching API data:", error);
+            });
+    }, []);
 
     return (
         <>
