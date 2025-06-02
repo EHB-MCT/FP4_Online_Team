@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router"
+import { createHashRouter, RouterProvider } from "react-router"
 
 //Components
 import App from "../app/App";
@@ -11,7 +11,7 @@ import { REGISTER_ROUTE } from "../register/register.route";
 
 export const Root = () => {
 
-    const ROUTE = createBrowserRouter([
+    const ROUTE = createHashRouter([
         {
             path: '/',
             element: <App />,
