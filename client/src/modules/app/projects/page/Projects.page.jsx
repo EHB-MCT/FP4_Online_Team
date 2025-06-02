@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Search from "../components/Search";
-const Projects = () => {
+
+export const Projects = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 	return (
 		<>
@@ -13,5 +14,3 @@ const Projects = () => {
 		</>
 	);
 };
-
-export default Projects;

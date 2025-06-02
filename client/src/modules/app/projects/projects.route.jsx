@@ -1,5 +1,5 @@
 //Components
-import Projects from ".";
+import { Projects } from ".";
 
 export const PROJECTS_ROUTE = {
     path: 'projects',

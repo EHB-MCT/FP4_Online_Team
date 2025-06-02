@@ -7,7 +7,7 @@ import App from "../app/App";
 import { ERROR_ROUTE } from "../error/error.route";
 import { HOME_ROUTE } from "../home/home.route";
 import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
-import { PROJECTS_ROUTE } from "../projects/projcts.route";
+import { PROJECTS_ROUTE } from "../projects/projects.route";
 import { REGISTER_ROUTE } from "../register/register.route";
 
 export const Root = () => {
