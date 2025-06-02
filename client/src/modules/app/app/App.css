@@ -174,11 +174,6 @@ section.hero-wrapper{
     max-width: 400px;
   }
 
-  .countdown{
-    #seconds{
-      display: none;
-    }
-  }
 }
 
 section.practical-info-wrapper{
