@@ -7,6 +7,7 @@ import App from "../app/App";
 import { ERROR_ROUTE } from "../error/error.route";
 import { HOME_ROUTE } from "../home/home.route";
 import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
+import { PROJECTS_ROUTE } from "../projects/projcts.route";
 import { REGISTER_ROUTE } from "../register/register.route";
 
 export const Root = () => {
@@ -31,6 +32,10 @@ export const Root = () => {
                 {
                     path: PRIVACY_POLICY_ROUTE.path,
                     element: PRIVACY_POLICY_ROUTE.element
+                },
+                {
+                    path: PROJECTS_ROUTE.path,
+                    element: PROJECTS_ROUTE.element
                 },
                 
             ]
