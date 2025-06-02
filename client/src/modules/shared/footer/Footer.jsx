@@ -1,10 +1,10 @@
 import { Link } from 'react-router';
-import Image from '../../public/Logo.svg';
+import Image from '/Logo.svg';
 
 //Components
-import Button from './Button.jsx';
+import Button from '../button/Button.jsx';
 
-const Footer = () => {
+export const Footer = () => {
 
     return(
         <footer>
@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className="footer-left-wrapper">
                     <Link to='/' ><img src={Image} className='logo' alt="Logo of the event" /></Link>
                     <p>Erasmus Hogeschool Brussel - 2025</p>
-                    {/*<Link to={"/policies/privacy"}>Privacy policy</Link>*/}
+                    {/*<Link to={"/policies/privacy"}>Prrivacy policy</Link>*/}
                     {/*<Link to={"/policies/cookies"}>Cookies policy</Link>*/}
                 </div>
                 <div className="footer-right-wrapper">
@@ -33,5 +33,3 @@ const Footer = () => {
     )
 
 }
-
-export default Footer;
