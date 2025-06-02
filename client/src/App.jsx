@@ -11,6 +11,7 @@ import Home from './pages/Home.jsx';
 import Layout from './pages/Layout.jsx';
 import Privacy from './pages/Privacy.jsx';
 import Register from './pages/Register.jsx';
+import Price from './pages/Price.jsx';
 
 function App() {
 
@@ -23,6 +24,9 @@ function App() {
             {/* Basic routes */}
             <Route index element={ <Home />} />
             <Route path='register' element={<Register />} /> 
+
+            
+            <Route path='price' element={<Price />} /> 
 
             {/* Error pages */}  
             <Route path='*' element={ <Error />} />
