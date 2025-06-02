@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 //CSS
 import "./Register.css";
@@ -9,10 +9,10 @@ import "./Register.css";
 import InputField from "../components/InputField.jsx";
 import Roles from "../components/Roles.jsx";
 
-const Register = () => {
+export const Register = () => {
 	document.title = "Inschrijven | Expo 2025 ";
 
-	const [swalProps, setSwalProps] = useState({});
+	// const [swalProps, setSwalProps] = useState({});
 
 	const [formData, setFormData] = useState({
 		firstName: "",
@@ -38,22 +38,22 @@ const Register = () => {
 				"https://shiftfestival.be/api/submit-register-form",
 				formData
 			);
-			Swal.fire({
-				title: "Success",
-				text: "Your registration was successful!",
-				icon: "success",
-			});
+			// Swal.fire({
+			// 	title: "Success",
+			// 	text: "Your registration was successful!",
+			// 	icon: "success",
+			// });
 		} catch (error) {
 			console.error("Error submitting form:", error);
 
 			let errorMessage = error.response.request.response;
 			const parsedMessage = JSON.parse(errorMessage);
 
-			Swal.fire({
-				title: "Error",
-				text: parsedMessage.message,
-				icon: "error",
-			});
+			// Swal.fire({
+			// 	title: "Error",
+			// 	text: parsedMessage.message,
+			// 	icon: "error",
+			// });
 		}
 	};
 
@@ -159,4 +159,3 @@ const Register = () => {
 	);
 };
 
-export default Register;

@@ -1,11 +1,11 @@
 import { Link } from 'react-router';
 
-import Image from '../../public/Logo.svg'
+import Image from '/Logo.svg'
 
 //Components
-import Button from './Button.jsx';
+import Button from '../button/Button.jsx';
 
-const Navigation = () => {
+export const Navigation = () => {
 
     return(
         <nav>
@@ -21,5 +21,3 @@ const Navigation = () => {
     )
 
 }
-
-export default Navigation
