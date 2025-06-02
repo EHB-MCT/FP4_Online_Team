@@ -1,10 +1,10 @@
-import {Link} from 'react-router';
+import { NavLink} from 'react-router';
 
 //CSS
 
 const Button = ({ destinationUrl, copy, className }) => {
     return (
-        <Link to={destinationUrl} className={ className } > {copy} </Link>
+        <NavLink to={destinationUrl} className={ className } > {copy} </NavLink>
     )
 }
 
