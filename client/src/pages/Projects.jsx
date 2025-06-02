@@ -6,7 +6,7 @@ const Projects = () => {
 		<>
 			<section>
 				<div className="inner-wrapper">
-					<h1>Eindjaarprojecten</h1>
+					<h2 className="">Eindjaarprojecten</h2>
 					<Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 				</div>
 			</section>
