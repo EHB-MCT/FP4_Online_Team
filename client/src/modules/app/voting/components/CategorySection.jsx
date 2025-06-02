@@ -1,4 +1,4 @@
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "../../../shared/ProjectCard/ProjectCard";
 
 export const CategorySection = ({ title, projects }) => {
 	return (
