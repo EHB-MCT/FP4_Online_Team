@@ -1,42 +1,42 @@
-import { BrowserRouter, Routes, Route} from 'react-router';
-import axios from 'axios'
+import { BrowserRouter, Routes, Route } from "react-router";
+import axios from "axios";
 
 //CSS
-import './App.css'
+import "./App.css";
 
 //Pages
-import Cookies from './pages/Cookies.jsx';
-import Error from './pages/Error.jsx'
-import Home from './pages/Home.jsx';
-import Layout from './pages/Layout.jsx';
-import Privacy from './pages/Privacy.jsx';
-import Register from './pages/Register.jsx';
+import Cookies from "./pages/Cookies.jsx";
+import Error from "./pages/Error.jsx";
+import Home from "./pages/Home.jsx";
+import Layout from "./pages/Layout.jsx";
+import Privacy from "./pages/Privacy.jsx";
+import Register from "./pages/Register.jsx";
+import Projects from "./pages/Projects.jsx";
 
 function App() {
+	return (
+		<>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Layout />}>
+						{/* Basic routes */}
+						<Route index element={<Home />} />
+						<Route path="register" element={<Register />} />
+						<Route path="projects" element={<Projects />} />
 
-  return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={ <Layout /> }>
+						{/* Error pages */}
+						<Route path="*" element={<Error />} />
 
-            {/* Basic routes */}
-            <Route index element={ <Home />} />
-            <Route path='register' element={<Register />} /> 
-
-            {/* Error pages */}  
-            <Route path='*' element={ <Error />} />
-
-            {/* Policy routes */}
-            <Route path='/policies/'>
-              <Route path='privacy' element={<Privacy />} />
-              <Route path='cookies' element={<Cookies />} />
-            </Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+						{/* Policy routes */}
+						<Route path="/policies/">
+							<Route path="privacy" element={<Privacy />} />
+							<Route path="cookies" element={<Cookies />} />
+						</Route>
+					</Route>
+				</Routes>
+			</BrowserRouter>
+		</>
+	);
 }
 
-export default App
+export default App;

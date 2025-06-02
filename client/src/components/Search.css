@@ -1,0 +1,14 @@
+.search {
+	background-color: #f4f4f4;
+	border: none;
+	border-radius: 8px;
+	padding: 0.8rem 1rem;
+	box-sizing: border-box;
+	width: 100%;
+	font-family: "unbounded";
+}
+
+.search-inner-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
