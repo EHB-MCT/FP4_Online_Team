@@ -12,7 +12,7 @@ import { PRICE_ROUTE } from "../price/price.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
 import { INFO_ROUTE } from "../info/info.route";
 import { COUNTER_ROUTE } from "../counter/counter.route";
-
+import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
 export const Root = () => {
 	const ROUTE = createHashRouter([
 		{
@@ -50,6 +50,10 @@ export const Root = () => {
 				{
 					path: INFO_ROUTE.path,
 					element: INFO_ROUTE.element,
+				},
+				{
+					path: PROJECTSDETAIL_ROUTE.path,
+					element: PROJECTSDETAIL_ROUTE.element,
 				},
 			],
 		},
