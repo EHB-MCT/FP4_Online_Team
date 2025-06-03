@@ -14,7 +14,7 @@ export const NavigationFase2 = () => {
 				</Link>
 				<ul className="nav-links">
 					<li>
-						<Link to="/" className="link">
+						<Link to="/program" className="link">
 							Programma
 						</Link>
 					</li>

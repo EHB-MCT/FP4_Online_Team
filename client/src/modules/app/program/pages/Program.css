@@ -1,0 +1,36 @@
+.program-container {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	padding: 30px;
+	width: 50%;
+	margin: 20px auto;
+	p {
+		position: absolute;
+		top: -20px;
+		left: 0;
+		font-weight: bold;
+		margin: 0;
+		padding: 10px 0 0 10px;
+	}
+}
+
+.program-title {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: #ddd;
+	padding: 10px 40px;
+	border-radius: 8px;
+	z-index: 2;
+	margin: 0;
+}
+
+.program-img {
+	width: 100%; /* adjust width as needed */
+	border-radius: 10px;
+}
+.title-wrapper {
+	margin-bottom: 30%;
+	background-image: url("../public/object1.png");
+}
