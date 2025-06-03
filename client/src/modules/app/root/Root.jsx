@@ -11,6 +11,7 @@ import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
 import { REGISTER_ROUTE } from "../register/register.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
 import { INFO_ROUTE } from "../info/info.route";
+import { COUNTER_ROUTE } from "../counter/counter.route";
 
 export const Root = () => {
 	const ROUTE = createHashRouter([

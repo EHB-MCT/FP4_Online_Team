@@ -14,7 +14,7 @@ export const Navigation = () => {
 
     return(
         <nav>
-            <div className="inner-wrapper">
+            <div className="inner-wrapper color-wrapper">
                 <NavLink to={ HOME_ROUTE.path } className='home-link'><img src={Image} alt="logo event" /></NavLink>
                 <Button
                     destinationUrl={ REGISTER_ROUTE.path }
