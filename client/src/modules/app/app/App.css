@@ -28,7 +28,7 @@
 	--subtitle-weight2: 400;
 	--subtitle-size: 14pt;
 	--h2-size: 64px;
-	--h3-size: 12pt;
+	--h3-size: 18pt;
 
   /* Button */
   --button-size: 18pt;
@@ -69,10 +69,12 @@ h1 {
 }
 h2#quick-info{
   color: #fff;
+  font-size: 14pt;
 }
 
 h2.info {
-	font-size: var(--h2-size);
+	font-size: 32pt;
+  text-align: center;
 	font-weight: var(--subtitle-weight2);
 	padding: 0;
 	margin: 0;
@@ -226,7 +228,6 @@ section {
 	justify-content: center;
 	text-align: center;
 	.hero {
-		margin-bottom: 30vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -242,19 +243,21 @@ section {
 
 .practical-info-wrapper {
 	margin-top: -30dvh;
-  padding-top: 10dvh;
+  padding-top: 20dvh;
+
 
   background-image: url("/left_image.png");
   background-repeat: no-repeat;
-  background-position: 0% 0% ;
+  background-position: 0% 18% ;
+  background-size: 35%;
 
   .background-image-right-wrapper{
     margin-top: -30dvh;
-    padding-top: 10dvh;
+    padding-top: 25dvh;
     background-image: url("/right_image.png");
     background-repeat: no-repeat;
-    background-position: 100% -20% ;
-    back
+    background-position: 100% 25% ;
+    background-size: 25%;
   }
 
 	p#more {
@@ -333,14 +336,14 @@ section.study-area-wrapper {
   }
   h2.info2{
     color: var(--green-color);
-    font-size: 48pt;
+    
   }
 }
 
 
 footer {
-	background-color: var(--orange-color);
-	margin-bottom: 0;
+	background-color: var(--font-color);
+	padding-bottom: 124px;
 
 	color: #fff;
 
@@ -442,6 +445,11 @@ footer {
 		--section-margin-bottom: 124px;
 	}
 
+  h2#quick-info{
+    color: #fff;
+    font-size: 24pt;
+  }
+
 	section.hero-wrapper {
 		background-size: 35%;
 		background-position: 0% 65%;
@@ -513,6 +521,11 @@ footer {
     }
     h2.info2{
       color: var(--green-color);
+      font-size: 48pt;
+      text-align: start;
+    }
+    h3{
+      font-size:24pt
     }
 	}
    
@@ -523,7 +536,7 @@ footer {
 }
 
 	footer {
-		background-color: #000000;
+		background-color: var(--font-color);
 		color: #fff;
 		a {
 			color: #fff;
@@ -614,6 +627,7 @@ footer {
 
 	.practical-info-wrapper {
 
+    padding-top: -10dvh;
 
     .inner-wrapper .practical-info{
       max-width: 1200px;
@@ -653,6 +667,16 @@ footer {
   .practical-info-wrapper-purple {
     background-position: 100% 24%;
     background-size: 20%;
+  }
+
+  .practical-info-wrapper {
+    background-position: 0% 0% ;
+    background-size: 25%;
+
+    .background-image-right-wrapper{
+      background-position: 100% -20% ;
+      background-size: 20%;
+    }
   }
 
 	section.study-area-wrapper {
