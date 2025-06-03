@@ -10,7 +10,8 @@ export const Price = () => {
 					<h1 id="quick-info">Prijzen </h1>
 					<p>
 						Op deze pagina presenteren we met trots de drie bijzondere prijzen die worden uitgereikt aan initiatieven die écht het verschil maken. De Publieksprijs, gekozen door het publiek, de Juryprijs, toegekend door een deskundige vakjury, en de
-						Impactprijs, voor het initiatief met de grootste maatschappelijke impact. <br /><br /> Lees verder en ontdek wie dit jaar in de spotlight staan!{" "}
+						Impactprijs, voor het initiatief met de grootste maatschappelijke impact. <br />
+						<br /> Lees verder en ontdek wie dit jaar in de spotlight staan!{" "}
 					</p>
 				</div>
 			</section>
@@ -40,12 +41,24 @@ export const Price = () => {
 					</div>
 				</div>
 
+				<h2>Innovatieprijs</h2>
+				<div className="price-div inner-wrapper">
+					<div>
+						<p>
+							De 'Innovatieprijs' beloont vernieuwende ideeën, producten of oplossingen die een aantoonbare technologische vernieuwing bevatten en bijdragen aan vooruitgang binnen een vakgebied of sector. De focus ligt op de technische uitwerking en
+							het innovatieve karakter van de toepassing.
+						</p>
+					</div>
+					<div>
+						<img className="price-img" src="/homepage-image.png" alt="" />
+					</div>
+				</div>
 				<h2>Impactprijs</h2>
 				<div className="price-div inner-wrapper">
 					<div>
 						<p>
-							De 'Impactprijs' wordt uitgereikt aan een laatstejaars project dat opvalt door maatschappelijke relevantie en de wens om het verschil te maken in de beeldvorming over een sociaal thema. Dit vanuit een unieke en eigenzinnige invalshoek
-							en betrokkenheid van de maker. Door een originele multimediale innovatieve uitwerking weet de winnaar het publiek te verbazen en een blijvende indruk achter te laten.
+							De 'Impactprijs' beloont initiatieven, projecten of innovaties die aantoonbare positieve effecten hebben op de maatschappij. De nadruk ligt op de mate waarin het idee bijdraagt aan maatschappelijke vooruitgang, het welzijn van mensen of
+							het oplossen van maatschappelijke uitdagingen.
 						</p>
 					</div>
 					<div>
