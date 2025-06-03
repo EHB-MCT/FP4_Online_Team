@@ -73,6 +73,7 @@ const Roles = ( { className, InputName, Mandatory, Placeholder, onChange} ) => {
                         <InputField 
                             className={"companyName"}
                             InputName={"Bedrijfsnaam"}
+                            InputType={"text"}
                             Mandatory={true}
                             Placeholder={"DigiMi"}
                             onChange={handleCompanyNameChange}

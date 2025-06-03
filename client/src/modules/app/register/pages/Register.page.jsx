@@ -1,18 +1,19 @@
 import { useState } from "react";
 import axios from "axios";
-// import Swal from "sweetalert2";
-
-//CSS
-import "./Register.css";
+import Swal from "sweetalert2";
+import { clsx } from 'clsx';
 
 //Components
 import InputField from "../components/InputField.jsx";
 import Roles from "../components/Roles.jsx";
 
+//CSS
+import styles from "./register.module.css";
+
 export const Register = () => {
 	document.title = "Inschrijven | Shift Festival 2025 ";
 
-	// const [swalProps, setSwalProps] = useState({});
+	const [swalProps, setSwalProps] = useState({});
 
 	const [formData, setFormData] = useState({
 		firstName: "",
@@ -38,31 +39,31 @@ export const Register = () => {
 				"https://api.shiftfestival.be/api/submit-register-form",
 				formData
 			);
-			// Swal.fire({
-			// 	title: "Success",
-			// 	text: "Your registration was successful!",
-			// 	icon: "success",
-			// });
+			Swal.fire({
+				title: "Success",
+				text: "Your registration was successful!",
+				icon: "success",
+			});
 		} catch (error) {
 			console.error("Error submitting form:", error);
 
 			let errorMessage = error.response.request.response;
 			const parsedMessage = JSON.parse(errorMessage);
 
-			// Swal.fire({
-			// 	title: "Error",
-			// 	text: parsedMessage.message,
-			// 	icon: "error",
-			// });
+			Swal.fire({
+				title: "Error",
+				text: parsedMessage.message,
+				icon: "error",
+			});
 		}
 	};
 
 	return (
-		<div className="wrapper">
-			<img src="/public/figure_pink.png" alt="" className="blob-pink" />
-			<img src="/public/figure_orange.png" alt="" className="blob-orange" />
+		<div className={clsx(styles["wrapper"])}>
+			{/* <img src="/public/figure_pink.png" alt="" className="blob-pink" />
+			<img src="/public/figure_orange.png" alt="" className="blob-orange" /> */}
 
-			<h1>Save the date</h1>
+			<h3>Save the date</h3>
 			<form onSubmit={handleSubmit}>
 				<InputField
 					className={"firstName"}
@@ -153,7 +154,7 @@ export const Register = () => {
 					</label>
 				</div>
 
-				<input type="submit" value="Inschrijven" />
+				<input type="submit" value="Inschrijven" className="button" />
 			</form>
 		</div>
 	);

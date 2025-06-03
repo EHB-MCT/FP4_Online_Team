@@ -1,14 +1,12 @@
 const express = require("express");
-const path = require('path');
+const path = require("path");
 const app = express();
 const mysql = require("mysql2");
 require("dotenv").config();
+const fs = require("fs");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-const { Client } = require('ssh2');
-const fs = require('fs');
-
-const sshClient = new Client();
+const { Client } = require("ssh2");
 
 const corsOptions = {
 	origin: "*",
@@ -18,26 +16,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors(corsOptions));
 
+
 // CSP Headers (Momenteel fout?)
-app.use((req, res, next) => {
-	res.setHeader("Content-Security-Policy",
-		"default-src 'none'; " +
-		"img-src 'self' data: https://shiftfestival.be; " +
-		"style-src 'self' 'unsafe-inline' fonts.googleapis.com use.typekit.net p.typekit.net;" +
-		"font-src fonts.gstatic.com use.typekit.net; " +
-		"script-src 'self' 'unsafe-inline'; " +
-		"connect-src 'self';"
-	);
-	next();
-});
+//app.use((req, res, next) => {
+//	res.setHeader("Content-Security-Policy",
+//		"default-src 'none'; " +
+//		"img-src 'self' data: https://shiftfestival.be; " +
+//		"style-src 'self' 'unsafe-inline' fonts.googleapis.com use.typekit.net p.typekit.net;" +
+//		"font-src fonts.gstatic.com use.typekit.net; " +
+//		"script-src 'self' 'unsafe-inline'; " +
+//		"connect-src 'self';"
+//	);
+//	next();
+//});
 
 // Frontend
-app.use(express.static(path.join(__dirname, '/client/dist')));
-
-app.get('/*\w', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/dist/index.html'));
-});
-
 // app.use(express.static(path.join(__dirname, '/www')));
 
 // app.get('/*\w', (req, res) => {
@@ -45,12 +38,14 @@ app.get('/*\w', (req, res) => {
 // });
 
 // Database volgens SSH
+// MySQL & SSH Config
+
 const dbConfig = {
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE,
-    port: 3306
+	host: process.env.DB_HOST,
+	user: process.env.DB_USER,
+	password: process.env.DB_PASSWORD,
+	database: process.env.DB_DATABASE,
+	port: 3306,
 };
 
 const tunnelConfig = {
@@ -59,53 +54,52 @@ const tunnelConfig = {
     username: process.env.DB_SSH_USER,
     privateKey: fs.readFileSync(process.env.SSH_PK_PATH)
 };
-
 const forwardConfig = {
-    srcHost: '127.0.0.1',
-    srcPort: 3306,
-    dstHost: dbConfig.host,
-    dstPort: dbConfig.port
+	srcHost: "127.0.0.1",
+	srcPort: 3306,
+	dstHost: dbConfig.host,
+	dstPort: dbConfig.port,
 };
 
-const SSHConnection = new Promise((resolve, reject) => {
-    sshClient.on('ready', () => {
-        console.log("SSH connection established.");
-        
-        sshClient.forwardOut(
-            forwardConfig.srcHost,
-            forwardConfig.srcPort,
-            forwardConfig.dstHost,
-            forwardConfig.dstPort,
-            (err, stream) => {
-                if (err) {
-                    console.error("Error forwarding SSH tunnel:", err);
-                    return reject(err);
-                }
+// Dynamic SSH Tunnel and MySQL Connection (per request)
+function createSshTunnelAndConnection(callback) {
+	const ssh = new Client();
 
-                const updatedDbConfig = {
-                    ...dbConfig,
-                    stream
-                };
+	ssh
+		.on("ready", () => {
+			ssh.forwardOut(forwardConfig.srcHost, forwardConfig.srcPort, forwardConfig.dstHost, forwardConfig.dstPort, (err, stream) => {
+				if (err) {
+					ssh.end();
+					return callback(err);
+				}
 
-                const connection = mysql.createConnection(updatedDbConfig);
-                connection.connect(error => {
-                    if (error) {
-                        console.error("Failed to connect to the database:", error);
-                        return reject(error);
-                    }
+				const connection = mysql.createConnection({
+					...dbConfig,
+					stream,
+				});
 
-                    console.log("Successfully connected to the database through SSH tunnel.");
-                    resolve(connection);
-                });
-            }
-        );
-    }).on('error', (err) => {
-        console.error("SSH connection error:", err);
-        reject(err);
-    }).connect(tunnelConfig);
-});
+				connection.connect((error) => {
+					if (error) {
+						stream.destroy();
+						ssh.end();
+						return callback(error);
+					}
 
-// Automatic mails
+					connection.on("end", () => ssh.end());
+					connection.on("error", () => ssh.end());
+
+					callback(null, connection);
+				});
+			});
+		})
+		.connect(tunnelConfig);
+
+	ssh.on("error", (err) => {
+		callback(err);
+	});
+}
+
+// Email Transport
 const transporter = nodemailer.createTransport({
 	host: "smtp-auth.mailprotect.be",
 	port: 465,
@@ -121,24 +115,58 @@ const sendEmail = async (to, name) => {
 	try {
 		const info = await transporter.sendMail({
 			from: '"Shift Festival" <info@shiftfestival.be>',
-			to: to,
+			to,
 			subject: `Welkom bij Shift Festival, ${name}!`,
 			text: `Hallo ${name}, bedankt voor je inschrijving bij Shift Festival! We kijken ernaar uit om je te verwelkomen.`,
-			html: `<h1>Welkom bij Shift, ${name}!</h1> 
-					<p>Hallo ${name},</p> 
-					<p>Bedankt voor je inschrijving voor <strong>Shift</strong>! 
-					We zijn enthousiast om je te verwelkomen op ons evenement.</p> 
-					
-					<h2>Waar en wanneer:</h2> 
-					<p><strong>Vrijdag 20 juni 2025</strong> van 17:00 tot 21:00 uur (doorlopend expo en workshops)</p> 
-					<p>Award-uitreiking om 20:00 uur</p> 
-					<p><strong>Locatie:</strong> Erasmushogeschool Brussel, Nijverheidskaai 170, 1070 Anderlecht</p> 
-					<p>Alle info vind je op de <a href="https://shiftfestival.be" target="_blank">website</a></p> 
-					<p>Vergeet zeker niet om je in te schrijven voor de barbecue!</p> 
-					<p>Nogmaals bedankt voor je inschrijving. Tot op <strong>Shift</strong>!</p> 
-					<p>Met vriendelijke groet,</p> 
-					<p>Het Promotieteam van Shift</p> 
-					<p>Studenten Multimedia en Creatieve Technologie, Erasmushogeschool Brussel</p>`,
+
+			html: `
+          <div style="font-family: 'Arial', sans-serif; background-color: #ffffff; color: #333; padding: 40px; max-width: 600px; margin: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <img src="https://shiftfestival.be/Logo.svg" alt="Shift Logo" style="width: 120px; margin-bottom: 30px;">
+
+            <h1 style="color: #E62474; font-size: 28px; margin-bottom: 10px;">Welkom bij Shift, ${name}!</h1>
+            
+            <p style="font-size: 16px; line-height: 1.6;">
+              Hallo ${name},<br>
+              Bedankt voor je inschrijving voor <strong style="color: #97EB4E;">Shift</strong>! 
+              We zijn enthousiast om je te verwelkomen op ons evenement.
+            </p>
+
+            <h2 style="color: #97EB4E; font-size: 20px; margin-top: 30px;">📍 Waar en wanneer:</h2>
+            <p style="font-size: 16px; line-height: 1.6;">
+              <strong>Vrijdag 20 juni 2025</strong> van 17:00 tot 21:00 uur <br>
+              (doorlopend expo en workshops)<br>
+              <strong>Award-uitreiking:</strong> 20:00 uur<br>
+              <strong>Locatie:</strong> Erasmushogeschool Brussel,<br> 
+              Nijverheidskaai 170, 1070 Anderlecht
+            </p>
+
+            <p style="font-size: 16px; line-height: 1.6;">
+              Alle info vind je op de <a href="https://shiftfestival.be" target="_blank" style="color: #E62474; text-decoration: none;">website</a>.
+            </p>
+
+            <p style="font-size: 16px; line-height: 1.6;">
+              Vergeet zeker niet om je in te schrijven voor de barbecue!
+            </p>
+
+            <div style="margin: 30px 0; text-align: center;">
+              <a href="https://shiftfestival.be" style="background-color: #97EB4E; color: #000; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: bold;">
+                Bekijk Website
+              </a>
+            </div>
+
+            <p style="font-size: 16px; line-height: 1.6;">
+              Nogmaals bedankt voor je inschrijving. Tot op <strong style="color: #E62474;">Shift</strong>!
+            </p>
+
+            <p style="font-size: 14px; line-height: 1.6; color: #666;">
+              Met vriendelijke groet,<br>
+              Het Promotieteam van Shift<br>
+              Studenten Multimedia en Creatieve Technologie,<br>
+              Erasmushogeschool Brussel
+            </p>
+          </div>
+        `,
+
 		});
 
 		console.log("✅ E-mail succesvol verzonden naar:", to);
@@ -148,49 +176,86 @@ const sendEmail = async (to, name) => {
 	}
 };
 
-// Test api call
+// Test API route
 app.get("/api", (req, res) => {
 	res.json({ fruits: ["apple", "banana", "grape"] });
 });
 
-// Form voor inschrijvingen
+// Form submission route
 app.post("/api/submit-register-form", (req, res) => {
-  SSHConnection.then(connection => {
-    const { firstName, lastName, email, roles, amount, message, subscribeToUpdates } = req.body;
+	createSshTunnelAndConnection((err, connection) => {
+		if (err) {
+			console.error("SSH/DB connection failed:", err);
+			return res.status(500).json({ message: "Database connection error" });
+		}
 
-    if (!firstName || !lastName || !email || !roles || !amount) {
-      return res.status(400).json({ message: "All fields are required" });
-    }
+		const { firstName, lastName, email, roles, amount, message, subscribeToUpdates } = req.body;
 
-    const checkMailQuery = `SELECT COUNT(*) AS email_count FROM event_registrations WHERE email = ?`;
-    connection.query(checkMailQuery, [email], (err, results) => {
-      if (err) {
-        console.error("Error querying database:", err);
-        return res.status(500).json({ message: "Sorry something went wrong" });
-      }
+		if (!firstName || !lastName || !email || !roles || !amount) {
+			connection.end();
+			return res.status(400).json({ message: "All fields are required" });
+		}
 
-      if (results[0].email_count !== 0) {
-        return res.status(409).json({ message: "Email is reeds gebruikt" });
-      }
+		const checkMailQuery = `SELECT COUNT(*) AS email_count FROM event_registrations WHERE email = ?`;
+		connection.query(checkMailQuery, [email], (err, results) => {
+			if (err) {
+				console.error("Query error:", err);
+				connection.end();
+				return res.status(500).json({ message: "Database query error" });
+			}
 
-      const role = roles[0];
-      const roleName = role.role;
-      const companyName = role.companyName;
-      const sponsor = role.sponsorship;
+			if (results[0].email_count !== 0) {
+				connection.end();
+				return res.status(409).json({ message: "Email is reeds gebruikt" });
+			}
 
-      const sql = "INSERT INTO event_registrations (first_name, last_name, email, num_attendees, message, wants_event_updates, role, company_name, wants_sponsorship) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-      connection.query(sql, [firstName, lastName, email, amount, message, [subscribeToUpdates ? 1 : 0], roleName, companyName, sponsor], (err, result) => {
-        if (err) {
-          console.error("Error inserting data:", err);
-          return res.status(500).json({ message: "Sorry something went wrong" });
-        }
-        res.status(200).json({ message: "Data inserted successfully" });
+			const role = roles[0];
+			const roleName = role.role;
+			const companyName = role.companyName;
+			const sponsor = role.sponsorship;
 
-        //sendmail function
-        sendEmail(email, firstName);
-      });
-    });
-  });
+			const sql = `
+                INSERT INTO event_registrations
+                (first_name, last_name, email, num_attendees, message, wants_event_updates, role, company_name, wants_sponsorship)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+
+			const values = [firstName, lastName, email, amount, message, subscribeToUpdates ? 1 : 0, roleName, companyName, sponsor];
+
+			connection.query(sql, values, (err, result) => {
+				connection.end();
+
+				if (err) {
+					console.error("Insert error:", err);
+					return res.status(500).json({ message: "Database insert error" });
+				}
+
+				res.status(200).json({ message: "Data inserted successfully" });
+				sendEmail(email, firstName);
+			});
+		});
+	});
+});
+
+app.get("/api/counter", (req, res) => {
+	createSshTunnelAndConnection((err, connection) => {
+		if (err) {
+			console.error("SSH/DB connection failed:", err);
+			return res.status(500).json({ message: "Database connection error" });
+		}
+
+		const countUsers = `SELECT SUM(num_attendees) AS total FROM event_registrations`;
+
+		connection.query(countUsers, (err, results) => {
+			connection.end();
+
+			if (err) {
+				console.error("Error querying database:", err);
+				return res.status(500).json({ message: "Sorry something went wrong" });
+			}
+
+			res.json({ count: results[0].total || 0 });
+		});
+	});
 });
 
 // Starten app

@@ -1,11 +1,13 @@
 import { Link, NavLink } from 'react-router';
-import Image from '/Logo.svg';
 
 //Components
 import Button from '../button/Button.jsx';
 
 //Route
 import { REGISTER_ROUTE } from '../../app/register/register.route.jsx';
+
+//Images
+import Image from '/Logo_white.svg';
 
 export const Footer = () => {
 

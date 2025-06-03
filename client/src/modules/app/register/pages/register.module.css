@@ -1,4 +1,8 @@
-/* === LAYOUT === */
+.wrapper{
+	background-color: #ef4478;
+	padding: 32px 0;
+}
+
 form {
 	display: flex;
 	flex-direction: column;
@@ -8,16 +12,18 @@ form {
 	padding: 0 1rem;
 }
 
-h1 {
+
+h3 {
 	text-align: center;
 	margin-bottom: 20px;
+	color: #f4f4f4;
 }
 
 h4 {
 	margin-bottom: 0.25rem;
 }
 
-/* === FORM ELEMENTS === */
+
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -32,17 +38,20 @@ select {
 	font-family: "unbounded";
 }
 
+input:focus{
+	outline: none;
+}
+
 textarea {
 	resize: none;
 	height: 100px;
 }
 
-/* === SUBMIT BUTTON === */
+
 input[type="submit"] {
 	border: none;
 	font-weight: bold;
 	cursor: pointer;
-	width: fit-content;
 	align-self: center;
 	margin-top: 50px;
 	margin-bottom: 60px;
@@ -60,32 +69,9 @@ input[type="submit"] {
 	margin-bottom: 0.5rem;
 }
 
-/* === Decorative figures (only on desktop) === */
-.blob-pink {
-	position: fixed;
-	bottom: 10vh;
-	left: 0vw;
-	width: 20vw;
-	z-index: -1;
-	pointer-events: none;
-}
-
-.blob-orange {
-	position: fixed;
-	top: 20vh;
-	right: 0vw;
-	width: 25vw;
-	z-index: -1;
-	pointer-events: none;
-}
 
 @media (max-width: 768px) {
-	.blob-orange,
-	.blob-pink {
-		display: none;
-	}
-
 	form {
 		max-width: 20rem;
 	}
-}
+} 
