@@ -1,3 +1,4 @@
+
 import { createHashRouter, RouterProvider } from "react-router"
 
 //Components
@@ -34,6 +35,9 @@ export const Root = () => {
 					element: PRIVACY_POLICY_ROUTE.element,
 				},
 				{
+					path: COUNTER_ROUTE.path,
+					element: COUNTER_ROUTE.element,
+
 					path: VOTING_ROUTE.path,
 					element: VOTING_ROUTE.element,
 				},
