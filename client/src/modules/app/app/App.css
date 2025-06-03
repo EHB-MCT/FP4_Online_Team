@@ -76,7 +76,7 @@ h3{
 }
 
 
-a.button{
+.button{
   display: inline-block;
 
   background-color: var(--button-color);
@@ -90,6 +90,15 @@ a.button{
   font-family: var(--main-font);
   font-size: var(--button-size);
   font-weight: var(--subtitle-weight);
+}
+.filter{
+  padding: 5px 35px;
+  font-size: 12pt;
+}
+
+.filter-button-wrapper{
+  display: flex;
+  justify-content: space-between;
 }
 
 ul{
