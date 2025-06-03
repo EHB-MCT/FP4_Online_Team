@@ -30,12 +30,12 @@
 	--h2-size: 64px;
 	--h3-size: 12pt;
 
-	/* Button */
-	--button-size: 14pt;
-	--button-padding: 18px 50px;
-	--button-margin: 24px 0;
-	--border-radius: 15px;
-	--button-color: #cedc29;
+  /* Button */
+  --button-size: 18pt;
+  --button-padding: 22px 75px;
+  --button-margin: 24px 0;
+  --border-radius: 15px;
+  --button-color: #cedc29;
 
 	/*Background color*/
 	--background-color: #ef4478;
@@ -92,7 +92,7 @@ h3 {
 
 	border-radius: var(--border-radius);
 
-	color: #fff;
+  color: var(--font-color);
 
   font-family: var(--main-font);
   font-size: var(--button-size);
@@ -156,12 +156,12 @@ nav {
 	font-size: 48pt;
 }
 
-input[type="submit"] {
-	border-radius: var(--border-radius);
-	background-color: var(--button-color);
-	color: #fff;
-	padding: var(--button-padding);
-	font-family: var(--main-font);
+input[type="submit"]{
+  border-radius: var(--border-radius);
+  background-color: var(--button-color);
+  color: var(--font-color);
+  padding: var(--button-padding);
+  font-family: var(--main-font);
 }
 
 section {
@@ -470,7 +470,7 @@ footer {
 			color: #fff;
 		}
 		.button {
-			color: #000000;
+      color: var(--font-color);
 		}
 
 		.inner-wrapper {
