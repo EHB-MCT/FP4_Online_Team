@@ -1,7 +1,7 @@
 [
     {
         "id": "BoutaarourtAbdella_SkillSwap",
-        "student": "Boutaarourt,Abdella",
+        "student": "Boutaarourt Abdella",
         "description": "Platform waar gebruikers vaardigheden uitwisselen en leren via gamification",
         "category": "Web & Mobile",
         "promotor": "Bert (8)",
@@ -9,7 +9,7 @@
     },
     {
         "id": "GistelinckRemy_NeuroBlocks",
-        "student": "Gistelinck,Remy",
+        "student": "Gistelinck Remy",
         "description": "Interactieve Tetris-toepassing om AI-leeralgoritmes visueel te vergelijken",
         "category": "Web & Mobile",
         "promotor": "Bert (8)",
@@ -17,7 +17,7 @@
     },
     {
         "id": "LanghendriesMilan_Notdefinedyet",
-        "student": "Langhendries,Milan",
+        "student": "Langhendries Milan",
         "description": "Niet deelgenomen aan jury",
         "category": "Web & Mobile",
         "promotor": "Bert (8)",
@@ -25,7 +25,7 @@
     },
     {
         "id": "VankriekingeRyan_Codeucation",
-        "student": "Vankriekinge,Ryan",
+        "student": "Vankriekinge Ryan",
         "description": "Platform met automatische code-evaluatie om informaticaonderwijs te verbeteren voor leerkrachten zonder programmeerkennis",
         "category": "Web & Mobile",
         "promotor": "Bert (8)",
@@ -33,7 +33,7 @@
     },
     {
         "id": "VerherstraetenKarsten_ORDENA",
-        "student": "Verherstraeten,Karsten",
+        "student": "Verherstraeten Karsten",
         "description": "Verherstraeten,Karsten",
         "category": "Web & Mobile",
         "promotor": "Bert (8)",
@@ -41,7 +41,7 @@
     },
     {
         "id": "VanhaelenJasper_GreenBuilder",
-        "student": "Vanhaelen,Jasper",
+        "student": "Vanhaelen Jasper",
         "description": "Milieuvriendelijke mobiele city builder game die duurzaam gedrag stimuleert bij spelers",
         "category": "XR, 3D, Game",
         "promotor": "Bert (8)",
@@ -49,7 +49,7 @@
     },
     {
         "id": "VettorelGregory_OceanScape",
-        "student": "Vettorel,Gregory",
+        "student": "Vettorel Gregory",
         "description": "Realistische zeilsimulator met VR en toegankelijkheid voor leren, ontspanning en onderzoek",
         "category": "XR, 3D, Game",
         "promotor": "Bert (8)",
@@ -57,7 +57,7 @@
     },
     {
         "id": "DePauwJules_Pose",
-        "student": "DePauw,Jules",
+        "student": "DePauw Jules",
         "description": "Yoga-app die via computer vision realtime feedback geeft op houdingen",
         "category": "Experience Design",
         "promotor": "Dennis (5)",
@@ -65,7 +65,7 @@
     },
     {
         "id": "DeReuseJulien_InteractieveSportinstallatie",
-        "student": "DeReuse,Julien",
+        "student": "DeReuse Julien",
         "description": "Sportinstallatie die hartslag koppelt aan visuals en muziek om motivatie tijdens sporten te verhogen",
         "category": "Experience Design",
         "promotor": "Dennis (5)",
@@ -73,7 +73,7 @@
     },
     {
         "id": "ClaeyeJef_HetVisualiserenvanSnelheidenKrachten",
-        "student": "Claeye,Jef",
+        "student": "Claeye Jef",
         "description": "Visualisatie van snelheid en krachten uit racesimulaties via real-time motion graphics",
         "category": "Interactive Motion",
         "promotor": "Dennis (5)",
@@ -81,7 +81,7 @@
     },
     {
         "id": "GeysJorbe_CAVA–CleanAutonomousVisionAcquisition",
-        "student": "Geys, Jorbe",
+        "student": "Geys Jorbe",
         "description": "Autonome afvalverzamelrobot voor festivals met vision tracking, rapportage en oplaadstations",
         "category": "Prototyping",
         "promotor": "Dennis (5)",
@@ -89,7 +89,7 @@
     },
     {
         "id": "AadimZiad_ARDrawingTutor",
-        "student": "Aadim,Ziad",
+        "student": "Aadim Ziad",
         "description": "AR-app voor Meta Quest 3 die beginnende tekenaars stap voor stap leert tekenen op papier",
         "category": "XR, 3D, Game",
         "promotor": "Dennis (5)",
@@ -97,7 +97,7 @@
     },
     {
         "id": "BenallalMehdi_Notdefinedyet",
-        "student": "Benallal, Mehdi",
+        "student": "Benallal Mehdi",
         "description": "Niet deelgenomen aan jury",
         "category": "XR, 3D, Game",
         "promotor": "Dennis (5)",
@@ -105,7 +105,7 @@
     },
     {
         "id": "BelaouchiMeryam_MinecraftTheExperience",
-        "student": "Belaouchi,Meryam",
+        "student": "Belaouchi Meryam",
         "description": "Interactieve installatie die Minecraft tot leven brengt met motion tracking, projecties en fysieke objecten",
         "category": "Experience Design",
         "promotor": "Jan E (8)",
@@ -113,7 +113,7 @@
     },
     {
         "id": "BouabdellahDikra_ToerismeenTechnologie",
-        "student": "Bouabdellah,Dikra",
+        "student": "Bouabdellah Dikra",
         "description": "Interactieve installatie over de legende van de Grot van Hercules om toeristen naar Tanger te trekken",
         "category": "Experience Design",
         "promotor": "Jan E (8)",
@@ -121,7 +121,7 @@
     },
     {
         "id": "FrederickxAmber_EenzaamheidopTafel",
-        "student": "Frederickx,Amber",
+        "student": "Frederickx Amber",
         "description": "Installatie en boek die studenten helpt gevoelens van eenzaamheid bespreekbaar te maken",
         "category": "Experience Design",
         "promotor": "Jan E (8)",
@@ -129,7 +129,7 @@
     },
     {
         "id": "OzcanAylin_OptimalisatievanSocialeDeductieveSpellen",
-        "student": "Ozcan,Aylin",
+        "student": "Ozcan Aylin",
         "description": "Optimalisatie van sociale deductiespellen voor cafés via NFC-kaarten, projecties en geluid",
         "category": "Experience Design",
         "promotor": "Jan E (8)",
@@ -137,7 +137,7 @@
     },
     {
         "id": "PouleurLouisJames_ILLUMINATE",
-        "student": "Pouleur,LouisJames",
+        "student": "Pouleur LouisJames",
         "description": "Interactieve installatie die de impact van Instagram-notificaties op jongeren visualiseert",
         "category": "Experience Design",
         "promotor": "Jan E (8)",
@@ -145,7 +145,7 @@
     },
     {
         "id": "ErnouldAchille_HudHelmet",
-        "student": "Ernould,Achille",
+        "student": "Ernould Achille",
         "description": "Heads-up display en mobiele app voor veiliger motornavigeren via subtiele visuele aanwijzingen",
         "category": "Prototyping",
         "promotor": "Jan E (8)",
@@ -153,7 +153,7 @@
     },
     {
         "id": "LopesOliveiraIgor_SmartPunchingBagSPB",
-        "student": "LopesOliveira,Igor",
+        "student": "LopesOliveira Igor",
         "description": "Slimme bokszak met sensoren en app voor beginnende boksers die real-time feedback geeft",
         "category": "Prototyping",
         "promotor": "Jan E (8)",
@@ -161,7 +161,7 @@
     },
     {
         "id": "AsanteStephen_HetMuseumvanAnansi",
-        "student": "Asante,Stephen",
+        "student": "Asante Stephen",
         "description": "Educatieve 3D-game die jongeren van Ghanese afkomst spelenderwijs de Ghanese taal en cultuur laat ontdekken",
         "category": "XR, 3D, Game",
         "promotor": "Jan E (8)",
@@ -169,7 +169,7 @@
     },
     {
         "id": "ClementSarah_Notdefinedyet",
-        "student": "Clement,Sarah",
+        "student": "Clement Sarah",
         "description": "Niet deelgenomen aan jury",
         "category": "XR, 3D, Game",
         "promotor": "Jan S (6)",
@@ -177,7 +177,7 @@
     },
     {
         "id": "DeClerckRobbeMosselmansLiam_TAG",
-        "student": "DeClerck,Robbe & Mosselmans,Liam",
+        "student": "DeClerck Robbe & Mosselmans Liam",
         "description": "1v1 multiplayer parkourgame waarin spelers elkaar taggen in een realistische, fysieke omgeving",
         "category": "XR, 3D, Game",
         "promotor": "Jan S (6)",
@@ -185,15 +185,15 @@
     },
     {
         "id": "JanssenMichiel_QuestForge",
-        "student": "Janssen,Michiel",
+        "student": "Janssen Michiel",
         "description": "Dynamisch quest-generatiesysteem dat spelerkeuzes omzet in betekenisvolle missies",
         "category": "XR, 3D, Game",
         "promotor": "Jan S (6)",
-        "project_name": "QuestForge"
+        "project_name": "FateQuest"
     },
     {
         "id": "LambeauGauthierPaceAlkhomailiNoham_NeonEscapeOperation",
-        "student": "Lambeau,Gauthier & PaceAlkhomaili,Noham",
+        "student": "Lambeau Gauthier & PaceAlkhomaili Noham",
         "description": "Game die beweging stimuleert",
         "category": "XR, 3D, Game",
         "promotor": "Jan S (6)",
@@ -201,7 +201,7 @@
     },
     {
         "id": "RauwAmaury_VRVR",
-        "student": "Rauw,Amaury",
+        "student": "Rauw Amaury",
         "description": "VR-simulator die jongeren bewust maakt van de gevaren van drugsgebruik via interactieve ervaringen",
         "category": "XR, 3D, Game",
         "promotor": "Jan S (6)",
@@ -209,7 +209,7 @@
     },
     {
         "id": "ZobairZaid_WatchersRite",
-        "student": "Zobair,Zaid",
+        "student": "Zobair Zaid",
         "description": "Multiplayer motion tracking game zonder VR, die sociale interactie en fysieke beweging stimuleert",
         "category": "XR, 3D, Game",
         "promotor": "Jan S (6)",
@@ -217,7 +217,7 @@
     },
     {
         "id": "BuscemiNicolas_UrbanEchoes",
-        "student": "Buscemi,Nicolas",
+        "student": "Buscemi Nicolas",
         "description": "Interactieve installatie die agorafobie tastbaar maakt via audiovisuele overprikkeling en biofeedback",
         "category": "Experience Design",
         "promotor": "Jan VC (10)",
@@ -225,7 +225,7 @@
     },
     {
         "id": "ClaeysJonathan_Flowtales",
-        "student": "Claeys,Jonathan",
+        "student": "Claeys Jonathan",
         "description": "Interactieve website impact sociale media",
         "category": "Web & Mobile",
         "promotor": "Jan VC (10)",
@@ -233,7 +233,7 @@
     },
     {
         "id": "DobrunaZani_Carbe",
-        "student": "Dobruna,Zani",
+        "student": "Dobruna Zani",
         "description": "Platform voor gedeelde mobiliteit met blockchain-identificatie, reputatiesysteem en openbaar vervoer integratie",
         "category": "Web & Mobile",
         "promotor": "Jan VC (10)",
@@ -241,7 +241,7 @@
     },
     {
         "id": "FavoreelNelle_Memoraa",
-        "student": "Favoreel,Nelle",
+        "student": "Favoreel Nelle",
         "description": "Platform voor het delen en bewaren van familie reizen",
         "category": "Web & Mobile",
         "promotor": "Jan VC (10)",
@@ -249,7 +249,7 @@
     },
     {
         "id": "SaahMitch_TuinMeister",
-        "student": "Saah,Mitch",
+        "student": "Saah Mitch",
         "description": "Slim waterbeheersysteem voor tuinen met AI, sensoren en mobiele app",
         "category": "Web & Mobile",
         "promotor": "Jan VC (10)",
@@ -257,7 +257,7 @@
     },
     {
         "id": "VanHemelrijckStephan_Lexora",
-        "student": "Van Hemelrijck, Stephan",
+        "student": "Van Hemelrijck Stephan",
         "description": "AI-taalapp met gepersonaliseerde leerervaring, gamificatie en real-time feedback",
         "category": "Web & Mobile",
         "promotor": "Jan VC (10)",
@@ -265,7 +265,7 @@
     },
     {
         "id": "BastienMaxime_HOPE",
-        "student": "Bastien,Maxime",
+        "student": "Bastien Maxime",
         "description": "2D-game over mentale gezondheid van jongvolwassenen met focus op visuele storytelling en emoties",
         "category": "XR, 3D, Game",
         "promotor": "Jan VC (10)",
@@ -273,7 +273,7 @@
     },
     {
         "id": "ImnadineSabri_Klimaatbewustzijn",
-        "student": "Imnadine,Sabri",
+        "student": "Imnadine Sabri",
         "description": "Educatieve light novel-game die jongeren bewust maakt van klimaatverandering via storytelling en keuzes",
         "category": "XR, 3D, Game",
         "promotor": "Jan VC (10)",
@@ -281,7 +281,7 @@
     },
     {
         "id": "RashidMohammad_LinkUp",
-        "student": "Rashid,Mohammad",
+        "student": "Rashid Mohammad",
         "description": "Videogame digitale kloof",
         "category": "XR, 3D, Game",
         "promotor": "Jan VC (10)",
@@ -289,7 +289,7 @@
     },
     {
         "id": "BerckmansKobe_BurenvorBuren",
-        "student": "Berckmans,Kobe",
+        "student": "Berckmans Kobe",
         "description": "Platform voor lokale burenhulp met vrijwilligersmatching",
         "category": "Web & Mobile",
         "promotor": "Johan (3)",
@@ -297,7 +297,7 @@
     },
     {
         "id": "ElMajdoubiWail_SocialBalans",
-        "student": "ElMajdoubi,Wail",
+        "student": "ElMajdoubi Wail",
         "description": "App die jongeren helpt een gezondere balans te vinden tussen schermtijd en offline leven",
         "category": "Web & Mobile",
         "promotor": "Johan (3)",
@@ -305,7 +305,7 @@
     },
     {
         "id": "HasanTaha_Notdefinedyet",
-        "student": "Hasan,Taha",
+        "student": "Hasan Taha",
         "description": "Geen magazine ingediend",
         "category": "Web & Mobile",
         "promotor": "Johan (3)",
@@ -313,7 +313,7 @@
     },
     {
         "id": "UnutkanBerkay_SkillShareHub",
-        "student": "Unutkan,Berkay",
+        "student": "Unutkan Berkay",
         "description": "Online platform voor lokale kennisuitwisseling met AI, blockchain en gamificatie om sociale cohesie te versterken",
         "category": "Web & Mobile",
         "promotor": "Johan (3)",
@@ -321,7 +321,7 @@
     },
     {
         "id": "AhmadNabras_LeveninGaza",
-        "student": "Ahmad,Nabras",
+        "student": "Ahmad Nabras",
         "description": "Interactieve installatie die via video en Arduino het leven in Gaza tastbaar maakt voor een Westers publiek",
         "category": "Experience Design",
         "promotor": "Joni (5)",
@@ -329,7 +329,7 @@
     },
     {
         "id": "DeVosFreya_UnderPressure",
-        "student": "De Vos, Freya",
+        "student": "De Vos Freya",
         "description": "Interactieve installatie die stress meet en visualiseert via hartslag",
         "category": "Experience Design",
         "promotor": "Joni (5)",
@@ -337,7 +337,7 @@
     },
     {
         "id": "vanUdenRachelle_PseudoWat",
-        "student": "vanUden,Rachelle",
+        "student": "vanUden Rachelle",
         "description": "Interactief platform met 3D-animaties dat zeldzame kanker (PMP) op een toegankelijke manier uitlegt",
         "category": "Interactive Motion",
         "promotor": "Joni (5)",
@@ -345,7 +345,7 @@
     },
     {
         "id": "BarillaSandro_Tagbox",
-        "student": "Barilla,Sandro",
+        "student": "Barilla Sandro",
         "description": "Fysieke Spotify-jukebox met RFID-kaartjes voor interactieve muziekbeleving",
         "category": "Prototyping",
         "promotor": "Joni (5)",
@@ -353,7 +353,7 @@
     },
     {
         "id": "BuelensMikolajBietsRowan_KattenTracker",
-        "student": "Buelens,Mikolaj & Biets,Rowan",
+        "student": "Buelens Mikolaj & Biets Rowan",
         "description": "Elektronische halsband met app om katten in realtime te volgen en hun veiligheid te garanderen",
         "category": "Prototyping",
         "promotor": "Joni (5)",
@@ -361,7 +361,7 @@
     },
     {
         "id": "DebonnetFolkert_UrbanOasis",
-        "student": "Debonnet, Folkert",
+        "student": "Debonnet Folkert",
         "description": "Interactieve licht- en geluidsinstallatie die rust creëert in drukke stedelijke ruimtes via natuurlijke stimuli",
         "category": "Experience Design",
         "promotor": "Mike (8)",
@@ -369,7 +369,7 @@
     },
     {
         "id": "BillietMiguel_DynamischCMSvoorzelfstandigen",
-        "student": "Billiet, Miguel",
+        "student": "Billiet Miguel",
         "description": "SaaS-platform waarmee zelfstandigen eenvoudig content kunnen beheren op hun website",
         "category": "Web & Mobile",
         "promotor": "Mike (8)",
@@ -377,7 +377,7 @@
     },
     {
         "id": "HeusdensThomas_Trivista",
-        "student": "Heusdens,Thomas",
+        "student": "Heusdens Thomas",
         "description": "Mobiele app die beginnende triatleten ondersteunt via AI-routeplanning, trainingsschema’s en motivatie",
         "category": "Web & Mobile",
         "promotor": "Mike (8)",
@@ -385,7 +385,7 @@
     },
     {
         "id": "MengaGlory_Samply",
-        "student": "Menga,Glory",
+        "student": "Menga Glory",
         "description": "App Beatmakers AI",
         "category": "Web & Mobile",
         "promotor": "Mike (8)",
@@ -393,7 +393,7 @@
     },
     {
         "id": "StoikosMichael_Notdefinedyet",
-        "student": "Stoikos,Michael",
+        "student": "Stoikos Michael",
         "description": "Niet deelgenomen aan jury",
         "category": "Web & Mobile",
         "promotor": "Mike (8)",
@@ -401,7 +401,7 @@
     },
     {
         "id": "SunaertJochen_PlotTwist",
-        "student": "Sunaert,Jochen",
+        "student": "Sunaert Jochen",
         "description": "Multiplayer partygame met AI die verhalen genereert en spelers beoordeelt",
         "category": "Web & Mobile",
         "promotor": "Mike (8)",
@@ -409,7 +409,7 @@
     },
     {
         "id": "TaziYassine_DalilTalk",
-        "student": "Tazi,Yassine",
+        "student": "Tazi Yassine",
         "description": "Platform voor interreligieuze debatten met live video, bronverificatie en contextuele toelichting",
         "category": "Web & Mobile",
         "promotor": "Mike (8)",
@@ -417,7 +417,7 @@
     },
     {
         "id": "AhdiSafwane_PCBuilder",
-        "student": "Ahdi,Safwane",
+        "student": "Ahdi Safwane",
         "description": "Educatief AR-platform dat gebruikers leert een PC te bouwen via interactieve simulaties",
         "category": "XR, 3D, Game",
         "promotor": "Mike (8)",
@@ -425,7 +425,7 @@
     },
     {
         "id": "VandenbusscheKian_Van2Dnaar3DmodelsmetAI",
-        "student": "Vandenbussche,Kian",
+        "student": "Vandenbussche Kian",
         "description": "AI-gestuurde tool die automatisch 2D-beelden omzet in geoptimaliseerde 3D-modellen voor diverse sectoren",
         "category": "XR, 3D, Game",
         "promotor": "Mike (8)",
@@ -433,7 +433,7 @@
     },
     {
         "id": "LambeensWannes_AuditieveFotoreeks",
-        "student": "Lambeens,Wannes",
+        "student": "Lambeens Wannes",
         "description": "Auditieve fotoreeks die visuele data vertaalt naar soundscapes voor slechtzienden",
         "category": "Experience Design",
         "promotor": "Stefan (8)",
@@ -441,7 +441,7 @@
     },
     {
         "id": "LMaimouniNail_StepIntoTheStruggle",
-        "student": "LMaimouni,Nail",
+        "student": "LMaimouni Nail",
         "description": "Interactieve installatie die jongeren uit kwetsbare wijken via keuzes en motion tracking bewust maakt van hun toekomst",
         "category": "Interactive Motion",
         "promotor": "Stefan (8)",
@@ -449,7 +449,7 @@
     },
     {
         "id": "VanBergenTuur_CreativeArcade",
-        "student": "VanBergen,Tuur",
+        "student": "VanBergen Tuur",
         "description": "Interactieve visual novel over mentale gezondheid bij jongeren met focus op keuzes en emotionele beleving",
         "category": "Interactive Motion",
         "promotor": "Stefan (8)",
@@ -457,7 +457,7 @@
     },
     {
         "id": "AuassarYoussef_YouthsDream",
-        "student": "Auassar,Youssef",
+        "student": "Auassar Youssef",
         "description": "Visuele webapp die jongeren helpt hun droomjob en studiekeuze te ontdekken via persoonlijkheidstesten",
         "category": "Web & Mobile",
         "promotor": "Stefan (8)",
@@ -465,7 +465,7 @@
     },
     {
         "id": "DriesenMarten_Simulectra",
-        "student": "Driesen,Marten",
+        "student": "Driesen Marten",
         "description": "Simulatie-app voor residentiële elektriciteit die eenvoud en gebruiksgemak biedt aan studenten",
         "category": "Web & Mobile",
         "promotor": "Stefan (8)",
@@ -473,7 +473,7 @@
     },
     {
         "id": "VerbekenSeppe_WandelWijs",
-        "student": "Verbeken,Seppe",
+        "student": "Verbeken Seppe",
         "description": "Gamified wandelapp voor kinderen om natuur te ontdekken via missies, beloningen en AI-herkenning",
         "category": "Web & Mobile",
         "promotor": "Stefan (8)",
@@ -481,7 +481,7 @@
     },
     {
         "id": "EylenboschBram_MindMatch",
-        "student": "Eylenbosch,Bram",
+        "student": "Eylenbosch Bram",
         "description": "Tabletgame met memory en dagelijkse taken, ontwikkeld voor senioren",
         "category": "XR, 3D, Game",
         "promotor": "Stefan (8)",
@@ -489,7 +489,7 @@
     },
     {
         "id": "PeetersCarysaVanHumbeeckAnke_Stellar",
-        "student": "Peeters,Carysa & VanHumbeeck,Anke",
+        "student": "Peeters Carysa & VanHumbeeck Anke",
         "description": "Educatieve visual novel voor kinderen over de ruimte met interactieve animaties",
         "category": "XR, 3D, Game",
         "promotor": "Stefan (8)",
