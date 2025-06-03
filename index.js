@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const mysql = require("mysql2");
 require("dotenv").config();
+const fs = require("fs");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const { Client } = require("ssh2");
@@ -28,9 +29,8 @@ const tunnelConfig = {
 	host: process.env.DB_SSH_HOST,
 	port: 22,
 	username: process.env.DB_SSH_USER,
-	privateKey: process.env.SSH_PK.replace(/\\n/g, "\n"),
+	privateKey: fs.readFileSync(process.env.SSH_PK_PATH),
 };
-
 const forwardConfig = {
 	srcHost: "127.0.0.1",
 	srcPort: 3306,
@@ -179,13 +179,24 @@ app.post("/api/submit-register-form", (req, res) => {
 });
 
 app.get("/api/counter", (req, res) => {
-	const countUsers = `SELECT SUM(num_attendees) FROM event_registrations`;
-	db.query(countUsers, (err, results) => {
+	createSshTunnelAndConnection((err, connection) => {
 		if (err) {
-			console.error("Error querying database:", err);
-			return res.status(500).json({ message: "Sorry something went wrong" });
+			console.error("SSH/DB connection failed:", err);
+			return res.status(500).json({ message: "Database connection error" });
 		}
-		res.json({ count: results[0].total });
+
+		const countUsers = `SELECT SUM(num_attendees) AS total FROM event_registrations`;
+
+		connection.query(countUsers, (err, results) => {
+			connection.end();
+
+			if (err) {
+				console.error("Error querying database:", err);
+				return res.status(500).json({ message: "Sorry something went wrong" });
+			}
+
+			res.json({ count: results[0].total || 0 });
+		});
 	});
 });
 
