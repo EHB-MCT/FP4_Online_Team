@@ -55,6 +55,8 @@ body {
 	margin: 0;
 
 	min-height: 100dvh;
+
+  overflow-x: hidden;
 }
 
 h1 {
@@ -63,25 +65,33 @@ h1 {
 	font-size: var(--title-size);
 	margin-block-start: 0em;
 	margin-block-end: 0em;
+  color: var(--green-color);
+}
+h2#quick-info{
+  color: #fff;
 }
 
 h2.info {
 	font-size: var(--h2-size);
 	font-weight: var(--subtitle-weight2);
-	color: var(--pink-color);
 	padding: 0;
 	margin: 0;
+
+  color: var(--pink-color);
 }
-h2.info2 {
-	font-size: var(--h2-size);
-}
+
 h3 {
 	font-family: var(--main-font);
 	font-weight: var(--subtitle-weight2);
 	font-size: var(--h3-size);
+  color: var(--font-color);
 	margin: 0;
 }
 
+
+img{ 
+  z-index: 0;
+}
 
 .button{
   display: inline-block;
@@ -197,15 +207,19 @@ section {
 	position: absolute;
 	margin-top: -4.25%;
 }
-.image4 {
+/* .image4 {
 	position: absolute;
 	right: 10%;
 	margin-top: -12%;
-}
+
+  z-index: 0;
+} */
+
+
 
 .hero-wrapper {
 	margin-top: 0;
-	height: 100dvh;
+	height: 80dvh;
 	display: flex;
 	position: relative;
 	flex-direction: column;
@@ -222,11 +236,26 @@ section {
 
 	p {
 		max-width: 550px;
+    color: #fff;
 	}
 }
 
-section.practical-info-wrapper {
+.practical-info-wrapper {
 	margin-top: -30dvh;
+  padding-top: 10dvh;
+
+  background-image: url("/left_image.png");
+  background-repeat: no-repeat;
+  background-position: 0% 0% ;
+
+  .background-image-right-wrapper{
+    margin-top: -30dvh;
+    padding-top: 10dvh;
+    background-image: url("/right_image.png");
+    background-repeat: no-repeat;
+    background-position: 100% -20% ;
+    back
+  }
 
 	p#more {
 		display: none;
@@ -245,6 +274,7 @@ section.practical-info-wrapper {
 		p {
 			margin: 5px;
 			text-align: center;
+      font-size: 16pt;
 		}
 	}
 	.praktischInfo {
@@ -253,6 +283,10 @@ section.practical-info-wrapper {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+
+    p{
+      font-size: 14pt;
+    }
 	}
 	.google-maps-wrapper img {
 		border-radius: 15px;
@@ -290,7 +324,18 @@ section.study-area-wrapper {
   li{
     padding: 0.5rem 1rem;
   }
-    }
+}
+
+.mct-info {
+  color: #fff;
+  p {
+    max-width: 800px;
+  }
+  h2.info2{
+    color: var(--green-color);
+    font-size: 48pt;
+  }
+}
 
 
 footer {
@@ -336,7 +381,22 @@ footer {
     grid-template-columns: repeat(1, 1fr);
 }
 
+.practical-info-inner-wrapper{
+  img{
+    width: 80dvw;
+  }
+}
 
+  .practical-info-wrapper-purple {
+		background-color: var(--purple-color);
+    padding: 64px 0;
+    margin: 0;
+
+    background-image: url("/image_right2.png");
+    background-repeat: no-repeat;
+    background-position: 100% 95%;
+    background-size: 30%;
+	}
 
 
 @media (min-width: 768px) {
@@ -357,8 +417,9 @@ footer {
     background-position: 0% 60% ;
   
   }
-  section.practical-info-wrapper{
+  .practical-info-wrapper{
     margin-top: -30dvh;
+    padding-top: 45dvh;
   
     p#more{
       display: block;
@@ -395,7 +456,7 @@ footer {
 		}
 	}
 
-	section.practical-info-wrapper {
+	.practical-info-wrapper {
 		margin-top: -30dvh;
 
 		.practical-info-inner-wrapper {
@@ -403,6 +464,10 @@ footer {
 			gap: 50px;
 
 			margin-top: 164px;
+
+      img{
+        width: 40dvw;
+      }
 		}
 		p {
 			max-width: 800px;
@@ -441,27 +506,21 @@ footer {
 			border: 0;
 		}
 	
-	.practical-info-wrapper2 {
-		background-color: #c169aa;
-		margin: 0;
-		padding: 50px;
-		position: relative;
-	}
 	.mct-info {
 		color: #fff;
-	}
-	.mct-info p {
-		max-width: 800px;
+    p {
+      max-width: 800px;
+    }
+    h2.info2{
+      color: var(--green-color);
+    }
 	}
    
-
-    .projects-wrapper{
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-
+  .projects-wrapper{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
   }
- 
+}
 
 	footer {
 		background-color: #000000;
@@ -520,7 +579,7 @@ footer {
 @media (min-width: 1220px) {
 	:root {
 		--title-size: 68pt;
-		--h3-size: 36pt;
+		--h3-size: 28pt;
 		--section-margin-top: 64px;
 		--section-margin-bottom: 64px;
 	}
@@ -553,10 +612,13 @@ footer {
 		background-position: 0 80%;
 	}
 
-	section.practical-info-wrapper {
-		max-width: 1200px;
-		margin: 0 auto;
+	.practical-info-wrapper {
 
+
+    .inner-wrapper .practical-info{
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 		p {
 			max-width: 800px;
 		}
@@ -582,7 +644,16 @@ footer {
 				margin: 5px;
 			}
 		}
+    h2{
+      font-size: var(--h2-size);
+    }
+    
 	}
+
+  .practical-info-wrapper-purple {
+    background-position: 100% 24%;
+    background-size: 20%;
+  }
 
 	section.study-area-wrapper {
 		background-image: url("../public/Vector.svg");
@@ -621,4 +692,7 @@ footer {
   .projects-wrapper{
     grid-template-columns: repeat(3, 1fr);
   }
+}
+.time-wrapper p {
+  color: var(--green-color);
 }

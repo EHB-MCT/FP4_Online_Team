@@ -12,7 +12,7 @@ function convert(n) {
 
 const CountDown = () => {
     const calculateTimeLeft = () => {
-        const targetDate = new Date("June 20, 2025 16:00:00").getTime();
+        const targetDate = new Date("June 20, 2025 17:00:00").getTime();
         const now = new Date().getTime();
         const timeDifference = targetDate - now;
 
@@ -45,7 +45,7 @@ const CountDown = () => {
                     <>
                         <div className="time-wrapper">
                             <h1>{timeLeft.months}</h1>
-                            <p>Months</p>
+                            <p>Maanden</p>
                         </div>
                                 <div>
                             <h1>:</h1>
@@ -56,28 +56,28 @@ const CountDown = () => {
             
             <div className="time-wrapper">
                 <h1>{timeLeft.days}</h1>
-                <p>Days</p>
+                <p>Dagen</p>
             </div>
             <div>
                 <h1>:</h1>
             </div>
             <div className="time-wrapper">
                 <h1>{timeLeft.hours}</h1>
-                <p>Hours</p>
+                <p>Uren</p>
             </div>
             <div>
                 <h1>:</h1>
             </div>
             <div className="time-wrapper">
                 <h1>{timeLeft.minutes}</h1>
-                <p>Minutes</p>
+                <p>Minuten</p>
             </div>
             <div id="seconds">
                 <h1>:</h1>
             </div>
             <div id="seconds" className="time-wrapper">
                 <h1>{timeLeft.seconds}</h1>
-                <p>Seconds</p>
+                <p>Seconden</p>
             </div>
         </div>
     );
