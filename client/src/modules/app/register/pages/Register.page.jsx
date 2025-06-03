@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 //CSS
 import "./Register.css";
@@ -9,10 +9,10 @@ import "./Register.css";
 import InputField from "../components/InputField.jsx";
 import Roles from "../components/Roles.jsx";
 
-const Register = () => {
+export const Register = () => {
 	document.title = "Inschrijven | Expo 2025 ";
 
-	const [swalProps, setSwalProps] = useState({});
+	// const [swalProps, setSwalProps] = useState({});
 
 	const [formData, setFormData] = useState({
 		firstName: "",
@@ -35,30 +35,30 @@ const Register = () => {
 		e.preventDefault();
 		try {
 			await axios.post(
-				"http://localhost:8080/api/submit-register-form",
+				"https://shiftfestival.be/api/submit-register-form",
 				formData
 			);
-			Swal.fire({
-				title: "Success",
-				text: "Your registration was successful!",
-				icon: "success",
-			});
+			// Swal.fire({
+			// 	title: "Success",
+			// 	text: "Your registration was successful!",
+			// 	icon: "success",
+			// });
 		} catch (error) {
 			console.error("Error submitting form:", error);
 
 			let errorMessage = error.response.request.response;
 			const parsedMessage = JSON.parse(errorMessage);
 
-			Swal.fire({
-				title: "Error",
-				text: parsedMessage.message,
-				icon: "error",
-			});
+			// Swal.fire({
+			// 	title: "Error",
+			// 	text: parsedMessage.message,
+			// 	icon: "error",
+			// });
 		}
 	};
 
 	return (
-		<>
+		<div className="wrapper">
 			<img src="/public/figure_pink.png" alt="" className="blob-pink" />
 			<img src="/public/figure_orange.png" alt="" className="blob-orange" />
 
@@ -155,8 +155,7 @@ const Register = () => {
 
 				<input type="submit" value="Inschrijven" />
 			</form>
-		</>
+		</div>
 	);
 };
 
-export default Register;
