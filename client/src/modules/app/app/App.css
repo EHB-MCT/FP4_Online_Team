@@ -257,6 +257,11 @@ footer{
   }
 }
 
+.projects-wrapper{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
 
 
 
@@ -286,6 +291,11 @@ footer{
       display: block;
       max-width: 600px;
     }
+  }
+
+  .projects-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
   }
  
 }
@@ -358,8 +368,11 @@ footer{
       border: 0;
     }
 
-    
-    
+    .projects-wrapper{
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
   }
  
 
@@ -416,8 +429,6 @@ footer{
     }
   }
 }
-
-
 
 @media (min-width: 1220px) {
   :root{
@@ -529,5 +540,8 @@ footer{
     a,p{
       margin-left: 10px;
     }
+  }
+  .projects-wrapper{
+    grid-template-columns: repeat(3, 1fr);
   }
 }

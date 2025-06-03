@@ -7,10 +7,15 @@ import App from "../app/App";
 import { ERROR_ROUTE } from "../error/error.route";
 import { HOME_ROUTE } from "../home/home.route";
 import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
+import { PROJECTS_ROUTE } from "../projects/projects.route";
 import { REGISTER_ROUTE } from "../register/register.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export const Root = () => {
+
+	const QUERY_CLIENT = new QueryClient();
+
 	const ROUTE = createHashRouter([
 		{
 			path: "/",
@@ -36,9 +41,17 @@ export const Root = () => {
 					path: VOTING_ROUTE.path,
 					element: VOTING_ROUTE.element,
 				},
+				{
+					path: PROJECTS_ROUTE.path,
+					element: PROJECTS_ROUTE.element
+				}
 			],
 		},
 	]);
 
-	return <RouterProvider router={ROUTE} />;
+	return (
+		<QueryClientProvider client={ QUERY_CLIENT }>
+			<RouterProvider router={ROUTE} />
+		</QueryClientProvider>
+	);
 };
