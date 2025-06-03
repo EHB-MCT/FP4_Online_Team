@@ -32,17 +32,17 @@ app.use((req, res, next) => {
 });
 
 // Frontend
-// app.use(express.static(path.join(__dirname, '/client/dist')));
-
-// app.get('/*\w', (req, res) => {
-//     res.sendFile(path.join(__dirname, '/client/dist/index.html'));
-// });
-
-app.use(express.static(path.join(__dirname, '/www')));
+app.use(express.static(path.join(__dirname, '/client/dist')));
 
 app.get('/*\w', (req, res) => {
-    res.sendFile(path.join(__dirname, '/www/index.html'));
+    res.sendFile(path.join(__dirname, '/client/dist/index.html'));
 });
+
+// app.use(express.static(path.join(__dirname, '/www')));
+
+// app.get('/*\w', (req, res) => {
+//     res.sendFile(path.join(__dirname, '/www/index.html'));
+// });
 
 // Database volgens SSH
 const dbConfig = {
@@ -57,7 +57,7 @@ const tunnelConfig = {
     host: process.env.DB_SSH_HOST,
     port: 22,
     username: process.env.DB_SSH_USER,
-    privateKey: fs.readFileSync(path.join(__dirname, process.env.SSH_PK_PATH))
+    privateKey: fs.readFileSync(process.env.SSH_PK_PATH)
 };
 
 const forwardConfig = {

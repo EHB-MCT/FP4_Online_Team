@@ -10,7 +10,7 @@ import InputField from "../components/InputField.jsx";
 import Roles from "../components/Roles.jsx";
 
 export const Register = () => {
-	document.title = "Inschrijven | Expo 2025 ";
+	document.title = "Inschrijven | Shift Festival 2025 ";
 
 	// const [swalProps, setSwalProps] = useState({});
 
@@ -35,7 +35,7 @@ export const Register = () => {
 		e.preventDefault();
 		try {
 			await axios.post(
-				"https://shiftfestival.be/api/submit-register-form",
+				"https://api.shiftfestival.be/api/submit-register-form",
 				formData
 			);
 			// Swal.fire({
