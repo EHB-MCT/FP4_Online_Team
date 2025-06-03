@@ -1,0 +1,436 @@
+[
+    {
+    "student": "Boutaarourt,Abdella",
+    "description": "Platform waar gebruikers vaardigheden uitwisselen en leren via gamification",
+    "category": "Web & Mobile",
+    "promotor": "Bert (8)",
+    "project_name": "SkillSwap"
+    },
+    {
+    "student": "Gistelinck,Remy",
+    "description": "Interactieve Tetris-toepassing om AI-leeralgoritmes visueel te vergelijken",
+    "category": "Web & Mobile",
+    "promotor": "Bert (8)",
+    "project_name": "NeuroBlocks"
+    },
+    {
+    "student": "Langhendries,Milan",
+    "description": "Niet deelgenomen aan jury",
+    "category": "Web & Mobile",
+    "promotor": "Bert (8)",
+    "project_name": "Not defined yet"
+    },
+    {
+    "student": "Vankriekinge,Ryan",
+    "description": "Platform met automatische code-evaluatie om informaticaonderwijs te verbeteren voor leerkrachten zonder programmeerkennis",
+    "category": "Web & Mobile",
+    "promotor": "Bert (8)",
+    "project_name": "Codeucation"
+    },
+    {
+    "student": "Verherstraeten,Karsten",
+    "description": "Verherstraeten,Karsten",
+    "category": "Web & Mobile",
+    "promotor": "Bert (8)",
+    "project_name": "ORDENA"
+    },
+    {
+    "student": "Vanhaelen,Jasper",
+    "description": "Milieuvriendelijke mobiele city builder game die duurzaam gedrag stimuleert bij spelers",
+    "category": "XR, 3D, Game",
+    "promotor": "Bert (8)",
+    "project_name": "Green Builder"
+    },
+    {
+    "student": "Vettorel,Gregory",
+    "description": "Realistische zeilsimulator met VR en toegankelijkheid voor leren, ontspanning en onderzoek",
+    "category": "XR, 3D, Game",
+    "promotor": "Bert (8)",
+    "project_name": "OceanScape"
+    },
+    {
+    "student": "DePauw,Jules",
+    "description": "Yoga-app die via computer vision realtime feedback geeft op houdingen",
+    "category": "Experience Design",
+    "promotor": "Dennis (5)",
+    "project_name": "Pose"
+    },
+    {
+    "student": "DeReuse,Julien",
+    "description": "Sportinstallatie die hartslag koppelt aan visuals en muziek om motivatie tijdens sporten te verhogen",
+    "category": "Experience Design",
+    "promotor": "Dennis (5)",
+    "project_name": "Interactieve Sportinstallatie"
+    },
+    {
+    "student": "Claeye,Jef",
+    "description": "Visualisatie van snelheid en krachten uit racesimulaties via real-time motion graphics",
+    "category": "Interactive Motion",
+    "promotor": "Dennis (5)",
+    "project_name": "Het Visualiseren van Snelheid en Krachten"
+    },
+    {
+    "student": "Geys, Jorbe",
+    "description": "Autonome afvalverzamelrobot voor festivals met vision tracking, rapportage en oplaadstations",
+    "category": "Prototyping",
+    "promotor": "Dennis (5)",
+    "project_name": "C.A.V.A. – Clean Autonomous Vision Acquisition"
+    },
+    {
+    "student": "Aadim,Ziad",
+    "description": "AR-app voor Meta Quest 3 die beginnende tekenaars stap voor stap leert tekenen op papier",
+    "category": "XR, 3D, Game",
+    "promotor": "Dennis (5)",
+    "project_name": "AR Drawing Tutor"
+    },
+    {
+    "student": "Benallal, Mehdi",
+    "description": "Niet deelgenomen aan jury",
+    "category": "XR, 3D, Game",
+    "promotor": "Dennis (5)",
+    "project_name": "Not defined yet"
+    },
+    {
+    "student": "Belaouchi,Meryam",
+    "description": "Interactieve installatie die Minecraft tot leven brengt met motion tracking, projecties en fysieke objecten",
+    "category": "Experience Design",
+    "promotor": "Jan E (8)",
+    "project_name": "Minecraft: The Experience"
+    },
+    {
+    "student": "Bouabdellah,Dikra",
+    "description": "Interactieve installatie over de legende van de Grot van Hercules om toeristen naar Tanger te trekken",
+    "category": "Experience Design",
+    "promotor": "Jan E (8)",
+    "project_name": "Toerisme en Technologie"
+    },
+    {
+    "student": "Frederickx,Amber",
+    "description": "Installatie en boek die studenten helpt gevoelens van eenzaamheid bespreekbaar te maken",
+    "category": "Experience Design",
+    "promotor": "Jan E (8)",
+    "project_name": "Eenzaamheid op Tafel"
+    },
+    {
+    "student": "Ozcan,Aylin",
+    "description": "Optimalisatie van sociale deductiespellen voor cafés via NFC-kaarten, projecties en geluid",
+    "category": "Experience Design",
+    "promotor": "Jan E (8)",
+    "project_name": "Optimalisatie van Sociale Deductieve Spellen\n"
+    },
+    {
+    "student": "Pouleur,LouisJames",
+    "description": "Interactieve installatie die de impact van Instagram-notificaties op jongeren visualiseert",
+    "category": "Experience Design",
+    "promotor": "Jan E (8)",
+    "project_name": "ILLUMINATE"
+    },
+    {
+    "student": "Ernould,Achille",
+    "description": "Heads-up display en mobiele app voor veiliger motornavigeren via subtiele visuele aanwijzingen",
+    "category": "Prototyping",
+    "promotor": "Jan E (8)",
+    "project_name": "Hud Helmet"
+    },
+    {
+    "student": "LopesOliveira,Igor",
+    "description": "Slimme bokszak met sensoren en app voor beginnende boksers die real-time feedback geeft",
+    "category": "Prototyping",
+    "promotor": "Jan E (8)",
+    "project_name": "Smart Punching Bag (SPB)"
+    },
+    {
+    "student": "Asante,Stephen",
+    "description": "Educatieve 3D-game die jongeren van Ghanese afkomst spelenderwijs de Ghanese taal en cultuur laat ontdekken",
+    "category": "XR, 3D, Game",
+    "promotor": "Jan E (8)",
+    "project_name": "Het Museum van Anansi"
+    },
+    {
+    "student": "Clement,Sarah",
+    "description": "Niet deelgenomen aan jury",
+    "category": "XR, 3D, Game",
+    "promotor": "Jan S (6)",
+    "project_name": "Not defined yet"
+    },
+    {
+    "student": "DeClerck,Robbe & Mosselmans,Liam",
+    "description": "1v1 multiplayer parkourgame waarin spelers elkaar taggen in een realistische, fysieke omgeving",
+    "category": "XR, 3D, Game",
+    "promotor": "Jan S (6)",
+    "project_name": "TAG"
+    },
+    {
+    "student": "Janssen,Michiel",
+    "description": "Dynamisch quest-generatiesysteem dat spelerkeuzes omzet in betekenisvolle missies",
+    "category": "XR, 3D, Game",
+    "promotor": "Jan S (6)",
+    "project_name": "QuestForge"
+    },
+    {
+    "student": "Lambeau,Gauthier & PaceAlkhomaili,Noham",
+    "description": "Game die beweging stimuleert",
+    "category": "XR, 3D, Game",
+    "promotor": "Jan S (6)",
+    "project_name": "Neon Escape Operation"
+    },
+    {
+    "student": "Rauw,Amaury",
+    "description": "VR-simulator die jongeren bewust maakt van de gevaren van drugsgebruik via interactieve ervaringen",
+    "category": "XR, 3D, Game",
+    "promotor": "Jan S (6)",
+    "project_name": "VRVR"
+    },
+    {
+    "student": "Zobair,Zaid",
+    "description": "Multiplayer motion tracking game zonder VR, die sociale interactie en fysieke beweging stimuleert",
+    "category": "XR, 3D, Game",
+    "promotor": "Jan S (6)",
+    "project_name": "Watcher’s Rite"
+    },
+    {
+    "student": "Buscemi,Nicolas",
+    "description": "Interactieve installatie die agorafobie tastbaar maakt via audiovisuele overprikkeling en biofeedback",
+    "category": "Experience Design",
+    "promotor": "Jan VC (10)",
+    "project_name": "Urban Echoes"
+    },
+    {
+    "student": "Claeys,Jonathan",
+    "description": "Interactieve website impact sociale media",
+    "category": "Web & Mobile",
+    "promotor": "Jan VC (10)",
+    "project_name": "Flowtales"
+    },
+    {
+    "student": "Dobruna,Zani",
+    "description": "Platform voor gedeelde mobiliteit met blockchain-identificatie, reputatiesysteem en openbaar vervoer integratie",
+    "category": "Web & Mobile",
+    "promotor": "Jan VC (10)",
+    "project_name": "Carbe"
+    },
+    {
+    "student": "Favoreel,Nelle",
+    "description": "Platform voor het delen en bewaren van familie reizen",
+    "category": "Web & Mobile",
+    "promotor": "Jan VC (10)",
+    "project_name": "Memoraa"
+    },
+    {
+    "student": "Saah,Mitch",
+    "description": "Slim waterbeheersysteem voor tuinen met AI, sensoren en mobiele app",
+    "category": "Web & Mobile",
+    "promotor": "Jan VC (10)",
+    "project_name": "TuinMeister"
+    },
+    {
+    "student": "Van Hemelrijck, Stephan",
+    "description": "AI-taalapp met gepersonaliseerde leerervaring, gamificatie en real-time feedback",
+    "category": "Web & Mobile",
+    "promotor": "Jan VC (10)",
+    "project_name": "Lexora"
+    },
+    {
+    "student": "Bastien,Maxime",
+    "description": "2D-game over mentale gezondheid van jongvolwassenen met focus op visuele storytelling en emoties",
+    "category": "XR, 3D, Game",
+    "promotor": "Jan VC (10)",
+    "project_name": "HOPE"
+    },
+    {
+    "student": "Imnadine,Sabri",
+    "description": "Educatieve light novel-game die jongeren bewust maakt van klimaatverandering via storytelling en keuzes",
+    "category": "XR, 3D, Game",
+    "promotor": "Jan VC (10)",
+    "project_name": "Klimaatbewustzijn"
+    },
+    {
+    "student": "Rashid,Mohammad",
+    "description": "Videogame digitale kloof",
+    "category": "XR, 3D, Game",
+    "promotor": "Jan VC (10)",
+    "project_name": "Link Up"
+    },
+    {
+    "student": "Berckmans,Kobe",
+    "description": "Platform voor lokale burenhulp met vrijwilligersmatching",
+    "category": "Web & Mobile",
+    "promotor": "Johan (3)",
+    "project_name": "Buren voor Buren"
+    },
+    {
+    "student": "ElMajdoubi,Wail",
+    "description": "App die jongeren helpt een gezondere balans te vinden tussen schermtijd en offline leven",
+    "category": "Web & Mobile",
+    "promotor": "Johan (3)",
+    "project_name": "Social Balans"
+    },
+    {
+    "student": "Hasan,Taha",
+    "description": "Geen magazine ingediend",
+    "category": "Web & Mobile",
+    "promotor": "Johan (3)",
+    "project_name": "Not defined yet"
+    },
+    {
+    "student": "Unutkan,Berkay",
+    "description": "Online platform voor lokale kennisuitwisseling met AI, blockchain en gamificatie om sociale cohesie te versterken",
+    "category": "Web & Mobile",
+    "promotor": "Johan (3)",
+    "project_name": "SkillShareHub"
+    },
+    {
+    "student": "Ahmad,Nabras",
+    "description": "Interactieve installatie die via video en Arduino het leven in Gaza tastbaar maakt voor een Westers publiek",
+    "category": "Experience Design",
+    "promotor": "Joni (5)",
+    "project_name": "Leven in Gaza"
+    },
+    {
+    "student": "De Vos, Freya",
+    "description": "Interactieve installatie die stress meet en visualiseert via hartslag",
+    "category": "Experience Design",
+    "promotor": "Joni (5)",
+    "project_name": "Under Pressure"
+    },
+    {
+    "student": "vanUden,Rachelle",
+    "description": "Interactief platform met 3D-animaties dat zeldzame kanker (PMP) op een toegankelijke manier uitlegt",
+    "category": "Interactive Motion",
+    "promotor": "Joni (5)",
+    "project_name": "Pseudo-Wat?"
+    },
+    {
+    "student": "Barilla,Sandro",
+    "description": "Fysieke Spotify-jukebox met RFID-kaartjes voor interactieve muziekbeleving",
+    "category": "Prototyping",
+    "promotor": "Joni (5)",
+    "project_name": "Tagbox*"
+    },
+    {
+    "student": "Buelens,Mikolaj & Biets,Rowan",
+    "description": "Elektronische halsband met app om katten in realtime te volgen en hun veiligheid te garanderen",
+    "category": "Prototyping",
+    "promotor": "Joni (5)",
+    "project_name": "KattenTracker"
+    },
+    {
+    "student": "Debonnet, Folkert",
+    "description": "Interactieve licht- en geluidsinstallatie die rust creëert in drukke stedelijke ruimtes via natuurlijke stimuli",
+    "category": "Experience Design",
+    "promotor": "Mike (8)",
+    "project_name": "Urban Oasis"
+    },
+    {
+    "student": "Billiet, Miguel",
+    "description": "SaaS-platform waarmee zelfstandigen eenvoudig content kunnen beheren op hun website",
+    "category": "Web & Mobile",
+    "promotor": "Mike (8)",
+    "project_name": "Dynamisch CMS voor zelfstandigen"
+    },
+    {
+    "student": "Heusdens,Thomas",
+    "description": "Mobiele app die beginnende triatleten ondersteunt via AI-routeplanning, trainingsschema’s en motivatie",
+    "category": "Web & Mobile",
+    "promotor": "Mike (8)",
+    "project_name": "Trivista"
+    },
+    {
+    "student": "Menga,Glory",
+    "description": "App Beatmakers AI",
+    "category": "Web & Mobile",
+    "promotor": "Mike (8)",
+    "project_name": "Samply"
+    },
+    {
+    "student": "Stoikos,Michael",
+    "description": "Niet deelgenomen aan jury",
+    "category": "Web & Mobile",
+    "promotor": "Mike (8)",
+    "project_name": "Not defined yet"
+    },
+    {
+    "student": "Sunaert,Jochen",
+    "description": "Multiplayer partygame met AI die verhalen genereert en spelers beoordeelt",
+    "category": "Web & Mobile",
+    "promotor": "Mike (8)",
+    "project_name": "PlotTwist"
+    },
+    {
+    "student": "Tazi,Yassine",
+    "description": "Platform voor interreligieuze debatten met live video, bronverificatie en contextuele toelichting",
+    "category": "Web & Mobile",
+    "promotor": "Mike (8)",
+    "project_name": "Dalil Talk"
+    },
+    {
+    "student": "Ahdi,Safwane",
+    "description": "Educatief AR-platform dat gebruikers leert een PC te bouwen via interactieve simulaties",
+    "category": "XR, 3D, Game",
+    "promotor": "Mike (8)",
+    "project_name": "PC Builder"
+    },
+    {
+    "student": "Vandenbussche,Kian",
+    "description": "AI-gestuurde tool die automatisch 2D-beelden omzet in geoptimaliseerde 3D-modellen voor diverse sectoren",
+    "category": "XR, 3D, Game",
+    "promotor": "Mike (8)",
+    "project_name": "Van 2D naar 3D models met AI"
+    },
+    {
+    "student": "Lambeens,Wannes",
+    "description": "Auditieve fotoreeks die visuele data vertaalt naar soundscapes voor slechtzienden",
+    "category": "Experience Design",
+    "promotor": "Stefan (8)",
+    "project_name": "Auditieve Fotoreeks"
+    },
+    {
+    "student": "LMaimouni,Nail",
+    "description": "Interactieve installatie die jongeren uit kwetsbare wijken via keuzes en motion tracking bewust maakt van hun toekomst",
+    "category": "Interactive Motion",
+    "promotor": "Stefan (8)",
+    "project_name": "Step Into The Struggle"
+    },
+    {
+    "student": "VanBergen,Tuur",
+    "description": "Interactieve visual novel over mentale gezondheid bij jongeren met focus op keuzes en emotionele beleving",
+    "category": "Interactive Motion",
+    "promotor": "Stefan (8)",
+    "project_name": "Creative Arcade!"
+    },
+    {
+    "student": "Auassar,Youssef",
+    "description": "Visuele webapp die jongeren helpt hun droomjob en studiekeuze te ontdekken via persoonlijkheidstesten",
+    "category": "Web & Mobile",
+    "promotor": "Stefan (8)",
+    "project_name": "Youth’s Dream"
+    },
+    {
+    "student": "Driesen,Marten",
+    "description": "Simulatie-app voor residentiële elektriciteit die eenvoud en gebruiksgemak biedt aan studenten",
+    "category": "Web & Mobile",
+    "promotor": "Stefan (8)",
+    "project_name": "Simulectra"
+    },
+    {
+    "student": "Verbeken,Seppe",
+    "description": "Gamified wandelapp voor kinderen om natuur te ontdekken via missies, beloningen en AI-herkenning",
+    "category": "Web & Mobile",
+    "promotor": "Stefan (8)",
+    "project_name": "WandelWijs"
+    },
+    {
+    "student": "Eylenbosch,Bram",
+    "description": "Tabletgame met memory en dagelijkse taken, ontwikkeld voor senioren",
+    "category": "XR, 3D, Game",
+    "promotor": "Stefan (8)",
+    "project_name": "MindMatch"
+    },
+    {
+    "student": "Peeters,Carysa & VanHumbeeck,Anke",
+    "description": "Educatieve visual novel voor kinderen over de ruimte met interactieve animaties",
+    "category": "XR, 3D, Game",
+    "promotor": "Stefan (8)",
+    "project_name": "Stellar"
+    }
+]

@@ -1,4 +1,5 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
+
+import { createHashRouter, RouterProvider } from "react-router"
 
 //Components
 import App from "../app/App";
@@ -8,10 +9,11 @@ import { ERROR_ROUTE } from "../error/error.route";
 import { HOME_ROUTE } from "../home/home.route";
 import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
 import { REGISTER_ROUTE } from "../register/register.route";
-import { COUNTER_ROUTE } from "../counter/counter.route";
+import { VOTING_ROUTE } from "../voting/voting.route";
+import { INFO_ROUTE } from "../info/info.route";
 
 export const Root = () => {
-	const ROUTE = createBrowserRouter([
+	const ROUTE = createHashRouter([
 		{
 			path: "/",
 			element: <App />,
@@ -35,6 +37,13 @@ export const Root = () => {
 				{
 					path: COUNTER_ROUTE.path,
 					element: COUNTER_ROUTE.element,
+
+					path: VOTING_ROUTE.path,
+					element: VOTING_ROUTE.element,
+				},
+				{
+					path: INFO_ROUTE.path,
+					element: INFO_ROUTE.element,
 				},
 			],
 		},

@@ -1,9 +1,11 @@
 export const Error = () => {
     return (
         <>
-            <div>
-                <h3>Oeps this page doesnt excist</h3>
-            </div>
+            <section className="inner-wrapper">
+                <div className="wrapper">
+                    <h3>Oeps this page doesnt excist</h3>
+                </div>
+            </section>
         </>
     )
 }

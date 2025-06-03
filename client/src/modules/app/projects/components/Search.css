@@ -1,0 +1,21 @@
+.search {
+	background-color: #f4f4f4;
+	border: none;
+	border-radius: 8px;
+	padding: 0.8rem 1rem;
+	box-sizing: border-box;
+	width: 80%;
+	font-family: "unbounded";
+}
+input[type="text"] {
+	outline-style: none;
+}
+.search-inner-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.outer-search {
+	display: flex;
+	justify-content: center;
+}

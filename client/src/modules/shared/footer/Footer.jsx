@@ -1,8 +1,11 @@
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import Image from '/Logo.svg';
 
 //Components
 import Button from '../button/Button.jsx';
+
+//Route
+import { REGISTER_ROUTE } from '../../app/register/register.route.jsx';
 
 export const Footer = () => {
 
@@ -10,14 +13,12 @@ export const Footer = () => {
         <footer>
             <div className="inner-wrapper">
                 <div className="footer-left-wrapper">
-                    <Link to='/' ><img src={Image} className='logo' alt="Logo of the event" /></Link>
+                    <NavLink to='/' ><img src={Image} className='logo' alt="Logo of the event" /></NavLink>
                     <p>Erasmus Hogeschool Brussel - 2025</p>
-                    {/*<Link to={"/policies/privacy"}>Prrivacy policy</Link>*/}
-                    {/*<Link to={"/policies/cookies"}>Cookies policy</Link>*/}
                 </div>
                 <div className="footer-right-wrapper">
                     <Button 
-                        destinationUrl={"register"}
+                        destinationUrl={ REGISTER_ROUTE.path }
                         copy={"Inschrijven"}
                         className={"button"}
                     />

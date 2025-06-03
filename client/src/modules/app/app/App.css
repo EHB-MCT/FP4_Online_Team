@@ -120,7 +120,7 @@ nav{
   }
 }
 .wrapper{
-  min-height: 80dvh;
+  min-height: 40dvh;
 }
 
 .coming_soon{
@@ -174,11 +174,6 @@ section.hero-wrapper{
     max-width: 400px;
   }
 
-  .countdown{
-    #seconds{
-      display: none;
-    }
-  }
 }
 
 section.practical-info-wrapper{
