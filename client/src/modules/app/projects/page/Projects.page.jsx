@@ -16,7 +16,7 @@ export const Projects = () => {
 
 	const { data = [], isLoading } = useProjectsData();
 	const [selectedCategory, setSelectedCategory] = useState(null);
-	const [filteredProjects, setFilteredProjects] = useState(data)
+	const [filteredProjects, setFilteredProjects] = useState(data);
 
 	const location = useLocation();
 	const searchParams = new URLSearchParams(location.search);
@@ -52,6 +52,12 @@ export const Projects = () => {
 		setFilteredProjects(filteredData);
 	}, [searchQuery, selectedCategory, data]);
 
+	// Get categories that have projects after filtering
+	const categoriesToShow = categories.filter(category => {
+		const categoryProjects = filteredProjects.filter(project => project.category === category);
+		return categoryProjects.length > 0;
+	});
+
 	return (
 		<>
 			<section>
@@ -78,15 +84,13 @@ export const Projects = () => {
                         {isLoading ? (
                             "loading..."
                         ) : (
-                            categories
-								.filter(category => selectedCategory === null || selectedCategory === category)
-                                .map((category) => (
-                                    <ProjectCategory
-                                        key={ category }
-                                        title={ category }
-                                        data={filteredProjects.filter((project) => project.category === category)}
-                                    />
-								))
+                            categoriesToShow.map((category) => (
+                                <ProjectCategory
+                                    key={ category }
+                                    title={ category }
+                                    data={filteredProjects.filter((project) => project.category === category)}
+                                />
+                            ))
                         )}
                     </div>
                 </div>
