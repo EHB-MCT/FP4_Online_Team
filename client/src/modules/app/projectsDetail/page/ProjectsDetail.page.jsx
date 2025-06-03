@@ -1,5 +1,13 @@
 import React from "react";
-
+import { NextProject } from "../components/NextProject";
 export const ProjectsDetail = () => {
-	return <div>ProjectsDetail.page</div>;
+	return (
+		<>
+			<section>
+				<div className="inner-wrapper">
+					<NextProject />
+				</div>
+			</section>
+		</>
+	);
 };
