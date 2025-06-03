@@ -82,8 +82,9 @@ h3 {
 	margin: 0;
 }
 
-a.button {
-	display: inline-block;
+
+.button{
+  display: inline-block;
 
 	background-color: var(--button-color);
 	padding: var(--button-padding);
@@ -93,9 +94,31 @@ a.button {
 
 	color: #fff;
 
-	font-family: var(--main-font);
-	font-size: var(--button-size);
-	font-weight: var(--subtitle-weight);
+  font-family: var(--main-font);
+  font-size: var(--button-size);
+  font-weight: var(--subtitle-weight);
+
+  cursor: pointer;
+}
+.filter{
+  padding: 5px 30px;
+  font-size: 12pt;
+  margin: 0 0;
+
+  p{
+    margin: 10px 0;
+  }
+}
+
+.filter-button-wrapper{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  margin: 24px 0;
+
+
 }
 
 ul {
@@ -249,6 +272,27 @@ section.study-area-wrapper {
 	}
 }
 
+.nav-links{
+        padding: 0;
+      margin: 0;
+      display: flex; /* Makes items horizontal */
+      gap: 1rem; /* Optional: spacing between items */
+  li{
+    padding: 0.5rem 1rem;
+  }
+}
+
+.nav-links{
+        padding: 0;
+      margin: 0;
+      display: flex; /* Makes items horizontal */
+      gap: 1rem; /* Optional: spacing between items */
+  li{
+    padding: 0.5rem 1rem;
+  }
+    }
+
+
 footer {
 	background-color: var(--orange-color);
 	margin-bottom: 0;
@@ -287,6 +331,14 @@ footer {
 	}
 }
 
+.projects-wrapper{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+
+
+
 @media (min-width: 768px) {
 	:root {
 		--title-size: 32pt;
@@ -300,18 +352,25 @@ footer {
 		}
 	}
 
-	section.hero-wrapper {
-		background-size: 35%;
-		background-position: 0% 60%;
-	}
-	section.practical-info-wrapper {
-		margin-top: -30dvh;
+  section.hero-wrapper{  
+    background-size: 35%;
+    background-position: 0% 60% ;
+  
+  }
+  section.practical-info-wrapper{
+    margin-top: -30dvh;
+  
+    p#more{
+      display: block;
+      max-width: 600px;
+    }
+  }
 
-		p#more {
-			display: block;
-			max-width: 600px;
-		}
-	}
+  .projects-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+ 
 }
 @media (min-width: 1024px) {
 	:root {
@@ -381,7 +440,7 @@ footer {
 			height: 100%; /* Responsive height */
 			border: 0;
 		}
-	}
+	
 	.practical-info-wrapper2 {
 		background-color: #c169aa;
 		margin: 0;
@@ -394,6 +453,15 @@ footer {
 	.mct-info p {
 		max-width: 800px;
 	}
+   
+
+    .projects-wrapper{
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+  }
+ 
 
 	footer {
 		background-color: #000000;
@@ -541,13 +609,16 @@ footer {
 			}
 		}
 
-		h2 {
-			font-size: 28pt;
-			max-width: 600px;
-		}
-		a,
-		p {
-			margin-left: 10px;
-		}
-	}
+
+    h2{
+      font-size: 28pt;
+      max-width: 600px;
+    }
+    a,p{
+      margin-left: 10px;
+    }
+  }
+  .projects-wrapper{
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

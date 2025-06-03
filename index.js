@@ -16,7 +16,30 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors(corsOptions));
 
+
+// CSP Headers (Momenteel fout?)
+//app.use((req, res, next) => {
+//	res.setHeader("Content-Security-Policy",
+//		"default-src 'none'; " +
+//		"img-src 'self' data: https://shiftfestival.be; " +
+//		"style-src 'self' 'unsafe-inline' fonts.googleapis.com use.typekit.net p.typekit.net;" +
+//		"font-src fonts.gstatic.com use.typekit.net; " +
+//		"script-src 'self' 'unsafe-inline'; " +
+//		"connect-src 'self';"
+//	);
+//	next();
+//});
+
+// Frontend
+// app.use(express.static(path.join(__dirname, '/www')));
+
+// app.get('/*\w', (req, res) => {
+//     res.sendFile(path.join(__dirname, '/www/index.html'));
+// });
+
+// Database volgens SSH
 // MySQL & SSH Config
+
 const dbConfig = {
 	host: process.env.DB_HOST,
 	user: process.env.DB_USER,
@@ -26,10 +49,10 @@ const dbConfig = {
 };
 
 const tunnelConfig = {
-	host: process.env.DB_SSH_HOST,
-	port: 22,
-	username: process.env.DB_SSH_USER,
-	privateKey: fs.readFileSync(process.env.SSH_PK_PATH),
+    host: process.env.DB_SSH_HOST,
+    port: 22,
+    username: process.env.DB_SSH_USER,
+    privateKey: fs.readFileSync(process.env.SSH_PK_PATH)
 };
 const forwardConfig = {
 	srcHost: "127.0.0.1",
