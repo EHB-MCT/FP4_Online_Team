@@ -27,10 +27,22 @@
 }
 
 .program-img {
-	width: 100%; /* adjust width as needed */
 	border-radius: 10px;
+	height: 300px;
 }
 .title-wrapper {
-	margin-bottom: 30%;
+	margin: 0;
+	height: 30dvh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	text-align: center;
+
 	background-image: url("../public/object1.png");
+	background-repeat: no-repeat;
+
+	/* Ensure the background image does not exceed 335px */
+	background-size: min(20%, 335px);
 }

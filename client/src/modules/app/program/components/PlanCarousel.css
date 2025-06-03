@@ -1,0 +1,54 @@
+.plan-swiper {
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.plan-slide {
+	text-align: center;
+	transition: transform 0.3s ease;
+	transform: scale(0.85);
+	opacity: 0.5;
+}
+
+.swiper-slide-active .plan-slide {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.plan-img {
+	width: 100%;
+    border: #000 2px solid;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.plan-caption {
+	margin-top: 10px;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.swiper-button-prev::after {
+	content: "←";
+	font-size: 24px;
+	color: #000;
+}
+
+.swiper-button-next::after {
+	content: "→";
+	font-size: 24px;
+	color: #000;
+}
+
+/* Optional: Style the button containers */
+.swiper-button-next,
+.swiper-button-prev {
+	background-color: white;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	top: 50%;
+	transform: translateY(-50%);
+}
