@@ -1,6 +1,4 @@
-
 import { createHashRouter, RouterProvider } from "react-router";
-
 
 //Components
 import App from "../app/App";
@@ -11,8 +9,10 @@ import { HOME_ROUTE } from "../home/home.route";
 import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
 import { REGISTER_ROUTE } from "../register/register.route";
 import { PRICE_ROUTE } from "../price/price.route";
+import { COUNTER_ROUTE } from "../counter/counter.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
 import { INFO_ROUTE } from "../info/info.route";
+import { HOMETWO_ROUTE } from "../homeTwo/homeTwo.route";
 
 export const Root = () => {
 	const ROUTE = createHashRouter([
@@ -50,6 +50,10 @@ export const Root = () => {
 				{
 					path: INFO_ROUTE.path,
 					element: INFO_ROUTE.element,
+				},
+				{
+					path: HOMETWO_ROUTE.path,
+					element: HOMETWO_ROUTE.element,
 				},
 			],
 		},
