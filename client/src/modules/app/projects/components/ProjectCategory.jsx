@@ -10,6 +10,7 @@ export const ProjectCategory = ({ data, title }) => {
                 {
                     data.map((project) => (
                         <ProjectCard
+                            key={ project.student }
                             project_name={ project.project_name }
                             student={ project.student }
                             banner_image={ project.banner_image }

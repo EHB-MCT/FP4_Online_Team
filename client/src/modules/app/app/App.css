@@ -90,15 +90,28 @@ h3{
   font-family: var(--main-font);
   font-size: var(--button-size);
   font-weight: var(--subtitle-weight);
+
+  cursor: pointer;
 }
 .filter{
-  padding: 5px 35px;
+  padding: 5px 30px;
   font-size: 12pt;
+  margin: 0 0;
+
+  p{
+    margin: 10px 0;
+  }
 }
 
 .filter-button-wrapper{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  margin: 24px 0;
+
+
 }
 
 ul{

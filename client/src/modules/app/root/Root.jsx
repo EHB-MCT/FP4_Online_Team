@@ -43,20 +43,22 @@ export const Root = () => {
 					path: PRIVACY_POLICY_ROUTE.path,
 					element: PRIVACY_POLICY_ROUTE.element,
 				},
+				// {
+				// 	path: COUNTER_ROUTE.path,
+				// 	element: COUNTER_ROUTE.element,
+				// },
 				{
-					path: COUNTER_ROUTE.path,
-					element: COUNTER_ROUTE.element,
-
 					path: VOTING_ROUTE.path,
 					element: VOTING_ROUTE.element,
 				},
 				{
 					path: PROJECTS_ROUTE.path,
 					element: PROJECTS_ROUTE.element
-				},{
-					path: INFO_ROUTE.path,
-					element: INFO_ROUTE.element,
 				},
+				// {
+				// 	path: INFO_ROUTE.path,
+				// 	element: INFO_ROUTE.element,
+				// },
 			],
 		},
 	]);
