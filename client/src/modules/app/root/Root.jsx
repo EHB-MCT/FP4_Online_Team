@@ -9,6 +9,7 @@ import { HOME_ROUTE } from "../home/home.route";
 import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
 import { REGISTER_ROUTE } from "../register/register.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
+import { INFO_ROUTE } from "../info/info.route";
 
 export const Root = () => {
 	const ROUTE = createHashRouter([
@@ -35,6 +36,10 @@ export const Root = () => {
 				{
 					path: VOTING_ROUTE.path,
 					element: VOTING_ROUTE.element,
+				},
+				{
+					path: INFO_ROUTE.path,
+					element: INFO_ROUTE.element,
 				},
 			],
 		},
