@@ -40,30 +40,30 @@ export const Root = () => {
 					path: HOME_ROUTE.path,
 					element: HOME_ROUTE.element,
 				},
-				{
-					path: PRICE_ROUTE.path,
-					element: PRICE_ROUTE.element,
-				},
-				{
-					path: PRIVACY_POLICY_ROUTE.path,
-					element: PRIVACY_POLICY_ROUTE.element,
-				},
-				{
-					path: PROJECTS_ROUTE.path,
-					element: PROJECTS_ROUTE.element
-				},
-				{
-					path: PROJECTSDETAIL_ROUTE.path,
-					element: PROJECTSDETAIL_ROUTE.element,
-				},
+				// {
+				// 	path: PRICE_ROUTE.path,
+				// 	element: PRICE_ROUTE.element,
+				// },
+				// {
+				// 	path: PRIVACY_POLICY_ROUTE.path,
+				// 	element: PRIVACY_POLICY_ROUTE.element,
+				// },
+				// {
+				// 	path: PROJECTS_ROUTE.path,
+				// 	element: PROJECTS_ROUTE.element
+				// },
+				// {
+				// 	path: PROJECTSDETAIL_ROUTE.path,
+				// 	element: PROJECTSDETAIL_ROUTE.element,
+				// },
 				{
 					path: REGISTER_ROUTE.path,
 					element: REGISTER_ROUTE.element,
 				},
-				{
-					path: VOTING_ROUTE.path,
-					element: VOTING_ROUTE.element,
-				},
+				// {
+				// 	path: VOTING_ROUTE.path,
+				// 	element: VOTING_ROUTE.element,
+				// },
 
 				// {
 				// 	path: INFO_ROUTE.path,
@@ -71,20 +71,21 @@ export const Root = () => {
 				// },
 
 			]
-		},{
-			path: "/voteReGRfguugXNEmMm/",
-			element: <App />,
-			children: [
-				{
-					path: AUTH_TEACHER_ROUTE.path,
-					element: AUTH_TEACHER_ROUTE.element,
-				},
-				{
-					path: REQUEST_TOKEN_ROUTE.path,
-					element: REQUEST_TOKEN_ROUTE.element,
-				}
-			]
-		}
+		},
+		//{
+		// 	path: "/voteReGRfguugXNEmMm/",
+		// 	element: <App />,
+		// 	children: [
+		// 		{
+		// 			path: AUTH_TEACHER_ROUTE.path,
+		// 			element: AUTH_TEACHER_ROUTE.element,
+		// 		},
+		// 		{
+		// 			path: REQUEST_TOKEN_ROUTE.path,
+		// 			element: REQUEST_TOKEN_ROUTE.element,
+		// 		}
+		// 	]
+		// }
 	]);
 
 	return (
