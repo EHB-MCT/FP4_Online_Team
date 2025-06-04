@@ -1,22 +1,32 @@
 import Carousel from "../components/Carousel";
 import Button from "../../../shared/button/Button";
 import { NavLink } from "react-router";
-import { LivestreamPopup } from "../../../shared/livestreamPopup/LivestreamPopup"
+import { LivestreamPopup } from "../../../shared/livestreamPopup/LivestreamPopup";
+import React, { useState, useEffect  } from "react";
 
 export const HomeTwo = () => {
 	document.title = "Home | Shift Expo";
 
+	const [showPopup, setShowPopup] = useState(false);
+
+	
+	useEffect(() => {
+		// Auto show after 2 seconds
+		const timer = setTimeout(() => {
+			setShowPopup(true);
+		}, 2000);
+
+		return () => clearTimeout(timer); // Cleanup on unmount
+	}, []);
+
 	return (
 		<section className="inner-wrapper">
-			<LivestreamPopup />
+			<LivestreamPopup showPopup={showPopup} setShowPopup={setShowPopup} />
 			<div className="wrapper">
 				<div style={styles.wrapper}>
 					<div style={styles.banner}>
 						<h1>Welkom op de Shift expo</h1>
-						<p>
-							Ontdek creatieve eindprojecten van onze afstuderende studenten en
-							krijg een blik achter de schermen van onze opleiding.
-						</p>
+						<p>Ontdek creatieve eindprojecten van onze afstuderende studenten en krijg een blik achter de schermen van onze opleiding.</p>
 					</div>
 				</div>
 
@@ -27,16 +37,14 @@ export const HomeTwo = () => {
 						<Carousel />
 					</div>
 
-					<Button
-						destinationUrl={"/Projecten"}
-						copy={"Ontdek meer eindjaarprojecten"}
-						className={"button"}
-					/>
+					<Button destinationUrl={"/Projecten"} copy={"Ontdek meer eindjaarprojecten"} className={"button"} />
 
 					<div style={styles.livestreamBoxWrapper}>
-						<NavLink to="/Livestream" style={styles.livestreamBox}>
-							Bekijk hier onze livestream!
-						</NavLink>
+						{!showPopup && (
+							<button onClick={() => setShowPopup(true)} style={styles.livestreamBox}>
+								Bekijk hier onze livestream!
+							</button>
+						)}
 					</div>
 				</div>
 
@@ -47,11 +55,7 @@ export const HomeTwo = () => {
 
 					<p>Bekijk het volledige programma en de tijdstabel.</p>
 
-					<Button
-						destinationUrl={"/Programma"}
-						copy={"Programma"}
-						className={"button"}
-					/>
+					<Button destinationUrl={"/Programma"} copy={"Programma"} className={"button"} />
 				</div>
 
 				<div style={styles.container}>
@@ -65,12 +69,7 @@ export const HomeTwo = () => {
 						Infodag: Vrijdag 20 juni, 17u – 22u
 					</p>
 
-					<a
-						href="https://www.erasmushogeschool.be/nl/opleidingen/multimedia-en-creatieve-technologie"
-						target="_blank"
-						rel="noopener noreferrer"
-						style={styles.link}
-					>
+					<a href="https://www.erasmushogeschool.be/nl/opleidingen/multimedia-en-creatieve-technologie" target="_blank" rel="noopener noreferrer" style={styles.link}>
 						Meer over de opleiding
 					</a>
 				</div>

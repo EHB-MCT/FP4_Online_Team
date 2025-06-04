@@ -10,7 +10,7 @@
 .popup-container{
     width: fit-content;
     z-index: 5;
-    position: absolute;
+    position: fixed;
 }
 .popup-close{
     height: fit-content;
