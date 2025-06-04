@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { clsx } from 'clsx';
 
 //Components
-import InputField from "../components/InputField.jsx";
+import InputField from "../../../shared/inputfield/InputField.jsx";
 import Roles from "../components/Roles.jsx";
 
 //CSS

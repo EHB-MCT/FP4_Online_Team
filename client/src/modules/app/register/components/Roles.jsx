@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 //Components
-import InputField from "./InputField.jsx";
+import InputField from "../../../shared/inputfield/InputField.jsx";
 
 const Roles = ( { className, InputName, Mandatory, Placeholder, onChange} ) => {
 

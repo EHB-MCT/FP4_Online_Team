@@ -12,7 +12,6 @@ import styles from './navigation.module.scss'
 
 //Routes
 import { HOME_ROUTE } from '../../app/home/home.route.jsx';
-import { REGISTER_ROUTE } from '../../app/register/register.route.jsx';
 
 export const Navigation = () => {
 
