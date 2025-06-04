@@ -1,5 +1,5 @@
 import { createHashRouter, RouterProvider } from "react-router";
-
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 //Components
 import App from "../app/App";
 
@@ -14,7 +14,6 @@ import { COUNTER_ROUTE } from "../counter/counter.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
 
 import { INFO_ROUTE } from "../info/info.route";
-import { COUNTER_ROUTE } from "../counter/counter.route";
 import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
 import { HOMETWO_ROUTE } from "../homeTwo/homeTwo.route";
 
