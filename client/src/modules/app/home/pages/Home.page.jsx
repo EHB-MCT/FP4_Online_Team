@@ -84,7 +84,7 @@ export const Home = () => {
                                 in de creatieve en digitale sector.
                             </p>
                         </div>
-					    <Button destinationUrl={"/register"} copy={"Meer"} className={"button"} />
+                        <a href="https://www.erasmushogeschool.be/nl/opleidingen/multimedia-en-creatieve-technologie" target="_blank" className="button">Meer</a>
                     </div>
 				</div>
 			</section>
