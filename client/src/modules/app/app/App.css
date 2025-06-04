@@ -133,6 +133,10 @@ section.pink-wrapper{
   height: 70dvh;
 }
 
+.large-section{
+  height: 30dvh;
+}
+
 /* Button */
 .button{
   display: inline-block;
