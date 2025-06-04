@@ -24,8 +24,9 @@
 	--subtitle-weight: 400;
 	--subtitle-weight2: 400;
 	--subtitle-size: 14pt;
-	--h2-size: 64px;
-	--h3-size: 18pt;
+	--h2-size: 24pt;
+	--h3-size: 16pt;
+  --h4-size: 14pt;
 
   /* Button */
   --button-size: 17pt;
@@ -53,24 +54,45 @@ h1{
   font-family: var(--main-font);
   font-weight: var(--title-weight);
   color: var(--white-font-color);
+  font-size: var(--title-size);
+  margin: 10px 0;
+  text-align: center;
 }
 h2{
   font-family: var(--main-font);
   font-weight: var(--title-weight);
-  color: var(--white-font-color);
+  color: var(--font-color);
+  font-size: var(--h2-size);
+  margin: 10px 0;
+  text-align: center;
 }
 h3{
   font-family: var(--main-font);
   font-weight: var(--title-weight);
-  color: var(--white-font-color); 
+  color: var(--font-color); 
+  font-size: var(--h3-size);
+  margin: 10px 0;
+  text-align: center;
 }
 h4{
   font-family: var(--main-font);
   font-weight: var(--title-weight);
   color: var(--white-font-color); 
+  font-size: var(--h4-size);
+  margin: 10px 0;
+  text-align: center;
 }
 p{
   font-family: var(--secundary-font);
+  margin: 24px 0;
+}
+
+p#more-text{
+  display: none;
+}
+
+a{
+  text-decoration: none;
 }
 
 /* Text-colors */
@@ -107,6 +129,10 @@ section.pink-wrapper{
   margin-top: 0;
 }
 
+.large{
+  height: 70dvh;
+}
+
 /* Button */
 .button{
   display: inline-block;
@@ -121,7 +147,7 @@ section.pink-wrapper{
 
   font-family: var(--main-font);
   font-size: var(--button-size);
-  font-weight: var(--subtitle-weight);
+  font-weight: var(--title-weight);
 
   cursor: pointer;
 }
@@ -135,11 +161,12 @@ section.pink-wrapper{
 @media(min-width: 1024px){
   :root{
    /* Titles */
-    --title-size: 18pt;
+    --title-size: 64pt;
 
     /* Subtitles */
-    --h2-size: 64px;
+    --h2-size: 38pt;
     --h3-size: 18pt;
+    --h4-size: 24pt;
 
     /* Button */
     --button-size: 17pt;
@@ -156,11 +183,18 @@ section.pink-wrapper{
     --section-padding: 64px 0;
 
   }
-    .inner-wrapper{
-      width: 100%;
-      max-width: 950px;
-      margin: 0 auto;
-    }
+  .inner-wrapper{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+  .small-wrapper{
+    width: 850px;
+    margin: 0 auto;
+  }
+  p#more-text{
+    display: inline-block;
+  }
 }
 
 /* Large computer */
