@@ -1,6 +1,4 @@
 import { createHashRouter, RouterProvider } from "react-router";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
 
 //Components
 import App from "../app/App";
@@ -12,14 +10,15 @@ import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
 import { PROJECTS_ROUTE } from "../projects/projects.route";
 import { REGISTER_ROUTE } from "../register/register.route";
 import { PRICE_ROUTE } from "../price/price.route";
+import { COUNTER_ROUTE } from "../counter/counter.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
 
 import { INFO_ROUTE } from "../info/info.route";
 import { COUNTER_ROUTE } from "../counter/counter.route";
 import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
+import { HOMETWO_ROUTE } from "../homeTwo/homeTwo.route";
 
 export const Root = () => {
-
 	const QUERY_CLIENT = new QueryClient();
 
 	const ROUTE = createHashRouter([
@@ -57,7 +56,7 @@ export const Root = () => {
 				},
 				{
 					path: PROJECTS_ROUTE.path,
-					element: PROJECTS_ROUTE.element
+					element: PROJECTS_ROUTE.element,
 				},
 
 				{
@@ -65,17 +64,20 @@ export const Root = () => {
 					element: PROJECTSDETAIL_ROUTE.element,
 				},
 
-				// {
-				// 	path: INFO_ROUTE.path,
-				// 	element: INFO_ROUTE.element,
-				// },
-
+				{
+					path: INFO_ROUTE.path,
+					element: INFO_ROUTE.element,
+				},
+				{
+					path: HOMETWO_ROUTE.path,
+					element: HOMETWO_ROUTE.element,
+				},
 			],
 		},
 	]);
 
 	return (
-		<QueryClientProvider client={ QUERY_CLIENT }>
+		<QueryClientProvider client={QUERY_CLIENT}>
 			<RouterProvider router={ROUTE} />
 		</QueryClientProvider>
 	);

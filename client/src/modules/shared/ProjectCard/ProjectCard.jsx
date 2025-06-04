@@ -3,9 +3,8 @@ import { NavLink } from "react-router";
 import styles from "./projectCard.module.css";
 
 export const ProjectCard = ({ project_name, student, banner_image }) => {
-
-    return (
-        <NavLink to={ "#" }>
+	return (
+		<NavLink to={"#"}>
 			<div className={styles.card}>
 				<div className={styles.banner_image}>
 					<img src={banner_image} alt="image of project" />
@@ -18,6 +17,5 @@ export const ProjectCard = ({ project_name, student, banner_image }) => {
 				</div>
 			</div>
 		</NavLink>
-    );
-
+	);
 };
