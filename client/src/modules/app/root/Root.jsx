@@ -6,17 +6,18 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import App from "../app/App";
 
 //Routes
+import { AUTH_TEACHER_ROUTE} from "../teachervoting/authenticate/authenticate.route";
+import { COUNTER_ROUTE } from "../counter/counter.route";
 import { ERROR_ROUTE } from "../error/error.route";
 import { HOME_ROUTE } from "../home/home.route";
+import { INFO_ROUTE } from "../info/info.route";
+import { PRICE_ROUTE } from "../price/price.route";
 import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
 import { PROJECTS_ROUTE } from "../projects/projects.route";
-import { REGISTER_ROUTE } from "../register/register.route";
-import { PRICE_ROUTE } from "../price/price.route";
-import { VOTING_ROUTE } from "../voting/voting.route";
-
-import { INFO_ROUTE } from "../info/info.route";
-import { COUNTER_ROUTE } from "../counter/counter.route";
 import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
+import { REGISTER_ROUTE } from "../register/register.route";
+import { VOTING_ROUTE } from "../voting/voting.route";
+import { REQUEST_TOKEN_ROUTE } from "../teachervoting/requestToken/requestToken.route";
 
 export const Root = () => {
 
@@ -28,16 +29,16 @@ export const Root = () => {
 			element: <App />,
 			children: [
 				{
+					path: COUNTER_ROUTE.path,
+					element: COUNTER_ROUTE.element,
+				},
+				{
 					path: ERROR_ROUTE.path,
 					element: ERROR_ROUTE.element,
 				},
 				{
 					path: HOME_ROUTE.path,
 					element: HOME_ROUTE.element,
-				},
-				{
-					path: REGISTER_ROUTE.path,
-					element: REGISTER_ROUTE.element,
 				},
 				{
 					path: PRICE_ROUTE.path,
@@ -48,21 +49,20 @@ export const Root = () => {
 					element: PRIVACY_POLICY_ROUTE.element,
 				},
 				{
-					path: COUNTER_ROUTE.path,
-					element: COUNTER_ROUTE.element,
+					path: PROJECTS_ROUTE.path,
+					element: PROJECTS_ROUTE.element
+				},
+				{
+					path: PROJECTSDETAIL_ROUTE.path,
+					element: PROJECTSDETAIL_ROUTE.element,
+				},
+				{
+					path: REGISTER_ROUTE.path,
+					element: REGISTER_ROUTE.element,
 				},
 				{
 					path: VOTING_ROUTE.path,
 					element: VOTING_ROUTE.element,
-				},
-				{
-					path: PROJECTS_ROUTE.path,
-					element: PROJECTS_ROUTE.element
-				},
-
-				{
-					path: PROJECTSDETAIL_ROUTE.path,
-					element: PROJECTSDETAIL_ROUTE.element,
 				},
 
 				// {
@@ -70,8 +70,21 @@ export const Root = () => {
 				// 	element: INFO_ROUTE.element,
 				// },
 
-			],
-		},
+			]
+		},{
+			path: "/voteReGRfguugXNEmMm/",
+			element: <App />,
+			children: [
+				{
+					path: AUTH_TEACHER_ROUTE.path,
+					element: AUTH_TEACHER_ROUTE.element,
+				},
+				{
+					path: REQUEST_TOKEN_ROUTE.path,
+					element: REQUEST_TOKEN_ROUTE.element,
+				}
+			]
+		}
 	]);
 
 	return (
