@@ -735,3 +735,19 @@ footer {
 .time-wrapper p {
   color: var(--green-color);
 }
+
+
+.custom-sweet-alert{
+  background-color: var(--background-color);
+  border-radius: 20px;
+  color: var(--font-color);
+
+}
+
+.pink{
+  background-color: var(--green-color);
+}
+.button.pink:hover {
+  background-color: var(--green-color);
+  color: #fff;
+}

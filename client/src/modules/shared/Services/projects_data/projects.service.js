@@ -1,5 +1,3 @@
-import PROJECTS_MOCK from "./data/projects.json"
-
 class ProjectsService {
 
     async getProjectsData(){

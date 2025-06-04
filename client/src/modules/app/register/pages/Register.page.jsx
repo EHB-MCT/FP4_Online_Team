@@ -41,8 +41,12 @@ export const Register = () => {
 			);
 			Swal.fire({
 				title: "Success",
-				text: "Your registration was successful!",
+				text: "Inschrijving succesvol!",
 				icon: "success",
+				customClass: {
+					popup: "custom-sweet-alert",
+					confirmButton: "button pink"
+				}
 			});
 		} catch (error) {
 			console.error("Error submitting form:", error);
@@ -54,6 +58,10 @@ export const Register = () => {
 				title: "Error",
 				text: parsedMessage.message,
 				icon: "error",
+				customClass: {
+					popup: "custom-sweet-alert",
+					confirmButton: "button pink"
+				}
 			});
 		}
 	};
