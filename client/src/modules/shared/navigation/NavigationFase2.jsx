@@ -19,17 +19,17 @@ export const NavigationFase2 = () => {
 						</Link>
 					</li>
 					<li>
-						<Link to="/" className="link">
+						<Link to="/projects" className="link">
 							Eindjaarprojecten
 						</Link>
 					</li>
 					<li>
-						<Link to="/" className="link">
-							Workshops
+						<Link to="/price" className="link">
+							Prijzen
 						</Link>
 					</li>
 					<li>
-						<Link to="/" className="link">
+						<Link to="/info" className="link">
 							Info
 						</Link>
 					</li>
