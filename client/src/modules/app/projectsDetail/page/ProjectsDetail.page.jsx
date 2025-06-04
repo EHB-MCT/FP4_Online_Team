@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useProjectsData } from "../../../shared/const/hooks/getProjectsData.hook";
 import { NextProject } from "../components/NextProject";
+import "../components/NextProject.css";
 
 export const ProjectsDetail = () => {
 	const { projectId } = useParams();
@@ -22,10 +23,14 @@ export const ProjectsDetail = () => {
 							<div className="banner-image">
 								<img src="/homepage-image.png" alt="" />
 							</div>
-							<div className="banner-circle"></div>
+							<div className="banner-circle">
+								{" "}
+								<img src="/homepage-image.png" alt="" />
+							</div>
 						</div>
 
-						<h1>{project.project_name}</h1>
+						<h1>{project.student}</h1>
+						<h3>{project.project_name}</h3>
 						<p>{project.description}</p>
 					</>
 				) : (
