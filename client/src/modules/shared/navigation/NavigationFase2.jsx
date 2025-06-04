@@ -22,7 +22,11 @@ export const NavigationFase2 = () => {
 					</li>
 
 					<li className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
-						<span className="link cursor-pointer">Eindjaarprojecten ▾</span>
+						<span className="link cursor-pointer">
+							<Link to="/projects" className="link">
+								Eindjaarprojecten ▾
+							</Link>
+						</span>
 						{isDropdownOpen && (
 							<ul className="dropdown-menu">
 								<li>
