@@ -1,12 +1,14 @@
 import Carousel from "../components/Carousel";
 import Button from "../../../shared/button/Button";
 import { NavLink } from "react-router";
+import { LivestreamPopup } from "../../../shared/livestreamPopup/LivestreamPopup"
 
 export const HomeTwo = () => {
 	document.title = "Home | Shift Expo";
 
 	return (
 		<section className="inner-wrapper">
+			<LivestreamPopup />
 			<div className="wrapper">
 				<div style={styles.wrapper}>
 					<div style={styles.banner}>
