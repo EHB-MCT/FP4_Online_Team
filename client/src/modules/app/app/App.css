@@ -90,6 +90,12 @@ h3 {
 	margin: 0;
 }
 
+h3.register{
+  color: #fff;
+  font-weight: 400;
+  font-size: 24pt;
+}
+
 
 img{ 
   z-index: 0;
@@ -601,6 +607,10 @@ footer {
 		--section-margin-top: 64px;
 		--section-margin-bottom: 64px;
 	}
+
+  h3.register{
+    font-size: 42pt;
+  }
 
 	.inner-wrapper {
 		width: 1200px;

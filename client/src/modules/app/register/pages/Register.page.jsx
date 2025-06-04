@@ -63,7 +63,7 @@ export const Register = () => {
 			{/* <img src="/public/figure_pink.png" alt="" className="blob-pink" />
 			<img src="/public/figure_orange.png" alt="" className="blob-orange" /> */}
 
-			<h3>Save the date</h3>
+			<h3 className="register">Save the date</h3>
 			<form onSubmit={handleSubmit}>
 				<InputField
 					className={"firstName"}
