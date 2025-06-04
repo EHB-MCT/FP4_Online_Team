@@ -46,6 +46,17 @@
 
 }
 
+.practical-info-wrapper-purple{
+    margin-bottom: 0;
+    background-color: var(--purple-color);
+
+    &--mct-info-wrapper{
+        h2{
+            text-align: start;
+        }
+    }
+}
+
 @media(min-width: 1024px){
 
     .hero-wrapper{
@@ -95,5 +106,15 @@
 
         }
 
+    }
+    .practical-info-wrapper-purple{
+        background-color: var(--purple-color);
+
+        &--mct-info-wrapper{
+            width: 1000px;
+            h2{
+                text-align: start;
+            }
+        }
     }
 }

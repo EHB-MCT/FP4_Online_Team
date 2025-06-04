@@ -15,7 +15,7 @@ function App() {
       {/* <NavigationFase2 /> */}
       <Navigation/>
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

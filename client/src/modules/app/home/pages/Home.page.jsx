@@ -67,18 +67,20 @@ export const Home = () => {
                 </div>
 			</section>
 
-			<section className={clsx}>
-				<div className="inner-wrapper practical-info">
-					<div className="mct-info">
-						<h2 className="info2">Multimedia en Creatieve technologie</h2>
-						<p>
-							Multimedia & Creatieve Technologie is een veelzijdige studierichting waarin technologie en creativiteit samenkomen. Studenten leren
-							interactieve en digitale ervaringen ontwerpen, ontwikkelen en realiseren met tools zoals webdesign, animatie, AR/VR, videoproductie en
-							programmeren. De focus ligt op innovatie, storytelling en technische vaardigheden, waardoor afgestudeerden klaar zijn voor een carrière
-							in de creatieve en digitale sector.
-						</p>
-					</div>
-					<Button destinationUrl={"/register"} copy={"Meer"} className={"button"} />
+			<section className={clsx(styles["practical-info-wrapper-purple"])}>
+				<div className="inner-wrapper">
+                    <div className={clsx(styles["practical-info-wrapper-purple--mct-info-wrapper"])}>
+                        <div className="mct-info">
+                            <h2 className="green-text">Multimedia en Creatieve technologie</h2>
+                            <p className="white-text">
+                                Multimedia & Creatieve Technologie is een veelzijdige studierichting waarin technologie en creativiteit samenkomen. Studenten leren
+                                interactieve en digitale ervaringen ontwerpen, ontwikkelen en realiseren met tools zoals webdesign, animatie, AR/VR, videoproductie en
+                                programmeren. De focus ligt op innovatie, storytelling en technische vaardigheden, waardoor afgestudeerden klaar zijn voor een carrière
+                                in de creatieve en digitale sector.
+                            </p>
+                        </div>
+					    <Button destinationUrl={"/register"} copy={"Meer"} className={"button"} />
+                    </div>
 				</div>
 			</section>
 		</>

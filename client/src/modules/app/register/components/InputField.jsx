@@ -3,7 +3,7 @@ const InputField = ( { className, InputType,  InputName, Mandatory, Placeholder,
     if(Mandatory){
         return(
             <div className="input-item-wrapper">
-                <h4>{ InputName } *</h4>
+                <h3 style={{textAlign: "start"}}>{ InputName } *</h3>
                 <input 
                     type={ InputType } 
                     name={ className } 
@@ -18,7 +18,7 @@ const InputField = ( { className, InputType,  InputName, Mandatory, Placeholder,
     }else{
         return(
             <div className="input-item-wrapper">
-                <h4>{ InputName }</h4>
+                <h3 style={{textAlign: "start"}}>{ InputName }</h3>
                 <textarea 
                     name={ className } 
                     id={ className }

@@ -50,7 +50,7 @@ const Roles = ( { className, InputName, Mandatory, Placeholder, onChange} ) => {
 
     return(
         <div className="input-item-wrapper">
-            <h4>{ InputName } *</h4>
+            <h3 style={{textAlign: "start"}}>{ InputName } *</h3>
             <select 
                 name={ className } 
                 id={ className } 
