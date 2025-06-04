@@ -35,7 +35,8 @@ export const RequestToken = () => {
             // );
             localStorage.setItem("user", JSON.stringify({
                 email: formData.email,
-                token: formData.token
+                token: formData.token,
+                validated: true
             }))
 
             Swal.fire({

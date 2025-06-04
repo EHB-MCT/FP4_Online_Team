@@ -14,7 +14,7 @@ export const Authenticate = () => {
 
     const [formData, setFormData] = useState({
         email: "",
-        token: null
+        token: null,
     });
 
     const handleAuthentication = async (e) => {
@@ -28,7 +28,8 @@ export const Authenticate = () => {
 
             localStorage.setItem("user", JSON.stringify({
                 email: formData.email,
-                token: formData.token
+                token: formData.token,
+                validated: false
             }));
 
             window.location.href = `/#/voteReGRfguugXNEmMm/${REQUEST_TOKEN_ROUTE.path}`; 
