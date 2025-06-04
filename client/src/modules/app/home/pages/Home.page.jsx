@@ -4,37 +4,29 @@ import Button from "../../../shared/button/Button.jsx";
 import InfoLine from "../components/InfoLine.jsx";
 import { useEffect } from "react";
 
-export const Home = () => {
-	document.title = "Shift Festival - 2025 ";
+//CSS
+import styles from './home.module.scss'
+import clsx from "clsx";
 
-	
+export const Home = () => {
+	document.title = "Shift Festival - 2025 ";	
 
 	return (
 		<>
-			<div className="outer-wrapper2">
-				<div className="outer-wrapper">
-					<div className="images">
-						{/* <div className="image1">
-							<img className="background-image" src="../public/left_image.png" alt="Homepage image 2" />
-						</div>
-						<div className="image2">
-							<img className="background-image" src="../public/right_image.png" alt="Homepage image" />
-						</div> */}
-					</div>
-					<div className="hero-wrapper">
-						<div className="inner-wrapper hero">
-							<h2 id="quick-info">Expo 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20 juni&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Anderlecht </h2>
-							<CountDown />
-							<p>
-								Kom de afstudeerprojecten van onze derdejaarsstudenten ontdekken tijdens dit unieke expo/festival. Laat je inspireren door innovatief
-								design, technologie en creativiteit. Schrijf je vandaag nog in en verzeker jezelf van een plekje op dit bijzondere event.
-							</p>
-							<Button destinationUrl={"/register"} copy={"Inschrijven"} className={"button"} />
-						</div>
-					</div>
-				</div>
-			</div>
-			<div className="practical-info-wrapper">
+			<section className="pink-wrapper">
+                <div className={clsx(styles["hero-wrapper"])}>
+                    <div className="inner-wrapper">
+                        <h4>Expo 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20 juni&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Anderlecht </h4>
+                        <CountDown />
+                        <p className="white-text">
+                            Kom de afstudeerprojecten van onze derdejaarsstudenten ontdekken tijdens dit unieke expo/festival. Laat je inspireren door innovatief
+                            design, technologie en creativiteit. Schrijf je vandaag nog in en verzeker jezelf van een plekje op dit bijzondere event.
+                        </p>
+                        <Button destinationUrl={"/register"} copy={"Inschrijven"} className={"button"} />
+                    </div>
+                </div>
+			</section>
+			{/* <section className="practical-info-wrapper">
                 <div className="background-image-right-wrapper">
 				    <div className="inner-wrapper practical-info">
                         <div className="praktischInfo">
@@ -77,9 +69,9 @@ export const Home = () => {
                         </div>
                     </div>
 				</div>
-			</div>
+			</section> */}
 
-			<section className="practical-info-wrapper-purple">
+			{/* <section className="practical-info-wrapper-purple">
 				<div className="inner-wrapper practical-info">
 					<div className="mct-info">
 						<h2 className="info2">Multimedia en Creatieve technologie</h2>
@@ -92,7 +84,7 @@ export const Home = () => {
 					</div>
 					<Button destinationUrl={"/register"} copy={"Meer"} className={"button"} />
 				</div>
-			</section>
+			</section> */}
 		</>
 	);
 };

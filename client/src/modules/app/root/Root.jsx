@@ -47,10 +47,10 @@ export const Root = () => {
 					path: PRIVACY_POLICY_ROUTE.path,
 					element: PRIVACY_POLICY_ROUTE.element,
 				},
-				// {
-				// 	path: COUNTER_ROUTE.path,
-				// 	element: COUNTER_ROUTE.element,
-				// },
+				{
+					path: COUNTER_ROUTE.path,
+					element: COUNTER_ROUTE.element,
+				},
 				{
 					path: VOTING_ROUTE.path,
 					element: VOTING_ROUTE.element,
