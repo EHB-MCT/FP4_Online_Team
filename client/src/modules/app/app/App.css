@@ -93,7 +93,7 @@ h3 {
 h3.register{
   color: #fff;
   font-weight: 400;
-  font-size: 24pt;
+  font-size: 42pt;
 }
 
 
@@ -342,7 +342,7 @@ section.study-area-wrapper {
   }
   h2.info2{
     color: var(--green-color);
-    font-size: 42pt;
+    font-size: 22pt;
     max-width: 800px;
   }
 }
