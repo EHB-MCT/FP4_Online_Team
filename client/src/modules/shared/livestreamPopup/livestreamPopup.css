@@ -1,0 +1,17 @@
+.popup-handle{
+    background-color: black;
+    height: fit-content;
+    padding: 10px;
+}
+.popup-video{
+    width: 400px;
+    height: 200px;
+}
+.popup-container{
+    width: fit-content;
+    z-index: 5;
+    position: absolute;
+}
+.popup-close{
+    height: fit-content;
+}
