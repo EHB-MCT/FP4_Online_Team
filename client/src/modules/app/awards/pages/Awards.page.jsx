@@ -99,10 +99,10 @@ export const Awards = () => {
                         <Model
                             rotation={[ 0, rotationY, 0 ]}
                         />
-                        <ambientLight intensity={0.5} />
+                        <ambientLight intensity={0.3} />
                         <directionalLight 
                             position={[5, 10, 7.5]} 
-                            intensity={1} 
+                            intensity={.75} 
                         />
                         <perspectiveCamera 
                             makeDefault 
