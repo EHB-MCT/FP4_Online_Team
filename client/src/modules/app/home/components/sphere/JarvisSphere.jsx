@@ -2,9 +2,24 @@ import React, { useRef, useMemo } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 
-function SpherePoints({ radius, count, color }) {
+// Utility to create a circular texture
+function createCircleTexture(size = 64) {
+  const canvas = document.createElement('canvas')
+  canvas.width = canvas.height = size
+  const ctx = canvas.getContext('2d')
+  ctx.beginPath()
+  ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2)
+  ctx.closePath()
+  ctx.fillStyle = 'white'
+  ctx.fill()
+  const texture = new THREE.Texture(canvas)
+  texture.needsUpdate = true
+  return texture
+}
+
+function SpherePoints({ radius, count, color, vector }) {
   const meshRef = useRef()
-  const { mouse, size, camera } = useThree()
+  const circleTexture = useMemo(() => createCircleTexture(64), [])
 
   const positions = useMemo(() => {
     const temp = []
@@ -34,24 +49,17 @@ function SpherePoints({ radius, count, color }) {
   const geometryRef = useRef()
 
   useFrame(() => {
-    const vector = new THREE.Vector3(
-      (mouse.x * size.width) / 2,
-      (mouse.y * size.height) / 2,
-      0
-    )
-    meshRef.current.worldToLocal(vector)
-
     for (let i = 0; i < count; i++) {
       const pos = positions[i]
       const original = originalPositions[i]
 
-      const distance = pos.distanceTo(vector)
+      const distance = vector ? pos.distanceTo(vector) : Infinity
 
-      if (distance < 75) {
+      if (distance < (radius * 0.75)) {
         const direction = pos.clone().sub(vector).normalize()
         pos.add(direction.multiplyScalar(20.5))
       } else {
-        pos.lerp(original, 0.05) // return to original position
+        pos.lerp(original, 0.05)
       }
 
       positionsArray[i * 3] = pos.x
@@ -72,19 +80,51 @@ function SpherePoints({ radius, count, color }) {
           itemSize={3}
         />
       </bufferGeometry>
-      <pointsMaterial size={5} color={color} />
+      <pointsMaterial
+        size={5}
+        color={color}
+        sizeAttenuation={true}
+        alphaTest={0.5}
+        transparent={true}
+        map={circleTexture}
+      />
     </points>
+  )
+}
+
+function JarvisSphereGroup() {
+  const groupRef = useRef()
+  const { mouse, size } = useThree()
+  const vector = useMemo(() => new THREE.Vector3(), [])
+
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.003
+      groupRef.current.rotation.x += 0.001
+    }
+    vector.set(
+      (mouse.x * size.width) / 2,
+      (mouse.y * size.height) / 2,
+      0
+    )
+    if (groupRef.current) {
+      groupRef.current.worldToLocal(vector)
+    }
+  })
+
+  return (
+    <group ref={groupRef}>
+      <SpherePoints radius={200} count={5000} color="#B20F60" vector={vector} />
+      <SpherePoints radius={100} count={1000} color="#CDDB28" vector={vector} />
+    </group>
   )
 }
 
 export const JarvisSphere = () => {
   return (
-    <Canvas camera={{ position: [0, 0, 500], fov: 75 }}>
+    <Canvas style={{ width: "100vw", height: "2000px", opacity: ".5"}} camera={{ position: [0, 0, 500], fov: 75 }}>
       <ambientLight />
-      <group>
-        <SpherePoints radius={200} count={1000} color="#ffea70" />
-      <SpherePoints radius={100} count={500} color="#0000ff" />
-      </group>
+      <JarvisSphereGroup />
     </Canvas>
   )
 }
