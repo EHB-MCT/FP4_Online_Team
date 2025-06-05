@@ -40,7 +40,7 @@ export const Awards = () => {
         setIsTransitioning(true);
 
         const spinTimes = 1;
-        const spinAmount = Math.PI * 2 * spinTimes + Math.PI;
+        const spinAmount = Math.PI * 2 * spinTimes;
         const startRotation = rotationY;
         const endRotation = startRotation + spinAmount;
 
@@ -49,7 +49,7 @@ export const Awards = () => {
             { value: startRotation },
             {
             value: endRotation,
-            duration: 3,
+            duration: 2,
             ease: "power4.inOut",
             onUpdate: function () {
                 setRotationY(this.targets()[0].value);
@@ -66,7 +66,7 @@ export const Awards = () => {
 
         setIsTransitioning(true);
 
-        const spinAmount = -Math.PI; // Spin once (180 degrees) in the opposite direction
+        const spinAmount = -Math.PI * 2;
         const startRotation = rotationY;
         const endRotation = startRotation + spinAmount;
 
@@ -74,7 +74,7 @@ export const Awards = () => {
             { value: startRotation },
             {
                 value: endRotation,
-                duration: 3,
+                duration: 2,
                 ease: "power4.inOut",
                 onUpdate: function () {
                     setRotationY(this.targets()[0].value);
