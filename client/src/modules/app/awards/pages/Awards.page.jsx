@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber"
 import clsx from "clsx"
 import { useState } from "react"
+import gsap from "gsap"
 
 //Models
 import { Model } from "../../../shared/model/Model"
@@ -35,68 +36,55 @@ export const Awards = () => {
     
     const next = () => {
         if (isTransitioning) return; // Prevent multiple clicks during animation
-        
+
         setIsTransitioning(true);
-        
-        let spins = 0;
-        const spinTimes = 2;
-        const spinStep = Math.PI / 12; 
-        const totalSteps = spinTimes * 24; 
-        let currentStep = 0;
-        
-        const animationInterval = setInterval(() => {
-            currentStep++;
-            
-            setRotationY(prev => {
-                const next = prev + spinStep;
-                if (next >= (spins + 1) * Math.PI * 2) {
-                    spins++;
-                }
-                return next;
-            });
-            
-            if (currentStep === Math.floor(totalSteps / 2)) {
+
+        const spinTimes = 1;
+        const spinAmount = Math.PI * 2 * spinTimes + Math.PI;
+        const startRotation = rotationY;
+        const endRotation = startRotation + spinAmount;
+
+        // Animate
+        gsap.to(
+            { value: startRotation },
+            {
+            value: endRotation,
+            duration: 3,
+            ease: "power4.inOut",
+            onUpdate: function () {
+                setRotationY(this.targets()[0].value);
+            },
+            onComplete: () => {
                 setCurrentIndex((prevIndex) => (prevIndex + 1) % awards.length);
-            }
-            
-            if (currentStep >= totalSteps) {
-                clearInterval(animationInterval);
                 setIsTransitioning(false);
             }
-        }, 12); 
+            }
+        );
     }  
-
     const previous = () => {
         if (isTransitioning) return; // Prevent multiple clicks during animation
-        
+
         setIsTransitioning(true);
-        
-        let spins = 0;
-        const spinTimes = 2;
-        const spinStep = -Math.PI / 12; 
-        const totalSteps = spinTimes * 24; 
-        let currentStep = 0;
-        
-        const animationInterval = setInterval(() => {
-            currentStep++;
-            
-            setRotationY(prev => {
-                const next = prev + spinStep;
-                if (next <= (spins - 1) * Math.PI * 2) {
-                    spins--;
+
+        const spinAmount = -Math.PI; // Spin once (180 degrees) in the opposite direction
+        const startRotation = rotationY;
+        const endRotation = startRotation + spinAmount;
+
+        gsap.to(
+            { value: startRotation },
+            {
+                value: endRotation,
+                duration: 3,
+                ease: "power4.inOut",
+                onUpdate: function () {
+                    setRotationY(this.targets()[0].value);
+                },
+                onComplete: () => {
+                    setCurrentIndex((prevIndex) => (prevIndex - 1 + awards.length) % awards.length);
+                    setIsTransitioning(false);
                 }
-                return next;
-            });
-            
-            if (currentStep === Math.floor(totalSteps / 2)) {
-                setCurrentIndex((prevIndex) => (prevIndex - 1 + awards.length) % awards.length);
             }
-            
-            if (currentStep >= totalSteps) {
-                clearInterval(animationInterval);
-                setIsTransitioning(false);
-            }
-        }, 12); 
+        );
     }
 
     return (
@@ -117,7 +105,8 @@ export const Awards = () => {
                             onClick={previous}
                         >
                             <p>{'<'}-</p>                       
-                        </div>                          <div className={clsx(style["awards-inner-wrapper"])}>
+                        </div>                          
+                        <div className={clsx(style["awards-inner-wrapper"])}>
                             <div className={clsx(style["award-golden-mike"], {
                                 [style.transitioning]: isTransitioning
                             })}>
