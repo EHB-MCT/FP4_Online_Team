@@ -18,7 +18,7 @@
 
 	/* Titles */
 	--title-weight: 500;
-	--title-size: 18pt;
+	--title-size: 16pt;
 
 	/* Subtitles */
 	--subtitle-weight: 400;
@@ -26,11 +26,11 @@
 	--subtitle-size: 14pt;
 	--h2-size: 24pt;
 	--h3-size: 16pt;
-  --h4-size: 14pt;
+  --h4-size: 12pt;
 
   /* Button */
-  --button-size: 17pt;
-  --button-padding: 20px 65px;
+  --button-size: 14pt;
+  --button-padding: 15px 50px;
   --button-margin: 24px 0;
   --border-radius: 15px;
   --button-color: #cedc29;
@@ -171,7 +171,7 @@ footer {
 	}
 	.inner-wrapper {
 		height: 20dvh;
-		padding-bottom: 64px;
+		padding-bottom: 164px;
 		padding-top: 64px;
 		display: flex;
 		flex-direction: column;
