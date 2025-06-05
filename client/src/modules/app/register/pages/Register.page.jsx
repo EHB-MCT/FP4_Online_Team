@@ -40,8 +40,8 @@ export const Register = () => {
 				formData
 			);
 			Swal.fire({
-				title: "Success",
-				text: "Inschrijving succesvol!",
+				title: "Inschrijving succesvol!",
+				text: `Bedankt voor je inschrijving, er is een bevestigingsmail verstuurd naar ${formData.email}.`,
 				icon: "success",
 				customClass: {
 					popup: "custom-sweet-alert",
@@ -55,8 +55,8 @@ export const Register = () => {
 			const parsedMessage = JSON.parse(errorMessage);
 
 			Swal.fire({
-				title: "Error",
-				text: parsedMessage.message,
+				title: "Oeps!",
+				text: `Er is al ingeschreven met dit e-mailadres.`,
 				icon: "error",
 				customClass: {
 					popup: "custom-sweet-alert",
@@ -78,7 +78,7 @@ export const Register = () => {
 					InputType={"text"}
 					InputName={"Voornaam"}
 					Mandatory={true}
-					Placeholder={"Michiel"}
+					Placeholder={"Voornaam"}
 					onChange={(e) => {
 						setFormData((previousData) => ({
 							...previousData,
@@ -91,7 +91,7 @@ export const Register = () => {
 					InputType={"text"}
 					InputName={"Achternaam"}
 					Mandatory={true}
-					Placeholder={"Janssen"}
+					Placeholder={"Achternaam"}
 					onChange={(e) => {
 						setFormData((previousData) => ({
 							...previousData,
@@ -104,7 +104,7 @@ export const Register = () => {
 					InputType={"email"}
 					InputName={"Email"}
 					Mandatory={true}
-					Placeholder={"michiel.janssen@example.com"}
+					Placeholder={"mail@example.com"}
 					onChange={(e) => {
 						setFormData((previousData) => ({
 							...previousData,

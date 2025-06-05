@@ -36,6 +36,7 @@
 	--border-radius: 15px;
 	--button-color: #8fd11c;
 
+
 	/*Background color*/
 	--background-color: #ef4478;
 	/* --background-color: #c169aa; */
@@ -152,6 +153,7 @@ section.pink-wrapper {
 
 	color: white;
 
+
 	font-family: var(--main-font);
 	font-size: var(--button-size);
 	font-weight: var(--title-weight);
@@ -164,6 +166,9 @@ section.pink-wrapper {
 	transition: ease-out 0.5s;
 	border: 2px solid var(--button-color);
 	box-shadow: inset 0 0 0 0 var(--button-color);
+}
+.button:hover{
+  background-color: var(--button-hover-color);
 }
 
 .button:hover {
@@ -184,11 +189,12 @@ label {
 footer {
 	background-color: var(--font-color);
 
-	color: #fff;
+	color: var(--white-font-color);
 
-	a {
-		color: #fff;
+	.button {
+		color: var(--white-font-color);
 	}
+
 	.inner-wrapper {
 		height: 20dvh;
 		padding-bottom: 164px;
@@ -258,7 +264,7 @@ footer {
 	footer {
 		background-color: var(--font-color);
 		color: #fff;
-		a {
+		.button {
 			color: #fff;
 		}
 		.button {
@@ -298,3 +304,4 @@ footer {
 		max-width: 1200px;
 	}
 }
+
