@@ -32,23 +32,27 @@
     overflow: hidden;
     padding: 0 20px;
 }
-
 .award-golden-mike {
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
     opacity: 1;
     transform: translateX(0);
-    
-    &.transitioning {
+
+    &.transitioning-next {
         opacity: 0;
         transform: translateX(10px);
     }
-    
+
+    &.transitioning-prev {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
     h2 {
         margin-bottom: 1rem;
         font-size: 1.5rem;
         color: #333;
     }
-    
+
     p {
         line-height: 1.6;
         color: #666;

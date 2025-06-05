@@ -13,7 +13,8 @@ export const Awards = () => {
 
     const [rotationY, setRotationY] = useState(0);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isTransitioning, setIsTransitioning] = useState(false);   
+    const [isTransitioning, setIsTransitioning] = useState(false);
+    const [transitionDirection, setTransitionDirection] = useState('next');
 
     const awards = [
         {
@@ -35,8 +36,9 @@ export const Awards = () => {
     ];    
     
     const next = () => {
-        if (isTransitioning) return; // Prevent multiple clicks during animation
+        if (isTransitioning) return;
 
+        setTransitionDirection("next");
         setIsTransitioning(true);
 
         const spinTimes = 1;
@@ -44,26 +46,27 @@ export const Awards = () => {
         const startRotation = rotationY;
         const endRotation = startRotation + spinAmount;
 
-        // Animate
         gsap.to(
             { value: startRotation },
             {
-            value: endRotation,
-            duration: 2,
-            ease: "power4.inOut",
-            onUpdate: function () {
-                setRotationY(this.targets()[0].value);
-            },
-            onComplete: () => {
-                setCurrentIndex((prevIndex) => (prevIndex + 1) % awards.length);
-                setIsTransitioning(false);
-            }
+                value: endRotation,
+                duration: 2,
+                ease: "power4.inOut",
+                onUpdate: function () {
+                    setRotationY(this.targets()[0].value);
+                },
+                onComplete: () => {
+                    setCurrentIndex((prevIndex) => (prevIndex + 1) % awards.length);
+                    setIsTransitioning(false);
+                }
             }
         );
-    }  
-    const previous = () => {
-        if (isTransitioning) return; // Prevent multiple clicks during animation
+    };
 
+    const previous = () => {
+        if (isTransitioning) return;
+
+        setTransitionDirection("previous");
         setIsTransitioning(true);
 
         const spinAmount = -Math.PI * 2;
@@ -85,7 +88,8 @@ export const Awards = () => {
                 }
             }
         );
-    }
+    };
+
 
     return (
         <>
@@ -101,14 +105,16 @@ export const Awards = () => {
 
                     </Canvas>
                     <div className={clsx(style["awards-wrapper"])}>
-                        <div className={clsx(style["awards-wrapper--btn"])}
+                        <div className={clsx(style["awards-wrapper--btn"], style["awards-wrapper-btn--previous"])}
                             onClick={previous}
                         >
                             <p>{'<'}-</p>                       
                         </div>                          
                         <div className={clsx(style["awards-inner-wrapper"])}>
                             <div className={clsx(style["award-golden-mike"], {
-                                [style.transitioning]: isTransitioning
+                                [style.transitioning]: isTransitioning,
+                                [style["transitioning-next"]]: isTransitioning && transitionDirection === "next",
+                                [style["transitioning-prev"]]: isTransitioning && transitionDirection === "previous"
                             })}>
                                 <h2>{awards[currentIndex].title}</h2>
                                 <p>
