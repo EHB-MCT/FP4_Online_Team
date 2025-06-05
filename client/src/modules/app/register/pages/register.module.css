@@ -1,3 +1,5 @@
+@import "../../app/App.css";
+
 .wrapper{
 	background-color: #ef4478;
 	padding: 32px 0;
@@ -38,6 +40,20 @@ select {
 	font-family: "unbounded";
 }
 
+select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center; 
+  background-size: 1.5em;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input::placeholder{
+	opacity: .4;
+}
+
 input:focus{
 	outline: none;
 }
@@ -75,3 +91,7 @@ input[type="submit"] {
 		max-width: 20rem;
 	}
 } 
+
+.custom-sweet-alert{
+	font-family: var(--main-font);
+}
