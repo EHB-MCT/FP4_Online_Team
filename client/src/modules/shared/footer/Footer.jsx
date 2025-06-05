@@ -28,7 +28,7 @@ export const Footer = () => {
                         <a target='_blank' href="https://www.erasmushogeschool.be/nl/opleidingen/multimedia-en-creatieve-technologie"><img src="/ehb-logo-wit.png" className='socials-ehb' alt="logo-school" /></a>
                         <a target='_blank' href="https://www.linkedin.com/school/erasmushogeschool-brussel/posts/?feedView=all"><img src="/linkedin.svg" className='socials' alt="Logo linkedin" /></a>
                         <a target='_blank' href="https://www.instagram.com/multimedia.ehb/"><img src="/instagram.svg" className='socials' alt="Logo instagram" /></a>
-                        <a target='_blank' href="https://www.tiktok.com/@erasmushogeschool"><img src="/tiktok.svg" className='socials' alt="Logo tiktok" /></a>
+                        <a target='_blank' href="https://www.tiktok.com/@multimedia.ehb"><img src="/tiktok.svg" className='socials' alt="Logo tiktok" /></a>
                     </div>
                 </div>
             </div>
