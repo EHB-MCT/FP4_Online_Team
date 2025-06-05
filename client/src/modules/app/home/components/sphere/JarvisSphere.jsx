@@ -36,7 +36,7 @@ function SpherePoints({ radius, count, color }) {
   useFrame(() => {
     const vector = new THREE.Vector3(
       (mouse.x * size.width) / 2,
-      -(mouse.y * size.height) / 2,
+      (mouse.y * size.height) / 2,
       0
     )
     meshRef.current.worldToLocal(vector)
@@ -47,9 +47,9 @@ function SpherePoints({ radius, count, color }) {
 
       const distance = pos.distanceTo(vector)
 
-      if (distance < 50) {
+      if (distance < 75) {
         const direction = pos.clone().sub(vector).normalize()
-        pos.add(direction.multiplyScalar(0.5))
+        pos.add(direction.multiplyScalar(20.5))
       } else {
         pos.lerp(original, 0.05) // return to original position
       }
@@ -72,17 +72,19 @@ function SpherePoints({ radius, count, color }) {
           itemSize={3}
         />
       </bufferGeometry>
-      <pointsMaterial size={2} color={color} />
+      <pointsMaterial size={5} color={color} />
     </points>
   )
 }
 
-export default function SphereScene() {
+export const JarvisSphere = () => {
   return (
     <Canvas camera={{ position: [0, 0, 500], fov: 75 }}>
       <ambientLight />
-      <SpherePoints radius={200} count={1000} color="#ffea70" />
+      <group>
+        <SpherePoints radius={200} count={1000} color="#ffea70" />
       <SpherePoints radius={100} count={500} color="#0000ff" />
+      </group>
     </Canvas>
   )
 }
