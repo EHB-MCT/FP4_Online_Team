@@ -16,7 +16,7 @@ export const Footer = () => {
             <div className="inner-wrapper">
                 <div className="footer-left-wrapper">
                     <NavLink to='/' ><img src={Image} className='logo' alt="Logo of the event" /></NavLink>
-                    <p>Erasmus Hogeschool Brussel - 2025</p>
+                    <p>Erasmushogeschool Brussel - 2025</p>
                 </div>
                 <div className="footer-right-wrapper">
                     <Button 
