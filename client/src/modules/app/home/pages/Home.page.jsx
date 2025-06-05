@@ -7,6 +7,7 @@ import { useEffect } from "react";
 //CSS
 import styles from './home.module.scss'
 import clsx from "clsx";
+import { JarvisSphere } from "../components/sphere/JarvisSphere.jsx";
 
 export const Home = () => {
 	document.title = "Shift Festival - 2025 ";	
@@ -17,12 +18,14 @@ export const Home = () => {
                 <div className={clsx(styles["hero-wrapper"])}>
                     <div className={clsx(styles["hero"], "inner-wrapper")}>
                         <h4>Expo 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20 juni&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Anderlecht </h4>
-                        <CountDown />
+                        {/* <CountDown />
                         <p className="white-text">
                             Kom de afstudeerprojecten van onze derdejaarsstudenten ontdekken tijdens dit unieke expo/festival. Laat je inspireren door innovatief
                             design, technologie en creativiteit. Schrijf je vandaag nog in en verzeker jezelf van een plekje op dit bijzondere event.
                         </p>
-                        <Button destinationUrl={"/register"} copy={"Inschrijven"} className={"button"} />
+                        <Button destinationUrl={"/register"} copy={"Inschrijven"} className={"button"} /> */}
+
+                        <JarvisSphere />
                     </div>
                 </div>
 			</section>
