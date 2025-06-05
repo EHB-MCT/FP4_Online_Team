@@ -34,6 +34,7 @@
   --button-margin: 24px 0;
   --border-radius: 15px;
   --button-color: #cedc29;
+  --button-hover-color: #b8c527;
 
 	/*Background color*/
 	--background-color: #ef4478;
@@ -147,13 +148,16 @@ section.pink-wrapper{
 
 	border-radius: var(--border-radius);
 
-  color: var(--font-color);
+  color: var(--white-font-color);
 
   font-family: var(--main-font);
   font-size: var(--button-size);
   font-weight: var(--title-weight);
 
   cursor: pointer;
+}
+.button:hover{
+  background-color: var(--button-hover-color);
 }
 
 label{
@@ -164,11 +168,12 @@ label{
 footer {
 	background-color: var(--font-color);
 
-	color: #fff;
+	color: var(--white-font-color);
 
-	a {
-		color: #fff;
+	.button {
+		color: var(--white-font-color);
 	}
+
 	.inner-wrapper {
 		height: 20dvh;
 		padding-bottom: 164px;
@@ -244,7 +249,7 @@ footer {
   footer {
 		background-color: var(--font-color);
 		color: #fff;
-		a {
+		.button {
 			color: #fff;
 		}
 		.button {
@@ -282,5 +287,10 @@ footer {
 @media(min-width: 1200px){
     .inner-wrapper{
       max-width: 1200px;
+    }
+    footer{
+      .button{
+        color: var(--white-font-color);
+      }
     }
 }
