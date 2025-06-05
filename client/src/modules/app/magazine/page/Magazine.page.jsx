@@ -5,13 +5,14 @@ import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import "./Magazine.css";
 
+// Update worker configuration
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const availableMagazines = [
 	{
 		id: 1,
 		title: "DEV4 - Spring Boot",
-		url: "/pdfs/DEV4_Spring_Boot.pdf",
+		url: "https://www.st.com/resource/en/datasheet/bd239c.pdf",
 		thumbnail: "/homepage-image.png",
 	},
 ];
@@ -22,6 +23,7 @@ export const Magazine = () => {
 	const [openMagazine, setOpenMagazine] = useState(null);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPages, setTotalPages] = useState(0);
+	const [error, setError] = useState(null);
 
 	const handleMagazineOpen = (magazine) => {
 		setOpenMagazine(magazine);
@@ -30,6 +32,11 @@ export const Magazine = () => {
 
 	const handleDocumentLoad = ({ numPages }) => {
 		setTotalPages(numPages);
+	};
+
+	const handleError = (error) => {
+		console.error("PDF Error:", error);
+		setError("Could not load PDF file. Please check the file path.");
 	};
 
 	const goToNextPage = () => {
@@ -70,12 +77,13 @@ export const Magazine = () => {
 							<Document
 								file={openMagazine.url}
 								onLoadSuccess={handleDocumentLoad}
+								onLoadError={handleError}
 								loading={
 									<div className="status-message">Loading magazine...</div>
 								}
 								error={
 									<div className="status-message error">
-										Could not load magazine
+										{error || "Could not load magazine"}
 									</div>
 								}
 							>
