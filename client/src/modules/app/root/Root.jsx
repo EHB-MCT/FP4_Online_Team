@@ -12,6 +12,7 @@ import { REGISTER_ROUTE } from "../register/register.route";
 import { PRICE_ROUTE } from "../price/price.route";
 import { COUNTER_ROUTE } from "../counter/counter.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
+import { MAGAZINE_ROUTE } from "../magazine/magazine.route";
 
 import { INFO_ROUTE } from "../info/info.route";
 import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
@@ -70,6 +71,10 @@ export const Root = () => {
 				{
 					path: HOMETWO_ROUTE.path,
 					element: HOMETWO_ROUTE.element,
+				},
+				{
+					path: MAGAZINE_ROUTE.path,
+					element: MAGAZINE_ROUTE.element,
 				},
 			],
 		},
