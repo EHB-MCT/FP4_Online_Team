@@ -1,70 +1,88 @@
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef, useState, useEffect } from "react";
-import * as THREE from "three";
+import React, { useRef, useMemo } from 'react'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import * as THREE from 'three'
 
-function MovingPoints({ color, size, radius, detail }) {
-  const pointsRef = useRef();
-  const geometryRef = useRef();
-  const [hovered, setHovered] = useState(false);
-  const positionsRef = useRef([]);
-  const timeRef = useRef(0);
+function SpherePoints({ radius, count, color }) {
+  const meshRef = useRef()
+  const { mouse, size, camera } = useThree()
 
-  // Capture original vertex positions after mount
-  useEffect(() => {
-    if (!geometryRef.current) return;
-
-    const posAttr = geometryRef.current.attributes.position;
-    const positions = [];
-    for (let i = 0; i < posAttr.count; i++) {
-      positions.push([posAttr.getX(i), posAttr.getY(i), posAttr.getZ(i)]);
+  const positions = useMemo(() => {
+    const temp = []
+    for (let i = 0; i < count; i++) {
+      const theta = Math.acos(2 * Math.random() - 1)
+      const phi = 2 * Math.PI * Math.random()
+      const x = radius * Math.sin(theta) * Math.cos(phi)
+      const y = radius * Math.sin(theta) * Math.sin(phi)
+      const z = radius * Math.cos(theta)
+      temp.push(new THREE.Vector3(x, y, z))
     }
-    positionsRef.current = positions;
-  }, []);
+    return temp
+  }, [count, radius])
 
-  useFrame((_, delta) => {
-    if (!pointsRef.current || !geometryRef.current) return;
+  const originalPositions = useMemo(() => positions.map(p => p.clone()), [])
 
-    const posAttr = geometryRef.current.attributes.position;
-    timeRef.current += delta;
+  const positionsArray = useMemo(() => {
+    const arr = new Float32Array(count * 3)
+    positions.forEach((p, i) => {
+      arr[i * 3] = p.x
+      arr[i * 3 + 1] = p.y
+      arr[i * 3 + 2] = p.z
+    })
+    return arr
+  }, [positions, count])
 
-    for (let i = 0; i < posAttr.count; i++) {
-      const orig = positionsRef.current[i];
-      if (!orig) continue;
+  const geometryRef = useRef()
 
-      const [ox, oy, oz] = orig;
-      const noise = hovered ? 0.1 : 0;
+  useFrame(() => {
+    const vector = new THREE.Vector3(
+      (mouse.x * size.width) / 2,
+      -(mouse.y * size.height) / 2,
+      0
+    )
+    meshRef.current.worldToLocal(vector)
 
-      posAttr.setXYZ(
-        i,
-        ox + Math.sin(timeRef.current * 5 + i) * noise,
-        oy + Math.cos(timeRef.current * 5 + i) * noise,
-        oz + Math.sin(timeRef.current * 3 + i) * noise
-      );
+    for (let i = 0; i < count; i++) {
+      const pos = positions[i]
+      const original = originalPositions[i]
+
+      const distance = pos.distanceTo(vector)
+
+      if (distance < 50) {
+        const direction = pos.clone().sub(vector).normalize()
+        pos.add(direction.multiplyScalar(0.5))
+      } else {
+        pos.lerp(original, 0.05) // return to original position
+      }
+
+      positionsArray[i * 3] = pos.x
+      positionsArray[i * 3 + 1] = pos.y
+      positionsArray[i * 3 + 2] = pos.z
     }
 
-    posAttr.needsUpdate = true;
-  });
+    geometryRef.current.attributes.position.needsUpdate = true
+  })
 
   return (
-    <points
-      ref={pointsRef}
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
-    >
-      <icosahedronGeometry args={[radius, detail]} ref={geometryRef} />
-      <pointsMaterial color={color} size={size} />
+    <points ref={meshRef}>
+      <bufferGeometry ref={geometryRef}>
+        <bufferAttribute
+          attach="attributes-position"
+          count={count}
+          array={positionsArray}
+          itemSize={3}
+        />
+      </bufferGeometry>
+      <pointsMaterial size={2} color={color} />
     </points>
-  );
+  )
 }
 
-export const JarvisSphere = () => {
+export default function SphereScene() {
   return (
-    <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-      <ambientLight intensity={1.5} />
-      <directionalLight intensity={2} position={[0, 5, 4]} />
-
-      <MovingPoints color="yellow" size={0.05} radius={2} detail={10} />
-      <MovingPoints color="blue" size={0.05} radius={1} detail={4} />
+    <Canvas camera={{ position: [0, 0, 500], fov: 75 }}>
+      <ambientLight />
+      <SpherePoints radius={200} count={1000} color="#ffea70" />
+      <SpherePoints radius={100} count={500} color="#0000ff" />
     </Canvas>
-  );
-};
+  )
+}
