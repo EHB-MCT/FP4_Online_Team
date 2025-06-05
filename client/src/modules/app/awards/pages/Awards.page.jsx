@@ -100,15 +100,20 @@ export const Awards = () => {
                             rotation={[ 0, rotationY, 0 ]}
                         />
                         <ambientLight intensity={0.5} />
-                        <directionalLight position={[5, 10, 7.5]} intensity={1} castShadow />
-                        <perspectiveCamera makeDefault position={[0, 0, 5]} />
+                        <directionalLight 
+                            position={[5, 10, 7.5]} 
+                            intensity={1} 
+                        />
+                        <perspectiveCamera 
+                            makeDefault 
+                        />
 
                     </Canvas>
                     <div className={clsx(style["awards-wrapper"])}>
                         <div className={clsx(style["awards-wrapper--btn"], style["awards-wrapper-btn--previous"])}
                             onClick={previous}
                         >
-                            <p>{'<'}-</p>                       
+                            <p>{'<'}</p>                       
                         </div>                          
                         <div className={clsx(style["awards-inner-wrapper"])}>
                             <div className={clsx(style["award-golden-mike"], {
@@ -125,7 +130,7 @@ export const Awards = () => {
                         <div className={clsx(style["awards-wrapper--btn"])}
                             onClick={next}
                         >
-                            <p>-{'>'}</p>
+                            <p>{'>'}</p>
                         </div>
                     </div>
                 </div>
