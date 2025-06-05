@@ -121,7 +121,7 @@ export const Awards = () => {
                                 [style["transitioning-next"]]: isTransitioning && transitionDirection === "next",
                                 [style["transitioning-prev"]]: isTransitioning && transitionDirection === "previous"
                             })}>
-                                <h2>{awards[currentIndex].title}</h2>
+                                <h2 className="pink-text">{awards[currentIndex].title}</h2>
                                 <p>
                                     {awards[currentIndex].description}
                                 </p>

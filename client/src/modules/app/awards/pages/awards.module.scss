@@ -1,3 +1,5 @@
+@import "../../app/App.css";
+
 .canvas{
     width: 850px;
     height: 800px;
@@ -20,6 +22,9 @@
         cursor: pointer;
         user-select: none;
         transition: opacity 0.2s ease;
+
+        font-size: 32pt;
+        color: var(--background-color);
 
         &:hover {
             opacity: 0.7;
@@ -47,14 +52,8 @@
         transform: translateX(-10px);
     }
 
-    h2 {
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
-        color: #333;
-    }
-
     p {
         line-height: 1.6;
-        color: #666;
+        text-align: center;
     }
 }
