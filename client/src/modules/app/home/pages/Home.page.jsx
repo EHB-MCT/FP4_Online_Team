@@ -1,12 +1,11 @@
+import clsx from "clsx";
+
 //Components
 import CountDown from "../components/countdown/CountDown.jsx";
 import Button from "../../../shared/button/Button.jsx";
-import InfoLine from "../components/InfoLine.jsx";
-import { useEffect } from "react";
 
 //CSS
 import styles from './home.module.scss'
-import clsx from "clsx";
 
 export const Home = () => {
 	document.title = "Shift Festival - 2025 ";	
@@ -16,10 +15,10 @@ export const Home = () => {
 			<section className="pink-wrapper large">
                 <div className={clsx(styles["hero-wrapper"])}>
                     <div className={clsx(styles["hero"], "inner-wrapper")}>
-                        <h4>Expo 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20 juni&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Anderlecht </h4>
+                        <h4>Expo 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20 juni&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Campus Kaai </h4>
                         <CountDown />
                         <p className="white-text">
-                            Kom de afstudeerprojecten van onze derdejaarsstudenten ontdekken tijdens dit unieke expo/festival. Laat je inspireren door innovatief
+                            Kom de afstudeerprojecten van onze derdejaarsstudenten Multimedia en creative technologie ontdekken tijdens dit unieke expo/festival. Laat je inspireren door innovatief
                             design, technologie en creativiteit. Schrijf je vandaag nog in en verzeker jezelf van een plekje op dit bijzondere event.
                         </p>
                         <Button destinationUrl={"/register"} copy={"Inschrijven"} className={"button"} />
@@ -34,7 +33,7 @@ export const Home = () => {
                                 <h2>Praktische info</h2>
                                 <p>
                                     Welkom bij Shift festival, dé expo waar innovatie, design en creativiteit samenkomen! Dit unieke festival biedt een podium aan de
-                                    afstudeerprojecten van onze derdejaarsstudenten, waarbij baanbrekende ideeën en vernieuwende technologieën worden gepresenteerd.
+                                    afstudeerprojecten van onze derdejaarsstudenten Multimedia en creative technologie, waarbij baanbrekende ideeën en vernieuwende technologieën worden gepresenteerd.
                                     Daarnaast worden ook de beste werken van studenten uit alle jaren tentoongesteld.
                                 </p>
                                 <p id="more-text">
@@ -66,11 +65,38 @@ export const Home = () => {
                                     </div>
                                 </div>
                             </div>
+                            <div className={clsx(styles["practical-info-wrapper--maps-frame"])}>
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6108.236960527531!2d4.317942457393778!3d50.84224228625964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c40f19faf0f9%3A0x4ef5b683135ecb1e!2sErasmushogeschool%20Brussel!5e1!3m2!1snl!2sbe!4v1749143530421!5m2!1snl!2sbe" 
+                                    width="100%"
+                                    height="100%" 
+                                    style={{ border: "0"}} 
+                                    allowFullScreen={ true } 
+                                    loading="lazy" 
+                                    referrerPolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
 			</section>
+
+            {/* <section className={clsx(styles["teaser-video-wrapper"])}>
+                <div className={clsx(styles["teaser-video-wrapper--teaser-video-inner-wrapper"],"inner-wrapper small-wrapper")}>
+                    <h2>Aftermovie EXPO24</h2>
+                    < iframe
+                        className={clsx(styles["teaser-video-wrapper--teaser-video-inner-wrapper--teaser-video"])}
+                        src="https://www.youtube.com/embed/ifv5pC7-qtI?si=c5xuW800eOxgKMQb&enablejsapi=1&origin=https%3A%2F%2Fwww.erasmushogeschool.be"
+                        width="100%"
+                        height="100%" 
+                        style={{ border: "0"}} 
+                        allowFullScreen={ true } 
+                        loading="lazy" 
+                        referrerPolicy="no-referrer-when-downgrade"
+                    />
+                </div>
+            </section> */}
 
 			<section className={clsx(styles["practical-info-wrapper-purple"])}>
 				<div className="inner-wrapper">

@@ -19,7 +19,8 @@ export const Navigation = () => {
         <nav>
             <div className={clsx(styles["inner-wrapper"])}>
                 <div className={clsx(styles["inner-wrapper--navigation-wrapper"])}>
-                    <NavLink to={ HOME_ROUTE.path } className='home-link'><img src={ Image } alt="logo event" /></NavLink>
+                    <NavLink to={ HOME_ROUTE.path } className='home-link'><img className={clsx(styles["inner-wrapper--navigation-wrapper--logo-shift"])} src={ Image } alt="logo event" /></NavLink>
+                    <NavLink to="http://erasmushogeschool.be" target='_blank' className='home-link'><img className={clsx(styles["inner-wrapper--navigation-wrapper--logo-ehb"])} src={ "/ehb-logo-wit.png" } alt="logo event" /></NavLink>
                 </div>
             </div>
         </nav>

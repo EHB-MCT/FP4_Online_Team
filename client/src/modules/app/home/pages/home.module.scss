@@ -69,6 +69,28 @@
         }
        }
     }
+
+    &--maps-frame{
+        width: 100%;
+        height: 40dvh;
+
+        display: flex;
+        justify-content: center;
+
+        margin-top: 64px;
+    }
+}
+
+.teaser-video-wrapper{
+    padding-top: 0;
+    &--teaser-video-inner-wrapper{
+
+        &--teaser-video{
+           aspect-ratio: 16 / 9;
+
+           margin-top: 32px;
+        }
+    }
 }
 
 .practical-info-wrapper-purple{

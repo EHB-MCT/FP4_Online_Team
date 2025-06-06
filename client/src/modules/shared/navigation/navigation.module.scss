@@ -8,17 +8,21 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .inner-wrapper{
     &--navigation-wrapper{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
 
         img{
             width: 150px;
         }
+        img.inner-wrapper--navigation-wrapper--logo-ehb{
+            width: 50px;
+        }
+
     }
 }
 
@@ -32,9 +36,18 @@ nav{
             display: flex;
             justify-content: space-between;
         }
+
+        img.inner-wrapper--navigation-wrapper--logo-ehb{
+            width: 75px;
+        }
+        .inner-wrapper--navigation-wrapper--logo-ehb:hover,
+        .inner-wrapper--navigation-wrapper--logo-shift:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
     }
 }
 
-@media(min-width: 1200px){
+// @media(min-width: 1200px){
     
-}
+// }

@@ -114,7 +114,7 @@ export const Register = () => {
 				/>
 				<Roles
 					className={"roles"}
-					InputName={"Rol"}
+					InputName={"Op welke manier neemt u deel?"}
 					Mandatory={true}
 					Placeholder={"Select your role"}
 					onChange={handleRoleChange}
@@ -122,7 +122,7 @@ export const Register = () => {
 				<InputField
 					className={"amount"}
 					InputType={"number"}
-					InputName={"Aantal"}
+					InputName={"Aantal personen"}
 					Mandatory={true}
 					Placeholder={"2"}
 					onChange={(e) =>

@@ -15,7 +15,7 @@ export const Footer = () => {
         <footer>
             <div className="inner-wrapper">
                 <div className="footer-left-wrapper">
-                    <NavLink to='/' ><img src={Image} className='logo' alt="Logo of the event" /></NavLink>
+                    <NavLink to='/' ><img className="logo-shift" src={Image} alt="Logo of the event" /></NavLink>
                     <p>Erasmushogeschool Brussel - 2025</p>
                 </div>
                 <div className="footer-right-wrapper">

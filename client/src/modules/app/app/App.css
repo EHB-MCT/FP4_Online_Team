@@ -295,6 +295,12 @@ footer {
 		img {
 			width: 150px;
 		}
+
+		.logo-shift:hover
+        {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
 	}
 }
 

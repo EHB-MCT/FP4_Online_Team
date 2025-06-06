@@ -58,7 +58,7 @@ const Roles = ( { className, InputName, Mandatory, Placeholder, onChange} ) => {
                 required={Mandatory} 
                 onChange={handleSelectChange}
             >
-                <option value="" disabled selected>Selecteer rol</option>
+                <option value="" disabled selected>Selecteer</option>
                 <option value="student">Student</option>
                 <option value="staff-ehb">Docent / Personeel EHB</option>
                 <option value="parents-friends">Ouders / Vrienden</option>
