@@ -65,7 +65,6 @@ textarea {
 
 
 input[type="submit"] {
-	border: none;
 	font-weight: bold;
 	cursor: pointer;
 	align-self: center;

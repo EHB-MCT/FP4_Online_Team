@@ -41,7 +41,7 @@ export const Register = () => {
 			);
 			Swal.fire({
 				title: "Inschrijving succesvol!",
-				text: `Bedankt voor je inschrijving we zien je graag op 20/06, er is een bevestigingsmail verstuurd naar ${formData.email}.`,
+				html: `<p>Bedankt voor je inschrijving we zien je graag op 20/06, er is een bevestigingsmail verstuurd naar ${formData.email}.</p>`,
 				icon: "success",
 				customClass: {
 					popup: "custom-sweet-alert",
@@ -56,7 +56,7 @@ export const Register = () => {
 
 			Swal.fire({
 				title: "Oeps!",
-				text: `Er is al ingeschreven met dit e-mailadres.`,
+				html: `<p>Er is al ingeschreven met dit e-mailadres.</p>`,
 				icon: "error",
 				customClass: {
 					popup: "custom-sweet-alert",

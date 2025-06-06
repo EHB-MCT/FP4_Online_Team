@@ -172,7 +172,7 @@ section.pink-wrapper {
 }
 
 .button:hover {
-	color: white;
+	color: var(--font-color);
 	background-color: transparent;
 	box-shadow: inset -278px 0 0 0 transparent;
 }
