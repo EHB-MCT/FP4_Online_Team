@@ -82,7 +82,7 @@ export const Home = () => {
                 
 			</section>
 
-            {/* <section className={clsx(styles["teaser-video-wrapper"])}>
+            <section className={clsx(styles["teaser-video-wrapper"])}>
                 <div className={clsx(styles["teaser-video-wrapper--teaser-video-inner-wrapper"],"inner-wrapper small-wrapper")}>
                     <h2>Aftermovie EXPO24</h2>
                     < iframe
@@ -96,7 +96,7 @@ export const Home = () => {
                         referrerPolicy="no-referrer-when-downgrade"
                     />
                 </div>
-            </section> */}
+            </section>
 
 			<section className={clsx(styles["practical-info-wrapper-purple"])}>
 				<div className="inner-wrapper">
