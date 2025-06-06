@@ -62,7 +62,7 @@ export const Projects = () => {
 		<>
 			<section>
                 <div className="inner-wrapper">
-                    <h1 className="">Eindjaarprojecten</h1>
+                    <h2 className="">Eindjaarprojecten</h2>
                     <Search />
                     <div className="filter-button-wrapper">
 						{

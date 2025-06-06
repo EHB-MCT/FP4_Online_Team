@@ -53,10 +53,10 @@ export const Root = () => {
 				// 	path: PRIVACY_POLICY_ROUTE.path,
 				// 	element: PRIVACY_POLICY_ROUTE.element,
 				// },
-				// {
-				// 	path: PROJECTS_ROUTE.path,
-				// 	element: PROJECTS_ROUTE.element
-				// },
+				{
+					path: PROJECTS_ROUTE.path,
+					element: PROJECTS_ROUTE.element
+				},
 				// {
 				// 	path: PROJECTSDETAIL_ROUTE.path,
 				// 	element: PROJECTSDETAIL_ROUTE.element,
