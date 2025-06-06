@@ -33,7 +33,7 @@
   --button-padding: 15px 50px;
   --button-margin: 24px 0;
   --border-radius: 15px;
-  --button-color: #cedc29;
+  --button-color: #8fd11c;
   --button-hover-color: #b8c527;
 
 	/*Background color*/
@@ -156,9 +156,9 @@ section.pink-wrapper{
 
   cursor: pointer;
 }
-.button:hover{
+/* .button:hover{
   background-color: var(--button-hover-color);
-}
+} */
 
 label{
   font-family: var(--main-font);
@@ -224,7 +224,7 @@ footer {
     --button-padding: 20px 65px;
     --button-margin: 24px 0;
     --border-radius: 15px;
-    --button-color: #cedc29;
+    --button-color: #8fd11c;
 
     /*Background color*/
     --background-color: #ef4478;
