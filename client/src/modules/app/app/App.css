@@ -226,6 +226,26 @@ footer {
 
 /* Tablet */
 @media (min-width: 768px) {
+
+  :root{
+    --title-size: 32pt;
+    --subtitle-size: 14pt;
+    --h2-size: 24pt;
+    --h3-size: 16pt;
+    --h4-size: 12pt;
+  }
+
+  .inner-wrapper {
+		width: 80%;
+		max-width: 850px;
+		margin: 0 auto;
+	}
+	.small-wrapper {
+    width: 65%;
+		max-width: 750px;
+		margin: 0 auto;
+	}
+
 }
 
 /* Small computer */
