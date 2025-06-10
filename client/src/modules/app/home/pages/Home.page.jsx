@@ -1,18 +1,35 @@
 import clsx from "clsx";
+import { useState, useEffect } from "react";
 
 //Components
 import CountDown from "../components/countdown/CountDown.jsx";
 import Button from "../../../shared/button/Button.jsx";
 
+//Hooks
+import { useProjectsData } from "../../../shared/const/hooks/getProjectsData.hook.js";
+
+//Routes
+import { INFO_ROUTE } from "../../info/info.route.jsx";
+
 //CSS
 import styles from './home.module.scss'
 
-export const Home = () => {
-	document.title = "Shift Festival - 2025 ";	
 
-	return (
-		<>
-			<section className="pink-wrapper large">
+export const Home = () => {
+    document.title = "Shift Festival - 2025 ";	
+
+    const [projects, setProjects] = useState([]);
+    const {data, isLoading} = useProjectsData();
+
+    useEffect(() => {
+        if (data && Array.isArray(data)) {
+            setProjects(data.slice(0, 3));
+        }
+    }, [data])
+
+    return (
+        <>
+            <section className="pink-wrapper large">
                 <div className={clsx(styles["hero-wrapper"])}>
                     <div className={clsx(styles["hero"], "inner-wrapper")}>
                         <h4>Expo 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20 juni&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Campus Kaai </h4>
@@ -27,31 +44,37 @@ export const Home = () => {
                         </div>
                     </div>
                 </div>
-			</section>
-			<section className={clsx(styles["practical-info-wrapper"])}>
+            </section>
+
+            <section className={clsx(styles["projects-preview-wrapper"])}>
+                <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper"], "inner-wrapper")}>
+                    <h2>Eindejaarsprojecten</h2>
+                    { isLoading ? (<p>Loading...</p>) : (projects.map((project) => <p key={project.id || project.project_name}>{project.project_name}</p>)) }
+                </div>
+
+            </section>
+            <section className={clsx(styles["practical-info-wrapper"])}>
                 <div className={clsx(styles["practical-info-wrapper--background-image-top-left"])}>
                     <div className={clsx(styles["practical-info-wrapper--background-image-top-left--background-image-top-right"])}>
                         <div className={clsx(styles["practical-info-outer-wrapper"], "inner-wrapper small-wrapper ")}>
                             <div className={clsx(styles["practical-info-wrapper--practical-info-text-wrapper"])}>
-                                <h2>Praktische info</h2>
+                                <h2>Shift festival 2025</h2>
                                 <p>
-                                    Welkom bij Shift festival, dé expo waar innovatie, design en creativiteit samenkomen! Dit unieke festival biedt een podium aan de
-                                    afstudeerprojecten van onze derdejaarsstudenten Multimedia en creative technologie, waarbij baanbrekende ideeën en vernieuwende technologieën worden gepresenteerd.
-                                    Daarnaast worden ook de beste werken van studenten uit alle jaren tentoongesteld.
+                                   Welkom bij Shift, de expo waar innovatie, design en creativiteit samenkomen! Dit unieke festival biedt een podium aan de afstudeerprojecten van onze derdejaarsstudenten, waarbij baanbrekende ideeën en vernieuwende technologieën worden gepresenteerd. Daarnaast worden ook de beste werken van studenten uit alle jaren tentoongesteld.
                                 </p>
                                 <p id="more-text">
-                                    Het evenement is niet alleen een viering van talent, maar ook een inspiratiemoment voor toekomstige studenten. Overweeg je een studie in
-                                    deze richting? Dan is dit de perfecte kans om de sfeer te proeven, in gesprek te gaan met studenten en docenten, en te ontdekken wat
-                                    onze opleiding te bieden heeft.
+                                    Het evenement is niet alleen een viering van talent, maar ook een inspiratiemoment voor toekomstige studenten. Overweeg je een studie in deze richting? Dan is dit de perfecte kans om de sfeer te proeven, in gesprek te gaan met studenten en docenten, en te ontdekken wat onze opleiding te bieden heeft.
                                 </p>
                                 <p id="more-text">
-                                    Bovendien zullen vertegenwoordigers van bedrijven aanwezig zijn, wat dit event ook een uitstekende netwerkmogelijkheid maakt voor
-                                    iedereen die geïnteresseerd is in de creatieve en technologische sector.
-                                    <br /> <br />
-                                    Mis het niet—schrijf je in en laat je inspireren!
+                                    Bovendien zullen vertegenwoordigers van bedrijven aanwezig zijn, wat dit event ook een uitstekende netwerkmogelijkheid maakt voor iedereen die geïnteresseerd is in de creatieve en technologische sector.
                                 </p>
                             </div>
-                            <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper"])}>
+                            <Button
+                                destinationUrl={ INFO_ROUTE.path }
+                                copy={ "info" }
+                                className={ "button" }
+                            />
+                            {/* <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper"])}>
                                 <img src="/homepage-image.png" alt="foto van ehb" />
                                 <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper--specific-info"])}>
                                     <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper--specific-info--specific-info-upper-wrapper"])}>
@@ -78,14 +101,33 @@ export const Home = () => {
                                     loading="lazy" 
                                     referrerPolicy="no-referrer-when-downgrade">
                                     </iframe>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
                 
-			</section>
+            </section>
 
-            <section className={clsx(styles["teaser-video-wrapper"])}>
+            <section className={clsx(styles["large-info-wrapper"], styles["orange-wrapper"])}>
+                <div className="inner-wrapper">
+                    <div className={clsx(styles["large-info-wrapper--mct-info-wrapper"])}>
+                        <img src="homepage-image.png" alt="" />
+                        <div className="mct-info">
+                            <h2 className="green-text">Programma</h2>
+                            <p className="white-text">
+                                Ontdek onze programma van de festival en al onze workshops
+                            </p>
+                            <Button
+                                destinationUrl={ "#" }
+                                copy={ "Programma" }
+                                className={ "button" }
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* <section className={clsx(styles["teaser-video-wrapper"])}>
                 <div className={clsx(styles["teaser-video-wrapper--teaser-video-inner-wrapper"],"inner-wrapper small-wrapper")}>
                     <h2>Aftermovie EXPO24</h2>
                     < iframe
@@ -99,11 +141,15 @@ export const Home = () => {
                         referrerPolicy="no-referrer-when-downgrade"
                     />
                 </div>
+            </section> */}
+
+            <section className={clsx(styles["awards-wrapper"])}>
+                
             </section>
 
-			<section className={clsx(styles["practical-info-wrapper-purple"])}>
-				<div className="inner-wrapper">
-                    <div className={clsx(styles["practical-info-wrapper-purple--mct-info-wrapper"])}>
+            <section className={clsx(styles["large-info-wrapper"], styles["purple-wrapper"])}>
+                <div className="inner-wrapper">
+                    <div className={clsx(styles["large-info-wrapper--mct-info-wrapper"])}>
                         <div className="mct-info">
                             <h2 className="green-text">Multimedia en Creatieve technologie</h2>
                             <p className="white-text">
@@ -112,11 +158,11 @@ export const Home = () => {
                                 programmeren. De focus ligt op innovatie, storytelling en technische vaardigheden, waardoor afgestudeerden klaar zijn voor een carrière
                                 in de creatieve en digitale sector.
                             </p>
+                            <a href="https://www.erasmushogeschool.be/nl/opleidingen/multimedia-en-creatieve-technologie" target="_blank" className="button">Meer</a>
                         </div>
-                        <a href="https://www.erasmushogeschool.be/nl/opleidingen/multimedia-en-creatieve-technologie" target="_blank" className="button">Meer</a>
                     </div>
-				</div>
-			</section>
-		</>
-	);
+                </div>
+            </section>
+        </>
+    );
 };
