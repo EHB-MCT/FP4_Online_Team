@@ -11,7 +11,7 @@ const InputField = ( { className, InputType,  InputName, Mandatory, Placeholder,
                     placeholder={ Placeholder } 
                     required
                     onChange={onChange}
-                    {...(InputType === "number" ? { min: "0" } : {})}
+                    {...(InputType === "number" ? { min: "1" } : {})}
                 />
             </div>
         )
