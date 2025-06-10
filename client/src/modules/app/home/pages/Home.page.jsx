@@ -166,7 +166,7 @@ export const Home = () => {
                 <div className="inner-wrapper">
                     <div className={clsx(styles["large-info-wrapper--mct-info-wrapper"])}>
                         <div className="mct-info">
-                            <h2 className="green-text">Multimedia en Creatieve technologie</h2>
+                            <h2 className="white-text">Multimedia en Creatieve technologie</h2>
                             <p className="white-text">
                                 Multimedia & Creatieve Technologie is een veelzijdige studierichting waarin technologie en creativiteit samenkomen. Studenten leren
                                 interactieve en digitale ervaringen ontwerpen, ontwikkelen en realiseren met tools zoals webdesign, animatie, AR/VR, videoproductie en
