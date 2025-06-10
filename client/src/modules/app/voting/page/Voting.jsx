@@ -5,31 +5,7 @@ import { useProjectsData } from "../../../shared/const/hooks/getProjectsData.hoo
 export const Voting = () => {
 	document.title = "Voting | Expo 2025";
 
-	// Keep the data object
-	// const data = {
-	// 	"App / Web": new Array(10).fill({
-	// 		projectName: "Projectnaam",
-	// 		name: "Naam",
-	// 	}),
-	// 	"Game / AR / VR": new Array(7).fill({
-	// 		projectName: "Projectnaam",
-	// 		name: "Naam",
-	// 	}),
-	// 	"Installatie / Prototyping": new Array(4).fill({
-	// 		projectName: "Projectnaam",
-	// 		name: "Naam",
-	// 	}),
-	// 	"Motion graphics": new Array(5).fill({
-	// 		projectName: "Projectnaam",
-	// 		name: "Naam",
-	// 	}),
-	// };
 	const { data = [], isLoading } = useProjectsData();
-
-	// const allProjects = [...new Array(52)].map(() => ({
-	// 	projectName: "Projectnaam",
-	// 	name: "Naam",
-	// }));
 
 	// Flatten all projects into one array
 	const allProjects = Array.isArray(data) ? data : Object.values(data).flat();
@@ -63,7 +39,7 @@ export const Voting = () => {
 						}}
 					>
 						{row.map((p, i) => (
-							<ProjectCard key={i + (visibleRowStart + rowIdx) * 3} projectName={p.projectName} name={p.name} />
+							<ProjectCard key={i + (visibleRowStart + rowIdx) * 3} projectName={p.project_name} name={p.student} />
 						))}
 					</div>
 				))}
