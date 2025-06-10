@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useProjectsData } from "../../../shared/const/hooks/getProjectsData.hook";
 import { NextProject } from "../components/NextProject";
 import "../components/NextProject.css";
+import { Magazine } from "../../magazine";
 
 export const ProjectsDetail = () => {
 	const { projectId } = useParams();
@@ -21,17 +22,31 @@ export const ProjectsDetail = () => {
 						<NextProject currentId={projectId} projects={allProjects} />
 						<div className="image">
 							<div className="banner-image">
-								<img src="/homepage-image.png" alt="" />
-							</div>
-							<div className="banner-circle">
-								{" "}
-								<img src="/homepage-image.png" alt="" />
+								<img
+									className="banner-image__photo"
+									src="/homepage-image.png"
+									alt="Project banner"
+								/>
+
+								<div className="badge">
+									{/* load your Figma-exported SVG from public */}
+									<img
+										className="badge__shape"
+										src="/badge.svg"
+										alt="Badge background"
+									/>
+
+									{/* overlay HTML text */}
+									<div className="badge__text">
+										<h1>{project.student}</h1>
+										<h3>{project.project_name}</h3>
+									</div>
+								</div>
 							</div>
 						</div>
 
-						<h1>{project.student}</h1>
-						<h3>{project.project_name}</h3>
 						<p>{project.description}</p>
+						<Magazine></Magazine>
 					</>
 				) : (
 					"Project not found"
