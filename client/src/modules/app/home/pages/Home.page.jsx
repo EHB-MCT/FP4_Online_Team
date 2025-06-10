@@ -22,6 +22,9 @@ export const Home = () => {
                             design, technologie en creativiteit. Schrijf je vandaag nog in en verzeker jezelf van een plekje op dit bijzondere event.
                         </p>
                         <Button destinationUrl={"/register"} copy={"Inschrijven"} className={"button"} />
+                        <div className={clsx(styles["hero--mouse-wrapper"])}>
+                            <img src="/scroll-icon.png" alt="" />
+                        </div>
                     </div>
                 </div>
 			</section>
