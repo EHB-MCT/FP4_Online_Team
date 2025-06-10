@@ -151,7 +151,7 @@ section.pink-wrapper {
 
 	border-radius: var(--border-radius);
 
-	color: white;
+	color: var(--font-color);
 
 
 	font-family: var(--main-font);
@@ -189,10 +189,10 @@ label {
 footer {
 	background-color: var(--font-color);
 
-	color: var(--white-font-color);
+	color: var(--font-color);
 
 	.button {
-		color: var(--white-font-color);
+		color: var(--font-color);
 	}
 
 	.inner-wrapper {
@@ -285,10 +285,7 @@ footer {
 		background-color: var(--font-color);
 		color: #fff;
 		.button {
-			color: #fff;
-		}
-		.button {
-			color: white;
+			color: var(--font-color);
 		}
 
 		.inner-wrapper {
@@ -317,10 +314,10 @@ footer {
 		}
 
 		.logo-shift:hover
-        {
-            transform: translateY(-5px);
-            transition: transform 0.3s ease;
-        }
+      {
+          transform: translateY(-5px);
+          transition: transform 0.3s ease;
+      }
 	}
 }
 
