@@ -5,14 +5,13 @@ import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import "./Magazine.css";
 
-// Update worker configuration
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs";
 
 const availableMagazines = [
 	{
 		id: 1,
 		title: "DEV4 - Spring Boot",
-		url: "https://www.st.com/resource/en/datasheet/bd239c.pdf",
+		url: "/pdf/testVert.pdf",
 		thumbnail: "/homepage-image.png",
 	},
 ];
@@ -35,8 +34,8 @@ export const Magazine = () => {
 	};
 
 	const handleError = (error) => {
-		console.error("PDF Error:", error);
-		setError("Could not load PDF file. Please check the file path.");
+		console.error("PDF load error:", error.message || error);
+		setError("Could not load PDF file. Make sure it's a valid URL or path.");
 	};
 
 	const goToNextPage = () => {
@@ -57,14 +56,7 @@ export const Magazine = () => {
 				<div className="magazine-list">
 					<h2>Beschikbare Magazines</h2>
 					{availableMagazines.map((magazine) => (
-						<motion.div
-							key={magazine.id}
-							className={`magazine-card ${
-								openMagazine?.id === magazine.id ? "selected" : ""
-							}`}
-							onClick={() => handleMagazineOpen(magazine)}
-							whileHover={{ scale: 1.02 }}
-						>
+						<motion.div key={magazine.id} className={`magazine-card ${openMagazine?.id === magazine.id ? "selected" : ""}`} onClick={() => handleMagazineOpen(magazine)} whileHover={{ scale: 1.02 }}>
 							<img src={magazine.thumbnail} alt={magazine.title} />
 							<h3>{magazine.title}</h3>
 						</motion.div>
@@ -72,44 +64,35 @@ export const Magazine = () => {
 				</div>
 
 				<div className="pdf-display">
-					{openMagazine ? (
-						<>
-							<Document
-								file={openMagazine.url}
-								onLoadSuccess={handleDocumentLoad}
-								onLoadError={handleError}
-								loading={
-									<div className="status-message">Loading magazine...</div>
-								}
-								error={
-									<div className="status-message error">
-										{error || "Could not load magazine"}
-									</div>
-								}
-							>
-								<Page pageNumber={currentPage} width={800} />
-							</Document>
-
-							<div className="page-navigation">
-								<button onClick={goToPreviousPage} disabled={currentPage <= 1}>
-									Previous Page
-								</button>
-								<span>
-									Page {currentPage} of {totalPages}
-								</span>
-								<button
-									onClick={goToNextPage}
-									disabled={currentPage >= totalPages}
+					<div className="pdf-display">
+						{openMagazine ? (
+							<>
+								<Document
+									file={openMagazine.url}
+									onLoadSuccess={handleDocumentLoad}
+									onLoadError={handleError}
+									loading={<div className="status-message">Loading magazine...</div>}
+									error={<div className="status-message error">{error || "Could not load magazine"}</div>}
 								>
-									Next Page
-								</button>
-							</div>
-						</>
-					) : (
-						<div className="status-message">
-							Select a magazine to start reading
-						</div>
-					)}
+									<Page pageNumber={currentPage} width={800} />
+								</Document>
+
+								<div className="page-navigation">
+									<button onClick={goToPreviousPage} disabled={currentPage <= 1}>
+										Previous Page
+									</button>
+									<span>
+										Page {currentPage} of {totalPages}
+									</span>
+									<button onClick={goToNextPage} disabled={currentPage >= totalPages}>
+										Next Page
+									</button>
+								</div>
+							</>
+						) : (
+							<div className="status-message">Select a magazine to start reading</div>
+						)}
+					</div>
 				</div>
 			</div>
 		</section>
