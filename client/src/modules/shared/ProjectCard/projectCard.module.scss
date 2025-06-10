@@ -16,7 +16,7 @@
             bottom: -25px;
             left: -25px;
 
-            width: 250px;
+            width: 70%;
         }
 
         &--right-shape {
@@ -24,11 +24,13 @@
             text-align: center;
             color: var(--white-font-color);
 
-            left: 27px;
-            bottom: 30px;
+            left: 20px;
+            bottom: 85px;
 
             height: 55px;
-            width: 195px;
+            width: 400px;
+
+            font-size: 16pt;
 
             /* border: 1pt solid black; */
             
@@ -42,4 +44,39 @@
         }
         
     }
+}
+
+@media(min-width: 768px){
+    .card-wrapper{
+
+    position: relative;
+
+    img{
+        width: 100%;
+    }
+
+    &--student-info {
+        position: relative;
+        
+        svg{
+            position: absolute;
+            bottom: -25px;
+            left: -25px;
+
+            width: 250px;
+        }
+
+        &--right-shape {
+
+            left: 27px;
+            bottom: 30px;
+
+            height: 55px;
+            width: 195px;
+
+            font-size: 14pt;
+        }
+        
+    }
+}
 }
