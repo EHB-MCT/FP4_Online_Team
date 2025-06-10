@@ -5,7 +5,8 @@
         "description": "Platform waar gebruikers vaardigheden uitwisselen en leren via gamification",
         "category": "Web & Mobile",
         "promotor": "Bert (8)",
-        "project_name": "SkillSwap"
+        "project_name": "SkillSwap",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "GistelinckRemy_NeuroBlocks",
@@ -13,7 +14,8 @@
         "description": "Interactieve Tetris-toepassing om AI-leeralgoritmes visueel te vergelijken",
         "category": "Web & Mobile",
         "promotor": "Bert (8)",
-        "project_name": "NeuroBlocks"
+        "project_name": "NeuroBlocks",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "LanghendriesMilan_Notdefinedyet",
@@ -21,7 +23,8 @@
         "description": "Niet deelgenomen aan jury",
         "category": "Web & Mobile",
         "promotor": "Bert (8)",
-        "project_name": "Not defined yet"
+        "project_name": "Not defined yet",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "VankriekingeRyan_Codeucation",
@@ -29,7 +32,8 @@
         "description": "Platform met automatische code-evaluatie om informaticaonderwijs te verbeteren voor leerkrachten zonder programmeerkennis",
         "category": "Web & Mobile",
         "promotor": "Bert (8)",
-        "project_name": "Codeucation"
+        "project_name": "Codeucation",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "VerherstraetenKarsten_ORDENA",
@@ -37,7 +41,8 @@
         "description": "Verherstraeten,Karsten",
         "category": "Web & Mobile",
         "promotor": "Bert (8)",
-        "project_name": "ORDENA"
+        "project_name": "ORDENA",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "VanhaelenJasper_GreenBuilder",
@@ -45,7 +50,8 @@
         "description": "Milieuvriendelijke mobiele city builder game die duurzaam gedrag stimuleert bij spelers",
         "category": "XR, 3D, Game",
         "promotor": "Bert (8)",
-        "project_name": "Green Builder"
+        "project_name": "Green Builder",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "VettorelGregory_OceanScape",
@@ -53,7 +59,8 @@
         "description": "Realistische zeilsimulator met VR en toegankelijkheid voor leren, ontspanning en onderzoek",
         "category": "XR, 3D, Game",
         "promotor": "Bert (8)",
-        "project_name": "OceanScape"
+        "project_name": "OceanScape",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "DePauwJules_Pose",
@@ -61,7 +68,8 @@
         "description": "Yoga-app die via computer vision realtime feedback geeft op houdingen",
         "category": "Experience Design",
         "promotor": "Dennis (5)",
-        "project_name": "Pose"
+        "project_name": "Pose",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "DeReuseJulien_InteractieveSportinstallatie",
@@ -69,7 +77,8 @@
         "description": "Sportinstallatie die hartslag koppelt aan visuals en muziek om motivatie tijdens sporten te verhogen",
         "category": "Experience Design",
         "promotor": "Dennis (5)",
-        "project_name": "Interactieve Sportinstallatie"
+        "project_name": "Interactieve Sportinstallatie",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "ClaeyeJef_HetVisualiserenvanSnelheidenKrachten",
@@ -77,7 +86,8 @@
         "description": "Visualisatie van snelheid en krachten uit racesimulaties via real-time motion graphics",
         "category": "Interactive Motion",
         "promotor": "Dennis (5)",
-        "project_name": "Het Visualiseren van Snelheid en Krachten"
+        "project_name": "Het Visualiseren van Snelheid en Krachten",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "GeysJorbe_CAVA–CleanAutonomousVisionAcquisition",
@@ -85,7 +95,8 @@
         "description": "Autonome afvalverzamelrobot voor festivals met vision tracking, rapportage en oplaadstations",
         "category": "Prototyping",
         "promotor": "Dennis (5)",
-        "project_name": "C.A.V.A. – Clean Autonomous Vision Acquisition"
+        "project_name": "C.A.V.A. – Clean Autonomous Vision Acquisition",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "AadimZiad_ARDrawingTutor",
@@ -93,7 +104,8 @@
         "description": "AR-app voor Meta Quest 3 die beginnende tekenaars stap voor stap leert tekenen op papier",
         "category": "XR, 3D, Game",
         "promotor": "Dennis (5)",
-        "project_name": "AR Drawing Tutor"
+        "project_name": "AR Drawing Tutor",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "BenallalMehdi_Notdefinedyet",
@@ -101,7 +113,8 @@
         "description": "Niet deelgenomen aan jury",
         "category": "XR, 3D, Game",
         "promotor": "Dennis (5)",
-        "project_name": "Not defined yet"
+        "project_name": "Not defined yet",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "BelaouchiMeryam_MinecraftTheExperience",
@@ -109,7 +122,8 @@
         "description": "Interactieve installatie die Minecraft tot leven brengt met motion tracking, projecties en fysieke objecten",
         "category": "Experience Design",
         "promotor": "Jan E (8)",
-        "project_name": "Minecraft: The Experience"
+        "project_name": "Minecraft: The Experience",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "BouabdellahDikra_ToerismeenTechnologie",
@@ -117,7 +131,8 @@
         "description": "Interactieve installatie over de legende van de Grot van Hercules om toeristen naar Tanger te trekken",
         "category": "Experience Design",
         "promotor": "Jan E (8)",
-        "project_name": "Toerisme en Technologie"
+        "project_name": "Toerisme en Technologie",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "FrederickxAmber_EenzaamheidopTafel",
@@ -125,7 +140,8 @@
         "description": "Installatie en boek die studenten helpt gevoelens van eenzaamheid bespreekbaar te maken",
         "category": "Experience Design",
         "promotor": "Jan E (8)",
-        "project_name": "Eenzaamheid op Tafel"
+        "project_name": "Eenzaamheid op Tafel",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "OzcanAylin_OptimalisatievanSocialeDeductieveSpellen",
@@ -133,7 +149,8 @@
         "description": "Optimalisatie van sociale deductiespellen voor cafés via NFC-kaarten, projecties en geluid",
         "category": "Experience Design",
         "promotor": "Jan E (8)",
-        "project_name": "Optimalisatie van Sociale Deductieve Spellen\n"
+        "project_name": "Optimalisatie van Sociale Deductieve Spellen\n",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "PouleurLouisJames_ILLUMINATE",
@@ -141,7 +158,8 @@
         "description": "Interactieve installatie die de impact van Instagram-notificaties op jongeren visualiseert",
         "category": "Experience Design",
         "promotor": "Jan E (8)",
-        "project_name": "ILLUMINATE"
+        "project_name": "ILLUMINATE",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "ErnouldAchille_HudHelmet",
@@ -149,7 +167,8 @@
         "description": "Heads-up display en mobiele app voor veiliger motornavigeren via subtiele visuele aanwijzingen",
         "category": "Prototyping",
         "promotor": "Jan E (8)",
-        "project_name": "Hud Helmet"
+        "project_name": "Hud Helmet",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "LopesOliveiraIgor_SmartPunchingBagSPB",
@@ -157,7 +176,8 @@
         "description": "Slimme bokszak met sensoren en app voor beginnende boksers die real-time feedback geeft",
         "category": "Prototyping",
         "promotor": "Jan E (8)",
-        "project_name": "Smart Punching Bag (SPB)"
+        "project_name": "Smart Punching Bag (SPB)",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "AsanteStephen_HetMuseumvanAnansi",
@@ -165,7 +185,8 @@
         "description": "Educatieve 3D-game die jongeren van Ghanese afkomst spelenderwijs de Ghanese taal en cultuur laat ontdekken",
         "category": "XR, 3D, Game",
         "promotor": "Jan E (8)",
-        "project_name": "Het Museum van Anansi"
+        "project_name": "Het Museum van Anansi",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "ClementSarah_Notdefinedyet",
@@ -173,7 +194,8 @@
         "description": "Niet deelgenomen aan jury",
         "category": "XR, 3D, Game",
         "promotor": "Jan S (6)",
-        "project_name": "Not defined yet"
+        "project_name": "Not defined yet",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "DeClerckRobbeMosselmansLiam_TAG",
@@ -181,7 +203,8 @@
         "description": "1v1 multiplayer parkourgame waarin spelers elkaar taggen in een realistische, fysieke omgeving",
         "category": "XR, 3D, Game",
         "promotor": "Jan S (6)",
-        "project_name": "TAG"
+        "project_name": "TAG",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "JanssenMichiel_QuestForge",
@@ -189,7 +212,8 @@
         "description": "Dynamisch quest-generatiesysteem dat spelerkeuzes omzet in betekenisvolle missies",
         "category": "XR, 3D, Game",
         "promotor": "Jan S (6)",
-        "project_name": "FateQuest"
+        "project_name": "FateQuest",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "LambeauGauthierPaceAlkhomailiNoham_NeonEscapeOperation",
@@ -197,7 +221,8 @@
         "description": "Game die beweging stimuleert",
         "category": "XR, 3D, Game",
         "promotor": "Jan S (6)",
-        "project_name": "Neon Escape Operation"
+        "project_name": "Neon Escape Operation",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "RauwAmaury_VRVR",
@@ -205,7 +230,8 @@
         "description": "VR-simulator die jongeren bewust maakt van de gevaren van drugsgebruik via interactieve ervaringen",
         "category": "XR, 3D, Game",
         "promotor": "Jan S (6)",
-        "project_name": "VRVR"
+        "project_name": "VRVR",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "ZobairZaid_WatchersRite",
@@ -213,7 +239,8 @@
         "description": "Multiplayer motion tracking game zonder VR, die sociale interactie en fysieke beweging stimuleert",
         "category": "XR, 3D, Game",
         "promotor": "Jan S (6)",
-        "project_name": "Watcher’s Rite"
+        "project_name": "Watcher’s Rite",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "BuscemiNicolas_UrbanEchoes",
@@ -221,7 +248,8 @@
         "description": "Interactieve installatie die agorafobie tastbaar maakt via audiovisuele overprikkeling en biofeedback",
         "category": "Experience Design",
         "promotor": "Jan VC (10)",
-        "project_name": "Urban Echoes"
+        "project_name": "Urban Echoes",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "ClaeysJonathan_Flowtales",
@@ -229,7 +257,8 @@
         "description": "Interactieve website impact sociale media",
         "category": "Web & Mobile",
         "promotor": "Jan VC (10)",
-        "project_name": "Flowtales"
+        "project_name": "Flowtales",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "DobrunaZani_Carbe",
@@ -237,7 +266,8 @@
         "description": "Platform voor gedeelde mobiliteit met blockchain-identificatie, reputatiesysteem en openbaar vervoer integratie",
         "category": "Web & Mobile",
         "promotor": "Jan VC (10)",
-        "project_name": "Carbe"
+        "project_name": "Carbe",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "FavoreelNelle_Memoraa",
@@ -245,7 +275,8 @@
         "description": "Platform voor het delen en bewaren van familie reizen",
         "category": "Web & Mobile",
         "promotor": "Jan VC (10)",
-        "project_name": "Memoraa"
+        "project_name": "Memoraa",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "SaahMitch_TuinMeister",
@@ -253,7 +284,8 @@
         "description": "Slim waterbeheersysteem voor tuinen met AI, sensoren en mobiele app",
         "category": "Web & Mobile",
         "promotor": "Jan VC (10)",
-        "project_name": "TuinMeister"
+        "project_name": "TuinMeister",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "VanHemelrijckStephan_Lexora",
@@ -261,7 +293,8 @@
         "description": "AI-taalapp met gepersonaliseerde leerervaring, gamificatie en real-time feedback",
         "category": "Web & Mobile",
         "promotor": "Jan VC (10)",
-        "project_name": "Lexora"
+        "project_name": "Lexora",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "BastienMaxime_HOPE",
@@ -269,7 +302,8 @@
         "description": "2D-game over mentale gezondheid van jongvolwassenen met focus op visuele storytelling en emoties",
         "category": "XR, 3D, Game",
         "promotor": "Jan VC (10)",
-        "project_name": "HOPE"
+        "project_name": "HOPE",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "ImnadineSabri_Klimaatbewustzijn",
@@ -277,7 +311,8 @@
         "description": "Educatieve light novel-game die jongeren bewust maakt van klimaatverandering via storytelling en keuzes",
         "category": "XR, 3D, Game",
         "promotor": "Jan VC (10)",
-        "project_name": "Klimaatbewustzijn"
+        "project_name": "Klimaatbewustzijn",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "RashidMohammad_LinkUp",
@@ -285,7 +320,8 @@
         "description": "Videogame digitale kloof",
         "category": "XR, 3D, Game",
         "promotor": "Jan VC (10)",
-        "project_name": "Link Up"
+        "project_name": "Link Up",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "BerckmansKobe_BurenvorBuren",
@@ -293,7 +329,8 @@
         "description": "Platform voor lokale burenhulp met vrijwilligersmatching",
         "category": "Web & Mobile",
         "promotor": "Johan (3)",
-        "project_name": "Buren voor Buren"
+        "project_name": "Buren voor Buren",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "ElMajdoubiWail_SocialBalans",
@@ -301,7 +338,8 @@
         "description": "App die jongeren helpt een gezondere balans te vinden tussen schermtijd en offline leven",
         "category": "Web & Mobile",
         "promotor": "Johan (3)",
-        "project_name": "Social Balans"
+        "project_name": "Social Balans",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "HasanTaha_Notdefinedyet",
@@ -309,7 +347,8 @@
         "description": "Geen magazine ingediend",
         "category": "Web & Mobile",
         "promotor": "Johan (3)",
-        "project_name": "Not defined yet"
+        "project_name": "Not defined yet",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "UnutkanBerkay_SkillShareHub",
@@ -317,7 +356,8 @@
         "description": "Online platform voor lokale kennisuitwisseling met AI, blockchain en gamificatie om sociale cohesie te versterken",
         "category": "Web & Mobile",
         "promotor": "Johan (3)",
-        "project_name": "SkillShareHub"
+        "project_name": "SkillShareHub",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "AhmadNabras_LeveninGaza",
@@ -325,7 +365,8 @@
         "description": "Interactieve installatie die via video en Arduino het leven in Gaza tastbaar maakt voor een Westers publiek",
         "category": "Experience Design",
         "promotor": "Joni (5)",
-        "project_name": "Leven in Gaza"
+        "project_name": "Leven in Gaza",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "DeVosFreya_UnderPressure",
@@ -333,7 +374,8 @@
         "description": "Interactieve installatie die stress meet en visualiseert via hartslag",
         "category": "Experience Design",
         "promotor": "Joni (5)",
-        "project_name": "Under Pressure"
+        "project_name": "Under Pressure",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "vanUdenRachelle_PseudoWat",
@@ -341,7 +383,8 @@
         "description": "Interactief platform met 3D-animaties dat zeldzame kanker (PMP) op een toegankelijke manier uitlegt",
         "category": "Interactive Motion",
         "promotor": "Joni (5)",
-        "project_name": "Pseudo-Wat?"
+        "project_name": "Pseudo-Wat?",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "BarillaSandro_Tagbox",
@@ -349,7 +392,8 @@
         "description": "Fysieke Spotify-jukebox met RFID-kaartjes voor interactieve muziekbeleving",
         "category": "Prototyping",
         "promotor": "Joni (5)",
-        "project_name": "Tagbox*"
+        "project_name": "Tagbox*",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "BuelensMikolajBietsRowan_KattenTracker",
@@ -357,7 +401,8 @@
         "description": "Elektronische halsband met app om katten in realtime te volgen en hun veiligheid te garanderen",
         "category": "Prototyping",
         "promotor": "Joni (5)",
-        "project_name": "KattenTracker"
+        "project_name": "KattenTracker",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "DebonnetFolkert_UrbanOasis",
@@ -365,7 +410,8 @@
         "description": "Interactieve licht- en geluidsinstallatie die rust creëert in drukke stedelijke ruimtes via natuurlijke stimuli",
         "category": "Experience Design",
         "promotor": "Mike (8)",
-        "project_name": "Urban Oasis"
+        "project_name": "Urban Oasis",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "BillietMiguel_DynamischCMSvoorzelfstandigen",
@@ -373,7 +419,8 @@
         "description": "SaaS-platform waarmee zelfstandigen eenvoudig content kunnen beheren op hun website",
         "category": "Web & Mobile",
         "promotor": "Mike (8)",
-        "project_name": "Dynamisch CMS voor zelfstandigen"
+        "project_name": "Dynamisch CMS voor zelfstandigen",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "HeusdensThomas_Trivista",
@@ -381,7 +428,8 @@
         "description": "Mobiele app die beginnende triatleten ondersteunt via AI-routeplanning, trainingsschema’s en motivatie",
         "category": "Web & Mobile",
         "promotor": "Mike (8)",
-        "project_name": "Trivista"
+        "project_name": "Trivista",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "MengaGlory_Samply",
@@ -389,7 +437,8 @@
         "description": "App Beatmakers AI",
         "category": "Web & Mobile",
         "promotor": "Mike (8)",
-        "project_name": "Samply"
+        "project_name": "Samply",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "StoikosMichael_Notdefinedyet",
@@ -397,7 +446,8 @@
         "description": "Niet deelgenomen aan jury",
         "category": "Web & Mobile",
         "promotor": "Mike (8)",
-        "project_name": "Not defined yet"
+        "project_name": "Not defined yet",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "SunaertJochen_PlotTwist",
@@ -405,7 +455,8 @@
         "description": "Multiplayer partygame met AI die verhalen genereert en spelers beoordeelt",
         "category": "Web & Mobile",
         "promotor": "Mike (8)",
-        "project_name": "PlotTwist"
+        "project_name": "PlotTwist",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "TaziYassine_DalilTalk",
@@ -413,7 +464,8 @@
         "description": "Platform voor interreligieuze debatten met live video, bronverificatie en contextuele toelichting",
         "category": "Web & Mobile",
         "promotor": "Mike (8)",
-        "project_name": "Dalil Talk"
+        "project_name": "Dalil Talk",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "AhdiSafwane_PCBuilder",
@@ -421,7 +473,8 @@
         "description": "Educatief AR-platform dat gebruikers leert een PC te bouwen via interactieve simulaties",
         "category": "XR, 3D, Game",
         "promotor": "Mike (8)",
-        "project_name": "PC Builder"
+        "project_name": "PC Builder",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "VandenbusscheKian_Van2Dnaar3DmodelsmetAI",
@@ -429,7 +482,8 @@
         "description": "AI-gestuurde tool die automatisch 2D-beelden omzet in geoptimaliseerde 3D-modellen voor diverse sectoren",
         "category": "XR, 3D, Game",
         "promotor": "Mike (8)",
-        "project_name": "Van 2D naar 3D models met AI"
+        "project_name": "Van 2D naar 3D models met AI",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "LambeensWannes_AuditieveFotoreeks",
@@ -437,7 +491,8 @@
         "description": "Auditieve fotoreeks die visuele data vertaalt naar soundscapes voor slechtzienden",
         "category": "Experience Design",
         "promotor": "Stefan (8)",
-        "project_name": "Auditieve Fotoreeks"
+        "project_name": "Auditieve Fotoreeks",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "LMaimouniNail_StepIntoTheStruggle",
@@ -445,7 +500,8 @@
         "description": "Interactieve installatie die jongeren uit kwetsbare wijken via keuzes en motion tracking bewust maakt van hun toekomst",
         "category": "Interactive Motion",
         "promotor": "Stefan (8)",
-        "project_name": "Step Into The Struggle"
+        "project_name": "Step Into The Struggle",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "VanBergenTuur_CreativeArcade",
@@ -453,7 +509,8 @@
         "description": "Interactieve visual novel over mentale gezondheid bij jongeren met focus op keuzes en emotionele beleving",
         "category": "Interactive Motion",
         "promotor": "Stefan (8)",
-        "project_name": "Creative Arcade!"
+        "project_name": "Creative Arcade!",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "AuassarYoussef_YouthsDream",
@@ -461,7 +518,8 @@
         "description": "Visuele webapp die jongeren helpt hun droomjob en studiekeuze te ontdekken via persoonlijkheidstesten",
         "category": "Web & Mobile",
         "promotor": "Stefan (8)",
-        "project_name": "Youth’s Dream"
+        "project_name": "Youth’s Dream",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "DriesenMarten_Simulectra",
@@ -469,7 +527,8 @@
         "description": "Simulatie-app voor residentiële elektriciteit die eenvoud en gebruiksgemak biedt aan studenten",
         "category": "Web & Mobile",
         "promotor": "Stefan (8)",
-        "project_name": "Simulectra"
+        "project_name": "Simulectra",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "VerbekenSeppe_WandelWijs",
@@ -477,7 +536,8 @@
         "description": "Gamified wandelapp voor kinderen om natuur te ontdekken via missies, beloningen en AI-herkenning",
         "category": "Web & Mobile",
         "promotor": "Stefan (8)",
-        "project_name": "WandelWijs"
+        "project_name": "WandelWijs",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "EylenboschBram_MindMatch",
@@ -485,7 +545,8 @@
         "description": "Tabletgame met memory en dagelijkse taken, ontwikkeld voor senioren",
         "category": "XR, 3D, Game",
         "promotor": "Stefan (8)",
-        "project_name": "MindMatch"
+        "project_name": "MindMatch",
+        "banner_image": "placeholder.jpg"
     },
     {
         "id": "PeetersCarysaVanHumbeeckAnke_Stellar",
@@ -493,6 +554,7 @@
         "description": "Educatieve visual novel voor kinderen over de ruimte met interactieve animaties",
         "category": "XR, 3D, Game",
         "promotor": "Stefan (8)",
-        "project_name": "Stellar"
+        "project_name": "Stellar",
+        "banner_image": "placeholder.jpg"
     }
 ]

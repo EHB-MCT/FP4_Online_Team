@@ -1,5 +1,10 @@
+import { Canvas } from "@react-three/fiber"
 import clsx from "clsx";
+import gsap from "gsap"
 import { useState, useEffect } from "react";
+
+//Models
+import { Model } from "../../../shared/model/Model"
 
 //Components
 import CountDown from "../components/countdown/CountDown.jsx";
@@ -13,19 +18,99 @@ import { INFO_ROUTE } from "../../info/info.route.jsx";
 
 //CSS
 import styles from './home.module.scss'
+import { ProjectCard } from "../../../shared/ProjectCard/ProjectCard.jsx";
 
 
 export const Home = () => {
     document.title = "Shift Festival - 2025 ";	
 
-    const [projects, setProjects] = useState([]);
+
     const {data, isLoading} = useProjectsData();
+    const [projects, setProjects] = useState([]);
+    const [rotationY, setRotationY] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(false);
+    const [transitionDirection, setTransitionDirection] = useState('next');
+
+    const awards = [
+        {
+            title: "Publieksprijs",
+            description: "Gekozen door het publiek."
+        },
+        {
+            title: "Juryprijs",
+            description: "Geselecteerd door de jury."
+        },
+        {
+            title: "Innovatieprijs",
+            description: "Meest vernieuwend project."
+        },
+        {
+            title: "Impactprijs",
+            description: "Project met grootste impact."
+        }
+    ];    
 
     useEffect(() => {
         if (data && Array.isArray(data)) {
             setProjects(data.slice(0, 3));
         }
     }, [data])
+    
+    const next = () => {
+        if (isTransitioning) return;
+
+        setTransitionDirection("next");
+        setIsTransitioning(true);
+
+        const spinTimes = 1;
+        const spinAmount = Math.PI * 2 * spinTimes;
+        const startRotation = rotationY;
+        const endRotation = startRotation + spinAmount;
+
+        gsap.to(
+            { value: startRotation },
+            {
+                value: endRotation,
+                duration: 2,
+                ease: "power4.inOut",
+                onUpdate: function () {
+                    setRotationY(this.targets()[0].value);
+                },
+                onComplete: () => {
+                    setCurrentIndex((prevIndex) => (prevIndex + 1) % awards.length);
+                    setIsTransitioning(false);
+                }
+            }
+        );
+    };
+
+    const previous = () => {
+        if (isTransitioning) return;
+
+        setTransitionDirection("previous");
+        setIsTransitioning(true);
+
+        const spinAmount = -Math.PI * 2;
+        const startRotation = rotationY;
+        const endRotation = startRotation + spinAmount;
+
+        gsap.to(
+            { value: startRotation },
+            {
+                value: endRotation,
+                duration: 2,
+                ease: "power4.inOut",
+                onUpdate: function () {
+                    setRotationY(this.targets()[0].value);
+                },
+                onComplete: () => {
+                    setCurrentIndex((prevIndex) => (prevIndex - 1 + awards.length) % awards.length);
+                    setIsTransitioning(false);
+                }
+            }
+        );
+    };
 
     return (
         <>
@@ -46,13 +131,6 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className={clsx(styles["projects-preview-wrapper"])}>
-                <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper"], "inner-wrapper")}>
-                    <h2>Eindejaarsprojecten</h2>
-                    { isLoading ? (<p>Loading...</p>) : (projects.map((project) => <p key={project.id || project.project_name}>{project.project_name}</p>)) }
-                </div>
-
-            </section>
             <section className={clsx(styles["practical-info-wrapper"])}>
                 <div className={clsx(styles["practical-info-wrapper--background-image-top-left"])}>
                     <div className={clsx(styles["practical-info-wrapper--background-image-top-left--background-image-top-right"])}>
@@ -68,12 +146,31 @@ export const Home = () => {
                                 <p id="more-text">
                                     Bovendien zullen vertegenwoordigers van bedrijven aanwezig zijn, wat dit event ook een uitstekende netwerkmogelijkheid maakt voor iedereen die geïnteresseerd is in de creatieve en technologische sector.
                                 </p>
+                                <Button
+                                    destinationUrl={ INFO_ROUTE.path }
+                                    copy={ "info" }
+                                    className={ "button" }
+                                />
                             </div>
-                            <Button
-                                destinationUrl={ INFO_ROUTE.path }
-                                copy={ "info" }
-                                className={ "button" }
-                            />
+                            
+
+                            <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper"])}>
+                                <img src="/homepage-image.png" alt="foto van ehb" />
+                                <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper--specific-info"])}>
+                                    <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper--specific-info--specific-info-upper-wrapper"])}>
+                                        <h2 className="pink-text">20 juni 2025</h2>
+                                        <h3>17:00 &gt; 22:00</h3>
+                                    </div>
+                                    <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper--specific-info--specific-info-lower-wrapper"])}>
+                                        <p>Gratis, maar inschrijven verplicht</p>
+                                        <p>
+                                            Nijverheidskaai 170, 1070 Brussel
+                                            <br />
+                                            Campus Kaai
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                             {/* <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper"])}>
                                 <img src="/homepage-image.png" alt="foto van ehb" />
                                 <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper--specific-info"])}>
@@ -107,6 +204,22 @@ export const Home = () => {
                 </div>
                 
             </section>
+
+            <section className={clsx(styles["projects-preview-wrapper"])}>
+                <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper"], "inner-wrapper")}>
+                    <h2>Eindejaarsprojecten</h2>
+                    { isLoading ? (<p>Loading...</p>) : (projects.map((project) => {
+                        <ProjectCard
+                            project_name={ project.project_name }
+                            student={ project.student }
+                            banner_image={ project.banner_image }
+                        />
+                    })) }
+                </div>
+
+            </section>
+            
+
 
             <section className={clsx(styles["large-info-wrapper"], styles["orange-wrapper"])}>
                 <div className="inner-wrapper">
@@ -143,8 +256,48 @@ export const Home = () => {
                 </div>
             </section> */}
 
-            <section className={clsx(styles["awards-wrapper"])}>
-                
+            <section className={clsx(styles["award-page-wrapper"], "wrapper")}>
+                <div className="inner-wrapper">
+                    <h2>Prijzen</h2>
+                    <Canvas className={clsx(styles["canvas"])} style={{height: "45vh"}}>
+                        <Model
+                            rotation={[ 0, rotationY, 0 ]}
+                        />
+                        <ambientLight intensity={0.3} />
+                        <directionalLight 
+                            position={[5, 10, 7.5]} 
+                            intensity={.75} 
+                        />
+                        <perspectiveCamera 
+                            makeDefault 
+                        />
+
+                    </Canvas>
+                    <div className={clsx(styles["awards-wrapper"])}>
+                        <div className={clsx(styles["awards-wrapper--btn"], styles["awards-wrapper-btn--previous"])}
+                            onClick={previous}
+                        >
+                            <p>{'<'}</p>                       
+                        </div>                          
+                        <div className={clsx(styles["awards-inner-wrapper"])}>
+                            <div className={clsx(styles["award-golden-mike"], {
+                                [styles.transitioning]: isTransitioning,
+                                [styles["transitioning-next"]]: isTransitioning && transitionDirection === "next",
+                                [styles["transitioning-prev"]]: isTransitioning && transitionDirection === "previous"
+                            })}>
+                                <h2 className="pink-text">{awards[currentIndex].title}</h2>
+                                <p>
+                                    {awards[currentIndex].description}
+                                </p>
+                            </div>
+                        </div>
+                        <div className={clsx(styles["awards-wrapper--btn"])}
+                            onClick={next}
+                        >
+                            <p>{'>'}</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section className={clsx(styles["large-info-wrapper"], styles["purple-wrapper"])}>

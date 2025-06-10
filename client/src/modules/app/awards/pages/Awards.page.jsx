@@ -93,48 +93,7 @@ export const Awards = () => {
 
     return (
         <>
-            <section className={clsx(style["award-page-wrapper"], "wrapper")}>
-                <div className="inner-wrapper">
-                    <Canvas className={clsx(style["canvas"])} style={{height: "45vh"}}>
-                        <Model
-                            rotation={[ 0, rotationY, 0 ]}
-                        />
-                        <ambientLight intensity={0.3} />
-                        <directionalLight 
-                            position={[5, 10, 7.5]} 
-                            intensity={.75} 
-                        />
-                        <perspectiveCamera 
-                            makeDefault 
-                        />
 
-                    </Canvas>
-                    <div className={clsx(style["awards-wrapper"])}>
-                        <div className={clsx(style["awards-wrapper--btn"], style["awards-wrapper-btn--previous"])}
-                            onClick={previous}
-                        >
-                            <p>{'<'}</p>                       
-                        </div>                          
-                        <div className={clsx(style["awards-inner-wrapper"])}>
-                            <div className={clsx(style["award-golden-mike"], {
-                                [style.transitioning]: isTransitioning,
-                                [style["transitioning-next"]]: isTransitioning && transitionDirection === "next",
-                                [style["transitioning-prev"]]: isTransitioning && transitionDirection === "previous"
-                            })}>
-                                <h2 className="pink-text">{awards[currentIndex].title}</h2>
-                                <p>
-                                    {awards[currentIndex].description}
-                                </p>
-                            </div>
-                        </div>
-                        <div className={clsx(style["awards-wrapper--btn"])}
-                            onClick={next}
-                        >
-                            <p>{'>'}</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
             
         </>
     )
