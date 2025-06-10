@@ -1,0 +1,45 @@
+@import url("../../app/app/App.css");
+
+.card-wrapper{
+
+    position: relative;
+
+    img{
+        width: 100%;
+    }
+
+    &--student-info {
+        position: relative;
+        
+        svg{
+            position: absolute;
+            bottom: -25px;
+            left: -25px;
+
+            width: 250px;
+        }
+
+        &--right-shape {
+            position: absolute;
+            text-align: center;
+            color: var(--white-font-color);
+
+            left: 27px;
+            bottom: 30px;
+
+            height: 55px;
+            width: 195px;
+
+            /* border: 1pt solid black; */
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p{
+                margin: 0;
+            }
+        }
+        
+    }
+}

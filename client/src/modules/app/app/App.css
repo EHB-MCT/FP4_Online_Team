@@ -118,8 +118,8 @@ a {
 
 /* Main wrapper */
 .inner-wrapper {
-	width: 90dvw;
-	padding: 0 5dvw;
+	width: 80dvw;
+	padding: 0 10dvw;
 }
 
 /* Section */
@@ -270,7 +270,7 @@ footer {
 		--section-padding: 64px 0;
 	}
 	.inner-wrapper {
-		width: 100%;
+		width: 80%;
 		max-width: 950px;
 		margin: 0 auto;
 	}

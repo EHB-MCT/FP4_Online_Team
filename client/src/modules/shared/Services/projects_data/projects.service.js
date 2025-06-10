@@ -1,8 +1,11 @@
+import data from './data/projects.json'
+
 class ProjectsService {
 
     async getProjectsData(){
 
         const URL = "https://raw.githubusercontent.com/EHB-MCT/FP4_Online_Team/refs/heads/sprint-week-1/client/src/modules/shared/Services/projects_data/data/projects.json"
+
 
         const response = await fetch( URL );
         
@@ -14,9 +17,9 @@ class ProjectsService {
 
         DATA.sort(() => Math.random() - 0.5);
 
-        console.log(DATA)
+        console.log(data)
 
-        return DATA
+        return data
     }
 }
 
