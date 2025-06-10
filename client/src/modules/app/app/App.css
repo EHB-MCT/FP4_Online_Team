@@ -5,10 +5,11 @@
 :root {
 	/* Colors */
 	--purple-color: #c069a9;
-	--pink-color: #ef4478;
-	--orange-color: #f0582a;
-	--green-color: #cdd628;
-	--green-color2: #8fd11c;
+  --blue-color: #667BC4 ;
+  --orange-color: #EC6230;
+	--pink-color: #EE4478;
+  --green-color: #CEDC29;
+
 	/* Font color */
 	--font-color: #000000;
 	--white-font-color: #fcf9f9;
@@ -34,11 +35,16 @@
 	--button-padding: 15px 50px;
 	--button-margin: 24px 0;
 	--border-radius: 15px;
-	--button-color: #8fd11c;
+	--button-color: #CEDC29;
+  --button-font-color: #3F53A2;
 
+  --button-orange-color: #D83D0E ;
+  --button-purple-color: #B54A98 ;
+  --button-blue-color: #5269BC ;
+  --button-pink-color: #E61453;
 
 	/*Background color*/
-	--background-color: #ef4478;
+	--background-color: #EE4478;
 	/* --background-color: #c169aa; */
 
 	/* Section margin */
@@ -151,7 +157,7 @@ section.pink-wrapper {
 
 	border-radius: var(--border-radius);
 
-	color: var(--font-color);
+	color: var(--button-font-color);
 
 
 	font-family: var(--main-font);
@@ -172,7 +178,7 @@ section.pink-wrapper {
 } */
 
 .button:hover {
-	color: var(--font-color);
+	color: var(--button-font-color);
 	background-color: transparent;
 	box-shadow: inset -278px 0 0 0 transparent;
 }
@@ -187,12 +193,13 @@ label {
 }
 
 footer {
-	background-color: var(--font-color);
+	background-color: var(--blue-color);
 
-	color: var(--font-color);
+	color: var(--white-font-color-color);
 
 	.button {
-		color: var(--font-color);
+		color: var(--button-font-color);
+    margin-top: 0;
 	}
 
 	.inner-wrapper {
@@ -207,7 +214,18 @@ footer {
 	.footer-right-wrapper {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: top;
+    /* justify-content: start; */
+
+    .footer-event-info{
+
+      margin-top: 20px;
+
+      p{
+        margin: 5px 0;
+        color: var(--white-font-color);
+      }
+    }
 	}
 
 	img {
@@ -222,6 +240,20 @@ footer {
 		width: 50px;
 		margin-right: 10px;
 	}
+  .footer-policy{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white-font-color);
+    margin-top: 12px;
+
+    p{
+      margin: 0;
+    }
+  }
+  a{
+    color: var(--white-font-color);
+  }
 }
 
 /* Tablet */
@@ -269,6 +301,11 @@ footer {
 		--section-margin: 64px 0;
 		--section-padding: 64px 0;
 	}
+
+  h2{
+    margin: 10px 0 24px;
+  }
+
 	.inner-wrapper {
 		width: 80%;
 		max-width: 950px;
@@ -282,10 +319,8 @@ footer {
 		display: inline-block;
 	}
 	footer {
-		background-color: var(--font-color);
-		color: #fff;
 		.button {
-			color: var(--font-color);
+			color: var(--button-font-color);
 		}
 
 		.inner-wrapper {

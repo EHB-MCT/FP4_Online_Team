@@ -16,7 +16,12 @@ export const Footer = () => {
             <div className="inner-wrapper">
                 <div className="footer-left-wrapper">
                     <NavLink to='/' ><img className="logo-shift" src={Image} alt="Logo of the event" /></NavLink>
-                    <p>Erasmushogeschool Brussel - 2025</p>
+                    <div className="footer-event-info">
+                        <p>Erasmushogeschool Brussel - 2025</p>
+                        <p>Nijverheidskaai 170, 1070 Anderlecht</p>
+                        <p>20 juni 2025</p>
+                        <p>17:00 &gt; 22:00</p>
+                    </div>
                 </div>
                 <div className="footer-right-wrapper">
                     <Button 
@@ -30,6 +35,11 @@ export const Footer = () => {
                         <a target='_blank' href="https://www.instagram.com/multimedia.ehb/"><img src="/instagram.svg" className='socials' alt="Logo instagram" /></a>
                         <a target='_blank' href="https://www.tiktok.com/@multimedia.ehb"><img src="/tiktok.svg" className='socials' alt="Logo tiktok" /></a>
                     </div>
+                    {/* <div className="footer-policy">
+                        <NavLink to={"#"}>Cookie policy</NavLink>
+                        <p>-</p>
+                        <NavLink to={"#"}>Privacy policy</NavLink>
+                    </div> */}
                 </div>
             </div>
         </footer>
