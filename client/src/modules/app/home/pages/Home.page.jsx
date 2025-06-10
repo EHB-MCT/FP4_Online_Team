@@ -118,7 +118,7 @@ export const Home = () => {
             <section className={clsx(styles["large-info-wrapper"], styles["purple-wrapper"])}>
                 <div className="inner-wrapper">
                     <div className={clsx(styles["large-info-wrapper--programma-info-wrapper"])}>
-                        <img src="homepage-image.png" alt="" />
+                        <img src="programma-img.jpg" alt="" />
                         <div className={clsx(styles["large-info-wrapper--programma-info-wrapper--programma-info"])}>
                             <h2 className="white-text" style={{textAlign: "start"}}>Programma</h2>
                             <p className="white-text">

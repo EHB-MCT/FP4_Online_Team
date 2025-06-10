@@ -8,7 +8,7 @@ const faqData = [
     {
         question: "Wat is Shift?",
         answer:
-            "De Shift EXPO is een tentoonstelling van eindprojecten van studenten met workshops, awardshows en meer.",
+            "De Shift EXPO is een tentoonstelling van eindprojecten van studenten met workshops, awardshows en meer.De Shift EXPO is een tentoonstelling van eindprojecten van studenten met workshops, awardshows en meer.De Shift EXPO is een tentoonstelling van eindprojecten van studenten met workshops, awardshows en meer.De Shift EXPO is een tentoonstelling van eindprojecten van studenten met workshops, awardshows en meer.De Shift EXPO is een tentoonstelling van eindprojecten van studenten met workshops, awardshows en meer.De Shift EXPO is een tentoonstelling van eindprojecten van studenten met workshops, awardshows en meer.",
     },
     {
         question: "Waar is Shift?",
