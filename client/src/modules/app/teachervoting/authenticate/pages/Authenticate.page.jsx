@@ -21,10 +21,10 @@ export const Authenticate = () => {
         e.preventDefault();
 
         try {
-            // await axios.post(
-            // "https://api.shiftfestival.be/api/register-voter",
-            // formData
-            // );
+            await axios.post(
+            "https://api.shiftfestival.be/api/register-voter",
+            formData
+            );
 
             localStorage.setItem("user", JSON.stringify({
                 email: formData.email,

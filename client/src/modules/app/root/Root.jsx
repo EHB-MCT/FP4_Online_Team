@@ -18,6 +18,7 @@ import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
 import { REGISTER_ROUTE } from "../register/register.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
 import { REQUEST_TOKEN_ROUTE } from "../teachervoting/requestToken/requestToken.route";
+import { AWARDS_ROUTE } from "../awards/awards.route";
 
 export const Root = () => {
 
@@ -28,6 +29,10 @@ export const Root = () => {
 			path: "/",
 			element: <App />,
 			children: [
+				{
+					path: AWARDS_ROUTE.path,
+					element: AWARDS_ROUTE.element,
+				},
 				{
 					path: COUNTER_ROUTE.path,
 					element: COUNTER_ROUTE.element,
@@ -48,10 +53,10 @@ export const Root = () => {
 				// 	path: PRIVACY_POLICY_ROUTE.path,
 				// 	element: PRIVACY_POLICY_ROUTE.element,
 				// },
-				// {
-				// 	path: PROJECTS_ROUTE.path,
-				// 	element: PROJECTS_ROUTE.element
-				// },
+				{
+					path: PROJECTS_ROUTE.path,
+					element: PROJECTS_ROUTE.element
+				},
 				// {
 				// 	path: PROJECTSDETAIL_ROUTE.path,
 				// 	element: PROJECTSDETAIL_ROUTE.element,
@@ -72,20 +77,20 @@ export const Root = () => {
 
 			]
 		},
-		//{
-		// 	path: "/voteReGRfguugXNEmMm/",
-		// 	element: <App />,
-		// 	children: [
-		// 		{
-		// 			path: AUTH_TEACHER_ROUTE.path,
-		// 			element: AUTH_TEACHER_ROUTE.element,
-		// 		},
-		// 		{
-		// 			path: REQUEST_TOKEN_ROUTE.path,
-		// 			element: REQUEST_TOKEN_ROUTE.element,
-		// 		}
-		// 	]
-		// }
+		{
+			path: "/voteReGRfguugXNEmMm/",
+			element: <App />,
+			children: [
+				{
+					path: AUTH_TEACHER_ROUTE.path,
+					element: AUTH_TEACHER_ROUTE.element,
+				},
+				{
+					path: REQUEST_TOKEN_ROUTE.path,
+					element: REQUEST_TOKEN_ROUTE.element,
+				}
+			]
+		}
 	]);
 
 	return (
