@@ -22,44 +22,60 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	width: 100%; /* Full width */
+	width: 100%;
 	margin-top: 24px;
 	margin-bottom: 40px;
-	min-height: 360px; /* ensures space for the circle overlap */
+	min-height: 360px;
 }
 
 .banner-image {
-	width: 900px; /* Or use 90vw for responsiveness */
-	max-width: 95vw;
-	height: 320px; /* Fixed height for banner */
-	background: #fff;
-	border: 1.5px solid #222;
-	border-radius: 16px;
+	position: relative; /* contain absolute children */
 	overflow: hidden;
-	position: relative;
-	z-index: 1;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+}
+.banner-image__photo {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
-/* Make image fit banner exactly */
-.banner-image img {
+/* badge wrapper */
+.badge {
+	position: absolute;
+	bottom: 16px;
+	left: 16px;
+	width: 350px; /* match your SVG artboard width */
+	height: 80px; /* match your SVG artboard height */
+}
+
+/* SVG background */
+.badge__shape {
+	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover; /* Ensures the image covers the area, cropping as needed */
-	display: block;
+	object-fit: contain;
 }
 
-/* Overlapping circle */
-.banner-circle img {
+/* text on top of SVG */
+.badge__text {
 	position: absolute;
-	left: calc(50% - 450px - 60px); /* 50% - half banner width - circle offset */
-	bottom: -60px;
-	width: 160px;
-	height: 160px;
-	background: #fff;
-	border: 1.5px solid #222;
-	border-radius: 50%;
-	z-index: 2;
+	top: 50%;
+	left: 64px; /* push into the “bubble” area */
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	pointer-events: none; /* let clicks go through if needed */
+}
+
+.badge__text h1,
+.badge__text h3 {
+	margin: 0;
+	line-height: 1;
+}
+
+.badge__text h1 {
+	font-size: 1.25rem;
+}
+.badge__text h3 {
+	font-size: 1rem;
 }
