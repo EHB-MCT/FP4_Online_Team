@@ -6,17 +6,17 @@ import styles from "./faqDropdown.module.scss"
 
 const faqData = [
     {
-        question: "Wat is de Shift EXPO?",
+        question: "Wat is Shift?",
         answer:
             "De Shift EXPO is een tentoonstelling van eindprojecten van studenten met workshops, awardshows en meer.",
     },
     {
-        question: "Waar is de Shift EXPO?",
+        question: "Waar is Shift?",
         answer:
             "Op de campus van Erasmushogeschool Brussel, Nijverheidskaai 170, 1070 Anderlecht.",
     },
     {
-        question: "Hoe bereik ik de Shift EXPO?",
+        question: "Hoe bereik ik Shift?",
         answer:
             "De campus is makkelijk bereikbaar met het openbaar vervoer. Vlakbij station Brussel-Zuid.",
     },
