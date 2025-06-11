@@ -1,0 +1,12 @@
+.voting-dashboard-wrapper{
+    &--category-wrapper{
+        display: flex;
+        justify-content: space-between;
+        &--nominees-wrapper{
+            display: flex;
+            justify-content: space-between;
+
+            width: 50vw;
+        }
+    }
+}
