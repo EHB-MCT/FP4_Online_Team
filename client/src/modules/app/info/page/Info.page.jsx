@@ -88,7 +88,7 @@ export const Info = () => {
 					<AwardsInfo
 						price_title={ "Innovatieprijs" }
 						badge={ "innovatie" }
-						description={ " De Innovatieprijs bekroont het meest vernieuwende technische project. Een project dat niet alleen creatief is, maar ook technisch uitdagend. Waarin grenzen worden verlegd." }
+						description={ " De Innovatieprhijs bekroont het meest vernieuwende technische project. Een project dat niet alleen creatief is, maar ook technisch uitdagend. Waarin grenzen worden verlegd." }
 					/>
 					<AwardsInfo
 						price_title={ "Impactprijs" }

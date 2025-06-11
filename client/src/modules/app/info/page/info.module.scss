@@ -39,6 +39,14 @@
 }
 
 .awards-wrapper{
+
+    padding: 124px 0;
+
+    background-image: url('figure-green.svg');
+    background-repeat: no-repeat;
+    background-position: 0% 108%;
+    background-size: 45%;
+
     &--awards-inner-wrapper{
         display: flex;
         justify-content: space-between;
@@ -76,6 +84,12 @@
     }
 }
 
+@media(min-width: 768px){
+    .awards-wrapper{
+        background-position: 0% 110%;
+        background-size: 20%;
+    }
+}
 
 @media(min-width: 1024px){
     .course-info-wrapper{
@@ -115,6 +129,11 @@
                 width: 60%;
             }
         }
+    }
+
+    .awards-wrapper{
+        background-position: 0% 10%;
+        background-size: 30%;
     }
 
 }
