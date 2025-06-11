@@ -175,7 +175,7 @@
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	padding: 1rem;
+	padding: 0.3rem;
 	border-radius: 10px;
 	display: flex;
 	top: 1rem;
@@ -196,7 +196,7 @@
 
 .pdf-center-overlay {
 	position: relative;
-	margin: 0 120px; /* space for side overlays */
+	margin: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -210,7 +210,7 @@
 	margin: 0 auto;
 	bottom: 1rem;
 	width: fit-content;
-	padding: 1rem;
+	padding: 0.5rem;
 	border-radius: 10px;
 	display: flex;
 	flex-direction: row;
@@ -251,7 +251,7 @@
 
 @media (min-width: 1024px) {
 	.pdf-modal {
-		width: 80vw;
+		width: 60vw;
 		max-width: 1600px;
 		height: 100vh;
 		max-height: 100vh;
@@ -266,4 +266,17 @@ button {
 	padding: 0.5rem 1rem;
 	border-radius: 4px;
 	cursor: pointer;
+}
+
+.pdf-modal.fullscreen {
+	overflow: visible;
+	width: 100vw;
+	height: 200vh;
+	max-width: 100vw;
+	max-height: 200vh;
+	border-radius: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }

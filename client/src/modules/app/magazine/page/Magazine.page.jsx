@@ -29,6 +29,7 @@ export const Magazine = () => {
 	const [initialScale, setInitialScale] = useState(1);
 	const [zoomInFunc, setZoomInFunc] = useState(null);
 	const [zoomOutFunc, setZoomOutFunc] = useState(null);
+	const [isFullscreen, setIsFullscreen] = useState(false);
 
 	useEffect(() => {
 		function updateWidth() {
@@ -38,7 +39,7 @@ export const Magazine = () => {
 
 				// Assume native page is ~1200px wide
 				const nativePageWidth = 1200;
-				const scale = width / nativePageWidth - 0.1; // Adjust scale to fit within the modal with some padding
+				const scale = width / nativePageWidth; // Adjust scale to fit within the modal with some padding
 				setInitialScale(scale < 0.5 ? 0.5 : scale); // clamp to a minimum if needed
 			}
 		}
@@ -46,6 +47,17 @@ export const Magazine = () => {
 		window.addEventListener("resize", updateWidth);
 		return () => window.removeEventListener("resize", updateWidth);
 	}, [openMagazine]);
+
+	useEffect(() => {
+		const handleFullscreenChange = () => {
+			if (!document.fullscreenElement) {
+				setIsFullscreen(false);
+				setInitialScale(1);
+			}
+		};
+		document.addEventListener("fullscreenchange", handleFullscreenChange);
+		return () => document.removeEventListener("fullscreenchange", handleFullscreenChange);
+	}, []);
 
 	const handleMagazineOpen = (magazine) => {
 		setOpenMagazine(magazine);
@@ -93,6 +105,32 @@ export const Magazine = () => {
 
 	const isMobile = useIsMobile();
 
+	const enterFullscreen = () => {
+		if (fullscreenRef.current?.requestFullscreen) {
+			fullscreenRef.current.requestFullscreen();
+			setIsFullscreen(true);
+			setInitialScale(1.2); // or any larger value you want for fullscreen
+		}
+	};
+
+	const exitFullscreen = () => {
+		if (document.fullscreenElement && document.exitFullscreen) {
+			document.exitFullscreen();
+			setIsFullscreen(false);
+			setInitialScale(1); // reset to normal scale when exiting fullscreen
+		}
+	};
+
+	const toggleFullscreen = () => {
+		if (document.fullscreenElement) {
+			exitFullscreen();
+		} else {
+			enterFullscreen();
+		}
+	};
+
+	const fullscreenRef = useRef(null);
+
 	return (
 		<section className="inner-wrapper">
 			<div className="viewer-layout">
@@ -109,24 +147,26 @@ export const Magazine = () => {
 
 			{openMagazine && (
 				<div className="pdf-modal-overlay" onClick={() => setOpenMagazine(null)}>
-					<div className="pdf-modal" ref={modalRef} onClick={(e) => e.stopPropagation()}>
+					<div className={`pdf-modal${isFullscreen ? " fullscreen" : ""}`} ref={(modalRef, fullscreenRef)} onClick={(e) => e.stopPropagation()}>
 						{/* Zoom buttons OUTSIDE the center overlay */}
 						{!isMobile && (
 							<div className="pdf-zoom-overlay">
-								<button onClick={() => zoomOutFunc && zoomOutFunc()}>
+								<button onClick={() => zoomOutFunc?.()}>
 									<img src="/zoom-out.svg" alt="" />
 								</button>
-								<button onClick={() => zoomInFunc && zoomInFunc()}>
+								<button onClick={() => zoomInFunc?.()}>
 									<img src="/zoom-in.svg" alt="" />
+								</button>
+								<button onClick={toggleFullscreen}>
+									<img src="/fullscreen.svg" alt="" />
 								</button>
 							</div>
 						)}
 
+						<button className="pdf-modal-close" onClick={() => setOpenMagazine(null)}>
+							&times;
+						</button>
 						<div className="pdf-center-overlay">
-							<button className="pdf-modal-close" onClick={() => setOpenMagazine(null)}>
-								&times;
-							</button>
-
 							<Document
 								file={openMagazine.url}
 								onLoadSuccess={handleDocumentLoad}
