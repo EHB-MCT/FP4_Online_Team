@@ -10,7 +10,7 @@ export const useProjectsData = () => {
     
     return useQuery({
         queryKey: SHARED_QUERY_KEYS.projects,
-        queryFn: projectsService.getProjectsData
+        queryFn: projectsService.getProjectsData,
     })
-    
+
 }

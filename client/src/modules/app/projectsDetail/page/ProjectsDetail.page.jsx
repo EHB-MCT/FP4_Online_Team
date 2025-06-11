@@ -4,6 +4,7 @@ import { useProjectsData } from "../../../shared/const/hooks/getProjectsData.hoo
 import { NextProject } from "../components/NextProject";
 import "../components/NextProject.css";
 import { Magazine } from "../../magazine";
+import BadgeSvg from "/badge.svg";
 
 export const ProjectsDetail = () => {
 	const { projectId } = useParams();
@@ -19,33 +20,18 @@ export const ProjectsDetail = () => {
 					"Loading..."
 				) : project ? (
 					<>
+						<div className="top-title">
+							<h1>{project.project_name}</h1>
+							<h3>{project.student}</h3>
+						</div>
+
 						<NextProject currentId={projectId} projects={allProjects} />
 						<div className="image">
 							<div className="banner-image">
-								<img
-									className="banner-image__photo"
-									src="/homepage-image.png"
-									alt="Project banner"
-								/>
-
-								<div className="badge">
-									{/* load your Figma-exported SVG from public */}
-									<img
-										className="badge__shape"
-										src="/badge.svg"
-										alt="Badge background"
-									/>
-
-									{/* overlay HTML text */}
-									<div className="badge__text">
-										<h1>{project.student}</h1>
-										<h3>{project.project_name}</h3>
-									</div>
-								</div>
+								<img src="/homepage-image.png" alt="" />
 							</div>
 						</div>
 
-						<p>{project.description}</p>
 						<Magazine></Magazine>
 					</>
 				) : (

@@ -1,0 +1,38 @@
+.faq-wrapper{
+    width: 100%;
+
+    button{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: transparent;
+        border: none;
+        // border-bottom: 1pt solid black;
+        
+        padding: 24px 0 12px;
+
+        svg{
+            width: 35px;
+        }
+
+        span{
+            font-family: var(--secundary-font);
+            font-size: 20pt;
+            text-align: start;
+        }
+    }
+
+    .faq-drop-info{
+        // height: 10vh;
+        padding: 0 0 24px;
+        display: flex;
+        align-items: center;
+
+        font-size: 14pt;
+
+    }
+    border-bottom: 1pt solid black;
+
+}

@@ -1,0 +1,59 @@
+@import "../../app/App.css";
+
+.canvas{
+    width: 850px;
+    height: 800px;
+}
+.award-page-wrapper{
+    margin: 0;
+    padding-top: 20px;
+}
+.awards-wrapper{
+    width: 850px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--btn{
+        padding: 0 20px;
+        width: 100px;
+        cursor: pointer;
+        user-select: none;
+        transition: opacity 0.2s ease;
+
+        font-size: 32pt;
+        color: var(--background-color);
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.awards-inner-wrapper {
+    flex: 1;
+    overflow: hidden;
+    padding: 0 20px;
+}
+.award-golden-mike {
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+    opacity: 1;
+    transform: translateX(0);
+
+    &.transitioning-next {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    &.transitioning-prev {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    p {
+        line-height: 1.6;
+        text-align: center;
+    }
+}
