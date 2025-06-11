@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { clsx } from 'clsx';
 
 //Components
-import InputField from "../components/InputField.jsx";
+import InputField from "../../../shared/inputfield/InputField.jsx";
 import Roles from "../components/Roles.jsx";
 
 //CSS
@@ -40,9 +40,13 @@ export const Register = () => {
 				formData
 			);
 			Swal.fire({
-				title: "Success",
-				text: "Your registration was successful!",
+				title: "Inschrijving succesvol!",
+				html: `<p>Bedankt voor je inschrijving we zien je graag op 20/06, er is een bevestigingsmail verstuurd naar ${formData.email}.</p>`,
 				icon: "success",
+				customClass: {
+					popup: "custom-sweet-alert",
+					confirmButton: "button pink"
+				}
 			});
 		} catch (error) {
 			console.error("Error submitting form:", error);
@@ -51,9 +55,13 @@ export const Register = () => {
 			const parsedMessage = JSON.parse(errorMessage);
 
 			Swal.fire({
-				title: "Error",
-				text: parsedMessage.message,
+				title: "Oeps!",
+				html: `<p>Er is al ingeschreven met dit e-mailadres.</p>`,
 				icon: "error",
+				customClass: {
+					popup: "custom-sweet-alert",
+					confirmButton: "button pink"
+				}
 			});
 		}
 	};
@@ -63,14 +71,14 @@ export const Register = () => {
 			{/* <img src="/public/figure_pink.png" alt="" className="blob-pink" />
 			<img src="/public/figure_orange.png" alt="" className="blob-orange" /> */}
 
-			<h3>Save the date</h3>
+			<h2 className="white-text">Save the date</h2>
 			<form onSubmit={handleSubmit}>
 				<InputField
 					className={"firstName"}
 					InputType={"text"}
 					InputName={"Voornaam"}
 					Mandatory={true}
-					Placeholder={"Michiel"}
+					Placeholder={"Voornaam"}
 					onChange={(e) => {
 						setFormData((previousData) => ({
 							...previousData,
@@ -83,7 +91,7 @@ export const Register = () => {
 					InputType={"text"}
 					InputName={"Achternaam"}
 					Mandatory={true}
-					Placeholder={"Janssen"}
+					Placeholder={"Achternaam"}
 					onChange={(e) => {
 						setFormData((previousData) => ({
 							...previousData,
@@ -96,7 +104,7 @@ export const Register = () => {
 					InputType={"email"}
 					InputName={"Email"}
 					Mandatory={true}
-					Placeholder={"michiel.janssen@example.com"}
+					Placeholder={"mail@example.com"}
 					onChange={(e) => {
 						setFormData((previousData) => ({
 							...previousData,
@@ -106,7 +114,7 @@ export const Register = () => {
 				/>
 				<Roles
 					className={"roles"}
-					InputName={"Rol"}
+					InputName={"Op welke manier neemt u deel?"}
 					Mandatory={true}
 					Placeholder={"Select your role"}
 					onChange={handleRoleChange}
@@ -114,7 +122,7 @@ export const Register = () => {
 				<InputField
 					className={"amount"}
 					InputType={"number"}
-					InputName={"Aantal"}
+					InputName={"Aantal personen"}
 					Mandatory={true}
 					Placeholder={"2"}
 					onChange={(e) =>

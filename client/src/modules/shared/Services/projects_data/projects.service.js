@@ -1,10 +1,11 @@
-import PROJECTS_MOCK from "./data/projects.json"
+import data from './data/projects.json'
 
 class ProjectsService {
 
     async getProjectsData(){
 
         const URL = "https://raw.githubusercontent.com/EHB-MCT/FP4_Online_Team/refs/heads/sprint-week-1/client/src/modules/shared/Services/projects_data/data/projects.json"
+
 
         const response = await fetch( URL );
         
@@ -14,9 +15,11 @@ class ProjectsService {
 
         const DATA = await response.json();
 
-        console.log(DATA)
+        data.sort(() => Math.random() - 0.5);
 
-        return DATA
+        console.log(data)
+
+        return data
     }
 }
 

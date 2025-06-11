@@ -55,29 +55,29 @@ const CountDown = () => {
             }
             
             <div className="time-wrapper">
-                <h1>{timeLeft.days}</h1>
-                <p>Dagen</p>
+                <h1 className="green-text">{timeLeft.days}</h1>
+                <p className="green-text">Dagen</p>
             </div>
             <div>
-                <h1>:</h1>
+                <h1 className="green-text">:</h1>
             </div>
             <div className="time-wrapper">
-                <h1>{timeLeft.hours}</h1>
-                <p>Uren</p>
+                <h1 className="green-text">{timeLeft.hours}</h1>
+                <p className="green-text">Uren</p>
             </div>
             <div>
-                <h1>:</h1>
+                <h1 className="green-text">:</h1>
             </div>
             <div className="time-wrapper">
-                <h1>{timeLeft.minutes}</h1>
-                <p>Minuten</p>
+                <h1 className="green-text">{timeLeft.minutes}</h1>
+                <p className="green-text">Minuten</p>
             </div>
             <div id="seconds">
-                <h1>:</h1>
+                <h1 className="green-text">:</h1>
             </div>
             <div id="seconds" className="time-wrapper">
-                <h1>{timeLeft.seconds}</h1>
-                <p>Seconden</p>
+                <h1 className="green-text">{timeLeft.seconds}</h1>
+                <p className="green-text">Seconden</p>
             </div>
         </div>
     );

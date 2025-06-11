@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Faq } from "../component/Faq";
+// import { Faq } from "../component/Faq";
 export const Info = () => {
 	// Refs for each block
 	const opleidingRef = useRef(null);
@@ -88,7 +88,7 @@ export const Info = () => {
 
 				<div ref={faqRef} style={{ margin: "70px 0px" }}>
 					<h2 style={{ textAlign: "center" }}>FAQ</h2>
-					<Faq />
+					{/* <Faq /> */}
 				</div>
 			</div>
 		</section>

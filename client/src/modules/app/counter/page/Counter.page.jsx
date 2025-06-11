@@ -1,28 +1,28 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { useState, useEffect } from "react";
+
+//Counter
 import "./Counter.css";
+
+//Hooks
+import { useCounterData } from "../../../shared/const/hooks/getCounterData.hook";
+
 export const Counter = () => {
-	const [count, setCount] = useState(null);
+    const { data } = useCounterData();
+    const [count, setCount] = useState(null);
 
-	useEffect(() => {
-		const fetchCount = async () => {
-			try {
-				const res = await axios.get("https://api.shiftfestival.be/api/counter");
-				setCount(res.data.count);
-			} catch (error) {
-				console.error("Error fetching count:", error);
-			}
-		};
-		fetchCount();
-	}, []);
+    useEffect(() => {
+        if (data && typeof data.count !== "undefined") {
+            setCount(data.count);
+        }
+    }, [data]);
 
-	return (
-		<section className="inner-wrapper">
-			<div className="wrapper">
-				<h1 className="text ">
-					Totale inschrijvingen <br /> {count}
-				</h1>
-			</div>
-		</section>
-	);
+    return (
+        <section className="inner-wrapper" style={{minHeight: "40dvh", display: "flex", alignItems: "center", justifyContent: "center"}}>
+            <div className="wrapper">
+                <h1 className="green-text">
+                    Totale inschrijvingen <br /> {count}
+                </h1>
+            </div>
+        </section>
+    );
 };

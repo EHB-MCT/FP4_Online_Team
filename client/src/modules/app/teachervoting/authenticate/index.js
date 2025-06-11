@@ -1,0 +1,1 @@
+export { Authenticate } from './pages/Authenticate.page'

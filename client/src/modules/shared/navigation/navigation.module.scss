@@ -1,0 +1,53 @@
+@import '../../../modules/app/app/App.css';
+
+nav{
+    background-color: var(--background-color);
+
+    height: 15dvh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner-wrapper{
+    &--navigation-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img{
+            width: 150px;
+        }
+        img.inner-wrapper--navigation-wrapper--logo-ehb{
+            width: 50px;
+        }
+
+    }
+}
+
+@media(min-width: 768px){
+    
+}
+
+@media(min-width: 1024px){
+    .inner-wrapper{
+        &--navigation-wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img.inner-wrapper--navigation-wrapper--logo-ehb{
+            width: 75px;
+        }
+        .inner-wrapper--navigation-wrapper--logo-ehb:hover,
+        .inner-wrapper--navigation-wrapper--logo-shift:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    }
+}
+
+// @media(min-width: 1200px){
+    
+// }
