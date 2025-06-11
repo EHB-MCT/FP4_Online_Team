@@ -49,10 +49,7 @@ export const Root = () => {
 				// 	path: COUNTER_ROUTE.path,
 				// 	element: COUNTER_ROUTE.element,
 				// },
-				{
-					path: VOTING_ROUTE.path,
-					element: VOTING_ROUTE.element,
-				},
+
 				{
 					path: PROJECTS_ROUTE.path,
 					element: PROJECTS_ROUTE.element,
@@ -72,6 +69,10 @@ export const Root = () => {
 					element: HOMETWO_ROUTE.element,
 				},
 			],
+		},
+		{
+			path: VOTING_ROUTE.path,
+			element: VOTING_ROUTE.element,
 		},
 	]);
 
