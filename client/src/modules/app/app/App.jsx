@@ -12,7 +12,7 @@ function App() {
 	return (
 		<>
 			{/* <NavigationFase2 /> */}
-			{/* <Navigation /> */}
+			<Navigation />
 			<Outlet />
 			<Footer />
 		</>
