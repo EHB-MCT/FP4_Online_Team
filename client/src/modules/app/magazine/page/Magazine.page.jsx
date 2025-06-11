@@ -26,9 +26,6 @@ export const Magazine = () => {
 	const [error, setError] = useState(null);
 	const modalRef = useRef(null);
 	const [pdfWidth, setPdfWidth] = useState(800);
-	const [initialScale, setInitialScale] = useState(1);
-	const [zoomInFunc, setZoomInFunc] = useState(null);
-	const [zoomOutFunc, setZoomOutFunc] = useState(null);
 	const [setTransformFunc, setSetTransformFunc] = useState(null);
 	const [isFullscreen, setIsFullscreen] = useState(false);
 	const [zoom, setZoom] = useState(1);
@@ -45,6 +42,7 @@ export const Magazine = () => {
 				setInitialScale(scale < 0.5 ? 0.5 : scale); // clamp to a minimum if needed
 			}
 		}
+		updateSliderBackground(zoom);
 		updateWidth();
 		window.addEventListener("resize", updateWidth);
 		return () => window.removeEventListener("resize", updateWidth);
@@ -136,7 +134,18 @@ export const Magazine = () => {
 	const handleZoom = (value) => {
 		setZoom(value);
 		if (setTransformFunc) setTransformFunc(0, 0, value, 200, "easeOut");
+		updateSliderBackground(value);
 	};
+
+	function updateSliderBackground(value) {
+		const min = 0.5;
+		const max = 2;
+		const percent = ((value - min) / (max - min)) * 100;
+		const slider = document.getElementById("myRange");
+		if (slider) {
+			slider.style.background = `linear-gradient(to right, #ec6230 0%, #ec6230 ${percent}%, #d5dbe1 ${percent}%, #d5dbe1 100%)`;
+		}
+	}
 
 	return (
 		<section className="inner-wrapper">
@@ -181,7 +190,6 @@ export const Magazine = () => {
 								loading={<div className="status-message">Loading magazine...</div>}
 								error={<div className="status-message error">{error || "Could not load magazine"}</div>}
 							>
-								{/* Desktop: zoomable with react-zoom-pan-pinch */}
 								{!isMobile ? (
 									<TransformWrapper minScale={0.5} maxScale={2} wheel={{ step: 0.1 }} onZoom={(ref) => setZoom(ref.state.scale)} onInit={({ setTransform }) => setSetTransformFunc(() => setTransform)}>
 										{() => (
