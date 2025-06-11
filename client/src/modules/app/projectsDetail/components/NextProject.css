@@ -36,6 +36,8 @@
 	display: block;
 	width: 100%;
 	height: auto;
+	pointer-events: none;
+	overflow: hidden;
 }
 
 /* badge wrapper */
@@ -43,8 +45,7 @@
 	position: absolute;
 	bottom: 16px;
 	left: 16px;
-	width: 350px; /* match your SVG artboard width */
-	height: 80px; /* match your SVG artboard height */
+	width: 50%; /* match your SVG artboard width */
 }
 
 /* SVG background */
