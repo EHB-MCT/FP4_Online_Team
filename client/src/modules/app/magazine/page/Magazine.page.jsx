@@ -29,6 +29,7 @@ export const Magazine = () => {
 	const [setTransformFunc, setSetTransformFunc] = useState(null);
 	const [isFullscreen, setIsFullscreen] = useState(false);
 	const [zoom, setZoom] = useState(1);
+	const [initialScale, setInitialScale] = useState(1);
 
 	useEffect(() => {
 		function updateWidth() {
@@ -42,7 +43,7 @@ export const Magazine = () => {
 				setInitialScale(scale < 0.5 ? 0.5 : scale); // clamp to a minimum if needed
 			}
 		}
-		updateSliderBackground(zoom);
+
 		updateWidth();
 		window.addEventListener("resize", updateWidth);
 		return () => window.removeEventListener("resize", updateWidth);
@@ -134,18 +135,7 @@ export const Magazine = () => {
 	const handleZoom = (value) => {
 		setZoom(value);
 		if (setTransformFunc) setTransformFunc(0, 0, value, 200, "easeOut");
-		updateSliderBackground(value);
 	};
-
-	function updateSliderBackground(value) {
-		const min = 0.5;
-		const max = 2;
-		const percent = ((value - min) / (max - min)) * 100;
-		const slider = document.getElementById("myRange");
-		if (slider) {
-			slider.style.background = `linear-gradient(to right, #ec6230 0%, #ec6230 ${percent}%, #d5dbe1 ${percent}%, #d5dbe1 100%)`;
-		}
-	}
 
 	return (
 		<section className="inner-wrapper">
@@ -166,13 +156,18 @@ export const Magazine = () => {
 					<div className={`pdf-modal${isFullscreen ? " fullscreen" : ""}`} ref={(modalRef, fullscreenRef)} onClick={(e) => e.stopPropagation()}>
 						{!isMobile && (
 							<div className="pdf-zoom-overlay">
-								<button onClick={() => handleZoom(Math.max(0.5, zoom - 0.1))}>
-									<img src="/zoom-out.svg" alt="" />
-								</button>
-								<input type="range" min={0.5} max={2} step={0.01} value={zoom} onChange={(e) => handleZoom(Number(e.target.value))} className="slider" id="myRange" style={{ width: 100 }} />
-								<button onClick={() => handleZoom(Math.min(2, zoom + 0.1))}>
-									<img src="/zoom-in.svg" alt="" />
-								</button>
+								<span>
+									Page {currentPage} of {totalPages}
+								</span>
+								<div className="pdf-zoom-controls">
+									<button onClick={() => handleZoom(Math.max(initialScale, zoom - 0.1))}>
+										<img src="/zoom-out.svg" alt="" />
+									</button>
+									<input type="range" min={initialScale} max={2} step={0.01} value={zoom} onChange={(e) => handleZoom(Number(e.target.value))} className="slider" id="myRange" style={{ width: 100 }} />
+									<button onClick={() => handleZoom(Math.min(2, zoom + 0.1))}>
+										<img src="/zoom-in.svg" alt="" />
+									</button>
+								</div>
 								<button onClick={toggleFullscreen}>
 									<img src="/fullscreen.svg" alt="" />
 								</button>
@@ -191,7 +186,7 @@ export const Magazine = () => {
 								error={<div className="status-message error">{error || "Could not load magazine"}</div>}
 							>
 								{!isMobile ? (
-									<TransformWrapper minScale={0.5} maxScale={2} wheel={{ step: 0.1 }} onZoom={(ref) => setZoom(ref.state.scale)} onInit={({ setTransform }) => setSetTransformFunc(() => setTransform)}>
+									<TransformWrapper minScale={initialScale} maxScale={2} wheel={{ step: 0.1 }} onZoom={(ref) => setZoom(ref.state.scale)} onInit={({ setTransform }) => setSetTransformFunc(() => setTransform)}>
 										{() => (
 											<TransformComponent>
 												<div style={{ display: "flex", gap: "16px" }}>
@@ -208,25 +203,29 @@ export const Magazine = () => {
 										)}
 									</TransformWrapper>
 								) : (
-									// Mobile: scrollable all pages
-									Array.from({ length: totalPages }, (_, idx) => <Page key={idx + 1} pageNumber={idx + 1} width={window.innerWidth - 32} />)
+									// Mobile: horizontal scroll
+									<div className="pdf-horizontal-scroll">
+										{Array.from({ length: totalPages }, (_, idx) => (
+											<Page key={idx + 1} pageNumber={idx + 1} width={window.innerWidth - 32} style={{ minWidth: window.innerWidth - 32 }} />
+										))}
+									</div>
 								)}
 							</Document>
 						</div>
-
-						{/* Navigation overlay stays as is */}
 						{!isMobile && (
-							<div className="pdf-nav-overlay">
-								<button onClick={goToPreviousPage} disabled={currentPage <= 1}>
-									Previous
-								</button>
-								<span>
-									Page {currentPage} of {totalPages}
-								</span>
-								<button onClick={goToNextPage} disabled={currentPage >= totalPages}>
-									Next
-								</button>
-							</div>
+							<>
+								<div className="pdf-nav-overlay-left">
+									<button onClick={goToPreviousPage} disabled={currentPage <= 1}>
+										<img src="/arrowLeft.svg" alt="" />
+									</button>
+								</div>
+
+								<div className="pdf-nav-overlay-right">
+									<button onClick={goToNextPage} disabled={currentPage >= totalPages}>
+										<img src="/arrowRight.svg" alt="" />
+									</button>
+								</div>
+							</>
 						)}
 					</div>
 				</div>

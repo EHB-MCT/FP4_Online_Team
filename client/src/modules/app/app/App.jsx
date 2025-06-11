@@ -11,7 +11,7 @@ import "./App.css";
 function App() {
 	return (
 		<>
-			<NavigationFase2 />
+			{/* <NavigationFase2 /> */}
 			{/* <Navigation /> */}
 			<Outlet />
 			<Footer />
