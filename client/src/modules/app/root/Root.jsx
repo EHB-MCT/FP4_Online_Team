@@ -1,5 +1,7 @@
 import { createHashRouter, RouterProvider } from "react-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { VerifiedProvider } from "../../shared/const/context/VerifiedContext/VerifiedContext";
+import React, { useState, useEffect } from "react";
 
 
 //Components
@@ -17,9 +19,37 @@ import { PROJECTS_ROUTE } from "../projects/projects.route";
 import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
 import { REGISTER_ROUTE } from "../register/register.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
-import { REQUEST_TOKEN_ROUTE } from "../teachervoting/requestToken/requestToken.route";
 
 export const Root = () => {
+
+	const [verified, setVerified] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token');
+
+    if (token) {
+      fetch(`https://api.shiftfestival.be/api/verify-token?token=${token}`, {
+        credentials: 'include',
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            setVerified(true);
+          }
+        });
+    } else {
+      fetch('https://api.shiftfestival.be/api/user-status', {
+        credentials: 'include',
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.verified) {
+            setVerified(true);
+          }
+        });
+    }
+  }, []);
 
 	const QUERY_CLIENT = new QueryClient();
 
@@ -48,14 +78,14 @@ export const Root = () => {
 				// 	path: PRIVACY_POLICY_ROUTE.path,
 				// 	element: PRIVACY_POLICY_ROUTE.element,
 				// },
-				// {
-				// 	path: PROJECTS_ROUTE.path,
-				// 	element: PROJECTS_ROUTE.element
-				// },
-				// {
-				// 	path: PROJECTSDETAIL_ROUTE.path,
-				// 	element: PROJECTSDETAIL_ROUTE.element,
-				// },
+				{
+					path: PROJECTS_ROUTE.path,
+					element: PROJECTS_ROUTE.element
+				},
+				{
+					path: PROJECTSDETAIL_ROUTE.path,
+					element: PROJECTSDETAIL_ROUTE.element,
+				},
 				{
 					path: REGISTER_ROUTE.path,
 					element: REGISTER_ROUTE.element,
@@ -72,25 +102,23 @@ export const Root = () => {
 
 			]
 		},
-		//{
-		// 	path: "/voteReGRfguugXNEmMm/",
-		// 	element: <App />,
-		// 	children: [
-		// 		{
-		// 			path: AUTH_TEACHER_ROUTE.path,
-		// 			element: AUTH_TEACHER_ROUTE.element,
-		// 		},
-		// 		{
-		// 			path: REQUEST_TOKEN_ROUTE.path,
-		// 			element: REQUEST_TOKEN_ROUTE.element,
-		// 		}
-		// 	]
-		// }
+		{
+			path: "/voteReGRfguugXNEmMm/",
+			element: <App />,
+			children: [
+				{
+					path: AUTH_TEACHER_ROUTE.path,
+					element: AUTH_TEACHER_ROUTE.element,
+				},
+			]
+		}
 	]);
 
 	return (
 		<QueryClientProvider client={ QUERY_CLIENT }>
-			<RouterProvider router={ROUTE} />
+			<VerifiedProvider>
+				<RouterProvider router={ROUTE} />
+			</VerifiedProvider>
 		</QueryClientProvider>
 	);
 };

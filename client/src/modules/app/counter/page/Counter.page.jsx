@@ -17,7 +17,7 @@ export const Counter = () => {
     }, [data]);
 
     return (
-        <section className="inner-wrapper" style={{minHeight: "40dvh", display: "flex", alignItems: "center", justifyContent: "center"}}>
+        <section className="inner-wrapper large" style={{minHeight: "40dvh", display: "flex", alignItems: "center", justifyContent: "center"}}>
             <div className="wrapper">
                 <h1 className="green-text">
                     Totale inschrijvingen <br /> {count}

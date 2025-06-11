@@ -11,40 +11,8 @@ import styles from './home.module.scss'
 export const Home = () => {
 	document.title = "Shift Festival - 2025 ";
 
-    const [verified, setVerified] = useState(false);
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const token = params.get('token');
-
-    if (token) {
-      fetch(`http://api.shiftfestival.be/api/verify-token?token=${token}`, {
-        credentials: 'include',
-      })
-        .then(res => res.json())
-        .then(data => {
-          if (data.success) {
-            setVerified(true);
-          }
-        });
-    } else {
-      fetch('http://api.shiftfestival.be/api/user-status', {
-        credentials: 'include',
-      })
-        .then(res => res.json())
-        .then(data => {
-          if (data.verified) {
-            setVerified(true);
-          }
-        });
-    }
-  }, []);
-
 	return (
 		<>
-        <div>
-      {verified && <button>🔐 Secret Button</button>}
-    </div>
 			<section className="pink-wrapper large">
                 <div className={clsx(styles["hero-wrapper"])}>
                     <div className={clsx(styles["hero"], "inner-wrapper")}>

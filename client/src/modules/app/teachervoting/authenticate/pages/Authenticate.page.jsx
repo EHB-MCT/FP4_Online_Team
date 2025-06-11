@@ -5,9 +5,6 @@ import { useState } from "react";
 //Components
 import InputField from "../../../../shared/inputfield/InputField"
 
-//Routes
-import { REQUEST_TOKEN_ROUTE } from "../../requestToken/requestToken.route";
-
 export const Authenticate = () => {
 
     document.title = "Authenticate | Shift Festival 2025";
@@ -21,18 +18,10 @@ export const Authenticate = () => {
         e.preventDefault();
 
         try {
-            // await axios.post(
-            // "https://api.shiftfestival.be/api/register-voter",
-            // formData
-            // );
-
-            localStorage.setItem("user", JSON.stringify({
-                email: formData.email,
-                token: formData.token,
-                validated: false
-            }));
-
-            window.location.href = `/#/voteReGRfguugXNEmMm/${REQUEST_TOKEN_ROUTE.path}`; 
+            await axios.post(
+            "https://api.shiftfestival.be/api/register-voter",
+            formData
+            );
         } catch (error) {
             console.error(error);
 
