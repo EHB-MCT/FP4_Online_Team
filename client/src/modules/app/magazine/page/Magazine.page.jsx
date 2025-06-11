@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { motion } from "framer-motion";
+import React, { useState, useRef, useEffect } from "react";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import "./Magazine.css";
@@ -25,11 +26,20 @@ export const Magazine = () => {
 	const [error, setError] = useState(null);
 	const modalRef = useRef(null);
 	const [pdfWidth, setPdfWidth] = useState(800);
+	const [initialScale, setInitialScale] = useState(1);
+	const [zoomInFunc, setZoomInFunc] = useState(null);
+	const [zoomOutFunc, setZoomOutFunc] = useState(null);
 
 	useEffect(() => {
 		function updateWidth() {
 			if (modalRef.current) {
-				setPdfWidth(modalRef.current.offsetWidth - 48); // 48px for padding/margins
+				const width = modalRef.current.offsetWidth - 48;
+				setPdfWidth(width);
+
+				// Assume native page is ~1200px wide
+				const nativePageWidth = 1200;
+				const scale = width / nativePageWidth - 0.1; // Adjust scale to fit within the modal with some padding
+				setInitialScale(scale < 0.5 ? 0.5 : scale); // clamp to a minimum if needed
 			}
 		}
 		updateWidth();
@@ -53,17 +63,17 @@ export const Magazine = () => {
 
 	const goToNextPage = () => {
 		if (currentPage === 1) {
-			setCurrentPage(2); // Go from cover to first spread (2-3)
+			setCurrentPage(2);
 		} else if (currentPage + 2 <= totalPages) {
 			setCurrentPage(currentPage + 2);
 		} else if (currentPage < totalPages) {
-			setCurrentPage(totalPages); // Show last single page if odd number
+			setCurrentPage(totalPages);
 		}
 	};
 
 	const goToPreviousPage = () => {
 		if (currentPage === 2) {
-			setCurrentPage(1); // Go back to cover
+			setCurrentPage(1);
 		} else if (currentPage > 2) {
 			setCurrentPage(currentPage - 2);
 		} else {
@@ -97,46 +107,78 @@ export const Magazine = () => {
 				</div>
 			</div>
 
-			{/* Modal for PDF */}
 			{openMagazine && (
 				<div className="pdf-modal-overlay" onClick={() => setOpenMagazine(null)}>
 					<div className="pdf-modal" ref={modalRef} onClick={(e) => e.stopPropagation()}>
-						<button className="pdf-modal-close" onClick={() => setOpenMagazine(null)}>
-							&times;
-						</button>
-						<Document
-							file={openMagazine.url}
-							onLoadSuccess={handleDocumentLoad}
-							onLoadError={handleError}
-							loading={<div className="status-message">Loading magazine...</div>}
-							error={<div className="status-message error">{error || "Could not load magazine"}</div>}
-						>
-							{isMobile && totalPages > 0 ? (
-								Array.from({ length: totalPages }, (_, idx) => <Page key={idx + 1} pageNumber={idx + 1} width={window.innerWidth - 32} />)
-							) : (
-								<div style={{ display: "flex", gap: 1 }}>
-									{/* Show cover (page 1) alone */}
-									{currentPage === 1 ? (
-										<Page pageNumber={1} width={pdfWidth / 2 - 8} />
-									) : (
-										<>
-											<Page pageNumber={currentPage} width={pdfWidth / 2 - 8} />
-											{currentPage + 1 <= totalPages && <Page pageNumber={currentPage + 1} width={pdfWidth / 2 - 8} />}
-										</>
-									)}
-								</div>
-							)}
-						</Document>
+						{/* Zoom buttons OUTSIDE the center overlay */}
 						{!isMobile && (
-							<div className="page-navigation">
+							<div className="pdf-zoom-overlay">
+								<button onClick={() => zoomOutFunc && zoomOutFunc()}>
+									<img src="/zoom-out.svg" alt="" />
+								</button>
+								<button onClick={() => zoomInFunc && zoomInFunc()}>
+									<img src="/zoom-in.svg" alt="" />
+								</button>
+							</div>
+						)}
+
+						<div className="pdf-center-overlay">
+							<button className="pdf-modal-close" onClick={() => setOpenMagazine(null)}>
+								&times;
+							</button>
+
+							<Document
+								file={openMagazine.url}
+								onLoadSuccess={handleDocumentLoad}
+								onLoadError={handleError}
+								loading={<div className="status-message">Loading magazine...</div>}
+								error={<div className="status-message error">{error || "Could not load magazine"}</div>}
+							>
+								{/* Desktop: zoomable with react-zoom-pan-pinch */}
+								{!isMobile ? (
+									<TransformWrapper
+										initialScale={initialScale}
+										minScale={0.5}
+										maxScale={2}
+										wheel={{ step: 0.1 }}
+										onInit={({ zoomIn, zoomOut }) => {
+											setZoomInFunc(() => zoomIn);
+											setZoomOutFunc(() => zoomOut);
+										}}
+									>
+										{() => (
+											<TransformComponent>
+												<div style={{ display: "flex", gap: "16px" }}>
+													{currentPage === 1 ? (
+														<Page pageNumber={1} width={pdfWidth / 2} />
+													) : (
+														<>
+															<Page pageNumber={currentPage} width={pdfWidth / 2} />
+															{currentPage + 1 <= totalPages && <Page pageNumber={currentPage + 1} width={pdfWidth / 2} />}
+														</>
+													)}
+												</div>
+											</TransformComponent>
+										)}
+									</TransformWrapper>
+								) : (
+									// Mobile: scrollable all pages
+									Array.from({ length: totalPages }, (_, idx) => <Page key={idx + 1} pageNumber={idx + 1} width={window.innerWidth - 32} />)
+								)}
+							</Document>
+						</div>
+
+						{/* Navigation overlay stays as is */}
+						{!isMobile && (
+							<div className="pdf-nav-overlay">
 								<button onClick={goToPreviousPage} disabled={currentPage <= 1}>
-									Previous Page
+									Previous
 								</button>
 								<span>
 									Page {currentPage} of {totalPages}
 								</span>
 								<button onClick={goToNextPage} disabled={currentPage >= totalPages}>
-									Next Page
+									Next
 								</button>
 							</div>
 						)}
