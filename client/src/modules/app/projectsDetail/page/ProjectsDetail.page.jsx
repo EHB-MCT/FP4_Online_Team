@@ -42,10 +42,10 @@ export const ProjectsDetail = () => {
 	const handleVoteRequest = () => {
 		console.log("selected award", award_ids, project_id);
 		
-		fetch(`https://api.shiftfestival.be/api/votes`, {
+		fetch(`https://api.shiftfestival.be/api/vote`, {
 			method: "POST",
 			headers: {
-				"Content-type": "application/json;"
+				"Content-Type": "application/json",
 			},
 			credentials: 'include',
 			body: JSON.stringify({
@@ -53,7 +53,6 @@ export const ProjectsDetail = () => {
 				project_id
 			})
 		})
-
 	}
 
 	return (
