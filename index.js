@@ -16,7 +16,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors(corsOptions));
 
-
 // CSP Headers (Momenteel fout?)
 //app.use((req, res, next) => {
 //	res.setHeader("Content-Security-Policy",
@@ -25,7 +24,8 @@ app.use(cors(corsOptions));
 //		"style-src 'self' 'unsafe-inline' fonts.googleapis.com use.typekit.net p.typekit.net;" +
 //		"font-src fonts.gstatic.com use.typekit.net; " +
 //		"script-src 'self' 'unsafe-inline'; " +
-//		"connect-src 'self';"
+//		"connect-src 'self'; +
+// 		"object-src 'self';"
 //	);
 //	next();
 //});
@@ -49,10 +49,10 @@ const dbConfig = {
 };
 
 const tunnelConfig = {
-    host: process.env.DB_SSH_HOST,
-    port: 22,
-    username: process.env.DB_SSH_USER,
-    privateKey: fs.readFileSync(process.env.SSH_PK_PATH)
+	host: process.env.DB_SSH_HOST,
+	port: 22,
+	username: process.env.DB_SSH_USER,
+	privateKey: fs.readFileSync(process.env.SSH_PK_PATH),
 };
 const forwardConfig = {
 	srcHost: "127.0.0.1",
@@ -67,30 +67,36 @@ function createSshTunnelAndConnection(callback) {
 
 	ssh
 		.on("ready", () => {
-			ssh.forwardOut(forwardConfig.srcHost, forwardConfig.srcPort, forwardConfig.dstHost, forwardConfig.dstPort, (err, stream) => {
-				if (err) {
-					ssh.end();
-					return callback(err);
-				}
-
-				const connection = mysql.createConnection({
-					...dbConfig,
-					stream,
-				});
-
-				connection.connect((error) => {
-					if (error) {
-						stream.destroy();
+			ssh.forwardOut(
+				forwardConfig.srcHost,
+				forwardConfig.srcPort,
+				forwardConfig.dstHost,
+				forwardConfig.dstPort,
+				(err, stream) => {
+					if (err) {
 						ssh.end();
-						return callback(error);
+						return callback(err);
 					}
 
-					connection.on("end", () => ssh.end());
-					connection.on("error", () => ssh.end());
+					const connection = mysql.createConnection({
+						...dbConfig,
+						stream,
+					});
 
-					callback(null, connection);
-				});
-			});
+					connection.connect((error) => {
+						if (error) {
+							stream.destroy();
+							ssh.end();
+							return callback(error);
+						}
+
+						connection.on("end", () => ssh.end());
+						connection.on("error", () => ssh.end());
+
+						callback(null, connection);
+					});
+				}
+			);
 		})
 		.connect(tunnelConfig);
 
@@ -166,7 +172,6 @@ const sendEmail = async (to, name) => {
             </p>
           </div>
         `,
-
 		});
 
 		console.log("✅ E-mail succesvol verzonden naar:", to);
@@ -189,7 +194,15 @@ app.post("/api/submit-register-form", (req, res) => {
 			return res.status(500).json({ message: "Database connection error" });
 		}
 
-		const { firstName, lastName, email, roles, amount, message, subscribeToUpdates } = req.body;
+		const {
+			firstName,
+			lastName,
+			email,
+			roles,
+			amount,
+			message,
+			subscribeToUpdates,
+		} = req.body;
 
 		if (!firstName || !lastName || !email || !roles || !amount) {
 			connection.end();
@@ -219,7 +232,17 @@ app.post("/api/submit-register-form", (req, res) => {
                 (first_name, last_name, email, num_attendees, message, wants_event_updates, role, company_name, wants_sponsorship)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
-			const values = [firstName, lastName, email, amount, message, subscribeToUpdates ? 1 : 0, roleName, companyName, sponsor];
+			const values = [
+				firstName,
+				lastName,
+				email,
+				amount,
+				message,
+				subscribeToUpdates ? 1 : 0,
+				roleName,
+				companyName,
+				sponsor,
+			];
 
 			connection.query(sql, values, (err, result) => {
 				connection.end();
