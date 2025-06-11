@@ -38,6 +38,14 @@
 
 }
 
+.awards-wrapper{
+    &--awards-inner-wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
 .google-maps-wrapper{
         &--location-info{
             &--maps-frame{

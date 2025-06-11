@@ -8,6 +8,7 @@ import { FaqSection } from "../../../shared/faq-section/FaqSection";
 import styles from "./info.module.scss"
 import homeStyles from "../../home/pages/home.module.scss"
 import { strToU8 } from "three/examples/jsm/libs/fflate.module.js";
+import { AwardsInfo } from "../components/AwardsInfo";
 
 export const Info = () => {
 
@@ -74,7 +75,26 @@ export const Info = () => {
 
 			<section className={clsx(styles["awards-wrapper"], "orange-wrapper")}>
 				<div className={clsx(styles["awards-wrapper--awards-inner-wrapper"], "inner-wrapper")}>
-					
+					<AwardsInfo
+						price_title={ "Juryprijs" }
+						badge={ "jury" }
+						description={ "De Juryprijs wordt uitgereikt door onze eigen docenten met hun jaren ervaring en kennis.  Ze zochten naar een duidelijke visie, met veel creativiteit en afwerking. En volgens hen was de keuze niet makkelijk." }
+					/>
+					<AwardsInfo
+						price_title={ "Publieksprijs" }
+						badge={ "publiek" }
+						description={ "De Publieksprijs werd bepaald door de stemmen van jullie en het publiek.Jullie kregen allemaal de kans om te stemmen op jullie favoriete projecten. Nu gaan we zien welke 3 dat waren" }
+					/>
+					<AwardsInfo
+						price_title={ "Innovatieprijs" }
+						badge={ "innovatie" }
+						description={ " De Innovatieprijs bekroont het meest vernieuwende technische project. Een project dat niet alleen creatief is, maar ook technisch uitdagend. Waarin grenzen worden verlegd." }
+					/>
+					<AwardsInfo
+						price_title={ "Impactprijs" }
+						badge={ "impact" }
+						description={ "Deze gaat naar het project dat de grootste maatschappelijke impact maakt en het meest potentieel heeft om echte veranderingen te maken in de wereld" }
+					/>
 				</div>
 			</section>
 
