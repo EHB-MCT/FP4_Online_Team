@@ -24,21 +24,55 @@
 
         background-color: red;
 
+        &--header{
+            display: flex;
+            justify-content: space-between;
+
+            &--spacer{
+                width: 20%;
+            }
+
+            h3{
+                width: 60%;
+            }
+
+            &--close-btn{
+                cursor: pointer;
+                width: 20%;
+                text-align: end;
+                
+                p{
+                    padding-right: 20px;
+                }
+            }
+        }
+
         &--category-wrapper{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
             align-items: center;
 
-            height: 70dvh;
+            height: 60dvh;
             border: 1pt solid black;
 
             &--category-card{
                 width: 25%;
                 cursor: pointer;
 
-                border: 1pt solid blue;
+                // border: 1pt solid blue;
             }
         }
+
+        &--button-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
+}
+
+.selected{
+    border: 2pt solid blue;
+    border-radius: 15px;
 }
