@@ -109,6 +109,9 @@ a {
 .white-text {
 	color: var(--white-font-color);
 }
+.black-text{
+	color: var(--font-color);
+}
 
 /* Main font for p */
 .main-font {

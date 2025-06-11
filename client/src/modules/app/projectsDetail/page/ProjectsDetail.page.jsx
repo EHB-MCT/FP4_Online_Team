@@ -13,7 +13,13 @@ import { useState } from "react";
 export const ProjectsDetail = () => {
 	//  const { verified } = useVerified();
 
-	const [verified, setVerified] = useState(true)
+	const [verified, setVerified] = useState(true);
+	const [popupVisibility, setPopupVisibility] = useState(false);
+
+	const handleOpenVotePopup = () => {
+		console.log("click");
+		setPopupVisibility(true);
+	}
 
 	return (
 		<>
@@ -22,9 +28,47 @@ export const ProjectsDetail = () => {
 					<NextProject />
 					{
 						verified && 
-						<div className={[clsx(styles["project-detail-wrapper--voting-wrapper"])]} >
-							<button>Vote button</button>
+						<div className={clsx(styles["project-detail-wrapper--voting-wrapper"])} >
+							<button
+								onClick={ handleOpenVotePopup }
+							>
+								Vote button
+							</button>
 						</div>
+
+					}
+					{
+
+						verified && popupVisibility &&
+						<div className={clsx(styles["project-detail-wrapper--vote-pop-up"])}>
+							<h3>Nomineer categorie</h3>
+							<div className={clsx(styles["project-detail-wrapper--vote-pop-up--category-wrapper"])}>
+								<div className={clsx(styles["project-detail-wrapper--vote-pop-up--category-wrapper--category-card"])}>
+									<h4 
+										className="black-text"
+									
+									>
+										Impactprijs
+									</h4>
+								</div>
+								<div className={clsx(styles["project-detail-wrapper--vote-pop-up--category-wrapper--category-card"])}>
+									<h4 
+										className="black-text"
+									>
+										Juryprijs
+									</h4>
+								</div>
+								<div className={clsx(styles["project-detail-wrapper--vote-pop-up--category-wrapper--category-card"])}>
+									<h4 
+										className="black-text"
+									>
+										Innovatieprijs
+									</h4>
+								</div>
+								<button></button>
+							</div>
+						</div>
+
 					}
 
 					<div>

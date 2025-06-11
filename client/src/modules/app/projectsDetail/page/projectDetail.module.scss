@@ -1,0 +1,44 @@
+.project-detail-wrapper{
+
+    position: relative;
+
+    &--voting-wrapper{
+
+        padding-top: 24px;
+
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20px;
+    }
+
+    &--vote-pop-up{
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 85dvw;
+        height: 75dvh;
+
+
+        background-color: red;
+
+        &--category-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+
+            height: 70dvh;
+            border: 1pt solid black;
+
+            &--category-card{
+                width: 25%;
+                cursor: pointer;
+
+                border: 1pt solid blue;
+            }
+        }
+    }
+}
