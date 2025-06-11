@@ -19,9 +19,19 @@ export const Authenticate = () => {
 
         try {
             await axios.post(
-            "https://api.shiftfestival.be/api/register-voter",
-            formData
-            );
+                "https://api.shiftfestival.be/api/register-voter",
+                formData
+            )
+            Swal.fire({
+                title: "Token aanvraag succesvol!",
+                html: `<p>Er is een mail gestuurd</p>`,
+                icon: "success",
+                customClass: {
+                    popup: "custom-sweet-alert",
+                    confirmButton: "button pink"
+                }
+            });
+
         } catch (error) {
             console.error(error);
 

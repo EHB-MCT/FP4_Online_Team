@@ -5,15 +5,16 @@
 	padding: 0;
 	margin: 0;
 	align-items: center;
-	font-size: 50px;
+	font-size: 18pt;
 }
 .small-container {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	cursor: pointer;
 }
 
 .small-container h2 {
-	font-size: 30px;
+	font-size: 18pt;
 	margin-right: 10px;
 }

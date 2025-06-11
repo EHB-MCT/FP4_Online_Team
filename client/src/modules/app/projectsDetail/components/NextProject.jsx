@@ -6,7 +6,9 @@ import "./NextProject.css";
 export const NextProject = () => {
 	return (
 		<div className="large-container">
-			<FaArrowLeft />
+			<div className="small-container">
+				<FaArrowLeft />
+			</div>
 			<div className="small-container">
 				<h2>Volgende project</h2>
 
