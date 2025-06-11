@@ -70,10 +70,10 @@ export const Root = () => {
 				// 	element: VOTING_ROUTE.element,
 				// },
 
-				// {
-				// 	path: INFO_ROUTE.path,
-				// 	element: INFO_ROUTE.element,
-				// },
+				{
+					path: INFO_ROUTE.path,
+					element: INFO_ROUTE.element,
+				},
 
 			]
 		},

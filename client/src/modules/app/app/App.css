@@ -115,6 +115,13 @@ a {
 .white-text {
 	color: var(--white-font-color);
 }
+.black-text{
+	color: var(--font-color)
+}
+
+.blue-wrapper{
+	background-color: var(--blue-color);
+}
 
 /* Main font for p */
 .main-font {
@@ -126,6 +133,10 @@ a {
 .inner-wrapper {
 	width: 80dvw;
 	padding: 0 10dvw;
+}
+
+.image{
+	border-radius: 20px;
 }
 
 /* Section */

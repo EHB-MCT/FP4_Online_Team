@@ -1,0 +1,107 @@
+import clsx from "clsx";
+import { NavLink } from "react-router";
+
+//Components
+import { FaqSection } from "../../../shared/faq-section/FaqSection";
+
+//CSS
+import styles from "./info.module.scss"
+
+export const Info = () => {
+
+	return (
+		<>
+			<section className="info-hero-section">
+				<div className="inner-wrapper">
+					<div className={clsx(styles["info-hero-wrapper"])}>
+						<h1 className="black-text">Info</h1>
+						<div className={clsx(styles["info-hero-wrapper--hero-image-wrapper"])}>
+							<img src="./" alt="" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<section className={clsx(styles["practical-info-wrapper"])}>
+				<div className={clsx(styles["practical-info-wrapper--practical-info-outer-wrapper"], "inner-wrapper")}>
+					<div className={clsx(styles["practical-info-wrapper--practical-info-text-wrapper"])}>
+						<h2>Shift festival 2025</h2>
+						<p>
+							Welkom bij Shift, de expo waar innovatie, design en creativiteit samenkomen! Dit unieke festival biedt een podium aan de afstudeerprojecten van onze derdejaarsstudenten, waarbij baanbrekende ideeën en vernieuwende technologieën worden gepresenteerd. Daarnaast worden ook de beste werken van studenten uit alle jaren tentoongesteld.
+						</p>
+						<p>
+							Het evenement is niet alleen een viering van talent, maar ook een inspiratiemoment voor toekomstige studenten. Overweeg je een studie in deze richting? Dan is dit de perfecte kans om de sfeer te proeven, in gesprek te gaan met studenten en docenten, en te ontdekken wat onze opleiding te bieden heeft.
+						</p>
+						<p>
+							Bovendien zullen vertegenwoordigers van bedrijven aanwezig zijn, wat dit event ook een uitstekende netwerkmogelijkheid maakt voor iedereen die geïnteresseerd is in de creatieve en technologische sector.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section className={clsx(styles["course-info-wrapper"], "blue-wrapper")}>
+				<div className={clsx(styles["course-info-wrapper--course-info-inner-wrapper"], "inner-wrapper")}>
+					<div className={clsx(styles["course-info-wrapper--course-info-inner-wrapper--main-info-wrapper"])}>
+						<h2 className="white-text" style={{textAlign: "start"}}>
+							Opleiding
+						</h2>
+						<p
+							className="white-text"
+							dangerouslySetInnerHTML={{
+								__html: `
+									Wil je leren programmeren en ontwerpen om zelf je websites en apps te maken?<br/>
+									Interesse in het maken van 3D games voor Virtual Reality of Metaverse?<br/>
+									Wil je kunnen vliegen en filmen met drones of een virtuele filmstudio maken?<br/>
+									Zou je graag Motion Graphics kunnen maken en videobeelden monteren en bewerken?<br/>
+									Ontdek meer over onze opleiding.<br/>Infodag: zaterdag 28 juni
+								`
+							}}
+						></p>
+						<NavLink
+							to={ "https://www.erasmushogeschool.be/nl/opleidingen/multimedia-en-creatieve-technologie" }
+							target="_blank"
+							className={ "button" }
+						>Meer</NavLink>
+					</div>
+					<div className={clsx(styles["course-info-wrapper--course-info-inner-wrapper--image-wrapper"])}>
+						<img className={"image"} src="opleiding-image.png" alt="" />
+					</div>
+				</div>
+			</section>
+
+			<section className={clsx(styles["google-maps-wrapper"])}>
+				<div className="inner-wrapper">
+					<h2>Kaart</h2>
+					<div className={clsx(styles["google-maps-wrapper--maps-frame"])}>
+						<iframe 
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6108.236960527531!2d4.317942457393778!3d50.84224228625964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c40f19faf0f9%3A0x4ef5b683135ecb1e!2sErasmushogeschool%20Brussel!5e1!3m2!1snl!2sbe!4v1749143530421!5m2!1snl!2sbe" 
+							width="100%"
+							height="100%" 
+							style={{ border: "0"}} 
+							allowFullScreen={ true } 
+							loading="lazy" 
+							referrerPolicy="no-referrer-when-downgrade">
+						</iframe>
+					</div>
+				</div>
+			</section>
+			<section className={clsx(styles["teaser-video-wrapper"])}>
+			 	<div className={clsx(styles["teaser-video-wrapper--teaser-video-inner-wrapper"],"inner-wrapper small-wrapper")}>
+			 		<h2>Aftermovie EXPO24</h2>
+					< iframe
+						className={clsx(styles["teaser-video-wrapper--teaser-video-inner-wrapper--teaser-video"])}
+						src="https://www.youtube.com/embed/ifv5pC7-qtI?si=c5xuW800eOxgKMQb&enablejsapi=1&origin=https%3A%2F%2Fwww.erasmushogeschool.be"
+						width="100%"
+						height="100%" 
+						style={{ border: "0"}} 
+						allowFullScreen={ true } 
+						loading="lazy" 
+						referrerPolicy="no-referrer-when-downgrade"
+					/>
+				</div>
+			</section>
+
+			<FaqSection />
+		</>
+
+		
+	);
+};
