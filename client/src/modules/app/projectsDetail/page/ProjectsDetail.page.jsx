@@ -32,7 +32,6 @@ export const ProjectsDetail = () => {
 							</div>
 						</div>
 
-						<p>{project.description}</p>
 						<Magazine></Magazine>
 					</>
 				) : (
