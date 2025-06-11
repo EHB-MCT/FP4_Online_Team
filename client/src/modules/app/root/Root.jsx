@@ -19,6 +19,7 @@ import { PROJECTS_ROUTE } from "../projects/projects.route";
 import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
 import { REGISTER_ROUTE } from "../register/register.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
+import { VOTING_DASHBOARD_ROUTE } from "../teachervoting/votingDashboard/VotingDashboard.route";
 
 export const Root = () => {
 
@@ -90,6 +91,10 @@ export const Root = () => {
 					path: REGISTER_ROUTE.path,
 					element: REGISTER_ROUTE.element,
 				},
+				{
+					path: VOTING_DASHBOARD_ROUTE.path,
+					element: VOTING_DASHBOARD_ROUTE.element
+				}
 				// {
 				// 	path: VOTING_ROUTE.path,
 				// 	element: VOTING_ROUTE.element,
