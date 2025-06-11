@@ -6,8 +6,11 @@ import { FaqSection } from "../../../shared/faq-section/FaqSection";
 
 //CSS
 import styles from "./info.module.scss"
+import homeStyles from "../../home/pages/home.module.scss"
+import { strToU8 } from "three/examples/jsm/libs/fflate.module.js";
 
 export const Info = () => {
+
 
 	return (
 		<>
@@ -37,6 +40,59 @@ export const Info = () => {
 					</div>
 				</div>
 			</section>
+
+			<section className={clsx(styles["google-maps-wrapper"], "inner-wrapper")}>
+				<div className={clsx(styles["google-maps-wrapper--location-info"])}>
+					<div className={clsx(styles["google-maps-wrapper--location-info--maps-frame"])}>
+						<iframe 
+							className="image"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10073.75933673564!2d4.322807999999995!3d50.842239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c40f19faf0f9%3A0x4ef5b683135ecb1e!2sErasmushogeschool%20Brussel!5e0!3m2!1snl!2sbe!4v1749634068449!5m2!1snl!2sbe"							width="100%"
+							height="100%" 
+							style={{ border: "0", borderRadius: "20px"}} 
+							allowFullScreen={ true } 
+							loading="lazy" 
+							referrerPolicy="no-referrer-when-downgrade">
+						</iframe>
+					</div>
+					<div className={clsx(homeStyles["practical-info-wrapper--practical-info-location-wrapper--specific-info"])}>
+						<div className={clsx(homeStyles["practical-info-wrapper--practical-info-location-wrapper--specific-info--specific-info-upper-wrapper"])}>
+							<h2 className="pink-text">20 juni 2025</h2>
+							<h3>17:00 &gt; 22:00</h3>
+						</div>
+						<div className={clsx(homeStyles["practical-info-wrapper--practical-info-location-wrapper--specific-info--specific-info-lower-wrapper"])}>
+							<p>Gratis, maar inschrijven verplicht</p>
+							<p>
+								Nijverheidskaai 170, 1070 Brussel
+								<br />
+								Campus Kaai
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+			<section className={clsx(styles["awards-wrapper"], "orange-wrapper")}>
+				<div className={clsx(styles["awards-wrapper--awards-inner-wrapper"], "inner-wrapper")}>
+					
+				</div>
+			</section>
+
+			<section className={clsx(styles["teaser-video-wrapper"])}>
+				<div className={clsx(styles["teaser-video-wrapper--teaser-video-inner-wrapper"],"inner-wrapper small-wrapper")}>
+					<h2>Aftermovie EXPO24</h2>
+					< iframe
+						className={clsx(styles["teaser-video-wrapper--teaser-video-inner-wrapper--teaser-video"])}
+						src="https://www.youtube.com/embed/ifv5pC7-qtI?si=c5xuW800eOxgKMQb&enablejsapi=1&origin=https%3A%2F%2Fwww.erasmushogeschool.be"
+						width="100%"
+						height="100%" 
+						style={{ border: "0", borderRadius: "20px"}} 
+						allowFullScreen={ true } 
+						loading="lazy" 
+						referrerPolicy="no-referrer-when-downgrade"
+					/>
+				</div>
+			</section>
 			<section className={clsx(styles["course-info-wrapper"], "blue-wrapper")}>
 				<div className={clsx(styles["course-info-wrapper--course-info-inner-wrapper"], "inner-wrapper")}>
 					<div className={clsx(styles["course-info-wrapper--course-info-inner-wrapper--main-info-wrapper"])}>
@@ -64,39 +120,6 @@ export const Info = () => {
 					<div className={clsx(styles["course-info-wrapper--course-info-inner-wrapper--image-wrapper"])}>
 						<img className={"image"} src="opleiding-image.png" alt="" />
 					</div>
-				</div>
-			</section>
-
-			<section className={clsx(styles["google-maps-wrapper"])}>
-				<div className="inner-wrapper">
-					<h2>Kaart</h2>
-					<div className={clsx(styles["google-maps-wrapper--maps-frame"])}>
-						<iframe 
-							className="image"
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6108.236960527531!2d4.317942457393778!3d50.84224228625964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c40f19faf0f9%3A0x4ef5b683135ecb1e!2sErasmushogeschool%20Brussel!5e1!3m2!1snl!2sbe!4v1749143530421!5m2!1snl!2sbe" 
-							width="100%"
-							height="100%" 
-							style={{ border: "0", borderRadius: "20px"}} 
-							allowFullScreen={ true } 
-							loading="lazy" 
-							referrerPolicy="no-referrer-when-downgrade">
-						</iframe>
-					</div>
-				</div>
-			</section>
-			<section className={clsx(styles["teaser-video-wrapper"])}>
-			 	<div className={clsx(styles["teaser-video-wrapper--teaser-video-inner-wrapper"],"inner-wrapper small-wrapper")}>
-			 		<h2>Aftermovie EXPO24</h2>
-					< iframe
-						className={clsx(styles["teaser-video-wrapper--teaser-video-inner-wrapper--teaser-video"])}
-						src="https://www.youtube.com/embed/ifv5pC7-qtI?si=c5xuW800eOxgKMQb&enablejsapi=1&origin=https%3A%2F%2Fwww.erasmushogeschool.be"
-						width="100%"
-						height="100%" 
-						style={{ border: "0", borderRadius: "20px"}} 
-						allowFullScreen={ true } 
-						loading="lazy" 
-						referrerPolicy="no-referrer-when-downgrade"
-					/>
 				</div>
 			</section>
 

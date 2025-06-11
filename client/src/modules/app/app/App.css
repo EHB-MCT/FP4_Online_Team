@@ -122,6 +122,9 @@ a {
 .blue-wrapper{
 	background-color: var(--blue-color);
 }
+.orange-wrapper{
+	background-color: var(--orange-color);
+}
 
 /* Main font for p */
 .main-font {

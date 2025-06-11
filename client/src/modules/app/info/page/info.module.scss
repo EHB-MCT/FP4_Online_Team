@@ -23,16 +23,39 @@
     }
 }
 
-.google-maps-wrapper{
+.practical-info-wrapper{
+    &--practical-info-outer-wrapper{
+        &--location-info{
+            &--maps-frame{
+                width: 100%;
+                height: 50dvh;
 
-    &--maps-frame{
-        width: 100%;
-        height: 50dvh;
-
-        display: flex;
-        justify-content: center;
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
+
 }
+
+.google-maps-wrapper{
+        &--location-info{
+            &--maps-frame{
+                width: 100%;
+                height: 50dvh;
+
+                display: flex;
+                justify-content: center;
+
+                background-color: rgb(58, 55, 55);
+                border-radius: 20px;
+                
+                iframe{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
 
 .teaser-video-wrapper{
     &--teaser-video-inner-wrapper{
@@ -60,6 +83,28 @@
 
             &--image-wrapper{
                 margin-left: 32px;
+            }
+        }
+    }
+
+    .practical-info-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--practical-info-outer-wrapper{
+            max-width: 900px !important;
+        }
+    }
+
+    .google-maps-wrapper{
+        &--location-info{
+
+            display: flex;
+            justify-content: space-between;
+
+            &--maps-frame{
+                width: 60%;
             }
         }
     }
