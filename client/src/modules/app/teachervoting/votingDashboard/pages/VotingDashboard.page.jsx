@@ -3,6 +3,7 @@ import { useEffect,useState } from "react";
 
 //CSS
 import styles from "./votingDashboard.module.scss"
+import { Nominee } from "../components/Nominee";
 
 export const VotingDashboard = () => {
 
@@ -11,7 +12,7 @@ export const VotingDashboard = () => {
     useEffect(() => {
         fetch(`https://api.shiftfestival.be/api/votes`)
         .then( response => response.json())
-        .then( data => console.log(data) );
+        .then( data => setProjects(data) );
     }, [])
 
     return (
@@ -23,45 +24,35 @@ export const VotingDashboard = () => {
                     <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper"])}>
                         <h3>Impactsprijs</h3>
                         <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper--nominees-wrapper"])}>
-                            <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper--nominees-wrapper--nominee-item"])}>
-                                <h3>Naam</h3>
-                            </div>
-                            <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper--nominees-wrapper--nominee-item"])}>
-                                <h3>Naam</h3>
-                            </div>
-                            <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper--nominees-wrapper--nominee-item"])}>
-                                <h3>Naam</h3>
-                            </div>
+                            
+                            {
+                                
+                            }
+                            
                         </div>
                     </div>
 
                     <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper"])}>
                         <h3>Jurypijs</h3>
                         <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper--nominees-wrapper"])}>
-                            <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper--nominees-wrapper--nominee-item"])}>
-                                <h3>Naam</h3>
-                            </div>
-                            <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper--nominees-wrapper--nominee-item"])}>
-                                <h3>Naam</h3>
-                            </div>
-                            <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper--nominees-wrapper--nominee-item"])}>
-                                <h3>Naam</h3>
-                            </div>
+                            <Nominee />
+
+                            <Nominee />
+
+                            <Nominee />
+
                         </div>
                     </div>
 
                     <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper"])}>
                         <h3>Innovatiepijs</h3>
                         <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper--nominees-wrapper"])}>
-                            <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper--nominees-wrapper--nominee-item"])}>
-                                <h3>Naam</h3>
-                            </div>
-                            <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper--nominees-wrapper--nominee-item"])}>
-                                <h3>Naam</h3>
-                            </div>
-                            <div className={clsx(styles["voting-dashboard-wrapper--category-wrapper--nominees-wrapper--nominee-item"])}>
-                                <h3>Naam</h3>
-                            </div>
+                            <Nominee />
+
+                            <Nominee />
+
+                            <Nominee />
+
                         </div>
                     </div>
                 </div>
