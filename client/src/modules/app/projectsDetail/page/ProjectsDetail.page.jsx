@@ -11,9 +11,9 @@ import { useVerified } from "../../../shared/const/context/VerifiedContext/Verif
 import styles from "./projectDetail.module.scss"
 
 export const ProjectsDetail = () => {
-	const { verified } = useVerified();
+	// const { verified } = useVerified();
 	
-	// const [verified, setVerified] = useState(true);
+	const [verified, setVerified] = useState(true);
 	const [award_ids, setAwardIds] = useState([]);
 	const [popupVisibility, setPopupVisibility] = useState(false);
 	const [project_id, setProjectId] = useState(null);
@@ -90,37 +90,43 @@ export const ProjectsDetail = () => {
 
 							<div className={clsx(styles["project-detail-wrapper--vote-pop-up--category-wrapper"])}>
 								<div className={clsx(
-									styles["project-detail-wrapper--vote-pop-up--category-wrapper--category-card"],
-									award_ids.includes("1") && styles.selected
-								)}>
+										styles["project-detail-wrapper--vote-pop-up--category-wrapper--category-card"],
+										award_ids.includes("1") && styles.selected
+									)}
+									id="1"
+									onClick={ handleAwardSelection }
+								>
+									<img src="temp/badge.webp" alt="Badge voor impactsprijs" />
 									<h4 
 										className="black-text"
-										id="1"
-										onClick={ handleAwardSelection }
 									>
 										Impactprijs
 									</h4>
 								</div>
 								<div className={clsx(
-									styles["project-detail-wrapper--vote-pop-up--category-wrapper--category-card"],
-									award_ids.includes("2") && styles.selected
-								)}>
+										styles["project-detail-wrapper--vote-pop-up--category-wrapper--category-card"],
+										award_ids.includes("2") && styles.selected
+									)}
+									id="2"
+									onClick={ handleAwardSelection }
+								>
+									<img src="temp/badge.webp" alt="Badge voor Juryprijs" />
 									<h4 
 										className="black-text"
-										id="2"
-										onClick={ handleAwardSelection }
 									>
 										Juryprijs
 									</h4>
 								</div>
 								<div className={clsx(
-									styles["project-detail-wrapper--vote-pop-up--category-wrapper--category-card"],
-									award_ids.includes("3") && styles.selected
-								)}>
+										styles["project-detail-wrapper--vote-pop-up--category-wrapper--category-card"],
+										award_ids.includes("3") && styles.selected
+									)}
+									id="3"
+									onClick={ handleAwardSelection }
+								>
+									<img src="temp/badge.webp" alt="Badge voor innovatieprijs" />
 									<h4 
 										className="black-text"
-										id="3"
-										onClick={ handleAwardSelection }
 									>
 										Innovatieprijs
 									</h4>
@@ -129,6 +135,7 @@ export const ProjectsDetail = () => {
 							<div className={clsx(styles["project-detail-wrapper--vote-pop-up--button-wrapper"])}>
 								<button
 									onClick={ handleVoteRequest }
+									className="button"
 								>
 									Stem
 								</button>
