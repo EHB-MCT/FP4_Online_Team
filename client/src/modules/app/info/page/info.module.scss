@@ -2,7 +2,8 @@
 
     background-image: url("background-image-green-opleiding.svg");
     background-repeat: no-repeat;
-    background-position: 100% 20%;
+    background-position: 100% 100%;
+    background-size: 45%;
 
     &--course-info-inner-wrapper{
         display: flex;
@@ -14,7 +15,10 @@
                 text-align: start !important;
             }
         }
-
+    
+        &--image-wrapper img{
+            width: 100%;
+        }
 
     }
 }
@@ -46,6 +50,7 @@
     .course-info-wrapper{
 
         background-position: 100% 20%;
+        background-size: 30%;
 
         &--course-info-inner-wrapper{
             display: flex;

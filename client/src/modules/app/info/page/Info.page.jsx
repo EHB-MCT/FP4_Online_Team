@@ -50,7 +50,7 @@ export const Info = () => {
 									Wil je leren programmeren en ontwerpen om zelf je websites en apps te maken?<br/>
 									Interesse in het maken van 3D games voor Virtual Reality of Metaverse?<br/>
 									Wil je kunnen vliegen en filmen met drones of een virtuele filmstudio maken?<br/>
-									Zou je graag Motion Graphics kunnen maken en videobeelden monteren en bewerken?<br/>
+									Zou je graag Motion Graphics kunnen maken en videobeelden monteren en bewerken?<br/><br/>
 									Ontdek meer over onze opleiding.<br/>Infodag: zaterdag 28 juni
 								`
 							}}
@@ -72,6 +72,7 @@ export const Info = () => {
 					<h2>Kaart</h2>
 					<div className={clsx(styles["google-maps-wrapper--maps-frame"])}>
 						<iframe 
+							className="image"
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6108.236960527531!2d4.317942457393778!3d50.84224228625964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c40f19faf0f9%3A0x4ef5b683135ecb1e!2sErasmushogeschool%20Brussel!5e1!3m2!1snl!2sbe!4v1749143530421!5m2!1snl!2sbe" 
 							width="100%"
 							height="100%" 
