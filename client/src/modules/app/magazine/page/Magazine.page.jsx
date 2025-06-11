@@ -29,7 +29,9 @@ export const Magazine = () => {
 	const [initialScale, setInitialScale] = useState(1);
 	const [zoomInFunc, setZoomInFunc] = useState(null);
 	const [zoomOutFunc, setZoomOutFunc] = useState(null);
+	const [setTransformFunc, setSetTransformFunc] = useState(null);
 	const [isFullscreen, setIsFullscreen] = useState(false);
+	const [zoom, setZoom] = useState(1);
 
 	useEffect(() => {
 		function updateWidth() {
@@ -131,6 +133,11 @@ export const Magazine = () => {
 
 	const fullscreenRef = useRef(null);
 
+	const handleZoom = (value) => {
+		setZoom(value);
+		if (setTransformFunc) setTransformFunc(0, 0, value, 200, "easeOut");
+	};
+
 	return (
 		<section className="inner-wrapper">
 			<div className="viewer-layout">
@@ -148,13 +155,13 @@ export const Magazine = () => {
 			{openMagazine && (
 				<div className="pdf-modal-overlay" onClick={() => setOpenMagazine(null)}>
 					<div className={`pdf-modal${isFullscreen ? " fullscreen" : ""}`} ref={(modalRef, fullscreenRef)} onClick={(e) => e.stopPropagation()}>
-						{/* Zoom buttons OUTSIDE the center overlay */}
 						{!isMobile && (
 							<div className="pdf-zoom-overlay">
-								<button onClick={() => zoomOutFunc?.()}>
+								<button onClick={() => handleZoom(Math.max(0.5, zoom - 0.1))}>
 									<img src="/zoom-out.svg" alt="" />
 								</button>
-								<button onClick={() => zoomInFunc?.()}>
+								<input type="range" min={0.5} max={2} step={0.01} value={zoom} onChange={(e) => handleZoom(Number(e.target.value))} className="slider" id="myRange" style={{ width: 100 }} />
+								<button onClick={() => handleZoom(Math.min(2, zoom + 0.1))}>
 									<img src="/zoom-in.svg" alt="" />
 								</button>
 								<button onClick={toggleFullscreen}>
@@ -176,16 +183,7 @@ export const Magazine = () => {
 							>
 								{/* Desktop: zoomable with react-zoom-pan-pinch */}
 								{!isMobile ? (
-									<TransformWrapper
-										initialScale={initialScale}
-										minScale={0.5}
-										maxScale={2}
-										wheel={{ step: 0.1 }}
-										onInit={({ zoomIn, zoomOut }) => {
-											setZoomInFunc(() => zoomIn);
-											setZoomOutFunc(() => zoomOut);
-										}}
-									>
+									<TransformWrapper minScale={0.5} maxScale={2} wheel={{ step: 0.1 }} onZoom={(ref) => setZoom(ref.state.scale)} onInit={({ setTransform }) => setSetTransformFunc(() => setTransform)}>
 										{() => (
 											<TransformComponent>
 												<div style={{ display: "flex", gap: "16px" }}>
