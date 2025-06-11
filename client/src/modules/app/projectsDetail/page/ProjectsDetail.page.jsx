@@ -11,8 +11,8 @@ import { useVerified } from "../../../shared/const/context/VerifiedContext/Verif
 import styles from "./projectDetail.module.scss"
 
 export const ProjectsDetail = () => {
-	 const { verified } = useVerified();
-
+	const { verified } = useVerified();
+	
 	// const [verified, setVerified] = useState(true);
 	const [award_ids, setAwardIds] = useState([]);
 	const [popupVisibility, setPopupVisibility] = useState(false);
