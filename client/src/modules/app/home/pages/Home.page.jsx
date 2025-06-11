@@ -146,22 +146,6 @@ export const Home = () => {
                 
             </section>
 
-            {/* <section className={clsx(styles["teaser-video-wrapper"])}>
-                <div className={clsx(styles["teaser-video-wrapper--teaser-video-inner-wrapper"],"inner-wrapper small-wrapper")}>
-                    <h2>Aftermovie EXPO24</h2>
-                    < iframe
-                        className={clsx(styles["teaser-video-wrapper--teaser-video-inner-wrapper--teaser-video"])}
-                        src="https://www.youtube.com/embed/ifv5pC7-qtI?si=c5xuW800eOxgKMQb&enablejsapi=1&origin=https%3A%2F%2Fwww.erasmushogeschool.be"
-                        width="100%"
-                        height="100%" 
-                        style={{ border: "0"}} 
-                        allowFullScreen={ true } 
-                        loading="lazy" 
-                        referrerPolicy="no-referrer-when-downgrade"
-                    />
-                </div>
-            </section> */}
-
             <section className={clsx(styles["large-info-wrapper"], styles["orange-wrapper"])}>
                 <div className="inner-wrapper">
                     <div className={clsx(styles["large-info-wrapper--mct-info-wrapper"])}>
