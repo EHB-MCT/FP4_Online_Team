@@ -1,4 +1,5 @@
 @import "../../app/App.css";
+
 section .pink-wrapper {
 	margin: 0 !important;
 	padding: 0 !important;
@@ -221,7 +222,8 @@ section .pink-wrapper {
 		}
 	}
 	.purple-wrapper {
-		padding: 124px 0;
+		padding: 1px 0;
+		margin: 0;
 	}
 
 	.practical-info-wrapper {
@@ -230,6 +232,7 @@ section .pink-wrapper {
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			text-align: left;
 		}
 
 		// &--background-image-top-left{
@@ -243,10 +246,20 @@ section .pink-wrapper {
 		// }
 
 		&--practical-info-text-wrapper {
+			position: relative;
+			background: #eb6c33;
+			border-radius: 36px;
+			padding: 48px 48px 36px 48px;
+			margin: 64px auto 0 auto;
+			max-width: 1100px;
+			color: #fff;
+			overflow: visible;
+			min-height: 210px;
 			display: flex;
-			margin-bottom: 32px;
-			background-color: orange;
-			align-items: left;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 50px;
 		}
 		&--practical-info-location-wrapper {
 			display: flex;
@@ -262,14 +275,14 @@ section .pink-wrapper {
 			&--specific-info {
 				&--specific-info-upper-wrapper {
 					h3 {
-						text-align: end;
+						text-align: start;
 					}
-					text-align: end;
+					text-align: start;
 				}
 				&--specific-info-lower-wrapper {
 					p {
 						margin: 0;
-						text-align: end;
+						text-align: start;
 					}
 				}
 			}

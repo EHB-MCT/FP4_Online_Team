@@ -143,8 +143,13 @@ export const Home = () => {
 							styles["practical-info-wrapper--practical-info-text-wrapper"]
 						)}
 					>
-						<h2>Shift festival 2025</h2>
-						<p>
+						<h2
+							className="white-text"
+							style={{ textAlign: "start", margin: "0" }}
+						>
+							Shift festival 2025
+						</h2>
+						<p style={{ margin: 0 }}>
 							Welkom bij Shift, de expo waar innovatie, design en creativiteit
 							samenkomen! Dit unieke festival biedt een podium aan de
 							afstudeerprojecten van onze derdejaarsstudenten, waarbij
@@ -174,7 +179,9 @@ export const Home = () => {
 									]
 								)}
 							>
-								<h2 className="pink-text">20 juni 2025</h2>
+								<h2 className="black-text" style={{ textAlign: "start" }}>
+									20 juni 2025
+								</h2>
 								<h3>17:00 &gt; 22:00</h3>
 							</div>
 							<div
@@ -190,14 +197,14 @@ export const Home = () => {
 									<br />
 									Campus Kaai
 								</p>
+								<Button
+									destinationUrl={INFO_ROUTE.path}
+									copy={"Meer info"}
+									className={"button"}
+								/>
 							</div>
 						</div>
 					</div>
-					<Button
-						destinationUrl={INFO_ROUTE.path}
-						copy={"Meer info"}
-						className={"button"}
-					/>
 				</div>
 			</section>
 
