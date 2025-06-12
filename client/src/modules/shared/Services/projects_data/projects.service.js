@@ -6,7 +6,6 @@ class ProjectsService {
 
         const URL = "https://raw.githubusercontent.com/EHB-MCT/FP4_Online_Team/refs/heads/sprint-week-1/client/src/modules/shared/Services/projects_data/data/projects.json"
 
-
         const response = await fetch( URL );
         
         if( !response.ok ){

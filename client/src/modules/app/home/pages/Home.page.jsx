@@ -6,8 +6,10 @@ import { useState, useEffect } from "react";
 import { Model } from "../../../shared/model/Model";
 
 //Components
-import CountDown from "../components/countdown/CountDown.jsx";
 import Button from "../../../shared/button/Button.jsx";
+import CountDown from "../components/countdown/CountDown.jsx";
+import { FaqSection } from "../../../shared/faq-section/FaqSection.jsx";
+import { ProjectCard } from "../../../shared/ProjectCard/ProjectCard.jsx";
 
 //Hooks
 import { useProjectsData } from "../../../shared/const/hooks/getProjectsData.hook.js";
