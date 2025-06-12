@@ -202,15 +202,6 @@ section.pink-wrapper {
 	padding: 12px 30px;
 }
 
-.blue-button{
-	background-color: var(--button-blue-color);
-	color: var(--white-font-color);
-	font-family: var(--main-font);
-
-	border-radius: 15px;
-	padding: 12px 30px;
-}
-
 .filter {
 	text-align: center;
 	width: fit-content;
