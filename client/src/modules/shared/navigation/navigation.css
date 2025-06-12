@@ -146,7 +146,9 @@ nav .inner-wrapper {
 
 .navigation--home {
 	background: #ee4478;
-	
+	height: 15vh;
+	display: flex;
+	align-items: center;
 	
 }
 .navigation--home .dropdown-link:hover{
