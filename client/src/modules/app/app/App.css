@@ -92,6 +92,12 @@ h4 {
 	margin: 10px 0;
 	text-align: center;
 }
+h5{
+	font-family: var(--main-font);
+	font-weight: var(--title-weight);
+	color: var(--white-font-color);
+	margin: 10px 0;
+}
 p {
 	font-family: var(--secundary-font);
 	margin: 24px 0;
