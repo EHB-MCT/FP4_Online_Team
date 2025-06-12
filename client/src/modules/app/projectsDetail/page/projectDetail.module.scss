@@ -136,6 +136,8 @@
                             color: var(--font-color);
                         }
 
+                        margin-bottom: 24px;
+
                         &--category-tag{
                             font-family: var(--main-font);
                             border: 50px;
@@ -217,6 +219,9 @@
                         margin-bottom: 24px;
                         border-radius: 20px;
 
+                        &--info-wrapper{
+                            margin-bottom: 0;
+                        }
                     }
 
                     &--description-wrapper{

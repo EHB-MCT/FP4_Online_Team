@@ -71,7 +71,6 @@ export const ProjectsDetail = () => {
 		<>
 			<section className={clsx(styles["project-detail-wrapper"])}>
 				<div className={ isMobile !== true ? "inner-wrapper" : "" }>
-					{/* <NextProject /> */}
 					{/* {
 						verified && 
 						<div className={clsx(styles["project-detail-wrapper--voting-wrapper"])} >
@@ -161,6 +160,7 @@ export const ProjectsDetail = () => {
 							<h1 className={clsx(styles["project-detail-wrapper--main-wrapper--project-header--title"], "black-text")}>{ project && project[0].project_name }</h1>
 							<h4 className="black-text">{ project && project[0].student }</h4>
 						</div>
+						{/* <NextProject /> */}
 						<div className={clsx(styles["project-detail-wrapper--main-wrapper--project-image"])}>
 							<img src="homepage-image.png" alt="foto van het eindwerk" />
 						</div>
