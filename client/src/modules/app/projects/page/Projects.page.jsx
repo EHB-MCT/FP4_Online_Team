@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 
 //Components
 import { FilterButton } from "../components/FilterButton";
@@ -9,8 +10,8 @@ import Search from "../components/Search";
 import { useProjectsData } from "../../../shared/const/hooks/getProjectsData.hook";
 
 //CSS
-import "./projects.module.css";
-import { useLocation } from "react-router";
+import styles from "./projects.module.scss";
+import clsx from "clsx";
 
 export const Projects = () => {
 
@@ -24,10 +25,9 @@ export const Projects = () => {
 
 	const categories = [
 		"Web & Mobile",
-		"XR, 3D, Game",
+		"Digital Design",
 		"Experience Design",
-		"Interactive Motion",
-		"Prototyping",
+		"XR & 3D"
 	];
 
 	useEffect(() => {
@@ -60,27 +60,25 @@ export const Projects = () => {
 
 	return (
 		<>
-			<section>
-                <div className="inner-wrapper">
-                    <h2 className="">Eindjaarprojecten</h2>
-                    <Search />
-                    <div className="filter-button-wrapper">
-						{
-							categories.map((category) => (
-								<FilterButton 
-									key={ category }
-									category={ category}
-									onClick={() => setSelectedCategory(category)}
-								/>
-							))
-						}
-						<FilterButton 
-                            key="all"
-                            category="All"
-                            onClick={() => setSelectedCategory(null)}
-                        />
+			<section className={clsx(styles["projects-wrapper"])}>
+				<div className={clsx(styles["projects-wrapper--horizontal-scroll-wrapper"])} >
+					<div className={clsx(styles["projects-wrapper--horizontal-scroll-wrapper--header"], "inner-wrapper")}>
+						<h2>Eindprojecten</h2>
+						<Search />
+						<div className={clsx(styles["projects-wrapper--horizontal-scroll-wrapper--header--filter-button-wrapper"])}>
+							{
+								categories.map((category) => (
+									<FilterButton
+										key={ category }
+										project_category={ category }
+										onClick={() => setSelectedCategory( category )}
+									/>
+								))
+							}
+						</div>
 					</div>
-                    <div className="projects-outer-wrapper">
+
+					<div className={clsx(styles["projects-wrapper--horizontal-scoll-wrapper--projects-outer-wrapper"])}>
                         {isLoading ? (
                             "loading..."
                         ) : (
@@ -93,8 +91,34 @@ export const Projects = () => {
                             ))
                         )}
                     </div>
-                </div>
+
+
+					
+				</div>
             </section>
 		</>
 	);
 };
+
+
+// <div className="inner-wrapper">
+                //     <h2 className="">Eindjaarprojecten</h2>
+                //     <Search />
+                //     <div className="filter-button-wrapper">
+				// 		{
+				// 			categories.map((category) => (
+				// 				<FilterButton 
+				// 					key={ category }
+				// 					category={ category}
+				// 					onClick={() => setSelectedCategory(category)}
+				// 				/>
+				// 			))
+				// 		}
+				// 		<FilterButton 
+                //             key="all"
+                //             category="All"
+                //             onClick={() => setSelectedCategory(null)}
+                //         />
+				// 	</div>
+                    
+                // </div>

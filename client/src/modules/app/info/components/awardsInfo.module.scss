@@ -1,0 +1,20 @@
+.award-info-wrapper{
+    width: 100%;
+    margin-bottom: 32px;
+
+    img{
+        width: 50px;
+    }
+}
+
+@media(min-width: 768px){
+    .award-info-wrapper{
+        width: 48%;
+    }
+}
+@media(min-width: 1024px){
+    .award-info-wrapper{
+        width: 21%;
+        margin-bottom: 0;
+    }
+}

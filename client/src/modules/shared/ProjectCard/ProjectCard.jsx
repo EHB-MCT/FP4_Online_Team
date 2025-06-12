@@ -24,21 +24,38 @@ export const ProjectCard = ({ project_name, student, banner_image, project_categ
 
 	}, []);
     return (
-        <NavLink to={ "#" }>
-			<div className={clsx(styles["card-wrapper"])}>
-				<div className={clsx(styles["card-wrapper--image-wrapper"])}>
-					<img src={banner_image} alt="image of project" />
-				</div>
-				<div className={clsx(styles["card-wrapper--student-info"])}>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 121" fill="none">
-						<path d="M256.716 0H67.3581C61.1255 0 56.0737 5.34935 56.0737 11.9391V42.4653C56.0737 49.0551 51.0218 54.4045 44.7892 54.4045H11.2844C5.05186 54.4045 0 59.7538 0 66.3436V109.022C0 115.612 5.05186 120.961 11.2844 120.961H50.2476C56.4801 120.961 61.532 115.612 61.532 109.022V75.0266C61.532 68.4368 66.5838 63.0875 72.8164 63.0875H256.716C262.948 63.0875 268 57.7381 268 51.1483V11.9391C268 5.34935 262.948 0 256.716 0Z" fill={ projectColor }/>
-					</svg>
-					
-					<div className={clsx(styles["card-wrapper--student-info--right-shape"])} >
-						<p>{ project_name }</p>
+        
+		<div className={clsx(styles["card-wrapper"])}>
+			<NavLink to={ "#" }>
+				{/* <div className={clsx(styles["card-wrapper--image-wrapper"])}>
+					<img className={clsx(styles["card-wrapper--image-wrapper--image"])} src={"temp.png"} alt="image of project"  />
+				</div> */}
+				<div className={clsx(styles["card-wrapper__image-wrapper"])}>
+					<img 
+                        className={clsx(styles["card-wrapper__image-wrapper__image"])} 
+                        // src={banner_image || "temp-card/temp.png"} 
+						src={"temp-card/temp.png"}
+                        alt={`Project: ${project_name}`}  
+                    />
+                </div>
+				<div className={clsx(styles["card-wrapper--student-info"])}>	
+					<p className="black-text">{ student }</p>			
+					<div className={clsx(styles["card-wrapper--student-info--bottom-wrapper"])} >
+						<h5 className="black-text">{ project_name }</h5>
+						<div className={clsx(styles["card-wrapper--student-info--bottom-wrapper--svg-wrapper"])}>
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 59 59" fill="none">
+								<path 
+									d="M9.83334 27.0417L9.83334 31.9584L39.3333 31.9584L39.3333 36.8751L44.25 36.8751L44.25 31.9584L49.1667 31.9584L49.1667 27.0417L44.25 27.0417L44.25 22.1251L39.3333 22.1251L39.3333 27.0417L9.83334 27.0417ZM34.4167 17.2084L39.3333 17.2084L39.3333 22.1251L34.4167 22.1251L34.4167 17.2084ZM34.4167 17.2084L29.5 17.2084L29.5 12.2917L34.4167 12.2917L34.4167 17.2084ZM34.4167 41.7918L39.3333 41.7918L39.3333 36.8751L34.4167 36.8751L34.4167 41.7918ZM34.4167 41.7918L29.5 41.7918L29.5 46.7084L34.4167 46.7084L34.4167 41.7918Z" 
+									fill={ projectColor }
+								/>
+							</svg>
+						</div>
 					</div>
 				</div>
-			</div>
-		</NavLink>
-	);
+
+			</NavLink>
+		</div>
+    );
 };
+
+

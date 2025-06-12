@@ -7,8 +7,10 @@ import { useState, useEffect } from "react";
 import { Model } from "../../../shared/model/Model"
 
 //Components
-import CountDown from "../components/countdown/CountDown.jsx";
 import Button from "../../../shared/button/Button.jsx";
+import CountDown from "../components/countdown/CountDown.jsx";
+import { FaqSection } from "../../../shared/faq-section/FaqSection.jsx";
+import { ProjectCard } from "../../../shared/ProjectCard/ProjectCard.jsx";
 
 //Hooks
 import { useProjectsData } from "../../../shared/const/hooks/getProjectsData.hook.js";
@@ -18,9 +20,6 @@ import { INFO_ROUTE } from "../../info/info.route.jsx";
 
 //CSS
 import styles from './home.module.scss'
-import { ProjectCard } from "../../../shared/ProjectCard/ProjectCard.jsx";
-import { FaqDropdown } from "../../../shared/faq-dropdown/FaqDropdown.jsx";
-
 
 export const Home = () => {
     document.title = "Shift Festival - 2025 ";	
@@ -59,7 +58,7 @@ export const Home = () => {
             <section className={clsx(styles["projects-preview-wrapper"])}>
                 <div className={clsx(styles["projects-preview-wrapper--background-image-top-left"])}>
                     <div className={clsx(styles["projects-preview-wrapper--background-image-top-left--background-image-top-right"])}>
-                        <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper"], "inner-wrapper")}>
+                        <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper"],)}>
                             <h2>Eindprojecten</h2>
                             <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper--projects-carousel"])}>
                                 { isLoading ? (<p>Loading...</p>) : (
@@ -91,7 +90,7 @@ export const Home = () => {
                     
 
                     <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper"])}>
-                        <img src="/homepage-image.png" alt="foto van ehb" />
+                        <img className="image" src="/homepage-image.png" alt="foto van ehb" />
                         <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper--specific-info"])}>
                             <div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper--specific-info--specific-info-upper-wrapper"])}>
                                 <h2 className="pink-text">20 juni 2025</h2>
@@ -118,7 +117,7 @@ export const Home = () => {
             <section className={clsx(styles["large-info-wrapper"], styles["purple-wrapper"])}>
                 <div className="inner-wrapper">
                     <div className={clsx(styles["large-info-wrapper--programma-info-wrapper"])}>
-                        <img src="programma-img.jpg" alt="" />
+                        <img className="image" src="programma-img.jpg" alt="" />
                         <div className={clsx(styles["large-info-wrapper--programma-info-wrapper--programma-info"])}>
                             <h2 className="white-text" style={{textAlign: "start"}}>Programma</h2>
                             <p className="white-text">
@@ -134,17 +133,7 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className={clsx(styles["FAQ-section"])}>
-                <div className="inner-wrapper">
-                    <div className={clsx(styles["FAQ-section--FAQ-wrapper"])}>
-                        <h2>FAQ</h2>
-
-                        <FaqDropdown />
-
-                    </div>
-                </div>
-                
-            </section>
+            <FaqSection />
 
             <section className={clsx(styles["large-info-wrapper"], styles["orange-wrapper"])}>
                 <div className="inner-wrapper">

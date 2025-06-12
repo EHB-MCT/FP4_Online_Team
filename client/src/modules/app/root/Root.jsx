@@ -17,8 +17,14 @@ import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
 import { PROJECTS_ROUTE } from "../projects/projects.route";
 import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
 import { REGISTER_ROUTE } from "../register/register.route";
+
+
+import { VOTING_ROUTE } from "../voting/voting.route";
+import { PROGRAM_ROUTE } from "../program/program.route";
+
 import { REQUEST_TOKEN_ROUTE } from "../teachervoting/requestToken/requestToken.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
+
 
 export const Root = () => {
 	const QUERY_CLIENT = new QueryClient();
@@ -56,10 +62,10 @@ export const Root = () => {
 					path: PROJECTS_ROUTE.path,
 					element: PROJECTS_ROUTE.element,
 				},
-				// {
-				// 	path: PROJECTSDETAIL_ROUTE.path,
-				// 	element: PROJECTSDETAIL_ROUTE.element,
-				// },
+				{
+					path: PROJECTSDETAIL_ROUTE.path,
+					element: PROJECTSDETAIL_ROUTE.element,
+				},
 				{
 					path: REGISTER_ROUTE.path,
 					element: REGISTER_ROUTE.element,
@@ -74,18 +80,16 @@ export const Root = () => {
 					element: INFO_ROUTE.element,
 				},
 				{
-					path: HOMETWO_ROUTE.path,
-					element: HOMETWO_ROUTE.element,
-				},
-				{
 					path: MAGAZINE_ROUTE.path,
 					element: MAGAZINE_ROUTE.element,
 				},
-			],
-			// {
-			// 	path: INFO_ROUTE.path,
-			// 	element: INFO_ROUTE.element,
-			// },
+    {
+					path: PROGRAM_ROUTE.path,
+					element: PROGRAM_ROUTE.element,
+				},
+
+			]
+
 		},
 		{
 			path: "/voteReGRfguugXNEmMm/",
@@ -95,6 +99,7 @@ export const Root = () => {
 					path: AUTH_TEACHER_ROUTE.path,
 					element: AUTH_TEACHER_ROUTE.element,
 				},
+
 				{
 					path: REQUEST_TOKEN_ROUTE.path,
 					element: REQUEST_TOKEN_ROUTE.element,
