@@ -1,3 +1,4 @@
+
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
@@ -211,5 +212,6 @@ export const ProjectsDetail = () => {
 				</div>
 			</section>
 		</>
+
 	);
 };
