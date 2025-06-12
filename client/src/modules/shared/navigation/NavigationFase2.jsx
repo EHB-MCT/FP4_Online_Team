@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-
 import Image from "/Logo.svg";
 
 //Components
