@@ -220,7 +220,7 @@
 		height: 100vh;
 		max-width: 100vw;
 		max-height: 100vh;
-		overflow: auto;
+		overflow-x: auto;
 		border-radius: 0;
 	}
 	.pdf-zoom-controls,
@@ -322,9 +322,8 @@ button {
 	display: flex;
 	flex-direction: row;
 	overflow-x: auto;
+	width: 100vw;
 	scroll-snap-type: x mandatory;
-	gap: 1rem;
-	padding-bottom: 1rem;
 }
 .pdf-horizontal-scroll canvas {
 	scroll-snap-align: start;

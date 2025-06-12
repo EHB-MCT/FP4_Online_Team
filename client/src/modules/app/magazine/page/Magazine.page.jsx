@@ -1,5 +1,5 @@
 import { Document, Page, pdfjs } from "react-pdf";
-import { motion } from "framer-motion";
+import { motion, transform } from "framer-motion";
 import React, { useState, useRef, useEffect } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import "react-pdf/dist/Page/AnnotationLayer.css";
@@ -30,6 +30,7 @@ export const Magazine = () => {
 	const [isFullscreen, setIsFullscreen] = useState(false);
 	const [zoom, setZoom] = useState(1);
 	const [initialScale, setInitialScale] = useState(1);
+	const horizontalScrollRef = useRef(null);
 
 	useEffect(() => {
 		function updateWidth() {
@@ -129,6 +130,12 @@ export const Magazine = () => {
 			enterFullscreen();
 		}
 	};
+	const onHorizontalScrollContainerRef = (node) => {
+		if (node) {
+			horizontalScrollRef.current = node;
+			node.scrollLeft = 0;
+		}
+	};
 
 	const fullscreenRef = useRef(null);
 
@@ -136,6 +143,16 @@ export const Magazine = () => {
 		setZoom(value);
 		if (setTransformFunc) setTransformFunc(0, 0, value, 200, "easeOut");
 	};
+
+	// Scroll to the start when openMagazine or totalPages changes (mobile only)
+	useEffect(() => {
+		if (isMobile && openMagazine && horizontalScrollRef.current) {
+			// Wait for pages to render
+			requestAnimationFrame(() => {
+				horizontalScrollRef.current.scrollLeft = 0;
+			});
+		}
+	}, [isMobile, openMagazine, totalPages]);
 
 	return (
 		<section className="inner-wrapper">
@@ -185,7 +202,31 @@ export const Magazine = () => {
 								loading={<div className="status-message">Loading magazine...</div>}
 								error={<div className="status-message error">{error || "Could not load magazine"}</div>}
 							>
-								{!isMobile ? (
+								{isMobile ? (
+									<TransformWrapper
+										minScale={initialScale}
+										maxScale={2}
+										wheel={{ step: 0.1 }}
+										panning={{ disabled: zoom <= initialScale + 0.01 }}
+										onZoom={(ref) => setZoom(ref.state.scale)}
+										onInit={({ setTransform }) => setSetTransformFunc(() => setTransform)}
+									>
+										{() => (
+											<TransformComponent>
+												<div className="pdf-horizontal-scroll" ref={horizontalScrollRef}>
+													{Array.from(
+														{ length: totalPages },
+														(_, idx) => (
+															console.log(`Mobile mode page: ${idx} /n total pages: ${totalPages}`), // Mobile logic
+															(<Page key={idx + 1} pageNumber={idx + 1} width={window.innerWidth - 32} style={{ minWidth: window.innerWidth - 32 }} />)
+														)
+													)}
+												</div>
+											</TransformComponent>
+										)}
+									</TransformWrapper>
+								) : (
+									// Desktop logic
 									<TransformWrapper minScale={initialScale} maxScale={2} wheel={{ step: 0.1 }} onZoom={(ref) => setZoom(ref.state.scale)} onInit={({ setTransform }) => setSetTransformFunc(() => setTransform)}>
 										{() => (
 											<TransformComponent>
@@ -202,13 +243,6 @@ export const Magazine = () => {
 											</TransformComponent>
 										)}
 									</TransformWrapper>
-								) : (
-									// Mobile: horizontal scroll
-									<div className="pdf-horizontal-scroll">
-										{Array.from({ length: totalPages }, (_, idx) => (
-											<Page key={idx + 1} pageNumber={idx + 1} width={window.innerWidth - 32} style={{ minWidth: window.innerWidth - 32 }} />
-										))}
-									</div>
 								)}
 							</Document>
 						</div>
