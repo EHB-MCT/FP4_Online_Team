@@ -78,6 +78,21 @@ export const Projects = () => {
 						</div>
 					</div>
 
+					<div className={clsx(styles["projects-wrapper--horizontal-scoll-wrapper--projects-outer-wrapper"])}>
+                        {isLoading ? (
+                            "loading..."
+                        ) : (
+                            categoriesToShow.map((category) => (
+                                <ProjectCategory
+                                    key={ category }
+                                    title={ category }
+                                    data={filteredProjects.filter((project) => project.category === category)}
+                                />
+                            ))
+                        )}
+                    </div>
+
+
 					
 				</div>
             </section>
@@ -105,17 +120,5 @@ export const Projects = () => {
                 //             onClick={() => setSelectedCategory(null)}
                 //         />
 				// 	</div>
-                //     <div className="projects-outer-wrapper">
-                //         {isLoading ? (
-                //             "loading..."
-                //         ) : (
-                //             categoriesToShow.map((category) => (
-                //                 <ProjectCategory
-                //                     key={ category }
-                //                     title={ category }
-                //                     data={filteredProjects.filter((project) => project.category === category)}
-                //                 />
-                //             ))
-                //         )}
-                //     </div>
+                    
                 // </div>
