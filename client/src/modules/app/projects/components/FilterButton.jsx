@@ -1,11 +1,32 @@
-export const FilterButton = ({ category, onClick }) => {
+import { useState, useEffect } from "react";
+
+export const FilterButton = ({ project_category, onClick }) => {
+    
+    const [projectColor, setProjectColor] = useState("")
+    
+    useEffect(() => {
+
+        if(project_category === "Experience Design"){
+            setProjectColor("#5269BC")
+        }else if(project_category === "Web & Mobile"){
+            setProjectColor("#E61453")
+        }else if(project_category === "XR & 3D"){
+            setProjectColor("#B54A98")
+        }else if(project_category === "Digital Design"){
+            setProjectColor("#D83D0E")
+        }
+
+    }, []);
+    
     return (
         <div 
-            className="button filter"
-            value={ category }
+            className="filter"
+            value={ project_category }
             onClick={ onClick }
+
+            style={{ backgroundColor: projectColor}}
         >
-            <p>{ category }</p>
+            <p>{ project_category }</p>
         </div>
     )
 }

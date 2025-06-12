@@ -1,560 +1,373 @@
 [
-    {
-        "id": "BoutaarourtAbdella_SkillSwap",
-        "student": "Boutaarourt Abdella",
-        "description": "Platform waar gebruikers vaardigheden uitwisselen en leren via gamification",
-        "category": "Web & Mobile",
-        "promotor": "Bert (8)",
-        "project_name": "SkillSwap",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "GistelinckRemy_NeuroBlocks",
-        "student": "Gistelinck Remy",
-        "description": "Interactieve Tetris-toepassing om AI-leeralgoritmes visueel te vergelijken",
-        "category": "Web & Mobile",
-        "promotor": "Bert (8)",
-        "project_name": "NeuroBlocks",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "LanghendriesMilan_Notdefinedyet",
-        "student": "Langhendries Milan",
-        "description": "Niet deelgenomen aan jury",
-        "category": "Web & Mobile",
-        "promotor": "Bert (8)",
-        "project_name": "Not defined yet",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "VankriekingeRyan_Codeucation",
-        "student": "Vankriekinge Ryan",
-        "description": "Platform met automatische code-evaluatie om informaticaonderwijs te verbeteren voor leerkrachten zonder programmeerkennis",
-        "category": "Web & Mobile",
-        "promotor": "Bert (8)",
-        "project_name": "Codeucation",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "VerherstraetenKarsten_ORDENA",
-        "student": "Verherstraeten Karsten",
-        "description": "Verherstraeten,Karsten",
-        "category": "Web & Mobile",
-        "promotor": "Bert (8)",
-        "project_name": "ORDENA",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "VanhaelenJasper_GreenBuilder",
-        "student": "Vanhaelen Jasper",
-        "description": "Milieuvriendelijke mobiele city builder game die duurzaam gedrag stimuleert bij spelers",
-        "category": "XR & 3D",
-        "promotor": "Bert (8)",
-        "project_name": "Green Builder",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "VettorelGregory_OceanScape",
-        "student": "Vettorel Gregory",
-        "description": "Realistische zeilsimulator met VR en toegankelijkheid voor leren, ontspanning en onderzoek",
-        "category": "XR & 3D",
-        "promotor": "Bert (8)",
-        "project_name": "OceanScape",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "DePauwJules_Pose",
-        "student": "DePauw Jules",
-        "description": "Yoga-app die via computer vision realtime feedback geeft op houdingen",
-        "category": "Experience Design",
-        "promotor": "Dennis (5)",
-        "project_name": "Pose",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "DeReuseJulien_InteractieveSportinstallatie",
-        "student": "DeReuse Julien",
-        "description": "Sportinstallatie die hartslag koppelt aan visuals en muziek om motivatie tijdens sporten te verhogen",
-        "category": "Experience Design",
-        "promotor": "Dennis (5)",
-        "project_name": "Interactieve Sportinstallatie",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "ClaeyeJef_HetVisualiserenvanSnelheidenKrachten",
-        "student": "Claeye Jef",
-        "description": "Visualisatie van snelheid en krachten uit racesimulaties via real-time motion graphics",
-        "category": "Interactive Motion",
-        "promotor": "Dennis (5)",
-        "project_name": "Het Visualiseren van Snelheid en Krachten",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "GeysJorbe_CAVA–CleanAutonomousVisionAcquisition",
-        "student": "Geys Jorbe",
-        "description": "Autonome afvalverzamelrobot voor festivals met vision tracking, rapportage en oplaadstations",
-        "category": "Prototyping",
-        "promotor": "Dennis (5)",
-        "project_name": "C.A.V.A. – Clean Autonomous Vision Acquisition",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "AadimZiad_ARDrawingTutor",
-        "student": "Aadim Ziad",
-        "description": "AR-app voor Meta Quest 3 die beginnende tekenaars stap voor stap leert tekenen op papier",
-        "category": "XR & 3D",
-        "promotor": "Dennis (5)",
-        "project_name": "AR Drawing Tutor",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "BenallalMehdi_Notdefinedyet",
-        "student": "Benallal Mehdi",
-        "description": "Niet deelgenomen aan jury",
-        "category": "XR & 3D",
-        "promotor": "Dennis (5)",
-        "project_name": "Not defined yet",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "BelaouchiMeryam_MinecraftTheExperience",
-        "student": "Belaouchi Meryam",
-        "description": "Interactieve installatie die Minecraft tot leven brengt met motion tracking, projecties en fysieke objecten",
-        "category": "Experience Design",
-        "promotor": "Jan E (8)",
-        "project_name": "Minecraft: The Experience",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "BouabdellahDikra_ToerismeenTechnologie",
-        "student": "Bouabdellah Dikra",
-        "description": "Interactieve installatie over de legende van de Grot van Hercules om toeristen naar Tanger te trekken",
-        "category": "Experience Design",
-        "promotor": "Jan E (8)",
-        "project_name": "Toerisme en Technologie",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "FrederickxAmber_EenzaamheidopTafel",
-        "student": "Frederickx Amber",
-        "description": "Installatie en boek die studenten helpt gevoelens van eenzaamheid bespreekbaar te maken",
-        "category": "Experience Design",
-        "promotor": "Jan E (8)",
-        "project_name": "Eenzaamheid op Tafel",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "OzcanAylin_OptimalisatievanSocialeDeductieveSpellen",
-        "student": "Ozcan Aylin",
-        "description": "Optimalisatie van sociale deductiespellen voor cafés via NFC-kaarten, projecties en geluid",
-        "category": "Experience Design",
-        "promotor": "Jan E (8)",
-        "project_name": "Optimalisatie van Sociale Deductieve Spellen\n",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "PouleurLouisJames_ILLUMINATE",
-        "student": "Pouleur LouisJames",
-        "description": "Interactieve installatie die de impact van Instagram-notificaties op jongeren visualiseert",
-        "category": "Experience Design",
-        "promotor": "Jan E (8)",
-        "project_name": "ILLUMINATE",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "ErnouldAchille_HudHelmet",
-        "student": "Ernould Achille",
-        "description": "Heads-up display en mobiele app voor veiliger motornavigeren via subtiele visuele aanwijzingen",
-        "category": "Prototyping",
-        "promotor": "Jan E (8)",
-        "project_name": "Hud Helmet",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "LopesOliveiraIgor_SmartPunchingBagSPB",
-        "student": "LopesOliveira Igor",
-        "description": "Slimme bokszak met sensoren en app voor beginnende boksers die real-time feedback geeft",
-        "category": "Prototyping",
-        "promotor": "Jan E (8)",
-        "project_name": "Smart Punching Bag (SPB)",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "AsanteStephen_HetMuseumvanAnansi",
-        "student": "Asante Stephen",
-        "description": "Educatieve 3D-game die jongeren van Ghanese afkomst spelenderwijs de Ghanese taal en cultuur laat ontdekken",
-        "category": "XR & 3D",
-        "promotor": "Jan E (8)",
-        "project_name": "Het Museum van Anansi",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "ClementSarah_Notdefinedyet",
-        "student": "Clement Sarah",
-        "description": "Niet deelgenomen aan jury",
-        "category": "XR & 3D",
-        "promotor": "Jan S (6)",
-        "project_name": "Not defined yet",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "DeClerckRobbeMosselmansLiam_TAG",
-        "student": "DeClerck Robbe & Mosselmans Liam",
-        "description": "1v1 multiplayer parkourgame waarin spelers elkaar taggen in een realistische, fysieke omgeving",
-        "category": "XR & 3D",
-        "promotor": "Jan S (6)",
-        "project_name": "TAG",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "JanssenMichiel_QuestForge",
-        "student": "Janssen Michiel",
-        "description": "Dynamisch quest-generatiesysteem dat spelerkeuzes omzet in betekenisvolle missies",
-        "category": "XR & 3D",
-        "promotor": "Jan S (6)",
-        "project_name": "FateQuest",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "LambeauGauthierPaceAlkhomailiNoham_NeonEscapeOperation",
-        "student": "Lambeau Gauthier & PaceAlkhomaili Noham",
-        "description": "Game die beweging stimuleert",
-        "category": "XR & 3D",
-        "promotor": "Jan S (6)",
-        "project_name": "Neon Escape Operation",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "RauwAmaury_VRVR",
-        "student": "Rauw Amaury",
-        "description": "VR-simulator die jongeren bewust maakt van de gevaren van drugsgebruik via interactieve ervaringen",
-        "category": "XR & 3D",
-        "promotor": "Jan S (6)",
-        "project_name": "VRVR",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "ZobairZaid_WatchersRite",
-        "student": "Zobair Zaid",
-        "description": "Multiplayer motion tracking game zonder VR, die sociale interactie en fysieke beweging stimuleert",
-        "category": "XR & 3D",
-        "promotor": "Jan S (6)",
-        "project_name": "Watcher’s Rite",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "BuscemiNicolas_UrbanEchoes",
-        "student": "Buscemi Nicolas",
-        "description": "Interactieve installatie die agorafobie tastbaar maakt via audiovisuele overprikkeling en biofeedback",
-        "category": "Experience Design",
-        "promotor": "Jan VC (10)",
-        "project_name": "Urban Echoes",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "ClaeysJonathan_Flowtales",
-        "student": "Claeys Jonathan",
-        "description": "Interactieve website impact sociale media",
-        "category": "Web & Mobile",
-        "promotor": "Jan VC (10)",
-        "project_name": "Flowtales",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "DobrunaZani_Carbe",
-        "student": "Dobruna Zani",
-        "description": "Platform voor gedeelde mobiliteit met blockchain-identificatie, reputatiesysteem en openbaar vervoer integratie",
-        "category": "Web & Mobile",
-        "promotor": "Jan VC (10)",
-        "project_name": "Carbe",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "FavoreelNelle_Memoraa",
-        "student": "Favoreel Nelle",
-        "description": "Platform voor het delen en bewaren van familie reizen",
-        "category": "Web & Mobile",
-        "promotor": "Jan VC (10)",
-        "project_name": "Memoraa",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "SaahMitch_TuinMeister",
-        "student": "Saah Mitch",
-        "description": "Slim waterbeheersysteem voor tuinen met AI, sensoren en mobiele app",
-        "category": "Web & Mobile",
-        "promotor": "Jan VC (10)",
-        "project_name": "TuinMeister",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "VanHemelrijckStephan_Lexora",
-        "student": "Van Hemelrijck Stephan",
-        "description": "AI-taalapp met gepersonaliseerde leerervaring, gamificatie en real-time feedback",
-        "category": "Web & Mobile",
-        "promotor": "Jan VC (10)",
-        "project_name": "Lexora",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "BastienMaxime_HOPE",
-        "student": "Bastien Maxime",
-        "description": "2D-game over mentale gezondheid van jongvolwassenen met focus op visuele storytelling en emoties",
-        "category": "XR & 3D",
-        "promotor": "Jan VC (10)",
-        "project_name": "HOPE",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "ImnadineSabri_Klimaatbewustzijn",
-        "student": "Imnadine Sabri",
-        "description": "Educatieve light novel-game die jongeren bewust maakt van klimaatverandering via storytelling en keuzes",
-        "category": "XR & 3D",
-        "promotor": "Jan VC (10)",
-        "project_name": "Klimaatbewustzijn",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "RashidMohammad_LinkUp",
-        "student": "Rashid Mohammad",
-        "description": "Videogame digitale kloof",
-        "category": "XR & 3D",
-        "promotor": "Jan VC (10)",
-        "project_name": "Link Up",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "BerckmansKobe_BurenvorBuren",
-        "student": "Berckmans Kobe",
-        "description": "Platform voor lokale burenhulp met vrijwilligersmatching",
-        "category": "Web & Mobile",
-        "promotor": "Johan (3)",
-        "project_name": "Buren voor Buren",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "ElMajdoubiWail_SocialBalans",
-        "student": "ElMajdoubi Wail",
-        "description": "App die jongeren helpt een gezondere balans te vinden tussen schermtijd en offline leven",
-        "category": "Web & Mobile",
-        "promotor": "Johan (3)",
-        "project_name": "Social Balans",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "HasanTaha_Notdefinedyet",
-        "student": "Hasan Taha",
-        "description": "Geen magazine ingediend",
-        "category": "Web & Mobile",
-        "promotor": "Johan (3)",
-        "project_name": "Not defined yet",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "UnutkanBerkay_SkillShareHub",
-        "student": "Unutkan Berkay",
-        "description": "Online platform voor lokale kennisuitwisseling met AI, blockchain en gamificatie om sociale cohesie te versterken",
-        "category": "Web & Mobile",
-        "promotor": "Johan (3)",
-        "project_name": "SkillShareHub",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "AhmadNabras_LeveninGaza",
-        "student": "Ahmad Nabras",
-        "description": "Interactieve installatie die via video en Arduino het leven in Gaza tastbaar maakt voor een Westers publiek",
-        "category": "Experience Design",
-        "promotor": "Joni (5)",
-        "project_name": "Leven in Gaza",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "DeVosFreya_UnderPressure",
-        "student": "De Vos Freya",
-        "description": "Interactieve installatie die stress meet en visualiseert via hartslag",
-        "category": "Experience Design",
-        "promotor": "Joni (5)",
-        "project_name": "Under Pressure",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "vanUdenRachelle_PseudoWat",
-        "student": "vanUden Rachelle",
-        "description": "Interactief platform met 3D-animaties dat zeldzame kanker (PMP) op een toegankelijke manier uitlegt",
-        "category": "Interactive Motion",
-        "promotor": "Joni (5)",
-        "project_name": "Pseudo-Wat?",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "BarillaSandro_Tagbox",
-        "student": "Barilla Sandro",
-        "description": "Fysieke Spotify-jukebox met RFID-kaartjes voor interactieve muziekbeleving",
-        "category": "Prototyping",
-        "promotor": "Joni (5)",
-        "project_name": "Tagbox*",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "BuelensMikolajBietsRowan_KattenTracker",
-        "student": "Buelens Mikolaj & Biets Rowan",
-        "description": "Elektronische halsband met app om katten in realtime te volgen en hun veiligheid te garanderen",
-        "category": "Prototyping",
-        "promotor": "Joni (5)",
-        "project_name": "KattenTracker",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "DebonnetFolkert_UrbanOasis",
-        "student": "Debonnet Folkert",
-        "description": "Interactieve licht- en geluidsinstallatie die rust creëert in drukke stedelijke ruimtes via natuurlijke stimuli",
-        "category": "Experience Design",
-        "promotor": "Mike (8)",
-        "project_name": "Urban Oasis",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "BillietMiguel_DynamischCMSvoorzelfstandigen",
-        "student": "Billiet Miguel",
-        "description": "SaaS-platform waarmee zelfstandigen eenvoudig content kunnen beheren op hun website",
-        "category": "Web & Mobile",
-        "promotor": "Mike (8)",
-        "project_name": "Dynamisch CMS voor zelfstandigen",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "HeusdensThomas_Trivista",
-        "student": "Heusdens Thomas",
-        "description": "Mobiele app die beginnende triatleten ondersteunt via AI-routeplanning, trainingsschema’s en motivatie",
-        "category": "Web & Mobile",
-        "promotor": "Mike (8)",
-        "project_name": "Trivista",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "MengaGlory_Samply",
-        "student": "Menga Glory",
-        "description": "App Beatmakers AI",
-        "category": "Web & Mobile",
-        "promotor": "Mike (8)",
-        "project_name": "Samply",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "StoikosMichael_Notdefinedyet",
-        "student": "Stoikos Michael",
-        "description": "Niet deelgenomen aan jury",
-        "category": "Web & Mobile",
-        "promotor": "Mike (8)",
-        "project_name": "Not defined yet",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "SunaertJochen_PlotTwist",
-        "student": "Sunaert Jochen",
-        "description": "Multiplayer partygame met AI die verhalen genereert en spelers beoordeelt",
-        "category": "Web & Mobile",
-        "promotor": "Mike (8)",
-        "project_name": "PlotTwist",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "TaziYassine_DalilTalk",
-        "student": "Tazi Yassine",
-        "description": "Platform voor interreligieuze debatten met live video, bronverificatie en contextuele toelichting",
-        "category": "Web & Mobile",
-        "promotor": "Mike (8)",
-        "project_name": "Dalil Talk",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "AhdiSafwane_PCBuilder",
-        "student": "Ahdi Safwane",
-        "description": "Educatief AR-platform dat gebruikers leert een PC te bouwen via interactieve simulaties",
-        "category": "XR & 3D",
-        "promotor": "Mike (8)",
-        "project_name": "PC Builder",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "VandenbusscheKian_Van2Dnaar3DmodelsmetAI",
-        "student": "Vandenbussche Kian",
-        "description": "AI-gestuurde tool die automatisch 2D-beelden omzet in geoptimaliseerde 3D-modellen voor diverse sectoren",
-        "category": "XR & 3D",
-        "promotor": "Mike (8)",
-        "project_name": "Van 2D naar 3D models met AI",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "LambeensWannes_AuditieveFotoreeks",
-        "student": "Lambeens Wannes",
-        "description": "Auditieve fotoreeks die visuele data vertaalt naar soundscapes voor slechtzienden",
-        "category": "Experience Design",
-        "promotor": "Stefan (8)",
-        "project_name": "Auditieve Fotoreeks",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "LMaimouniNail_StepIntoTheStruggle",
-        "student": "LMaimouni Nail",
-        "description": "Interactieve installatie die jongeren uit kwetsbare wijken via keuzes en motion tracking bewust maakt van hun toekomst",
-        "category": "Interactive Motion",
-        "promotor": "Stefan (8)",
-        "project_name": "Step Into The Struggle",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "VanBergenTuur_CreativeArcade",
-        "student": "VanBergen Tuur",
-        "description": "Interactieve visual novel over mentale gezondheid bij jongeren met focus op keuzes en emotionele beleving",
-        "category": "Interactive Motion",
-        "promotor": "Stefan (8)",
-        "project_name": "Creative Arcade!",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "AuassarYoussef_YouthsDream",
-        "student": "Auassar Youssef",
-        "description": "Visuele webapp die jongeren helpt hun droomjob en studiekeuze te ontdekken via persoonlijkheidstesten",
-        "category": "Web & Mobile",
-        "promotor": "Stefan (8)",
-        "project_name": "Youth’s Dream",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "DriesenMarten_Simulectra",
-        "student": "Driesen Marten",
-        "description": "Simulatie-app voor residentiële elektriciteit die eenvoud en gebruiksgemak biedt aan studenten",
-        "category": "Web & Mobile",
-        "promotor": "Stefan (8)",
-        "project_name": "Simulectra",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "VerbekenSeppe_WandelWijs",
-        "student": "Verbeken Seppe",
-        "description": "Gamified wandelapp voor kinderen om natuur te ontdekken via missies, beloningen en AI-herkenning",
-        "category": "Web & Mobile",
-        "promotor": "Stefan (8)",
-        "project_name": "WandelWijs",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "EylenboschBram_MindMatch",
-        "student": "Eylenbosch Bram",
-        "description": "Tabletgame met memory en dagelijkse taken, ontwikkeld voor senioren",
-        "category": "XR & 3D",
-        "promotor": "Stefan (8)",
-        "project_name": "MindMatch",
-        "banner_image": "placeholder.jpg"
-    },
-    {
-        "id": "PeetersCarysaVanHumbeeckAnke_Stellar",
-        "student": "Peeters Carysa & VanHumbeeck Anke",
-        "description": "Educatieve visual novel voor kinderen over de ruimte met interactieve animaties",
-        "category": "XR & 3D",
-        "promotor": "Stefan (8)",
-        "project_name": "Stellar",
-        "banner_image": "placeholder.jpg"
-    }
+ {
+  "project_name": "N.E.O (Neon Enhance Operation)",
+  "category": "XR & 3D",
+  "student": "Noham Pace Alkhomaili - Gauthier Lambeau",
+  "description": "Dit is een fysiek spel waarin je je personage aanstuurt met je eigen lichaamsbewegingen. Door motion tracking en Kinect-technologie spring en buk je om obstakels te ontwijken en zo een maximale score te behalen, met een extra spel.",
+  "id": "NohamPaceAlkhomaili-GauthierLambeau"
+ },
+ {
+  "project_name": "Music Deck",
+  "category": "Experience Design",
+  "student": "Sandro Barilla",
+  "description": "Dit is een muziekspeler die werkt met muntjes: elke muntje staat voor een album, playlist of liedje. Steek je één in de speler, dan speelt het gekoppelde liedje. Muziek luisteren wordt weer een tastbaar en intuïtief. Scan de QR-code op het laatste muntje om eigen muziek toe te voegen!",
+  "id": "SandroBarilla"
+ },
+ {
+  "project_name": "Carbe",
+  "category": "Web & Mobile",
+  "student": "Zani Dobruna",
+  "description": "Dit werk is een autohuurplatform waarbij gebruikers op twee manieren actief kunnen zijn: als huurder kun je eenvoudig auto’s reserveren en huren. Als aanbieder stel je je eigen voertuigen beschikbaar voor verhuur, beheer je je kalender en boekingen, en verdien je geld.",
+  "id": "ZaniDobruna"
+ },
+ {
+  "project_name": "Triggers After Dark",
+  "category": "Experience Design",
+  "student": "Louis-James Pouleur",
+  "description": "Deze installatie is een audiovisuele ervaring die de impact van smartphone-notificaties op jongeren visualiseert. Drie projectievlakken in een halve kubus tonen ritmische beelden en geluiden die het dopamine-effect zintuigelijk en confronterend voelbaar maken.",
+  "id": "Louis-JamesPouleur"
+ },
+ {
+  "project_name": "Step into the Struggle",
+  "category": "Digital Design",
+  "student": "Naïl L'Maimouni",
+  "description": "Dit werk is een interactieve video-ervaring waar je in de huid kruipt van een jongere uit een sociale woonwijk. Na elke scène maak je een keuze via handgebaren, waardoor het verhaal zich op uiteenlopende en persoonlijke manieren ontwikkelt.",
+  "id": "NailLMaimouni"
+ },
+ {
+  "project_name": "PlotTwist",
+  "category": "XR & 3D",
+  "student": "Jochen Sunaert",
+  "description": "Dit werk is een interactieve multi-device partygame met AI waarin spelers via hun smartphone creatieve oplossingen bedenken voor absurde scenario’s die verschijnen op de pc. De AI beoordeelt wie het meeste impact heeft, origineelst is, of de winnaar is!",
+  "id": "JochenSunaert"
+ },
+ {
+  "project_name": "Party Tag",
+  "category": "XR & 3D",
+  "student": "Robbe De Clerck - Liam Mosselmans",
+  "description": "Dit werk is een 1-tegen-1 multiplayergame geïnspireerd op tikkertje, waarin twee spelers elkaar proberen te tikken terwijl ze over obstakels parkouren. Ze gebruiken daarbij een diverse set aan creatieve vaardigheden om te ontsnappen, de ander te verrassen of in te halen.",
+  "id": "RobbeDeClerck-LiamMosselmans"
+ },
+ {
+  "project_name": "Cycling Frequenies",
+  "category": "Experience Design ",
+  "student": "Julien De Reuse",
+  "description": "Dit werk is een interactieve fietsgame die trapsnelheid meet, en waarin muziek centraal staat. Trap jezelf in het ritme en beleef een meeslepende audiovisuele reis die sport, spel en sfeer samenbrengt in één dynamisch parcours. En er is nog meer…",
+  "id": "JulienDeReuse"
+ },
+ {
+  "project_name": "Dalil Talk",
+  "category": "Web & Mobile",
+  "student": "Yassine Tazi",
+  "description": "Dit werk is een livestreamingplatform met als centrale focus het voeren van debat over thema’s als de islam en kunstmatige intelligentie. Er wordt aandacht besteed aan AI-citatiedetectie, waarbij onderzocht wordt hoe technologie wordt ingezet om bronnen en uitspraken te traceren.",
+  "id": "YassineTazi"
+ },
+ {
+  "project_name": "Escape The Mines",
+  "category": "Digital Design",
+  "student": "Meryam Belaouchi",
+  "description": "Dit werk is een interactieve ervaring waarin spelers een levensechte Minecraft-wereld betreden. Door te verkennen, te craften en uitdagende puzzels op te lossen, banen ze zich een weg van een donkere, gevaarlijke mineshaft naar het oppervlak.",
+  "id": "MeryamBelaouchi"
+ },
+ {
+  "project_name": "pose",
+  "category": "Experience Design",
+  "student": "Jules De Pauw",
+  "description": "Dit werk is een digitale yoga coach die via je camera en AI je houding analyseert. Met behulp van computervisie krijg je realtime visuele en auditieve feedback, zodat iedereen veilig en zelfstandig yoga kan beoefenen met directe, slimme begeleiding.",
+  "id": "JulesDePauw"
+ },
+ {
+  "project_name": "Behind The Bar",
+  "category": "XR & 3D",
+  "student": "Amaury Rauw",
+  "description": "Dit werk is een interactieve 3D-opleiding voor bartenders, ontwikkeld als digitale leeromgeving waarin gebruikers via realistische simulatie kunnen oefenen in een virtuele barsetting. De focus ligt op het aanleren van bartendingvaardigheden op een toegankelijke en visuele manier.",
+  "id": "AmauryRauw"
+ },
+ {
+  "project_name": "Trivista",
+  "category": "Web & Mobile",
+  "student": "Thomas Heusdens",
+  "description": "Dit werk helpt absolute beginners zich voor te bereiden op hun eerste sprinttriathlon met een toegankelijk 12-wekenplan. De app biedt begeleiding bij elke stap, met aandacht voor training, voeding, stretching en herstel tijdens het volledige traject.",
+  "id": "ThomasHeusdens"
+ },
+ {
+  "project_name": "Wandelwijs",
+  "category": "Web & Mobile",
+  "student": "Seppe Verbeken",
+  "description": "Dit werk is een wandelapp die kinderen uitnodigt om hun omgeving te ontdekken en zo op een speelse manier hun kennis over de natuur te vergroten. De app stimuleert nieuwsgierigheid en maakt het buiten zijn leuk en leerzaam tegelijk.",
+  "id": "SeppeVerbeken"
+ },
+ {
+  "project_name": "Toerisme & Technologie",
+  "category": "Digital Design",
+  "student": "Dikra Bouabdellah",
+  "description": "Dit werk is een interactieve installatie die mensen uitnodigt de Grot van Hercules te bezoeken. Via een 2D-animatie wordt de legende van Hercules verteld, waarbij bezoekers met een tablet keuzes maken die het verhaal beïnvloeden en hun beleving verdiepen.",
+  "id": "DikraBouabdellah"
+ },
+ {
+  "project_name": "Het Museum van Anansi",
+  "category": "XR & 3D",
+  "student": "Stephen Asante",
+  "description": "Dit werk is een educatieve 3D-game voor jonge Belgo-Ghanese spelers, die Twi willen leren en Ghanese folklore ontdekken via interactieve minigames in een virtueel museum, waarbij ze taalvaardigheden ontwikkelen en culturele verhalen op een boeiende manier ervaren.",
+  "id": "StephenAsante"
+ },
+ {
+  "project_name": "Stellar",
+  "category": "XR & 3D",
+  "student": "Anke Van Humbeeck - Carysa Peeters",
+  "description": "Dit werk is een educatieve game over de ruimte, speciaal ontwikkeld voor kinderen. De game laat jonge spelers op een speelse manier kennismaken met planeten, sterren en het heelal, en prikkelt zo hun nieuwsgierigheid naar astronomie en de wereld buiten onze aarde.",
+  "id": "AnkeVanHumbeeck-CarysaPeeters"
+ },
+ {
+  "project_name": "Link Up",
+  "category": "XR & 3D",
+  "student": "Mohammad Rashid",
+  "description": "Dit werk is een interactieve en educatieve game die spelers bewust maakt van de digitale kloof. Door te verkennen, te verbinden en anderen te helpen, ervaren spelers op speelse wijze de uitdagingen en ongelijkheden die ontstaan door beperkte toegang tot technologie.",
+  "id": "MohammadRashid"
+ },
+ {
+  "project_name": "FateQuest",
+  "category": "XR & 3D",
+  "student": "Michiel Janssen",
+  "description": "Dit werk is een prototype dat aantoont hoe betekenisvolle quests in games procedureel gegenereerd kunnen worden op basis van spelerstatistieken. Het systeem past zich aan de speler aan, waardoor elke ervaring uniek en afgestemd is op individuele speelstijlen en voorkeuren.",
+  "id": "MichielJanssen"
+ },
+ {
+  "project_name": "Flowline",
+  "category": "Digital Design",
+  "student": "Jef Claeyé",
+  "description": "Deze kinetische installatie is er een met licht en beweging die data uit de game Formule 1 2024 visualiseert. De resulterende vormen en ritmes geven een fysieke en visuele representatie van de adrenaline, het gevaar en de snelheid in de race.",
+  "id": "JefClaeye"
+ },
+ {
+  "project_name": "Samply",
+  "category": "Web & Mobile",
+  "student": "Glory Menga",
+  "description": "Dit werk is een website waar producers en beatmakers een sample kunnen genereren door een prompt in te voeren. De gegenereerde sound kan vervolgens visueel worden aangepast in een 3D-omgeving, waardoor het creatieve proces intuïtiever en visueel ondersteund wordt.",
+  "id": "GloryMenga"
+ },
+ {
+  "project_name": "C.A.V.A.",
+  "category": "Web & Mobile",
+  "student": "Jorbe Geys",
+  "description": "Dit werk is een website die gebruikmaakt van een computer vision-model om afval over grote oppervlakten te detecteren en nauwkeurig in kaart te brengen. De toepassing richt zich op het zichtbaar maken van vervuiling met behulp van geautomatiseerde beeldherkenning.",
+  "id": "JorbeGeys"
+ },
+ {
+  "project_name": "Watch Out",
+  "category": "Digital Design",
+  "student": "Ernould Achille",
+  "description": "Dit werk is een interactieve VR-video die bestuurders confronteert met de risico’s van afleiding achter het stuur. Door zelf keuzes te maken binnen realistische situaties, ervaren kijkers op een directe en meeslepende manier hoe snel onoplettendheid tot gevaar kan leiden.",
+  "id": "ErnouldAchille"
+ },
+ {
+  "project_name": "Meowtracks",
+  "category": "Experience Design",
+  "student": "Rowan Biets - Mikolaj Buelens",
+  "description": "Dit werk is een slimme tracker die het activiteitsniveau, locatiegedrag en afwijkende bewegingen van een kat monitort. De verzamelde gegevens worden weergegeven aan de eigenaar via een applicatie die beschikbaar is voor zowel Android als iOS.",
+  "id": "RowanBiets-MikolajBuelens"
+ },
+ {
+  "project_name": "Social Balans",
+  "category": "Web & Mobile",
+  "student": "Wail El Majdoubi",
+  "description": "Dit werk is een mobiele welzijnsapp die jongeren ondersteunt bij het bewust verminderen van schermtijd. De app helpt hen om hun stemming te volgen en stap voor stap gezonde digitale gewoonten aan te leren, met aandacht voor balans tussen online en offline leven.",
+  "id": "WailElMajdoubi"
+ },
+ {
+  "project_name": "Hope",
+  "category": "XR & 3D",
+  "student": "Maxime Bastien",
+  "description": "Dit werk is een korte 2D game over her overkomen van eenzaamheid. De speler leert tijdens het spelen van de game hoe u met eenzaamheid om kunt gaan. Speler moeten interageren met verschillende zaken om de wereld van de protagonist kleurvoller en minder donker te maken.",
+  "id": "MaximeBastien"
+ },
+ {
+  "project_name": "NEUROBLOCKS",
+  "category": "XR & 3D",
+  "student": "Rémy Gistelinck",
+  "description": "Dit werk is een applicatie waarin spelers het opnemen tegen een A.I. in een aangepaste versie van Tetris. De game onderzoekt hoe kunstmatige intelligentie en menselijk spelgedrag elkaar beïnvloeden binnen een bekende en strategische spelomgeving.",
+  "id": "RemyGistelinck"
+ },
+ {
+  "project_name": "Under Pressure",
+  "category": "Experience Design ",
+  "student": "Freya De Vos",
+  "description": "Dit werk is een interactieve beleving die laat voelen hoe externe prikkels invloed hebben op je stressniveau. Door middel van audiovisuele elementen en responsieve omgevingen word je ondergedompeld in situaties waarin spanning opbouwt en je reacties worden getest. ",
+  "id": "FreyaDeVos"
+ },
+ {
+  "project_name": "Urban Echoes",
+  "category": "Digital Design",
+  "student": "Nicolas Buscemi",
+  "description": "Dit werk is een interactieve audiovisuele installatie die de spanning en paniek van agorafobie voelbaar maakt. Met realtime hartslagmetingen en visuele\/audio-elementen dompelt het bezoekers onder in de intense beleving van overprikkeling in drukke stedelijke omgevingen.",
+  "id": "NicolasBuscemi"
+ },
+ {
+  "project_name": "Tripli",
+  "category": "Web & Mobile",
+  "student": "Nelle Favoreel",
+  "description": "Dit werk is een familie-reisapp waarmee gezinnen eenvoudig reizen kunnen vastleggen, dag per dag plannen, foto’s uploaden en belevenissen delen. De app helpt iedereen overzicht te houden en samen herinneringen te creëren, zowel tijdens de voorbereiding als onderweg en na de reis.",
+  "id": "NelleFavoreel"
+ },
+ {
+  "project_name": "PC Build Sense",
+  "category": "XR & 3D",
+  "student": "Safwane Ahdi",
+  "description": "Dit werk is een interactieve PC-builder die educatie en immersie combineert: gebruikers bouwen met echte 3D-geprinte onderdelen, terwijl voice-overs stap voor stap uitleg geven. Technologie, ontwerp en fysiek spel smelten samen tot één meeslepende en leerzame ervaring.",
+  "id": "SafwaneAhdi"
+ },
+ {
+  "project_name": "Pseudo-wat?",
+  "category": "Web & Mobile",
+  "student": "Rachelle van Uden",
+  "description": "Dit werk is een interactief platform dat patiënten met de zeldzame ziekte Pseudomyxoma Peritonei op een toegankelijke manier informeert. Via duidelijke taal, 3D-visualisaties en een geruststellende toon biedt het houvast in de eerste fase na de diagnose.",
+  "id": "RachellevanUden"
+ },
+ {
+  "project_name": "ArtVision",
+  "category": "XR & 3D",
+  "student": "Ziad Aadim",
+  "description": "Dit werk is een mixed-reality applicatie op de Meta Quest 3 die gebruikers laat oefenen met tekenen in een virtuele ruimte. De toepassing combineert digitale technologie met creatieve expressie en biedt zo een nieuwe manier om met tekenen bezig te zijn.",
+  "id": "ZiadAadim"
+ },
+ {
+  "project_name": "Dalma AI",
+  "category": "Web & Mobile",
+  "student": "Kian Van den bussche",
+  "description": "Laat je fantasie tot leven komen door 2D afbeeldingen om te zetten naar 3D models! Heel simpel: upload een afbeelding, klik op \"generate\" en laat AI de rest van het werk doen. Binnen enkele minuten heb jij jouw unieke creatie in verschillende downloadformaten.",
+  "id": "KianVandenbussche"
+ },
+ {
+  "project_name": "TuinMeister",
+  "category": "Web & Mobile",
+  "student": "Mitch Saah",
+  "description": "Dit werk is een slim irrigatiesysteem met geïntegreerde app waarmee gebruikers hun planten op afstand kunnen beheren. Via een gekoppeld apparaat krijgen ze controle over bewatering en inzicht in de conditie van hun planten, voor eenvoudiger en efficiënter plantenonderhoud.",
+  "id": "MitchSaah"
+ },
+ {
+  "project_name": "SkillShareBuddy",
+  "category": "Web & Mobile",
+  "student": "Berkay Unutkan",
+  "description": "Dit werk is een lokale app waarmee buurtgenoten eenvoudig hun vaardigheden, kennis of hulp kunnen delen en ruilen. Vind of bied hulp aan in je eigen omgeving, van kleine klusjes tot kennisdeling, en bouw samen aan een sterkere, meer verbonden buurt.",
+  "id": "BerkayUnutkan"
+ },
+ {
+  "project_name": "Yalla",
+  "category": "Web & Mobile",
+  "student": "Taha Hasan",
+  "description": "Dit werk is een sociale zelfgroei-app die gebruikers helpt hun doelen op een ritmische en flexibele manier te bereiken. In plaats van streaks of beloningen ligt de focus op voortgang, authentiek delen en zachte verantwoordelijkheid binnen een veilige sociale omgeving.",
+  "id": "TahaHasan"
+ },
+ {
+  "project_name": "Linkup",
+  "category": "Web & Mobile",
+  "student": "Michaël Stoikos",
+  "description": "Dit werk is een platform waar multimedia freelancers hun vaardigheden één-op-één kunnen ruilen. Hierdoor kunnen ze samenwerken aan projecten en zo creatieve doelen realiseren zonder dat budgetten hen beperken, wat flexibiliteit en wederzijds leren stimuleert.",
+  "id": "MichaelStoikos"
+ },
+ {
+  "project_name": "Studie Match",
+  "category": "Web & Mobile",
+  "student": "Youssef Auassar",
+  "description": "Dit werk is een webplatform dat jongeren in het secundair onderwijs ondersteunt bij het vinden van een studierichting die aansluit bij hun persoonlijkheid. Het helpt hen beter inzicht te krijgen in hun interesses en mogelijkheden voor een passende studie.",
+  "id": "YoussefAuassar"
+ },
+ {
+  "project_name": "OceanScape",
+  "category": "XR & 3D",
+  "student": "Gregory Vettorel",
+  "description": "Dit werk is een zeilsimulatie waarbij je zelf bepaalt hoe realistisch de ervaring is via verschillende spelmodi. Of je nu een doorgewinterde schipper bent of voor het eerst virtueel aan boord stapt, OceanScape laat je het zeilen echt beleven.",
+  "id": "GregoryVettorel"
+ },
+ {
+  "project_name": "Keratoconus",
+  "category": "Web & Mobile",
+  "student": "Nabras Ahmad",
+  "description": "Dit werk is een website die op interactieve wijze informatie geeft over de oogaandoening keratoconus. U krijgt inzicht in symptomen, verloop en behandelmogelijkheden, met als doel het bewustzijn te vergroten en complexe medische informatie toegankelijk en begrijpelijk te maken.",
+  "id": "NabrasAhmad"
+ },
+ {
+  "project_name": "BeeldBox",
+  "category": "Experience Design",
+  "student": "Tuur Van Bergen",
+  "description": "Dit werk is een intuïtieve plug-&-play tool waarmee leerlingen via fysieke knoppen digitaal ontwerpen en direct analoog printen, zodat ze in een stressvrije, experimentele omgeving spelenderwijs hun creativiteit en basisprincipes van grafisch ontwerp ontdekken.",
+  "id": "TuurVanBergen"
+ },
+ {
+  "project_name": "Save The Planet",
+  "category": "XR & 3D",
+  "student": "Sabri Imnadine",
+  "description": "Dit werk is een educatief 2D-spel voor jongeren van 11 tot 15 jaar. Via quests en minigames leren spelers over milieuproblemen zoals vervuiling, ontbossing en energiegebruik. Het spel is speels, leerzaam en stimuleert bewustwording over het klimaat.",
+  "id": "SabriImnadine"
+ },
+ {
+  "project_name": "EcoRise City",
+  "category": "XR & 3D",
+  "student": "Jasper Vanhaelen",
+  "description": "Dit werk is een mobiele city builder game waarin spelers een milieuvriendelijke stad bouwen. De game focust op duurzame keuzes en wil vooral jongeren bewust maken van het belang van milieuvriendelijkheid en ecologisch verantwoorde keuzes.",
+  "id": "JasperVanhaelen"
+ },
+ {
+  "project_name": "urban oasis",
+  "category": "Experience Design ",
+  "student": "Folkert Debonnet",
+  "description": "Dit werk is een installatie die op openbare plekken in de stad kan worden opgezet, in deze installatie kan je ontprikkelen en rust en kalmte te vinden. Dit word gedaan met realtime weerdata die word omgezet in beeld, licht en geluid.",
+  "id": "FolkertDebonnet"
+ },
+ {
+  "project_name": "MindMatch",
+  "category": "XR & 3D",
+  "student": "Bram Eylenbosch",
+  "description": "Dit werk helpt ouderen met geheugenondersteuning en dagelijkse structuur. Door persoonlijke foto's toe te voegen aan het memory spel, blijft familie herkenbaar en dichtbij. Met aanvullende functies zoals taken en notities is het een waardevolle dagelijkse begeleider.",
+  "id": "BramEylenbosch"
+ },
+ {
+  "project_name": "Auditieve fotoreeks",
+  "category": "Experience Design",
+  "student": "Wannes Lambeens",
+  "description": "Dit werkstuk is een interactieve installatie waarin een soundscape wordt gegenereerd op basis van data uit een gekozen foto. Het resultaat is een zintuiglijke ervaring waarin geluid en bijpassende visuals samen een nieuw narratief vormen.",
+  "id": "WannesLambeens"
+ },
+ {
+  "project_name": "Skillswap",
+  "category": "Web & Mobile",
+  "student": "Abdella Boutaarourt",
+  "description": "Dit werk is een innovatief skill-sharingplatform waar gebruikers hun vaardigheden kunnen aanbieden, ontdekken en combineren met die van anderen om samen nieuwe kansen en samenwerkingen te creëren.",
+  "id": "AbdellaBoutaarourt"
+ },
+ {
+  "project_name": "Codeucation",
+  "category": "Web & Mobile",
+  "student": "Ryan Vankriekinge",
+  "description": "Dit werk is een educatief platform dat leraren informatica ondersteunt bij het onderwijzen van Python in het secundair onderwijs. Het biedt hulp, zelfs wanneer hun eigen programmeerkennis beperkt is, zodat ze toch met vertrouwen les kunnen geven in coderen.",
+  "id": "RyanVankriekinge"
+ },
+ {
+  "project_name": "Lexora",
+  "category": "Web & Mobile",
+  "student": "Stephan Van Hemelrijck",
+  "description": "Dit werk is een mobiele applicatie die taalverwerving ondersteunt met behulp van artificiële intelligentie. Gebruikers krijgen gepersonaliseerde leerpaden en kunnen oefenen via AI-gestuurde conversaties, wat zorgt voor een leerervaring die aansluit bij hun niveau en interesses.",
+  "id": "StephanVanHemelrijck"
+ },
+ {
+  "project_name": "Missed Connection",
+  "category": "Digital Design",
+  "student": "Amber Frederickx",
+  "description": "Eenzaamheid onder jongvolwassenen is een wereldwijd gezondheidsprobleem. Deze installatie laat je het leven van een student ervaren en toont hoe eenzaamheid er vandaag uitziet, zodat studenten hun eigen gevoelens kunnen herkennen en beseffen dat ze niet alleen zijn.",
+  "id": "AmberFrederickx"
+ },
+ {
+  "project_name": "Buren voor Buren",
+  "category": "Web & Mobile",
+  "student": "Kobe Berckmans",
+  "description": "Dit project is een digitaal platform voor Buren voor Buren dat hulpvragen vlot laat beheren via een toegankelijke website en efficiënte mobiele app voor vrijwilligers en coördinatoren.",
+  "id": "KobeBerckmans"
+ },
+ {
+  "project_name": "Powerlink",
+  "category": "Web & Mobile",
+  "student": "Driesen Marten",
+  "description": "Dit werk is een educatieve app voor het tekenen van (residentiële) elektronische schakelingen. Gebruikers kunnen circuits online delen. Leerkrachten kunnen klassen aanmaken, uploadzones instellen voor opdrachten en rechtstreeks feedback geven op ingediende taken van leerlingen.",
+  "id": "DriesenMarten"
+ }
 ]
