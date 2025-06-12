@@ -14,7 +14,7 @@
 
 h3 {
 	color: white;
-	font-size: 12px;
+	font-size: 15px;
 }
 
 p {
@@ -29,8 +29,8 @@ p {
 	left: 10px;
 	color: white;
 	position: absolute;
-	width: 150px;
-	height: 40px;
+	width: 200px;
+	height: 50px;
 	background-color: #e61453;
 	align-items: flex-end;
 	padding: 20px 40px;
@@ -41,8 +41,8 @@ p {
 }
 
 .program-title img {
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 }
 .program-img {
 	border-radius: 10px;
@@ -88,9 +88,8 @@ p {
 		margin: 0 auto;
 	}
 	.program-img {
-		width: 400px;
 		height: 200px;
-		width: 100%;
+		width: 500px;
 	}
 }
 
@@ -99,7 +98,7 @@ p {
 	.inner-wrapper {
 		margin: 0 auto;
 	}
-	
+
 	p {
 		font-size: 10pt;
 	}
