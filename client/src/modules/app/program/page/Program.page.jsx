@@ -26,7 +26,11 @@ export const Program = () => {
 									<div className="popup-content" style={{ backgroundColor: "#e61453" }} onMouseLeave={() => togglePopup(0)}>
 										<h3> Medialab</h3>
 										<p>Welkom bij de opening van het onthaal! Hier begint jouw Expo 2025 ervaring.</p>
+											<span className="close" onClick={togglePopup}>
+										&times;
+									</span>
 									</div>
+								
 								</div>
 							)}
 						</div>
@@ -41,12 +45,14 @@ export const Program = () => {
 							{activePopup === 1 && (
 								<div className="popup">
 									<div className="popup-content" style={{ backgroundColor: "#C169AA" }} onMouseLeave={() => togglePopup(1)}>
-
 										<h3> Medialab</h3>
 										<p>
 											Loop doorheen de campus om alle eindprojecten van de derde jaars te zien, en vote nadien op je favoriete project bij de voting
 											machine.
 										</p>
+										<span className="close" onClick={togglePopup}>
+											&times;
+										</span>
 									</div>
 								</div>
 							)}
@@ -62,9 +68,11 @@ export const Program = () => {
 							{activePopup === 2 && (
 								<div className="popup">
 									<div className="popup-content" style={{ backgroundColor: "#EC6230" }} onMouseLeave={() => togglePopup(2)}>
-										
 										<h3> Medialab</h3>
 										<p>Ontdek innovatieve ontwerpen tijdens de keychain showcase!</p>
+										<span className="close" onClick={togglePopup}>
+											&times;
+										</span>
 									</div>
 								</div>
 							)}
@@ -80,10 +88,12 @@ export const Program = () => {
 							{activePopup === 3 && (
 								<div className="popup">
 									<div className="popup-content" style={{ backgroundColor: "#667BC4" }} onMouseLeave={() => togglePopup(3)}>
-										
 										<h3> Medialab</h3>
 										<p>Spring in een andere werkelijkheid en hou deze ervaring bij in de vorm van een foto.</p>
 									</div>
+									<span className="close" onClick={togglePopup}>
+										&times;
+									</span>
 								</div>
 							)}
 						</div>
@@ -98,10 +108,12 @@ export const Program = () => {
 							{activePopup === 4 && (
 								<div className="popup">
 									<div className="popup-content" style={{ backgroundColor: "#C169AA" }} onMouseLeave={() => togglePopup(4)}>
-										
 										<h3> Agora</h3>
 										<p>Bij deze awardshow worden meerdere prijzen uitgedeeld aan de beste projecten van de derdejaars </p>
 									</div>
+									<span className="close" onClick={togglePopup}>
+										&times;
+									</span>
 								</div>
 							)}
 						</div>
