@@ -62,8 +62,8 @@ export const Program = () => {
 
 					<div className="program-container">
 						<h2>17:00 - 18:00</h2>
-						<div className="program-title" style={{ backgroundColor: "#EC6230" }}>
-							<h3>Showcase keychain</h3>
+						<div className="program-title" style={{ backgroundColor: "#EC6230"  }}>
+							<h3 >Showcase keychain Shift</h3>
 							<img src="/info-icon.svg" alt="" onMouseOver={() => togglePopup(2)} />
 							{activePopup === 2 && (
 								<div className="popup">
