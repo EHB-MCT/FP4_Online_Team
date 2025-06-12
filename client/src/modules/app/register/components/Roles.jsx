@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 //Components
-import InputField from "./InputField.jsx";
+import InputField from "../../../shared/inputfield/InputField.jsx";
 
 const Roles = ( { className, InputName, Mandatory, Placeholder, onChange} ) => {
 
@@ -50,7 +50,7 @@ const Roles = ( { className, InputName, Mandatory, Placeholder, onChange} ) => {
 
     return(
         <div className="input-item-wrapper">
-            <h4>{ InputName } *</h4>
+            <h3 style={{textAlign: "start"}}>{ InputName } *</h3>
             <select 
                 name={ className } 
                 id={ className } 
@@ -58,7 +58,7 @@ const Roles = ( { className, InputName, Mandatory, Placeholder, onChange} ) => {
                 required={Mandatory} 
                 onChange={handleSelectChange}
             >
-                <option value="" disabled selected>Selecteer rol</option>
+                <option value="" disabled selected>Selecteer</option>
                 <option value="student">Student</option>
                 <option value="staff-ehb">Docent / Personeel EHB</option>
                 <option value="parents-friends">Ouders / Vrienden</option>

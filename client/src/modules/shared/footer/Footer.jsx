@@ -15,8 +15,13 @@ export const Footer = () => {
         <footer>
             <div className="inner-wrapper">
                 <div className="footer-left-wrapper">
-                    <NavLink to='/' ><img src={Image} className='logo' alt="Logo of the event" /></NavLink>
-                    <p>Erasmus Hogeschool Brussel - 2025</p>
+                    <NavLink to='/' ><img className="logo-shift" src={Image} alt="Logo of the event" /></NavLink>
+                    <div className="footer-event-info">
+                        <p>Erasmushogeschool Brussel - 2025</p>
+                        <p>Nijverheidskaai 170, 1070 Anderlecht</p>
+                        <p>20 juni 2025</p>
+                        <p>17:00 &gt; 22:00</p>
+                    </div>
                 </div>
                 <div className="footer-right-wrapper">
                     <Button 
@@ -28,8 +33,13 @@ export const Footer = () => {
                         <a target='_blank' href="https://www.erasmushogeschool.be/nl/opleidingen/multimedia-en-creatieve-technologie"><img src="/ehb-logo-wit.png" className='socials-ehb' alt="logo-school" /></a>
                         <a target='_blank' href="https://www.linkedin.com/school/erasmushogeschool-brussel/posts/?feedView=all"><img src="/linkedin.svg" className='socials' alt="Logo linkedin" /></a>
                         <a target='_blank' href="https://www.instagram.com/multimedia.ehb/"><img src="/instagram.svg" className='socials' alt="Logo instagram" /></a>
-                        <a target='_blank' href="https://www.tiktok.com/@erasmushogeschool"><img src="/tiktok.svg" className='socials' alt="Logo tiktok" /></a>
+                        <a target='_blank' href="https://www.tiktok.com/@multimedia.ehb"><img src="/tiktok.svg" className='socials' alt="Logo tiktok" /></a>
                     </div>
+                    {/* <div className="footer-policy">
+                        <NavLink to={"#"}>Cookie policy</NavLink>
+                        <p>-</p>
+                        <NavLink to={"#"}>Privacy policy</NavLink>
+                    </div> */}
                 </div>
             </div>
         </footer>

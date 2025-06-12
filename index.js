@@ -230,6 +230,7 @@ app.post("/api/submit-register-form", (req, res) => {
 				}
 
 				res.status(200).json({ message: "Data inserted successfully" });
+				getAttendeeCountAndBroadcast();
 				sendEmail(email, firstName);
 			});
 		});
@@ -257,6 +258,57 @@ app.get("/api/counter", (req, res) => {
 		});
 	});
 });
+
+app.get('/api/attendee-stream', (req, res) => {
+	res.set({
+		'Content-Type': 'text/event-stream',
+		'Cache-Control': 'no-cache',
+		'Connection': 'keep-alive',
+	});
+	res.flushHeaders();
+
+	clients.push(res);
+
+	createSshTunnelAndConnection((err, connection) => {
+		if (!err) {
+			connection.query("SELECT SUM(num_attendees) AS total FROM event_registrations", (err, results) => {
+				connection.end();
+				if (!err) {
+					const count = results[0].total;
+					res.write(`data: ${JSON.stringify({ count })}\n\n`);
+				}
+			});
+		}
+	});
+
+	req.on('close', () => {
+		const index = clients.indexOf(res);
+		if (index !== -1) clients.splice(index, 1);
+	});
+});
+
+const getAttendeeCountAndBroadcast = () => {
+	createSshTunnelAndConnection((err, connection) => {
+		if (err) return console.error("Error counting attendees:", err);
+
+		const countQuery = "SELECT SUM(num_attendees) AS total FROM event_registrations";
+		connection.query(countQuery, (err, results) => {
+			connection.end();
+			if (err) return console.error("Count query failed:", err);
+
+			const count = results[0].total;
+			broadcastAttendeeCount(count);
+		});
+	});
+};
+
+// Your broadcast function
+const clients = [];
+
+const broadcastAttendeeCount = (count) => {
+	const data = `data: ${JSON.stringify({ count })}\n\n`;
+	clients.forEach((client) => client.write(data));
+};
 
 // Starten app
 app.listen(3000, () => {
