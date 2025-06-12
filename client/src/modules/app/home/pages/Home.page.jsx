@@ -19,8 +19,7 @@ import { INFO_ROUTE } from "../../info/info.route.jsx";
 
 //CSS
 import styles from "./home.module.scss";
-import { ProjectCard } from "../../../shared/ProjectCard/ProjectCard.jsx";
-import { FaqDropdown } from "../../../shared/faq-dropdown/FaqDropdown.jsx";
+import { FaqDropdown } from "../../../shared/faq-section/components/faq-dropdown/FaqDropdown.jsx";
 
 //video
 import { heroVideo } from "../../../utils/index.js";
