@@ -8,7 +8,7 @@ section .pink-wrapper {
 		position: relative;
 		overflow: hidden;
 		width: 100%;
-		height: 75dvh;
+		height: 100dvh;
 		background: none;
 		background-color: transparent;
 
@@ -119,33 +119,54 @@ section .pink-wrapper {
 }
 
 .projects-preview-wrapper {
-	margin-top: -35dvh;
+	// margin-top: -35dvh;
 
-	&--background-image-top-left {
-		background-image: url("/left_image.png");
-		background-repeat: no-repeat;
-		background-position: 0% 6%;
-		background-size: 30%;
+	// &--background-image-top-left {
+	// 	background-image: url("/left_image.png");
+	// 	background-repeat: no-repeat;
+	// 	background-position: 0% 6%;
+	// 	background-size: 30%;
 
-		&--background-image-top-right {
-			background-image: url("/right_image.png");
-			background-repeat: no-repeat;
-			background-position: 100% 6%;
-			background-size: 20%;
-		}
-	}
+	// 	&--background-image-top-right {
+	// 		background-image: url("/right_image.png");
+	// 		background-repeat: no-repeat;
+	// 		background-position: 100% 6%;
+	// 		background-size: 20%;
+	// 	}
+	// }
 
 	&--projects-inner-wrapper {
-		padding-top: 30dvh !important;
-		width: 250px !important;
+		// padding-top: 30dvh !important;
+		width: 100% !important;
 		margin: 0 auto;
 
-		&--projects-carousel {
-			display: grid;
-			grid-template-columns: repeat(1, 1fr);
-			gap: 40px;
-		}
+        &--project-category-wrapper{
+            width: 100vw;
+            overflow-x: scroll;
+
+            &--projects-horizontal-wrapper{
+                margin-left: 5%;
+                width: fit-content;
+                display: flex;
+                gap: 50px;
+                padding-right: 5%;
+                padding-bottom: 32px;
+
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &--button-wrapper{
+            display: flex;
+            justify-content: center;
+        }
 	}
+
 }
 
 .teaser-video-wrapper {
@@ -219,7 +240,7 @@ section .pink-wrapper {
 		&--projects-inner-wrapper {
 			width: 80% !important;
 			&--projects-carousel {
-				grid-template-columns: repeat(2, 1fr);
+				// grid-template-columns: repeat(2, 1fr);
 			}
 		}
 	}
@@ -242,7 +263,7 @@ section .pink-wrapper {
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			text-align: left;
+			text-align: start;
 		}
 
 		// &--background-image-top-left{
@@ -300,13 +321,24 @@ section .pink-wrapper {
 	}
 
 	.projects-preview-wrapper {
-		&--background-image-top-left {
-			background-position: 0% 20%;
-			background-size: 20%;
+		// &--background-image-top-left {
+		// 	background-position: 0% 20%;
+		// 	background-size: 20%;
 
-			&--background-image-top-right {
-				background-position: 100% 20%;
-				background-size: 16%;
+		// 	&--background-image-top-right {
+		// 		background-position: 100% 20%;
+		// 		background-size: 16%;
+		// 	}
+		// }
+		.projects-preview-wrapper {
+			&--background-image-top-left {
+				background-position: 0% 20%;
+				background-size: 20%;
+
+				&--background-image-top-right {
+					background-position: 100% 20%;
+					background-size: 16%;
+				}
 			}
 		}
 	}
@@ -344,7 +376,7 @@ section .pink-wrapper {
 .projects-center-btn {
 	display: flex;
 	justify-content: center;
-	margin-top: 2rem; // adds space above button, adjust as you like
+	margin-top: 2rem; 
 }
 
 @media (min-width: 1200px) {
@@ -352,18 +384,18 @@ section .pink-wrapper {
 		&--projects-inner-wrapper {
 			width: 100%;
 			&--projects-carousel {
-				grid-template-columns: repeat(3, 1fr);
+				// grid-template-columns: repeat(3, 1fr);
 			}
 		}
 
-		&--background-image-top-left {
-			background-position: 0% 0%;
-			background-size: 20%;
+		// &--background-image-top-left {
+		// 	background-position: 0% 0%;
+		// 	background-size: 20%;
 
-			&--background-image-top-right {
-				background-position: 100% 0%;
-				background-size: 16%;
-			}
-		}
+		// 	&--background-image-top-right {
+		// 		background-position: 100% 0%;
+		// 		background-size: 16%;
+		// 	}
+		// }
 	}
 }
