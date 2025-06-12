@@ -19,13 +19,19 @@ export const ProjectsDetail = () => {
 	const [award_ids, setAwardIds] = useState([]);
 	const [popupVisibility, setPopupVisibility] = useState(false);
 	const [project_id, setProjectId] = useState(null);
-
+	const [isMobile, setIsMobile] = useState(null)
+ 
 	const { id } = useParams();
 	console.log(id)
 	const { data: project, isLoading } = useProjectWithIdData(id);
 
 	useEffect(() => {
-		setProjectId(1)
+		// setProjectId(1)
+		if(window.innerWidth < "767px"){
+			setIsMobile(true)
+		}else{
+			setIsMobile(true)
+		}
 	}, [])
 
 	const handleOpenVotePopup = () => {
@@ -64,7 +70,7 @@ export const ProjectsDetail = () => {
 	return (
 		<>
 			<section className={clsx(styles["project-detail-wrapper"])}>
-				<div className="inner-wrapper">
+				<div className={ isMobile !== true ? "inner-wrapper" : "" }>
 					{/* <NextProject /> */}
 					{/* {
 						verified && 
@@ -152,7 +158,7 @@ export const ProjectsDetail = () => {
 
 					<div className={clsx(styles["project-detail-wrapper--main-wrapper"])}>
 						<div className={clsx(styles["project-detail-wrapper--main-wrapper--project-header"])}>
-							<h1 className="black-text">{ project && project[0].project_name }</h1>
+							<h1 className={clsx(styles["project-detail-wrapper--main-wrapper--project-header--title"], "black-text")}>{ project && project[0].project_name }</h1>
 							<h4 className="black-text">{ project && project[0].student }</h4>
 						</div>
 						<div className={clsx(styles["project-detail-wrapper--main-wrapper--project-image"])}>
@@ -191,7 +197,7 @@ export const ProjectsDetail = () => {
 									src="https://www.youtube.com/embed/ifv5pC7-qtI?si=c5xuW800eOxgKMQb&enablejsapi=1&origin=https%3A%2F%2Fwww.erasmushogeschool.be"
 									width="100%"
 									height="100%" 
-									style={{ border: "0", borderRadius: "20px"}} 
+									style={{ border: "0"}} 
 									allowFullScreen={ true } 
 									loading="lazy" 
 									referrerPolicy="no-referrer-when-downgrade"
