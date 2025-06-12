@@ -58,10 +58,10 @@ export const Root = () => {
 					path: PROJECTS_ROUTE.path,
 					element: PROJECTS_ROUTE.element
 				},
-				// {
-				// 	path: PROJECTSDETAIL_ROUTE.path,
-				// 	element: PROJECTSDETAIL_ROUTE.element,
-				// },
+				{
+					path: PROJECTSDETAIL_ROUTE.path,
+					element: PROJECTSDETAIL_ROUTE.element,
+				},
 				{
 					path: REGISTER_ROUTE.path,
 					element: REGISTER_ROUTE.element,

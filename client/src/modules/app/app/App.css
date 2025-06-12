@@ -124,6 +124,9 @@ a {
 .black-text{
 	color: var(--font-color)
 }
+.blue-text{
+	color: var(--blue-color);
+}
 
 .blue-wrapper{
 	background-color: var(--blue-color);
