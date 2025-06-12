@@ -1,11 +1,13 @@
 import clsx from "clsx";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router";
 
 //Components
 import { NextProject } from "../components/NextProject";
 
 //Hooks
-import { useVerified } from "../../../shared/const/context/VerifiedContext/VerifiedContext";
+// import { useVerified } from "../../../shared/const/context/VerifiedContext/VerifiedContext";
+import { useProjectWithIdData } from "../../../shared/const/hooks/getProjectWithId.hook";
 
 //CSS
 import styles from "./projectDetail.module.scss"
@@ -17,6 +19,12 @@ export const ProjectsDetail = () => {
 	const [award_ids, setAwardIds] = useState([]);
 	const [popupVisibility, setPopupVisibility] = useState(false);
 	const [project_id, setProjectId] = useState(null);
+
+	const { id } = useParams();
+	console.log(id)
+	const { data } = useProjectWithIdData(id);
+
+	console.log(data);
 
 	useEffect(() => {
 		setProjectId(1)
@@ -42,17 +50,17 @@ export const ProjectsDetail = () => {
 	const handleVoteRequest = () => {
 		console.log("selected award", award_ids, project_id);
 		
-		fetch(`https://api.shiftfestival.be/api/vote`, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			credentials: 'include',
-			body: JSON.stringify({
-				award_ids,
-				project_id
-			})
-		})
+		// fetch(`https://api.shiftfestival.be/api/vote`, {
+		// 	method: "POST",
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 	},
+		// 	credentials: 'include',
+		// 	body: JSON.stringify({
+		// 		award_ids,
+		// 		project_id
+		// 	})
+		// })
 	}
 
 	return (

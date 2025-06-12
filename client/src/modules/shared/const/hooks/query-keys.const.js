@@ -1,4 +1,5 @@
 export const SHARED_QUERY_KEYS = {
     projects: ['projects'],
-    counter: ['counter']
+    projectsWithId: ["projectsWithId"],
+    counter: ['counter'],
 }
