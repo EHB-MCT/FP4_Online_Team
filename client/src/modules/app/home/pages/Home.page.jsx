@@ -58,7 +58,7 @@ export const Home = () => {
             <section className={clsx(styles["projects-preview-wrapper"])}>
                 <div className={clsx(styles["projects-preview-wrapper--background-image-top-left"])}>
                     <div className={clsx(styles["projects-preview-wrapper--background-image-top-left--background-image-top-right"])}>
-                        <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper"], "inner-wrapper")}>
+                        <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper"],)}>
                             <h2>Eindprojecten</h2>
                             <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper--projects-carousel"])}>
                                 { isLoading ? (<p>Loading...</p>) : (
