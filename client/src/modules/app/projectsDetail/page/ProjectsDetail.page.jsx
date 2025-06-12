@@ -19,7 +19,7 @@ export const ProjectsDetail = () => {
 	const [award_ids, setAwardIds] = useState([]);
 	const [popupVisibility, setPopupVisibility] = useState(false);
 	const [project_id, setProjectId] = useState(null);
-	const [isMobile, setIsMobile] = useState(null)
+	const [isMobile, setIsMobile] = useState(false)
  
 	const { id } = useParams();
 	console.log(id)
@@ -27,10 +27,10 @@ export const ProjectsDetail = () => {
 
 	useEffect(() => {
 		// setProjectId(1)
-		if(window.innerWidth < "767px"){
+		if(window.innerWidth < 767){
 			setIsMobile(true)
 		}else{
-			setIsMobile(true)
+			setIsMobile(false)
 		}
 	}, [])
 
@@ -188,6 +188,9 @@ export const ProjectsDetail = () => {
 										{
 											project && project[0].description
 										}
+										{
+											project && project[0].description
+										}
 									</p>
 								</div>
 							</div>
@@ -207,12 +210,6 @@ export const ProjectsDetail = () => {
 						<div className={clsx(styles["project-detail-wrapper--main-wrapper--magazine-wrapper"])}>
 							{/* Magazine */}
 						</div>
-						{/* <p>
-							{
-								project && project[0].description
-							}
-						</p>
-						<img src="homepage-image.png" alt="" /> */}
 					</div>
 				</div>
 			</section>

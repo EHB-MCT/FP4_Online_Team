@@ -227,6 +227,23 @@
 
                         max-height: 328px;
                         overflow-y: auto;
+                        /* Custom scrollbar styles */
+                        &::-webkit-scrollbar {
+                            width: 8px;
+                            background: transparent;
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background: #ffffff31;
+                            border-radius: 8px;
+                        }
+
+                        &::-webkit-scrollbar-track {
+                            background: transparent;
+                        }
+
+                        scrollbar-color: #ffffff6a transparent;
+                        scrollbar-width: thin;
                     }
                 }
 
