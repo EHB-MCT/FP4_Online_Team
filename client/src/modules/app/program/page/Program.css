@@ -12,7 +12,7 @@
 	}
 }
 
-.inner-wrapper h3 {
+h3 {
 	color: white;
 	font-size: 15px;
 }
@@ -87,10 +87,6 @@ p {
 		max-width: 550px;
 		margin: 0 auto;
 	}
-
-	.inner-wrapper h3{
-		font-size:15px;
-	}
 	.program-img {
 		height: 200px;
 		width: 500px;
@@ -105,9 +101,6 @@ p {
 
 	p {
 		font-size: 10pt;
-	}
-	.inner-wrapper h3{
-		font-size:16pt;
 	}
 }
 
@@ -130,9 +123,9 @@ p {
 		}
 	}
 
-	.inner-wrapper h3{
+	h3 {
 		color: white;
-		font-size:14pt;
+		font-size: 16pt;
 	}
 	p {
 		font-size: 14pt;
