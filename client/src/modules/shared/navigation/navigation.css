@@ -27,7 +27,6 @@
 
 .dropdown-link:hover {
 	background-color: #f0f0f0;
-
 	border-radius: 5px;
 }
 .nav-links {
@@ -147,6 +146,12 @@ nav .inner-wrapper {
 
 .navigation--home {
 	background: #ee4478;
+	
+	
+}
+.navigation--home .dropdown-link:hover{
+		background-color: #f0f0f0;
+		color: #000;
 }
 
 .navigation--home .nav-links li a {
