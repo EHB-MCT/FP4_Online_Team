@@ -61,6 +61,7 @@ const Carousel = () => {
 							}}
 						>
 							<ProjectCard
+								id={ p.id }
 								projectName={p.projectName}
 								name={p.name}
 								highlighted={isCenter}

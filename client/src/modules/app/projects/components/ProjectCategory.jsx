@@ -16,6 +16,7 @@ export const ProjectCategory = ({ data, title }) => {
                     {
                         data.map((project) => (
                             <ProjectCard
+                                id={ project.id }
                                 key={ project.student }
                                 project_name={ project.project_name }
                                 student={ project.student }

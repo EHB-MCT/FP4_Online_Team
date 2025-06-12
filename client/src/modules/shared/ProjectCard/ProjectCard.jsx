@@ -6,7 +6,7 @@ import styles from "./projectCard.module.scss";
 import { useEffect, useState } from "react";
 
 
-export const ProjectCard = ({ project_name, student, banner_image, project_category }) => {
+export const ProjectCard = ({ id ,project_name, student, banner_image, project_category }) => {
 
 	const [projectColor, setProjectColor] = useState("")
 
@@ -26,7 +26,7 @@ export const ProjectCard = ({ project_name, student, banner_image, project_categ
     return (
         
 		<div className={clsx(styles["card-wrapper"])}>
-			<NavLink to={ "#" }>
+			<NavLink to={ `/project/${id}` }>
 				<div 
 					className={clsx(styles["card-wrapper--image-wrapper"])}
 					style={{ paddingBottom: "8px", backgroundColor: projectColor }}

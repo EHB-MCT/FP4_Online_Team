@@ -69,6 +69,7 @@ export const Home = () => {
                                     { isLoading ? (<p>Loading...</p>) : (
                                         projects.map((project) => (
                                             <ProjectCard
+                                                id={ project.id }
                                                 key={project.project_name}
                                                 project_name={ project.project_name }
                                                 student={ project.student }

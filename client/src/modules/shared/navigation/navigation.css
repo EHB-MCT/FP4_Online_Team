@@ -13,6 +13,10 @@
 	min-width: 200px;
 }
 
+.home-link img{
+	width: 100px;
+}
+
 .dropdown-link {
 	display: block;
 	padding: 10px 15px;
@@ -73,7 +77,8 @@
 	transition: background 0.6s, box-shadow 0.3s;
 }
 .nav-spacer {
-	margin-top: 8%;
+	margin-top: 7%;
+	font-family: var(--main-font);
 }
 .hamburger-menu {
 	display: none;
@@ -152,5 +157,12 @@ nav .inner-wrapper {
 	}
 	.hamburger-bar {
 		background: #000000;
+	}
+}
+
+
+@media(min-width: 1024px){
+	.home-link img{
+		width: 150px;
 	}
 }

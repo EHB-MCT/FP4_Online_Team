@@ -6,9 +6,6 @@ import LogoWhite from "/Logo_white.svg";
 
 import "./navigation.css";
 
-
-import "./navigation.css";
-
 export const NavigationFase2 = () => {
 
 	const location = useLocation();
