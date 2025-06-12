@@ -1,11 +1,10 @@
 .program-container {
 	position: relative;
 	margin-bottom: 150px;
-	
 
-	p {
+	h2 {
 		position: absolute;
-		top: -40px;
+		top: -80px;
 		left: 0;
 		font-weight: bold;
 		margin: 0;
@@ -13,24 +12,66 @@
 	}
 }
 
+.title {
+	color: black;
+}
 .program-title {
 	position: absolute;
-	top: -10px;
+	text-align: left;
+	top: 10px;
 	left: 10px;
-	background-color: #ddd;
-	padding: 10px 40px;
-	border-radius: 8px;
+	color: white;
+	width: 300px;
+	height: 80px;
+	background-color: #e61453;
+	align-items: flex-end;
+	padding: 20px 40px;
+	border-radius: 15px;
 	z-index: 2;
+	display: flex;
 	margin: 0;
 }
 
+.program-title img {
+	width: 40px;
+	height: 40px;
+}
 .program-img {
 	border-radius: 10px;
-    aspect-ratio: 2.5;
-    margin-left: 180px;
-    margin-top:20px;
-    overflow:  hidden;
-    object-fit: cover;
-	
+	margin-left: 180px;
+	width: 700px;
+	height: 300px;
+	margin-top: 70px;
+	overflow: hidden;
+	object-fit: cover;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
 }
 
+.popup-content {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	max-width: 400px;
+	text-align: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+
+.popup .close {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 24px;
+	cursor: pointer;
+}
