@@ -230,10 +230,10 @@ export const Home = () => {
 								]
 							)}
 						>
-							<h2 className="white-text" style={{ textAlign: "start" }}>
+							<h2 className="black-text" style={{ textAlign: "start" }}>
 								Programma
 							</h2>
-							<p className="white-text">
+							<p className="black-text">
 								Ontdek onze programma van de festival en al onze workshops
 							</p>
 							<Button
