@@ -1,19 +1,26 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { useState, useEffect } from "react";
-import Image from "/Shift_Logo.svg";
+import LogoBlack from "/Shift_Logo.svg";
+import LogoWhite from "/Logo_white.svg";
 
 import "./navigation.css";
 
 export const NavigationFase2 = () => {
+	const location = useLocation();
+	const isHome = location.pathname === "/" || location.pathname === "/#";
+
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
 
 	useEffect(() => {
 		const nav = document.querySelector(".navigation");
 		const onScroll = () => {
 			if (window.scrollY > 10) {
 				nav.classList.add("scrolled");
+				setIsScrolled(true);
 			} else {
 				nav.classList.remove("scrolled");
+				setIsScrolled(false);
 			}
 		};
 		window.addEventListener("scroll", onScroll);
@@ -22,10 +29,10 @@ export const NavigationFase2 = () => {
 
 	return (
 		<div className="nav-spacer">
-			<nav className="navigation">
+			<nav className={`navigation${isHome ? " navigation--home" : ""}`}>
 				<div className="inner-wrapper">
 					<Link to="/" className="home-link">
-						<img src={Image} alt="logo event" />
+						<img src={isHome && !isScrolled ? LogoWhite : LogoBlack} alt="logo event" />
 					</Link>
 
 					<ul className="nav-links">
@@ -72,7 +79,31 @@ export const NavigationFase2 = () => {
 							</Link>
 						</li>
 					</ul>
+					<button className="hamburger-menu" aria-label="Open navigation" onClick={() => setIsDropdownOpen((open) => !open)}>
+						<span className="hamburger-bar"></span>
+						<span className="hamburger-bar"></span>
+						<span className="hamburger-bar"></span>
+					</button>
 				</div>
+				{isDropdownOpen && (
+					<ul className="mobile-nav-links">
+						<li>
+							<Link to="/program" className="link" onClick={() => setIsDropdownOpen(false)}>
+								Programma
+							</Link>
+						</li>
+						<li>
+							<Link to="/projects" className="link" onClick={() => setIsDropdownOpen(false)}>
+								Eindprojecten
+							</Link>
+						</li>
+						<li>
+							<Link to="/info" className="link" onClick={() => setIsDropdownOpen(false)}>
+								Info
+							</Link>
+						</li>
+					</ul>
+				)}
 			</nav>
 		</div>
 	);
