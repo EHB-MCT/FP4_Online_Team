@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { useState } from "react";
-import Image from "/Logo.svg";
+import Image from "/Logo_white.svg";
 import Button from "../button/Button.jsx";
 
 import "./navigation.css";
