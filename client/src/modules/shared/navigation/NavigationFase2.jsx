@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router";
 import { useState, useEffect } from "react";
 import LogoBlack from "/Shift_Logo.svg";
