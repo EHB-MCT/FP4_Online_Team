@@ -1,12 +1,11 @@
 import { createHashRouter, RouterProvider } from "react-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-
 //Components
 import App from "../app/App";
 
 //Routes
-import { AUTH_TEACHER_ROUTE} from "../teachervoting/authenticate/authenticate.route";
+import { AUTH_TEACHER_ROUTE } from "../teachervoting/authenticate/authenticate.route";
 import { COUNTER_ROUTE } from "../counter/counter.route";
 import { ERROR_ROUTE } from "../error/error.route";
 import { HOME_ROUTE } from "../home/home.route";
@@ -21,7 +20,6 @@ import { REQUEST_TOKEN_ROUTE } from "../teachervoting/requestToken/requestToken.
 import { AWARDS_ROUTE } from "../awards/awards.route";
 
 export const Root = () => {
-
 	const QUERY_CLIENT = new QueryClient();
 
 	const ROUTE = createHashRouter([
@@ -55,7 +53,7 @@ export const Root = () => {
 				// },
 				{
 					path: PROJECTS_ROUTE.path,
-					element: PROJECTS_ROUTE.element
+					element: PROJECTS_ROUTE.element,
 				},
 				// {
 				// 	path: PROJECTSDETAIL_ROUTE.path,
@@ -70,12 +68,11 @@ export const Root = () => {
 				// 	element: VOTING_ROUTE.element,
 				// },
 
-				// {
-				// 	path: INFO_ROUTE.path,
-				// 	element: INFO_ROUTE.element,
-				// },
-
-			]
+				{
+					path: INFO_ROUTE.path,
+					element: INFO_ROUTE.element,
+				},
+			],
 		},
 		{
 			path: "/voteReGRfguugXNEmMm/",
@@ -88,13 +85,13 @@ export const Root = () => {
 				{
 					path: REQUEST_TOKEN_ROUTE.path,
 					element: REQUEST_TOKEN_ROUTE.element,
-				}
-			]
-		}
+				},
+			],
+		},
 	]);
 
 	return (
-		<QueryClientProvider client={ QUERY_CLIENT }>
+		<QueryClientProvider client={QUERY_CLIENT}>
 			<RouterProvider router={ROUTE} />
 		</QueryClientProvider>
 	);
