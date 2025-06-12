@@ -2,7 +2,6 @@ import clsx from "clsx";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router";
 
-
 //Components
 import Button from "../../../shared/button/Button.jsx";
 import CountDown from "../components/countdown/CountDown.jsx";
@@ -14,7 +13,7 @@ import { useProjectsData } from "../../../shared/const/hooks/getProjectsData.hoo
 
 //Routes
 import { INFO_ROUTE } from "../../info/info.route.jsx";
-import { PROJECTS_ROUTE } from "../../projects/projects.route.jsx"
+import { PROJECTS_ROUTE } from "../../projects/projects.route.jsx";
 import { PROGRAM_ROUTE } from "../../program/program.route.jsx";
 
 //CSS
@@ -46,28 +45,21 @@ export const Home = () => {
 						<source src="hero.mp4" type="video/mp4" />
 					</video>
 					<div
-						className={clsx(
-							styles["pink-wrapper--large-wrapper--hero-wrapper"],
-							"inner-wrapper"
-						)}
+						className={clsx(styles["pink-wrapper--large-wrapper--hero-wrapper"], "inner-wrapper")}
 					>
-						<div
-							className={clsx(
-								styles["pink-wrapper--large-wrapper--hero-wrapper--hero"]
-							)}
-						>
+						<div className={clsx(styles["pink-wrapper--large-wrapper--hero-wrapper--hero"])}>
 							<h4>
 								Expo 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20
 								juni&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Campus Kaai
 							</h4>
 							<CountDown />
-							<p className="white-text">
-								Kom de afstudeerprojecten van onze derdejaarsstudenten …
-							</p>
+							<p className="white-text">Kom de afstudeerprojecten van onze derdejaarsstudenten …</p>
 							<Button
 								destinationUrl={"/register"}
 								copy={"Inschrijven"}
 								className={"button"}
+								color={"#FFF"}
+								hoverColor={"#FFF"}
 							/>
 							<div className={clsx(styles["hero--mouse-wrapper"])}>
 								<img src="/scroll-icon.png" alt="" />
@@ -78,32 +70,55 @@ export const Home = () => {
 			</section>
 
 			<div className={clsx(styles["projects-preview-wrapper--background-image-top-left"])}>
-                <div className={clsx(styles["projects-preview-wrapper--background-image-top-left--background-image-top-right"])}>
-                    <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper"])}>
-                        <h2>Eindprojecten</h2>
-                        <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper--project-category-wrapper"])}>
-                            <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper--project-category-wrapper--projects-horizontal-wrapper"])}>
-                                { isLoading ? (<p>Loading...</p>) : (
-                                    projects.map((project) => (
-                                        <ProjectCard
-                                            id={ project.id }
-                                            key={project.project_name}
-                                            project_name={ project.project_name }
-                                            student={ project.student }
-                                            banner_image={ project.banner_image }
-                                            project_category={ project.category }
-                                        />
-                                    ))                                    
-                                )}
-                            </div>
-                            <div className="spacer" style={{width: "145vw"}}></div>
-                        </div>
-                        <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper--button-wrapper"])}>
-                            <NavLink to={ PROJECTS_ROUTE.path } target="_blank" className="blue-button">Ontdek</NavLink>
-                        </div>
-                    </div>
-                </div>
-            </div>
+				<div
+					className={clsx(
+						styles[
+							"projects-preview-wrapper--background-image-top-left--background-image-top-right"
+						]
+					)}
+				>
+					<div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper"])}>
+						<h2>Eindprojecten</h2>
+						<div
+							className={clsx(
+								styles["projects-preview-wrapper--projects-inner-wrapper--project-category-wrapper"]
+							)}
+						>
+							<div
+								className={clsx(
+									styles[
+										"projects-preview-wrapper--projects-inner-wrapper--project-category-wrapper--projects-horizontal-wrapper"
+									]
+								)}
+							>
+								{isLoading ? (
+									<p>Loading...</p>
+								) : (
+									projects.map((project) => (
+										<ProjectCard
+											id={project.id}
+											key={project.project_name}
+											project_name={project.project_name}
+											student={project.student}
+											banner_image={project.banner_image}
+											project_category={project.category}
+										/>
+									))
+								)}
+							</div>
+							<div className="spacer" style={{ width: "145vw" }}></div>
+						</div>
+						<div
+							className={clsx(
+								styles["projects-preview-wrapper--projects-inner-wrapper--button-wrapper"]
+							)}
+						>
+							{/* <NavLink to={ PROJECTS_ROUTE.path } target="_blank" className="blue-button">Ontdek</NavLink> */}
+							<Button destinationUrl={PROJECTS_ROUTE.path} copy={"Ontdek"} className={"button"} />
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<section className={clsx(styles["practical-info-wrapper"])}>
 				<div
@@ -112,38 +127,24 @@ export const Home = () => {
 						"inner-wrapper"
 					)}
 				>
-					<div
-						className={clsx(
-							styles["practical-info-wrapper--practical-info-text-wrapper"]
-						)}
-					>
-						<h2
-							className="white-text"
-							style={{ textAlign: "start", margin: "0" }}
-						>
+					<div className={clsx(styles["practical-info-wrapper--practical-info-text-wrapper"])}>
+						<h2 className="white-text" style={{ textAlign: "start", margin: "0" }}>
 							Shift festival 2025
 						</h2>
 						<p style={{ margin: 0 }}>
-							Welkom bij Shift, de expo waar innovatie, design en creativiteit
-							samenkomen! Dit unieke festival biedt een podium aan de
-							afstudeerprojecten van onze derdejaarsstudenten, waarbij
-							baanbrekende ideeën en vernieuwende technologieën worden
-							gepresenteerd. Daarnaast worden ook de beste werken van studenten
-							uit alle jaren tentoongesteld.
+							Welkom bij Shift, de expo waar innovatie, design en creativiteit samenkomen! Dit
+							unieke festival biedt een podium aan de afstudeerprojecten van onze
+							derdejaarsstudenten, waarbij baanbrekende ideeën en vernieuwende technologieën worden
+							gepresenteerd. Daarnaast worden ook de beste werken van studenten uit alle jaren
+							tentoongesteld.
 						</p>
 					</div>
 
-					<div
-						className={clsx(
-							styles["practical-info-wrapper--practical-info-location-wrapper"]
-						)}
-					>
+					<div className={clsx(styles["practical-info-wrapper--practical-info-location-wrapper"])}>
 						<img src="/homepage-image.png" alt="foto van ehb" />
 						<div
 							className={clsx(
-								styles[
-									"practical-info-wrapper--practical-info-location-wrapper--specific-info"
-								]
+								styles["practical-info-wrapper--practical-info-location-wrapper--specific-info"]
 							)}
 						>
 							<div
@@ -171,11 +172,7 @@ export const Home = () => {
 									<br />
 									Campus Kaai
 								</p>
-								<Button
-									destinationUrl={ INFO_ROUTE.path }
-									copy={"Meer info"}
-									className={"button"}
-								/>
+								<Button destinationUrl={INFO_ROUTE.path} copy={"Meer info"} className={"button"} />
 							</div>
 						</div>
 					</div>
@@ -184,18 +181,10 @@ export const Home = () => {
 
 			<section className={clsx(styles["large-info-wrapper"])}>
 				<div className="inner-wrapper">
-					<div
-						className={clsx(
-							styles["large-info-wrapper--programma-info-wrapper"]
-						)}
-					>
+					<div className={clsx(styles["large-info-wrapper--programma-info-wrapper"])}>
 						<img src="programma-img.jpg" alt="" />
 						<div
-							className={clsx(
-								styles[
-									"large-info-wrapper--programma-info-wrapper--programma-info"
-								]
-							)}
+							className={clsx(styles["large-info-wrapper--programma-info-wrapper--programma-info"])}
 						>
 							<h2 className="black-text" style={{ textAlign: "start" }}>
 								Programma
@@ -203,11 +192,7 @@ export const Home = () => {
 							<p className="black-text">
 								Ontdek onze programma van de festival en al onze workshops
 							</p>
-							<Button
-								destinationUrl={ PROGRAM_ROUTE.path}
-								copy={"Programma"}
-								className={"button"}
-							/>
+							<Button destinationUrl={PROGRAM_ROUTE.path} copy={"Programma"} className={"button"} />
 						</div>
 					</div>
 				</div>
@@ -223,24 +208,18 @@ export const Home = () => {
 				</div>
 			</section>
 
-			<section
-				className={clsx(styles["large-info-wrapper"], styles["orange-wrapper"])}
-			>
+			<section className={clsx(styles["large-info-wrapper"], styles["orange-wrapper"])}>
 				<div className="inner-wrapper">
 					<div className={clsx(styles["large-info-wrapper--mct-info-wrapper"])}>
 						<div className="mct-info">
-							<h2 className="white-text">
-								Multimedia en Creatieve technologie
-							</h2>
+							<h2 className="white-text">Multimedia en Creatieve technologie</h2>
 							<p className="white-text">
-								Multimedia & Creatieve Technologie is een veelzijdige
-								studierichting waarin technologie en creativiteit samenkomen.
-								Studenten leren interactieve en digitale ervaringen ontwerpen,
-								ontwikkelen en realiseren met tools zoals webdesign, animatie,
-								AR/VR, videoproductie en programmeren. De focus ligt op
-								innovatie, storytelling en technische vaardigheden, waardoor
-								afgestudeerden klaar zijn voor een carrière in de creatieve en
-								digitale sector.
+								Multimedia & Creatieve Technologie is een veelzijdige studierichting waarin
+								technologie en creativiteit samenkomen. Studenten leren interactieve en digitale
+								ervaringen ontwerpen, ontwikkelen en realiseren met tools zoals webdesign, animatie,
+								AR/VR, videoproductie en programmeren. De focus ligt op innovatie, storytelling en
+								technische vaardigheden, waardoor afgestudeerden klaar zijn voor een carrière in de
+								creatieve en digitale sector.
 							</p>
 							<a
 								href="https://www.erasmushogeschool.be/nl/opleidingen/multimedia-en-creatieve-technologie"
