@@ -17,6 +17,7 @@ import { PROJECTS_ROUTE } from "../projects/projects.route";
 import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
 import { REGISTER_ROUTE } from "../register/register.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
+import { PROGRAM_ROUTE } from "../program/program.route";
 import { REQUEST_TOKEN_ROUTE } from "../teachervoting/requestToken/requestToken.route";
 import { AWARDS_ROUTE } from "../awards/awards.route";
 
@@ -70,9 +71,13 @@ export const Root = () => {
 				// 	element: VOTING_ROUTE.element,
 				// },
 
+				// {
+				// 	path: INFO_ROUTE.path,
+				// 	element: INFO_ROUTE.element,
+				// },
 				{
-					path: INFO_ROUTE.path,
-					element: INFO_ROUTE.element,
+					path: PROGRAM_ROUTE.path,
+					element: PROGRAM_ROUTE.element,
 				},
 
 			]
