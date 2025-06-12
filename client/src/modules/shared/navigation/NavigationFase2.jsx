@@ -22,8 +22,7 @@ export const NavigationFase2 = () => {
 	}, []);
 
 	return (
-		<>
-			<div className="nav-spacer"></div>
+		<div className="nav-spacer">
 			<nav className="navigation">
 				<div className="inner-wrapper">
 					<Link to="/" className="home-link">
@@ -76,6 +75,6 @@ export const NavigationFase2 = () => {
 					</ul>
 				</div>
 			</nav>
-		</>
+		</div>
 	);
 };

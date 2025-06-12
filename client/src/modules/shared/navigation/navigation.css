@@ -57,12 +57,14 @@
 		rgba(255, 255, 255, 0.1)
 	); */
 	background: transparent;
+	
 }
 
 .navigation.scrolled {
-	background: rgba(255, 255, 255, 0.99); /* or any color/gradient you want */
+	background: rgba(255, 255, 255, 0.98); /* or any color/gradient you want */
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-	transition: background 0.8s, box-shadow 0.3s;
+	transition: background 0.6s, box-shadow 0.3s;
+	
 }
 .nav-spacer {
 	margin-top: 150px;
