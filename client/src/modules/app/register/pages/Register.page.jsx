@@ -51,8 +51,8 @@ export const Register = () => {
 		} catch (error) {
 			console.error("Error submitting form:", error);
 
-			let errorMessage = error.response.request.response;
-			const parsedMessage = JSON.parse(errorMessage);
+			// let errorMessage = error.response.request.response;
+			// const parsedMessage = JSON.parse(errorMessage);
 
 			Swal.fire({
 				title: "Oeps!",

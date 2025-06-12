@@ -8,24 +8,19 @@ import React, { useState, useEffect } from "react";
 import App from "../app/App";
 
 //Routes
-import { AWARDS_ROUTE } from "../awards/awards.route";
-import { AUTH_TEACHER_ROUTE } from "../teachervoting/authenticate/authenticate.route";
+import { AUTH_TEACHER_ROUTE} from "../teachervoting/authenticate/authenticate.route";
 import { COUNTER_ROUTE } from "../counter/counter.route";
 import { ERROR_ROUTE } from "../error/error.route";
 import { HOME_ROUTE } from "../home/home.route";
-import { HOMETWO_ROUTE } from "../homeTwo/homeTwo.route";
 import { INFO_ROUTE } from "../info/info.route";
-import { MAGAZINE_ROUTE } from "../magazine/magazine.route";
 import { PRICE_ROUTE } from "../price/price.route";
 import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
 import { PROJECTS_ROUTE } from "../projects/projects.route";
 import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
 import { REGISTER_ROUTE } from "../register/register.route";
-
-import { PROGRAM_ROUTE } from "../program/program.route";
-
-import { REQUEST_TOKEN_ROUTE } from "../teachervoting/requestToken/requestToken.route";
 import { VOTING_ROUTE } from "../voting/voting.route";
+import { VOTING_DASHBOARD_ROUTE } from "../teachervoting/votingDashboard/VotingDashboard.route";
+import { PROGRAM_ROUTE } from "../program/program.route";
 
 export const Root = () => {
 
@@ -66,10 +61,6 @@ export const Root = () => {
 			element: <App />,
 			children: [
 				{
-					path: AWARDS_ROUTE.path,
-					element: AWARDS_ROUTE.element,
-				},
-				{
 					path: COUNTER_ROUTE.path,
 					element: COUNTER_ROUTE.element,
 				},
@@ -81,17 +72,13 @@ export const Root = () => {
 					path: HOME_ROUTE.path,
 					element: HOME_ROUTE.element,
 				},
-				// {
-				// 	path: PRICE_ROUTE.path,
-				// 	element: PRICE_ROUTE.element,
-				// },
-				// {
-				// 	path: PRIVACY_POLICY_ROUTE.path,
-				// 	element: PRIVACY_POLICY_ROUTE.element,
-				// },
+				{
+					path: PROGRAM_ROUTE.path,
+					element: PROGRAM_ROUTE.element
+				},
 				{
 					path: PROJECTS_ROUTE.path,
-					element: PROJECTS_ROUTE.element,
+					element: PROJECTS_ROUTE.element
 				},
 				{
 					path: PROJECTSDETAIL_ROUTE.path,
@@ -104,25 +91,17 @@ export const Root = () => {
 				{
 					path: VOTING_DASHBOARD_ROUTE.path,
 					element: VOTING_DASHBOARD_ROUTE.element
-				}
+				},
 				// {
 				// 	path: VOTING_ROUTE.path,
 				// 	element: VOTING_ROUTE.element,
 				// },
-
 				{
 					path: INFO_ROUTE.path,
 					element: INFO_ROUTE.element,
 				},
-				{
-					path: MAGAZINE_ROUTE.path,
-					element: MAGAZINE_ROUTE.element,
-				},
-				{
-					path: PROGRAM_ROUTE.path,
-					element: PROGRAM_ROUTE.element,
-				},
-			],
+
+			]
 		},
 		{
 			path: "/voteReGRfguugXNEmMm/",
@@ -132,13 +111,8 @@ export const Root = () => {
 					path: AUTH_TEACHER_ROUTE.path,
 					element: AUTH_TEACHER_ROUTE.element,
 				},
-
-				{
-					path: REQUEST_TOKEN_ROUTE.path,
-					element: REQUEST_TOKEN_ROUTE.element,
-				},
-			],
-		},
+			]
+		}
 	]);
 
 	return (
