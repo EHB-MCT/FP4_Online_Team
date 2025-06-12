@@ -1,11 +1,14 @@
+
 import clsx from "clsx";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router";
 
 //Components
 import { NextProject } from "../components/NextProject";
 
 //Hooks
-import { useVerified } from "../../../shared/const/context/VerifiedContext/VerifiedContext";
+// import { useVerified } from "../../../shared/const/context/VerifiedContext/VerifiedContext";
+import { useProjectWithIdData } from "../../../shared/const/hooks/getProjectWithId.hook";
 
 //CSS
 import styles from "./projectDetail.module.scss"
@@ -17,9 +20,19 @@ export const ProjectsDetail = () => {
 	const [award_ids, setAwardIds] = useState([]);
 	const [popupVisibility, setPopupVisibility] = useState(false);
 	const [project_id, setProjectId] = useState(null);
+	const [isMobile, setIsMobile] = useState(false)
+ 
+	const { id } = useParams();
+	console.log(id)
+	const { data: project, isLoading } = useProjectWithIdData(id);
 
 	useEffect(() => {
-		setProjectId(1)
+		// setProjectId(1)
+		if(window.innerWidth < 767){
+			setIsMobile(true)
+		}else{
+			setIsMobile(false)
+		}
 	}, [])
 
 	const handleOpenVotePopup = () => {
@@ -42,25 +55,24 @@ export const ProjectsDetail = () => {
 	const handleVoteRequest = () => {
 		console.log("selected award", award_ids, project_id);
 		
-		fetch(`https://api.shiftfestival.be/api/vote`, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			credentials: 'include',
-			body: JSON.stringify({
-				award_ids,
-				project_id
-			})
-		})
+		// fetch(`https://api.shiftfestival.be/api/vote`, {
+		// 	method: "POST",
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 	},
+		// 	credentials: 'include',
+		// 	body: JSON.stringify({
+		// 		award_ids,
+		// 		project_id
+		// 	})
+		// })
 	}
 
 	return (
 		<>
 			<section className={clsx(styles["project-detail-wrapper"])}>
-				<div className="inner-wrapper">
-					<NextProject />
-					{
+				<div className={ isMobile !== true ? "inner-wrapper" : "" }>
+					{/* {
 						verified && 
 						<div className={clsx(styles["project-detail-wrapper--voting-wrapper"])} >
 							<button
@@ -142,18 +154,64 @@ export const ProjectsDetail = () => {
 							</div>
 						</div>
 
-					}
+					} */}
 
-					<div>
-						<h2>Project naam</h2>
-						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, dolores aliquam voluptates voluptatum optio dicta eveniet excepturi consequatur suscipit delectus, doloribus repudiandae quia, nobis velit facere autem labore corporis nulla.
-							Tenetur, perferendis doloremque tempore ipsam consectetur ea est ipsum consequatur voluptatem, voluptatibus nihil voluptates nulla deleniti quam excepturi ex odit nobis consequuntur quidem obcaecati cum nostrum. Ullam laudantium tempore suscipit.
-						</p>
-						<img src="homepage-image.png" alt="" />
+					<div className={clsx(styles["project-detail-wrapper--main-wrapper"])}>
+						<div className={clsx(styles["project-detail-wrapper--main-wrapper--project-header"])}>
+							<h1 className={clsx(styles["project-detail-wrapper--main-wrapper--project-header--title"], "black-text")}>{ project && project[0].project_name }</h1>
+							<h4 className="black-text">{ project && project[0].student }</h4>
+						</div>
+						{/* <NextProject /> */}
+						<div className={clsx(styles["project-detail-wrapper--main-wrapper--project-image"])}>
+							<img src="homepage-image.png" alt="foto van het eindwerk" />
+						</div>
+						<div className={clsx(styles["project-detail-wrapper--main-wrapper--main-section"])}>
+							<div className={clsx(styles["project-detail-wrapper--main-wrapper--main-section--left-wrapper"])}>
+								<div className={clsx(styles["project-detail-wrapper--main-wrapper--main-section--left-wrapper--summary-wrapper"])}>
+									<div className={clsx(styles["project-detail-wrapper--main-wrapper--main-section--left-wrapper--summary-wrapper--info-wrapper"])}>
+										{/* Promotor */}
+										<p style={{fontSize: "16pt"}}>Promotor</p>
+										<p className="blue-text" style={{fontSize: "18pt"}}>Naam Achternaam</p>
+									</div>
+									<div className={clsx(styles["project-detail-wrapper--main-wrapper--main-section--left-wrapper--summary-wrapper--info-wrapper"])}>
+										<p style={{fontSize: "16pt"}}>Categorie</p>
+										<span className={clsx(styles["project-detail-wrapper--main-wrapper--main-section--left-wrapper--summary-wrapper--info-wrapper--category-tag"])}>
+											{ project && project[0].category }
+										</span>
+									</div>
+									<div className={clsx(styles["project-detail-wrapper--main-wrapper--main-section--left-wrapper--summary-wrapper--info-wrapper"])} style={{marginBottom: "0"}}>
+										<a href="https://www.linkedin.com/feed/"><img src="icons/linkedin.svg" alt="Link naar linkedin van de student" /></a>
+									</div>
+								</div>
+								<div className={clsx(styles["project-detail-wrapper--main-wrapper--main-section--left-wrapper--description-wrapper"])}>
+									<p className="white-text" style={{fontSize: "16pt"}}>Beschrijving</p>
+									<p className="white-text">
+										{
+											project && project[0].description
+										}
+									</p>
+								</div>
+							</div>
+							<div className={clsx(styles["project-detail-wrapper--main-wrapper--main-section--right-wrapper"])}>
+								< iframe
+									className={clsx(styles["project-detail-wrapper--main-wrapper--main-section--right-wrapper--teaser-video"])}
+									src="https://www.youtube.com/embed/ifv5pC7-qtI?si=c5xuW800eOxgKMQb&enablejsapi=1&origin=https%3A%2F%2Fwww.erasmushogeschool.be"
+									width="100%"
+									height="100%" 
+									style={{ border: "0"}} 
+									allowFullScreen={ true } 
+									loading="lazy" 
+									referrerPolicy="no-referrer-when-downgrade"
+								/>
+							</div>
+						</div>
+						<div className={clsx(styles["project-detail-wrapper--main-wrapper--magazine-wrapper"])}>
+							{/* Magazine */}
+						</div>
 					</div>
 				</div>
 			</section>
 		</>
+
 	);
 };

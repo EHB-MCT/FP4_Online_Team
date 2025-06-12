@@ -1,3 +1,5 @@
+import data from './data/projects.json'
+
 class ProjectsService {
 
     async getProjectsData(){
@@ -12,9 +14,11 @@ class ProjectsService {
 
         const DATA = await response.json();
 
-        console.log(DATA)
+        data.sort(() => Math.random() - 0.5);
 
-        return DATA
+        console.log(data)
+
+        return data
     }
 }
 

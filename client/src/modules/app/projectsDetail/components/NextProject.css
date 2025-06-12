@@ -5,7 +5,8 @@
 	padding: 0;
 	margin: 0;
 	align-items: center;
-	font-size: 18pt;
+	font-size: 14pt;
+	margin: 0 auto;
 }
 .small-container {
 	display: flex;
@@ -15,6 +16,65 @@
 }
 
 .small-container h2 {
-	font-size: 18pt;
+	font-size: 12pt;
 	margin-right: 10px;
 }
+
+
+.image {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%; /* Full width */
+	margin-top: 24px;
+	margin-bottom: 40px;
+	min-height: 360px; /* ensures space for the circle overlap */
+}
+
+.banner-image {
+	width: 900px; /* Or use 90vw for responsiveness */
+	max-width: 95vw;
+	height: 320px; /* Fixed height for banner */
+	background: #fff;
+	border: 1.5px solid #222;
+	border-radius: 16px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Make image fit banner exactly */
+.banner-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Ensures the image covers the area, cropping as needed */
+	display: block;
+}
+
+/* Overlapping circle */
+.banner-circle img {
+	position: absolute;
+	left: calc(50% - 450px - 60px); /* 50% - half banner width - circle offset */
+	bottom: -60px;
+	width: 160px;
+	height: 160px;
+	background: #fff;
+	border: 1.5px solid #222;
+	border-radius: 50%;
+	z-index: 2;
+}
+
+
+
+@media(max-width: 768px){
+	.large-container{
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+

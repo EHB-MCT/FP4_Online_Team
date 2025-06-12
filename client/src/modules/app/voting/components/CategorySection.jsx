@@ -16,7 +16,7 @@ export const CategorySection = ({ title, projects }) => {
 				}}
 			>
 				{projects.map((p, i) => (
-					<ProjectCard key={i} projectName={p.projectName} name={p.name} />
+					<ProjectCard key={i} id={p.id} projectName={p.projectName} name={p.name} />
 				))}
 			</div>
 		</section>
