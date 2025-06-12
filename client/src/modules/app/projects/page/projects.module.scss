@@ -18,8 +18,11 @@
             &--filter-button-wrapper{
                 display: flex;
                 justify-content: space-between;
+                gap: 20px;
                 width: 100%;
                 margin: 24px;
+
+                overflow-x: auto;
             }
         }
     }
@@ -51,19 +54,3 @@
     }
 }
 
-
-
-
-// @media(min-width: 768px){
-//     .projects-wrapper{
-//         grid-template-columns: repeat(2, 1fr);
-//         gap: 32px;
-//     }
-// }
-
-// @media(min-width: 1024px){
-//     .projects-wrapper{
-//         grid-template-columns: repeat(3, 1fr);
-//         gap: 32px;
-//     }
-// }
