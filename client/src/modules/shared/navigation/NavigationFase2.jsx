@@ -1,7 +1,14 @@
 import { Link, useLocation } from "react-router";
 import { useState, useEffect } from "react";
+
+//SVG
 import LogoBlack from "/Shift_Logo.svg";
 import LogoWhite from "/Logo_white.svg";
+
+//Routes
+import { INFO_ROUTE } from "../../app/info/info.route";
+import { PROGRAM_ROUTE } from "../../app/program/program.route";
+import { PROJECTS_ROUTE } from "../../app/projects/projects.route";
 
 import "./navigation.css";
 
@@ -40,7 +47,7 @@ export const NavigationFase2 = () => {
 					<ul className="nav-links">
 						<li>
 
-							<Link to="/program" className="link">
+							<Link to={ PROGRAM_ROUTE.path } className="link">
 
 								Programma
 							</Link>
@@ -48,7 +55,7 @@ export const NavigationFase2 = () => {
 
 						<li className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
 							<span className="link cursor-pointer">
-								<Link to="/projects" className="link">
+								<Link to={ PROJECTS_ROUTE.path } className="link">
 
 									Eindprojecten ▾
 
@@ -81,7 +88,7 @@ export const NavigationFase2 = () => {
 						</li>
 
 						<li>
-							<Link to="/info" className="link">
+							<Link to={ INFO_ROUTE.path } className="link">
 								Info
 							</Link>
 						</li>
@@ -95,17 +102,17 @@ export const NavigationFase2 = () => {
 				{isDropdownOpen && (
 					<ul className="mobile-nav-links">
 						<li>
-							<Link to="/program" className="link" onClick={() => setIsDropdownOpen(false)}>
+							<Link to={ PROGRAM_ROUTE.path } className="link" onClick={() => setIsDropdownOpen(false)}>
 								Programma
 							</Link>
 						</li>
 						<li>
-							<Link to="/projects" className="link" onClick={() => setIsDropdownOpen(false)}>
+							<Link to={ PROJECTS_ROUTE.path } className="link" onClick={() => setIsDropdownOpen(false)}>
 								Eindprojecten
 							</Link>
 						</li>
 						<li>
-							<Link to="/info" className="link" onClick={() => setIsDropdownOpen(false)}>
+							<Link to={ INFO_ROUTE.path } className="link" onClick={() => setIsDropdownOpen(false)}>
 
 								Info
 							</Link>

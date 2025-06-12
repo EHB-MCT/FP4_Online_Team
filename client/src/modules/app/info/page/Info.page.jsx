@@ -9,6 +9,7 @@ import styles from "./info.module.scss";
 import homeStyles from "../../home/pages/home.module.scss";
 import { strToU8 } from "three/examples/jsm/libs/fflate.module.js";
 import { AwardsInfo } from "../components/AwardsInfo";
+import { Timetable } from "../../../shared/timetable/Timetable";
 
 export const Info = () => {
 	return (
@@ -134,6 +135,8 @@ export const Info = () => {
 					</div>
 				</div>
 			</section>
+
+			<Timetable />
 
 			<FaqSection />
 		</>

@@ -2,7 +2,7 @@ import "./timetable.css";
 
 export const Timetable = () => {
 	return (
-		<div className="timetable">
+		<div className="timetable inner-wrapper">
 			<h2>Time table</h2>
 
 			<div className="timetable-grid">
@@ -22,22 +22,19 @@ export const Timetable = () => {
 				<div className="timetable-content">
 					<div className="time-column">
 						<div>
-							<h3>17h</h3>
+							<h3 className="black-text">17h</h3>
 						</div>
 						<div>
-							<h3>18h</h3>
+							<h3 className="black-text">18h</h3>
 						</div>
 						<div>
-							<h3>19h</h3>
+							<h3 className="black-text">19h</h3>
 						</div>
 						<div>
-							<h3>20h</h3>
+							<h3 className="black-text">20h</h3>
 						</div>
 						<div>
-							<h3>21h</h3>
-						</div>
-						<div>
-							<h3>22h</h3>
+							<h3 className="black-text">21h</h3>
 						</div>
 					</div>
 
