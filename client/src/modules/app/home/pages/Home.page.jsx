@@ -1,6 +1,5 @@
 import { Canvas } from "@react-three/fiber";
 import clsx from "clsx";
-import gsap from "gsap";
 import { useState, useEffect } from "react";
 
 //Models
@@ -51,7 +50,7 @@ export const Home = () => {
 			>
 				<div className={clsx(styles["pink-wrapper--large-wrapper"])}>
 					<video autoPlay muted loop playsInline key={heroVideo}>
-						<source src="test.mp4" type="video/mp4" />
+						<source src="hero.mp4" type="video/mp4" />
 					</video>
 					<div
 						className={clsx(
@@ -88,52 +87,38 @@ export const Home = () => {
 			<section className={clsx(styles["projects-preview-wrapper"])}>
 				<div
 					className={clsx(
-						styles["projects-preview-wrapper--background-image-top-left"]
+						styles["projects-preview-wrapper--projects-inner-wrapper"],
+						"inner-wrapper"
 					)}
 				>
+					<h2>Eindprojecten</h2>
 					<div
 						className={clsx(
 							styles[
-								"projects-preview-wrapper--background-image-top-left--background-image-top-right"
+								"projects-preview-wrapper--projects-inner-wrapper--projects-carousel"
 							]
 						)}
 					>
-						<div
-							className={clsx(
-								styles["projects-preview-wrapper--projects-inner-wrapper"],
-								"inner-wrapper"
-							)}
-						>
-							<h2>Eindprojecten</h2>
-							<div
-								className={clsx(
-									styles[
-										"projects-preview-wrapper--projects-inner-wrapper--projects-carousel"
-									]
-								)}
-							>
-								{isLoading ? (
-									<p>Loading...</p>
-								) : (
-									projects.map((project) => (
-										<ProjectCard
-											key={project.project_name}
-											project_name={project.project_name}
-											student={project.student}
-											banner_image={project.banner_image}
-											project_category={project.category}
-										/>
-									))
-								)}
-							</div>
-							<div className={styles["projects-center-btn"]}>
-								<Button
-									destinationUrl={"#"}
-									copy={"Programma"}
-									className={"button"}
+						{isLoading ? (
+							<p>Loading...</p>
+						) : (
+							projects.map((project) => (
+								<ProjectCard
+									key={project.project_name}
+									project_name={project.project_name}
+									student={project.student}
+									banner_image={project.banner_image}
+									project_category={project.category}
 								/>
-							</div>
-						</div>
+							))
+						)}
+					</div>
+					<div className={styles["projects-center-btn"]}>
+						<Button
+							destinationUrl={"#"}
+							copy={"Programma"}
+							className={"button"}
+						/>
 					</div>
 				</div>
 			</section>
