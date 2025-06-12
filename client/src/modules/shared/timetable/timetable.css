@@ -1,0 +1,178 @@
+.timetable {
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.timetable-grid {
+	display: grid;
+	gap: 1rem;
+	min-width: 1200px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.timetable-header {
+	display: grid;
+	grid-template-columns: 80px repeat(3, 1fr);
+	gap: 1rem;
+}
+
+.timetable-header h3 {
+	color: #fff;
+}
+
+.timetable-header > div {
+	border-radius: 12px;
+	padding: 0.15rem 0.75rem;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.timetable-header .workshop-column {
+	background-color: #ff5722;
+	width: calc(100% - 1rem);
+}
+
+.timetable-header .live-column {
+	background-color: #7986cb;
+	width: calc(100% - 1rem);
+}
+
+.timetable-header .catering-column {
+	background-color: #7986cb;
+	width: calc(100% - 1rem);
+	padding: 0.15rem 0.5rem;
+}
+
+.timetable-content {
+	display: grid;
+	grid-template-columns: 80px repeat(3, 1fr);
+	gap: 1rem;
+	height: 500px;
+	position: relative;
+}
+
+/* Workshop */
+.workshop-events {
+	position: relative;
+	grid-column: 2;
+	height: 100%;
+}
+
+.keychain-event {
+	position: absolute;
+	top: 0%; /* 17h */
+	height: 33.33%; /* Duration 1h */
+	width: calc(50% - 0.5rem);
+	background-color: #ff5722;
+}
+
+.photobooth-event {
+	position: absolute;
+	top: 0%; /* 17h */
+	left: calc(50% + 0.5rem);
+	height: 33.33%; /* Duration 1h */
+	width: calc(50% - 0.5rem);
+	background-color: #ff5722;
+}
+
+/* Live show */
+.live-column {
+	position: relative;
+	grid-column: 3;
+	height: 100%;
+}
+
+.award-show {
+	position: absolute;
+	top: 41.67%; /* 19h30 */
+	height: 16.67%; /* Duration 1h */
+	width: 100%;
+	background-color: #7986cb;
+	margin-bottom: 1rem;
+}
+
+.vj-set {
+	position: absolute;
+	top: calc(58.33% + 1rem); /* 20h30 plus margin */
+	height: 22.3%; /* Until 22h */
+	width: 100%;
+	background-color: #7986cb;
+}
+
+/* Catering */
+.catering-wrapper {
+	position: relative;
+	grid-column: 4;
+	height: 100%;
+}
+
+.bbq {
+	position: absolute;
+	top: 0; /* 17h */
+	height: 50%; /* Until 20h */
+	width: calc(50% - 0.75rem);
+	background-color: #7986cb;
+}
+
+.bar {
+	position: absolute;
+	top: 0; /* 17h */
+	right: 0;
+	height: 83.33%; /* Until 22h */
+	width: calc(50% - 0.75rem);
+	background-color: #7986cb;
+}
+
+.event {
+	border-radius: 12px;
+	padding: 0.25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.event h3 {
+	color: white;
+	margin: 0;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+.event p {
+	color: rgba(255, 255, 255, 0.8);
+	margin: 0.5rem 0 0;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.time-column {
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	gap: 1rem;
+}
+
+.time-column h3 {
+	margin: 0;
+	text-align: start;
+	font-weight: bold;
+}
+
+/* Add some visual hints for scrolling on mobile */
+@media (max-width: 800px) {
+	.timetable::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1));
+		pointer-events: none;
+	}
+}

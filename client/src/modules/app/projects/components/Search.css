@@ -2,9 +2,8 @@
 	background-color: #f4f4f4;
 	border: none;
 	border-radius: 8px;
-	padding: 0.8rem 1rem;
+	padding: 10px 20px;
 	box-sizing: border-box;
-	width: 80%;
 	font-family: "unbounded";
 }
 input[type="text"] {
@@ -16,6 +15,14 @@ input[type="text"] {
 	align-items: center;
 }
 .outer-search {
-	display: flex;
-	justify-content: center;
+	width: 100%;
+}
+.search {
+	width: 100%;
+}
+.search-inner-wrapper {
+	width: 100%;
+}
+.searchbar {
+	width: 100%;
 }
