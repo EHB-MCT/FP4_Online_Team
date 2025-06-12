@@ -28,18 +28,20 @@ export const ProjectCard = ({ project_name, student, banner_image, project_categ
         
 		<div className={clsx(styles["card-wrapper"])}>
 			<NavLink to={ "#" }>
-				{/* <div className={clsx(styles["card-wrapper--image-wrapper"])}>
-					<img className={clsx(styles["card-wrapper--image-wrapper--image"])} src={"temp.png"} alt="image of project"  />
-				</div> */}
-				<div className={clsx(styles["card-wrapper__image-wrapper"])}>
+				<div 
+					className={clsx(styles["card-wrapper--image-wrapper"])}
+					style={{ paddingBottom: "8px", backgroundColor: projectColor }}
+				>
 					<img 
-                        className={clsx(styles["card-wrapper__image-wrapper__image"])} 
+                        className={clsx(styles["card-wrapper--image-wrapper--image"])} 
                         // src={banner_image || "temp-card/temp.png"} 
 						src={"temp-card/temp.png"}
                         alt={`Project: ${project_name}`}  
                     />
                 </div>
-				<div className={clsx(styles["card-wrapper--student-info"])}>	
+				<div 
+					className={clsx(styles["card-wrapper--student-info"])}
+				>	
 					<p className="black-text">{ student }</p>			
 					<div className={clsx(styles["card-wrapper--student-info--bottom-wrapper"])} >
 						<h5 className="black-text">{ project_name }</h5>

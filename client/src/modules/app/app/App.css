@@ -197,6 +197,15 @@ section.pink-wrapper {
 	box-shadow: inset 0 0 0 0 var(--button-color);
 }
 
+.blue-button{
+	background-color: var(--button-blue-color);
+	color: var(--white-font-color);
+	font-family: var(--main-font);
+
+	border-radius: 15px;
+	padding: 12px 30px;
+}
+
 .filter{
 	text-align: center;
 	width: fit-content;

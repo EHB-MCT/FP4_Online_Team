@@ -20,6 +20,8 @@ import { INFO_ROUTE } from "../../info/info.route.jsx";
 
 //CSS
 import styles from './home.module.scss'
+import { NavLink } from "react-router";
+import { PROJECTS_ROUTE } from "../../projects/projects.route.jsx";
 
 export const Home = () => {
     document.title = "Shift Festival - 2025 ";	
@@ -29,8 +31,8 @@ export const Home = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        if (data && Array.isArray(data) && window.innerWidth >= 767 && window.innerWidth <= 1024) {
-            setProjects(data.slice(0, 4));
+        if (data && Array.isArray(data) && window.innerWidth > 1024) {
+            setProjects(data.slice(0, 6));
         }else if(data && Array.isArray(data)){
             setProjects(data.slice(0, 3));
         }
@@ -55,23 +57,31 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className={clsx(styles["projects-preview-wrapper"])}>
+            <section
+                className={clsx(styles["projects-preview-wrapper"])}
+            >
                 <div className={clsx(styles["projects-preview-wrapper--background-image-top-left"])}>
                     <div className={clsx(styles["projects-preview-wrapper--background-image-top-left--background-image-top-right"])}>
                         <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper"],)}>
                             <h2>Eindprojecten</h2>
-                            <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper--projects-carousel"])}>
-                                { isLoading ? (<p>Loading...</p>) : (
-                                    projects.map((project) => (
-                                        <ProjectCard
-                                            key={project.project_name}
-                                            project_name={ project.project_name }
-                                            student={ project.student }
-                                            banner_image={ project.banner_image }
-                                            project_category={ project.category }
-                                        />
-                                    ))
-                                )}
+                            <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper--project-category-wrapper"])}>
+                                <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper--project-category-wrapper--projects-horizontal-wrapper"])}>
+                                    { isLoading ? (<p>Loading...</p>) : (
+                                        projects.map((project) => (
+                                            <ProjectCard
+                                                key={project.project_name}
+                                                project_name={ project.project_name }
+                                                student={ project.student }
+                                                banner_image={ project.banner_image }
+                                                project_category={ project.category }
+                                            />
+                                        ))                                    
+                                    )}
+                                </div>
+                                <div className="spacer" style={{width: "145vw"}}></div>
+                            </div>
+                            <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper--button-wrapper"])}>
+                                <NavLink to={ PROJECTS_ROUTE.path } className="blue-button">Ontdek</NavLink>
                             </div>
                         </div>
                     </div>
