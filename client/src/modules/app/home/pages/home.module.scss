@@ -70,10 +70,20 @@ section .pink-wrapper {
 
 .practical-info-wrapper {
 	&--practical-info-text-wrapper {
+		position: relative;
+		background: #eb6c33;
+		border-radius: 36px;
+		padding: 48px 48px 36px 48px;
+		margin: 64px auto 0 auto;
+		max-width: 1100px;
+		color: #fff;
+		overflow: visible;
+		min-height: 210px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		margin-bottom: 32px;
+		align-items: start;
+		gap: 24px;
+		margin-bottom: 50px;
 	}
 	&--practical-info-location-wrapper {
 		img {
@@ -328,6 +338,11 @@ section .pink-wrapper {
 		background-position: 100% 50%;
 		background-size: 20%;
 	}
+}
+.projects-center-btn {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem; // adds space above button, adjust as you like
 }
 
 @media (min-width: 1200px) {

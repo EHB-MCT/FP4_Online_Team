@@ -126,11 +126,13 @@ export const Home = () => {
 									))
 								)}
 							</div>
-							<Button
-								destinationUrl={"#"}
-								copy={"Programma"}
-								className={"button"}
-							/>
+							<div className={styles["projects-center-btn"]}>
+								<Button
+									destinationUrl={"#"}
+									copy={"Programma"}
+									className={"button"}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -213,9 +215,7 @@ export const Home = () => {
 				</div>
 			</section>
 
-			<section
-				className={clsx(styles["large-info-wrapper"], styles["purple-wrapper"])}
-			>
+			<section className={clsx(styles["large-info-wrapper"])}>
 				<div className="inner-wrapper">
 					<div
 						className={clsx(
