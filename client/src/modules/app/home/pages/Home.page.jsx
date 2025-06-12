@@ -45,27 +45,41 @@ export const Home = () => {
 
 	return (
 		<>
-			<section className={clsx(styles["pink-wrapper"], "large")}>
-				<video autoPlay muted loop playsInline key={heroVideo}>
-					<source src={heroVideo} type="video/mp4" />
-				</video>
-				<div className={clsx(styles["hero-wrapper"], "inner-wrapper")}>
-					<div className={clsx(styles["hero"])}>
-						<h4>
-							Expo 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20
-							juni&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Campus Kaai
-						</h4>
-						<CountDown />
-						<p className="white-text">
-							Kom de afstudeerprojecten van onze derdejaarsstudenten …
-						</p>
-						<Button
-							destinationUrl={"/register"}
-							copy={"Inschrijven"}
-							className={"button"}
-						/>
-						<div className={clsx(styles["hero--mouse-wrapper"])}>
-							<img src="/scroll-icon.png" alt="" />
+			<section
+				style={{ backgroundColor: "#1D1D1D", padding: "0" }}
+				className={clsx(styles["pink-wrapper"])}
+			>
+				<div className={clsx(styles["pink-wrapper--large-wrapper"])}>
+					<video autoPlay muted loop playsInline key={heroVideo}>
+						<source src="test.mp4" type="video/mp4" />
+					</video>
+					<div
+						className={clsx(
+							styles["pink-wrapper--large-wrapper--hero-wrapper"],
+							"inner-wrapper"
+						)}
+					>
+						<div
+							className={clsx(
+								styles["pink-wrapper--large-wrapper--hero-wrapper--hero"]
+							)}
+						>
+							<h4>
+								Expo 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20
+								juni&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Campus Kaai
+							</h4>
+							<CountDown />
+							<p className="white-text">
+								Kom de afstudeerprojecten van onze derdejaarsstudenten …
+							</p>
+							<Button
+								destinationUrl={"/register"}
+								copy={"Inschrijven"}
+								className={"button"}
+							/>
+							<div className={clsx(styles["hero--mouse-wrapper"])}>
+								<img src="/scroll-icon.png" alt="" />
+							</div>
 						</div>
 					</div>
 				</div>
