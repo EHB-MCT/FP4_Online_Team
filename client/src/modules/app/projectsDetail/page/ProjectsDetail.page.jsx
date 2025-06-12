@@ -188,9 +188,6 @@ export const ProjectsDetail = () => {
 										{
 											project && project[0].description
 										}
-										{
-											project && project[0].description
-										}
 									</p>
 								</div>
 							</div>
