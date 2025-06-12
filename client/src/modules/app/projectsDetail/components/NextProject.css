@@ -19,6 +19,7 @@
 	margin-right: 10px;
 }
 
+
 .image {
 	position: relative;
 	display: flex;
@@ -74,4 +75,5 @@
 		margin: 0 auto;
 	}
 }
+
 

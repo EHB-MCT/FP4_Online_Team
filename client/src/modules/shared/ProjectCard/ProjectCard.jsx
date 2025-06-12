@@ -23,7 +23,6 @@ export const ProjectCard = ({ project_name, student, banner_image, project_categ
 		}
 
 	}, []);
-
     return (
         
 		<div className={clsx(styles["card-wrapper"])}>
@@ -53,8 +52,10 @@ export const ProjectCard = ({ project_name, student, banner_image, project_categ
 						</div>
 					</div>
 				</div>
+
 			</NavLink>
 		</div>
     );
 };
+
 

@@ -1,3 +1,4 @@
+
 import { Link, useLocation } from "react-router";
 import { useState, useEffect } from "react";
 import LogoBlack from "/Shift_Logo.svg";
@@ -5,7 +6,11 @@ import LogoWhite from "/Logo_white.svg";
 
 import "./navigation.css";
 
+
+import "./navigation.css";
+
 export const NavigationFase2 = () => {
+
 	const location = useLocation();
 	const isHome = location.pathname === "/" || location.pathname === "/#";
 
@@ -33,11 +38,14 @@ export const NavigationFase2 = () => {
 				<div className="inner-wrapper">
 					<Link to="/" className="home-link">
 						<img src={isHome && !isScrolled ? LogoWhite : LogoBlack} alt="logo event" />
+
 					</Link>
 
 					<ul className="nav-links">
 						<li>
+
 							<Link to="/program" className="link">
+
 								Programma
 							</Link>
 						</li>
@@ -45,7 +53,9 @@ export const NavigationFase2 = () => {
 						<li className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
 							<span className="link cursor-pointer">
 								<Link to="/projects" className="link">
+
 									Eindprojecten ▾
+
 								</Link>
 							</span>
 							{isDropdownOpen && (
@@ -73,6 +83,7 @@ export const NavigationFase2 = () => {
 								</ul>
 							)}
 						</li>
+
 						<li>
 							<Link to="/info" className="link">
 								Info
@@ -99,12 +110,15 @@ export const NavigationFase2 = () => {
 						</li>
 						<li>
 							<Link to="/info" className="link" onClick={() => setIsDropdownOpen(false)}>
+
 								Info
 							</Link>
 						</li>
 					</ul>
+
 				)}
 			</nav>
 		</div>
+
 	);
 };

@@ -4,21 +4,26 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import App from "../app/App";
 
 //Routes
-import { AUTH_TEACHER_ROUTE} from "../teachervoting/authenticate/authenticate.route";
+import { AWARDS_ROUTE } from "../awards/awards.route";
+import { AUTH_TEACHER_ROUTE } from "../teachervoting/authenticate/authenticate.route";
 import { COUNTER_ROUTE } from "../counter/counter.route";
 import { ERROR_ROUTE } from "../error/error.route";
 import { HOME_ROUTE } from "../home/home.route";
+import { HOMETWO_ROUTE } from "../homeTwo/homeTwo.route";
 import { INFO_ROUTE } from "../info/info.route";
+import { MAGAZINE_ROUTE } from "../magazine/magazine.route";
 import { PRICE_ROUTE } from "../price/price.route";
 import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
 import { PROJECTS_ROUTE } from "../projects/projects.route";
 import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
 import { REGISTER_ROUTE } from "../register/register.route";
 
+
 import { VOTING_ROUTE } from "../voting/voting.route";
 import { PROGRAM_ROUTE } from "../program/program.route";
+
 import { REQUEST_TOKEN_ROUTE } from "../teachervoting/requestToken/requestToken.route";
-import { AWARDS_ROUTE } from "../awards/awards.route";
+import { VOTING_ROUTE } from "../voting/voting.route";
 
 
 export const Root = () => {
@@ -55,7 +60,7 @@ export const Root = () => {
 				// },
 				{
 					path: PROJECTS_ROUTE.path,
-					element: PROJECTS_ROUTE.element
+					element: PROJECTS_ROUTE.element,
 				},
 				{
 					path: PROJECTSDETAIL_ROUTE.path,
@@ -75,11 +80,16 @@ export const Root = () => {
 					element: INFO_ROUTE.element,
 				},
 				{
+					path: MAGAZINE_ROUTE.path,
+					element: MAGAZINE_ROUTE.element,
+				},
+    {
 					path: PROGRAM_ROUTE.path,
 					element: PROGRAM_ROUTE.element,
 				},
 
 			]
+
 		},
 		{
 			path: "/voteReGRfguugXNEmMm/",
@@ -93,9 +103,9 @@ export const Root = () => {
 				{
 					path: REQUEST_TOKEN_ROUTE.path,
 					element: REQUEST_TOKEN_ROUTE.element,
-				}
-			]
-		}
+				},
+			],
+		},
 	]);
 
 	return (
