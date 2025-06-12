@@ -13,19 +13,23 @@ import { AwardsInfo } from "../components/AwardsInfo";
 export const Info = () => {
 	return (
 		<>
-			<section className="info-hero-section">
+			<div className={clsx(styles["header"])}>
 				<div className="inner-wrapper">
 					<div className={clsx(styles["info-hero-wrapper"])}>
 						<h1 className="black-text">Info</h1>
 						<div
 							className={clsx(styles["info-hero-wrapper--hero-image-wrapper"])}
 						>
-							<img src="./" alt="" />
+							<img
+								src="/infoBanner.png"
+								alt="Info Banner"
+								className="w-full h-auto"
+							/>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section className={clsx(styles["practical-info-wrapper"])}>
+			</div>
+			<div className={clsx(styles["practical-info-wrapper"])}>
 				<div
 					className={clsx(
 						styles["practical-info-wrapper--practical-info-outer-wrapper"],
@@ -61,7 +65,7 @@ export const Info = () => {
 						</p>
 					</div>
 				</div>
-			</section>
+			</div>
 
 			<section className={clsx(styles["google-maps-wrapper"], "inner-wrapper")}>
 				<div className={clsx(styles["google-maps-wrapper--location-info"])}>
