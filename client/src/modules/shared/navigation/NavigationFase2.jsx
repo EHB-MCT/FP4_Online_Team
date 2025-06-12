@@ -30,6 +30,8 @@ export const NavigationFase2 = () => {
 				nav.classList.remove("scrolled");
 				setIsScrolled(false);
 			}
+
+			console.log(window.scrollY)
 		};
 		window.addEventListener("scroll", onScroll);
 		return () => window.removeEventListener("scroll", onScroll);
@@ -93,7 +95,24 @@ export const NavigationFase2 = () => {
 							</Link>
 						</li>
 					</ul>
-					<button className="hamburger-menu" aria-label="Open navigation" onClick={() => setIsDropdownOpen((open) => !open)}>
+					<button className="hamburger-menu" style={{color: "#000"}} aria-label="Open navigation" onClick={() => setIsDropdownOpen((open) => !open)}>
+
+
+						{/* {
+							isScrolled ? (
+								<>
+									<span style={{color: "#000"}} className="hamburger-bar"></span>
+									<span style={{color: "#000"}} className="hamburger-bar"></span>
+									<span style={{color: "#000"}} className="hamburger-bar"></span>
+								</>
+							) : (
+								<>
+									<span style={{color: "#fff"}} className="hamburger-bar"></span>
+									<span style={{color: "#fff"}} className="hamburger-bar"></span>
+									<span style={{color: "#fff"}} className="hamburger-bar"></span>
+								</>
+							)
+						} */}
 						<span className="hamburger-bar"></span>
 						<span className="hamburger-bar"></span>
 						<span className="hamburger-bar"></span>

@@ -130,9 +130,9 @@ nav .inner-wrapper {
 	.hamburger-menu {
 		display: flex;
 	}
-	.hamburger-bar {
+	/* .hamburger-bar {
 		background: #ffffff;
-	}
+	} */
 
 	.mobile-nav-links {
 		position: absolute;
@@ -169,7 +169,12 @@ nav .inner-wrapper {
 	background: transparent;
 }
 
-.navigation--home.scrolled {
+.navigation--home .hamburger-bar {
+		background: #ffffff;
+	}
+
+.navigation--home.scrolled,
+.navigation.scrolled {
 	.nav-links li a {
 		color: #000000;
 	}
