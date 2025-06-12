@@ -1,1 +1,0 @@
-export { Program } from './pages/Program.page'
