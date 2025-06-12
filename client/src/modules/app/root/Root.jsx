@@ -1,7 +1,5 @@
 import { createHashRouter, RouterProvider } from "react-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-
 //Components
 import App from "../app/App";
 
@@ -16,13 +14,14 @@ import { PRIVACY_POLICY_ROUTE } from "../privacyPolicy/privacyPolicy.route";
 import { PROJECTS_ROUTE } from "../projects/projects.route";
 import { PROJECTSDETAIL_ROUTE } from "../projectsDetail/projectsDetail.route";
 import { REGISTER_ROUTE } from "../register/register.route";
+
 import { VOTING_ROUTE } from "../voting/voting.route";
 import { PROGRAM_ROUTE } from "../program/program.route";
 import { REQUEST_TOKEN_ROUTE } from "../teachervoting/requestToken/requestToken.route";
 import { AWARDS_ROUTE } from "../awards/awards.route";
 
-export const Root = () => {
 
+export const Root = () => {
 	const QUERY_CLIENT = new QueryClient();
 
 	const ROUTE = createHashRouter([
@@ -90,6 +89,7 @@ export const Root = () => {
 					path: AUTH_TEACHER_ROUTE.path,
 					element: AUTH_TEACHER_ROUTE.element,
 				},
+
 				{
 					path: REQUEST_TOKEN_ROUTE.path,
 					element: REQUEST_TOKEN_ROUTE.element,
@@ -99,7 +99,7 @@ export const Root = () => {
 	]);
 
 	return (
-		<QueryClientProvider client={ QUERY_CLIENT }>
+		<QueryClientProvider client={QUERY_CLIENT}>
 			<RouterProvider router={ROUTE} />
 		</QueryClientProvider>
 	);

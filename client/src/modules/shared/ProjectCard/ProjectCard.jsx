@@ -57,4 +57,4 @@ export const ProjectCard = ({ project_name, student, banner_image, project_categ
 		</div>
     );
 };
-		
+
