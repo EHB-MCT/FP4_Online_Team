@@ -180,7 +180,7 @@ export const ProjectsDetail = () => {
 										</span>
 									</div>
 									<div className={clsx(styles["project-detail-wrapper--main-wrapper--main-section--left-wrapper--summary-wrapper--info-wrapper"])} style={{marginBottom: "0"}}>
-										<a href="https://linkeding.com"><img src="icons/linkedin.svg" alt="Link naar linkedin van de student" /></a>
+										<a href="https://www.linkedin.com/feed/"><img src="icons/linkedin.svg" alt="Link naar linkedin van de student" /></a>
 									</div>
 								</div>
 								<div className={clsx(styles["project-detail-wrapper--main-wrapper--main-section--left-wrapper--description-wrapper"])}>

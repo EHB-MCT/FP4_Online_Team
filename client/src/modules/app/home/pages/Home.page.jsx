@@ -1,27 +1,24 @@
-import { Canvas } from "@react-three/fiber";
 import clsx from "clsx";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router";
 
-//Models
-import { Model } from "../../../shared/model/Model";
 
 //Components
 import Button from "../../../shared/button/Button.jsx";
 import CountDown from "../components/countdown/CountDown.jsx";
-import { FaqSection } from "../../../shared/faq-section/FaqSection.jsx";
 import { ProjectCard } from "../../../shared/ProjectCard/ProjectCard.jsx";
+import { FaqDropdown } from "../../../shared/faq-section/components/faq-dropdown/FaqDropdown.jsx";
 
 //Hooks
 import { useProjectsData } from "../../../shared/const/hooks/getProjectsData.hook.js";
 
 //Routes
 import { INFO_ROUTE } from "../../info/info.route.jsx";
-import { PROJECTS_ROUTE } from "../../projects/projects.route.jsx" 
+import { PROJECTS_ROUTE } from "../../projects/projects.route.jsx"
+import { PROGRAM_ROUTE } from "../../program/program.route.jsx";
 
 //CSS
 import styles from "./home.module.scss";
-import { FaqDropdown } from "../../../shared/faq-section/components/faq-dropdown/FaqDropdown.jsx";
 
 //video
 import { heroVideo } from "../../../utils/index.js";
@@ -102,7 +99,7 @@ export const Home = () => {
                             <div className="spacer" style={{width: "145vw"}}></div>
                         </div>
                         <div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper--button-wrapper"])}>
-                            <NavLink to={ PROJECTS_ROUTE.path } className="blue-button">Ontdek</NavLink>
+                            <NavLink to={ PROJECTS_ROUTE.path } target="_blank" className="blue-button">Ontdek</NavLink>
                         </div>
                     </div>
                 </div>
@@ -175,7 +172,7 @@ export const Home = () => {
 									Campus Kaai
 								</p>
 								<Button
-									destinationUrl={INFO_ROUTE.path}
+									destinationUrl={ INFO_ROUTE.path }
 									copy={"Meer info"}
 									className={"button"}
 								/>
@@ -207,7 +204,7 @@ export const Home = () => {
 								Ontdek onze programma van de festival en al onze workshops
 							</p>
 							<Button
-								destinationUrl={"#"}
+								destinationUrl={ PROGRAM_ROUTE.path}
 								copy={"Programma"}
 								className={"button"}
 							/>
