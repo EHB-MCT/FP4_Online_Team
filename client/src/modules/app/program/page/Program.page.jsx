@@ -20,7 +20,7 @@ export const Program = () => {
 						<h2>16:00</h2>
 						<div className="program-title" style={{ backgroundColor: "#e61453" }}>
 							<h3>Opening deuren van het onthaal</h3>
-							<img src="/logo-placeholder-image.png" alt="" onClick={() => togglePopup(0)} style={{ cursor: "pointer" }} />
+							<img src="/info-icon.svg" alt="" onClick={() => togglePopup(0)} style={{ cursor: "pointer" }} />
 							{activePopup === 0 && (
 								<div className="popup">
 									<div className="popup-content" style={{ backgroundColor: "#e61453" }}>
@@ -39,7 +39,7 @@ export const Program = () => {
 						<h2>16:00 - 19:30</h2>
 						<div className="program-title" style={{ backgroundColor: "#C169AA" }}>
 							<h3>Eindwerken derdejaars</h3>
-							<img src="/logo-placeholder-image.png" alt="" onClick={() => togglePopup(1)} style={{ cursor: "pointer" }} />
+							<img src="/info-icon.svg" alt="" onClick={() => togglePopup(1)} style={{ cursor: "pointer" }} />
 							{activePopup === 1 && (
 								<div className="popup">
 									<div className="popup-content" style={{ backgroundColor: "#C169AA" }}>
@@ -58,7 +58,7 @@ export const Program = () => {
 						<h2>17:00 - 18:00</h2>
 						<div className="program-title" style={{ backgroundColor: "#EC6230" }}>
 							<h3>Showcase keychain</h3>
-							<img src="/logo-placeholder-image.png" alt="" onClick={() => togglePopup(2)} style={{ cursor: "pointer" }} />
+							<img src="/info-icon.svg" alt="" onClick={() => togglePopup(2)} style={{ cursor: "pointer" }} />
 							{activePopup === 2 && (
 								<div className="popup">
 									<div className="popup-content" style={{ backgroundColor: "#EC6230" }}>
@@ -77,7 +77,7 @@ export const Program = () => {
 						<h2>17:00 - 18:00</h2>
 						<div className="program-title" style={{ backgroundColor: "#667BC4" }}>
 							<h3>Workshop Shift your reality</h3>
-							<img src="/logo-placeholder-image.png" alt="" onClick={() => togglePopup(3)} style={{ cursor: "pointer" }} />
+							<img src="/info-icon.svg" alt="" onClick={() => togglePopup(3)} style={{ cursor: "pointer" }} />
 							{activePopup === 3 && (
 								<div className="popup">
 									<div className="popup-content" style={{ backgroundColor: "#667BC4" }}>
@@ -96,14 +96,15 @@ export const Program = () => {
 						<h2>19:30</h2>
 						<div className="program-title" style={{ backgroundColor: "#C169AA" }}>
 							<h3>Awardshow derdejaars</h3>
-							<img src="/logo-placeholder-image.png" alt="" onClick={() => togglePopup(4)} style={{ cursor: "pointer" }} />
+							<img src="/info-icon.svg" alt="" onClick={() => togglePopup(4)} style={{ cursor: "pointer" }} />
 							{activePopup === 4 && (
 								<div className="popup">
 									<div className="popup-content" style={{ backgroundColor: "#C169AA" }}>
 										<span className="close" onClick={() => togglePopup(4)}>
 											&times;
 										</span>
-										<p>Bedankt voor je aanwezigheid! We hopen je snel terug te zien.</p>
+										<h3> Agora</h3>
+										<p>Bij deze awardshow worden meerdere  prijzen uitgedeeld aan de beste projecten van de derdejaars </p>
 									</div>
 								</div>
 							)}
