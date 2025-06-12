@@ -33,6 +33,7 @@
 .nav-links li {
 	padding: 0.5rem 1rem;
 	position: relative;
+	list-style: none;
 }
 .nav-links li a {
 	color: rgb(0, 0, 0);
@@ -67,7 +68,7 @@
 	transition: background 0.6s, box-shadow 0.3s;
 }
 .nav-spacer {
-	margin-top: 10.5%;
+	margin-top: 8%;
 }
 .hamburger-menu {
 	display: none;
@@ -94,6 +95,12 @@
 	display: none;
 	flex-direction: column;
 	gap: 1rem;
+}
+.inner-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
 }
 
 @media (max-width: 768px) {
