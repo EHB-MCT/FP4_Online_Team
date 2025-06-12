@@ -2,7 +2,7 @@
 	position: absolute;
 	top: 100%;
 	left: 0;
-	background: white;
+	background: rgba(255, 255, 255, 0.3);
 	border: 1px solid #ddd;
 	border-radius: 4px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -21,6 +21,7 @@
 
 .dropdown-link:hover {
 	background-color: #f0f0f0;
+	border-radius: 5px;
 }
 .nav-links {
 	padding: 0;
@@ -32,4 +33,37 @@
 .nav-links li {
 	padding: 0.5rem 1rem;
 	position: relative;
+}
+.nav-links li a {
+	color: rgb(0, 0, 0);
+}
+.navigation {
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	/* background: transparent; */
+	/* background: linear-gradient(
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 0.1)
+	); */
+	background: transparent;
+}
+
+.navigation.scrolled {
+	background: rgba(255, 255, 255, 0.99); /* or any color/gradient you want */
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	transition: background 0.8s, box-shadow 0.3s;
+}
+.nav-spacer {
+	margin-top: 150px;
 }
