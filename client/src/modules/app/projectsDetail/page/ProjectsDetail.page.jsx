@@ -1,10 +1,11 @@
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Magazine } from "../../magazine/page/Magazine.page";
+import Swal from "sweetalert2";
 
 //Components
 import { NextProject } from "../components/NextProject";
+import { Magazine } from "../../magazine/page/Magazine.page";
 
 //Hooks
 import { useVerified } from "../../../shared/const/context/VerifiedContext/VerifiedContext";
@@ -19,7 +20,7 @@ export const ProjectsDetail = () => {
 	// const [verified, setVerified] = useState(true);
 	const [award_ids, setAwardIds] = useState([]);
 	const [popupVisibility, setPopupVisibility] = useState(false);
-	const [project_id, setProjectId] = useState(null);
+	const [project_id, setProjectId] = useState(1);
 	const [isMobile, setIsMobile] = useState(false)
  
 	const { id } = useParams();
@@ -27,7 +28,7 @@ export const ProjectsDetail = () => {
 	const { data: project, isLoading } = useProjectWithIdData(id);
 
 	useEffect(() => {
-		// setProjectId(1)
+		setProjectId(1)
 		if(window.innerWidth < 767){
 			setIsMobile(true)
 		}else{
@@ -66,6 +67,14 @@ export const ProjectsDetail = () => {
 				project_id
 			})
 		})
+		Swal.fire({
+			title: "Stem succesvol!",
+			icon: "success",
+			customClass: {
+				popup: "custom-sweet-alert",
+				confirmButton: "button pink"
+			}
+		});
 	}
 
 	return (
