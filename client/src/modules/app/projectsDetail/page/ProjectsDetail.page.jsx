@@ -14,9 +14,9 @@ import { useProjectWithIdData } from "../../../shared/const/hooks/getProjectWith
 import styles from "./projectDetail.module.scss"
 
 export const ProjectsDetail = () => {
-	// const { verified } = useVerified();
+	const { verified } = useVerified();
 	
-	const [verified, setVerified] = useState(true);
+	// const [verified, setVerified] = useState(true);
 	const [award_ids, setAwardIds] = useState([]);
 	const [popupVisibility, setPopupVisibility] = useState(false);
 	const [project_id, setProjectId] = useState(null);
