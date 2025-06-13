@@ -123,7 +123,7 @@ a {
 	color: var(--white-font-color);
 }
 .black-text {
-	color: var(--font-color);
+	color: var(--font-color) !important;
 }
 .blue-text {
 	color: var(--blue-color);

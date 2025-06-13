@@ -155,7 +155,7 @@ export const Magazine = () => {
 	}, [isMobile, openMagazine, totalPages]);
 
 	return (
-		<section className="inner-wrapper">
+		<section className="inner-wrapper" style={{paddingTop: "64px"}}>
 			<div className="magazine-button">
 				<h2>Magazine</h2>
 				{availableMagazines.map((magazine) => (
@@ -166,7 +166,7 @@ export const Magazine = () => {
 						whileHover={{ scale: 1.02 }}
 					>
 						<img src={magazine.thumbnail} alt={magazine.title} />
-						<h3>{magazine.title}</h3>
+						<h3 className="black-text">{magazine.title}</h3>
 					</motion.div>
 				))}
 			</div>
