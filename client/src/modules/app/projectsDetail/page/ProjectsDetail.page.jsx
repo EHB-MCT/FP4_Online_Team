@@ -72,7 +72,6 @@ export const ProjectsDetail = () => {
 		<>
 			<section
 				className={clsx(styles["project-detail-wrapper"])}
-				style={{margin: "0", padding: "0"}}
 			>
 				<div className={ isMobile !== true ? "inner-wrapper" : "" }>
 					 {
