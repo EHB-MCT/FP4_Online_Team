@@ -7,7 +7,7 @@ import { useParams } from "react-router";
 import { NextProject } from "../components/NextProject";
 
 //Hooks
-// import { useVerified } from "../../../shared/const/context/VerifiedContext/VerifiedContext";
+import { useVerified } from "../../../shared/const/context/VerifiedContext/VerifiedContext";
 import { useProjectWithIdData } from "../../../shared/const/hooks/getProjectWithId.hook";
 
 //CSS
@@ -55,27 +55,31 @@ export const ProjectsDetail = () => {
 	const handleVoteRequest = () => {
 		console.log("selected award", award_ids, project_id);
 		
-		// fetch(`https://api.shiftfestival.be/api/vote`, {
-		// 	method: "POST",
-		// 	headers: {
-		// 		"Content-Type": "application/json",
-		// 	},
-		// 	credentials: 'include',
-		// 	body: JSON.stringify({
-		// 		award_ids,
-		// 		project_id
-		// 	})
-		// })
+		fetch(`https://api.shiftfestival.be/api/vote`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			credentials: 'include',
+			body: JSON.stringify({
+				award_ids,
+				project_id
+			})
+		})
 	}
 
 	return (
 		<>
-			<section className={clsx(styles["project-detail-wrapper"])}>
+			<section
+				className={clsx(styles["project-detail-wrapper"])}
+				style={{margin: "0", padding: "0"}}
+			>
 				<div className={ isMobile !== true ? "inner-wrapper" : "" }>
-					{/* {
+					 {
 						verified && 
 						<div className={clsx(styles["project-detail-wrapper--voting-wrapper"])} >
 							<button
+								className="blue-button"
 								onClick={ handleOpenVotePopup }
 							>
 								Vote button
@@ -154,7 +158,7 @@ export const ProjectsDetail = () => {
 							</div>
 						</div>
 
-					} */}
+					}
 
 					<div className={clsx(styles["project-detail-wrapper--main-wrapper"])}>
 						<div className={clsx(styles["project-detail-wrapper--main-wrapper--project-header"])}>

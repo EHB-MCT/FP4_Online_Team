@@ -57,13 +57,18 @@ export const NavigationFase2 = () => {
 
 						<li className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
 							<span className="link cursor-pointer">
-								<Link to={ PROJECTS_ROUTE.path } className="link">
+								{/* <Link to={ PROJECTS_ROUTE.path } className="link">
 
 									Eindprojecten ▾
 
+								</Link> */}
+								<Link to={ PROJECTS_ROUTE.path } className="link">
+
+									Eindprojecten
+
 								</Link>
 							</span>
-							{isDropdownOpen && (
+							{/* {isDropdownOpen && (
 								<ul className="dropdown-menu">
 									<li>
 										<Link to="/projects/app-web" className="dropdown-link">
@@ -86,7 +91,7 @@ export const NavigationFase2 = () => {
 										</Link>
 									</li>
 								</ul>
-							)}
+							)} */}
 						</li>
 
 						<li>
