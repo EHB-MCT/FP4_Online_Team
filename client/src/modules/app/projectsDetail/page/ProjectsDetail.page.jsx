@@ -1,7 +1,7 @@
-
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { Magazine } from "../../magazine/page/Magazine.page";
 
 //Components
 import { NextProject } from "../components/NextProject";
@@ -211,6 +211,7 @@ export const ProjectsDetail = () => {
 						</div>
 						<div className={clsx(styles["project-detail-wrapper--main-wrapper--magazine-wrapper"])}>
 							{/* Magazine */}
+							<Magazine/>
 						</div>
 					</div>
 				</div>

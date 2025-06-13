@@ -156,21 +156,28 @@ export const Magazine = () => {
 
 	return (
 		<section className="inner-wrapper">
-			<div className="viewer-layout">
-				<div className="magazine-list">
-					<h2>Beschikbare Magazines</h2>
-					{availableMagazines.map((magazine) => (
-						<motion.div key={magazine.id} className={`magazine-card ${openMagazine?.id === magazine.id ? "selected" : ""}`} onClick={() => handleMagazineOpen(magazine)} whileHover={{ scale: 1.02 }}>
-							<img src={magazine.thumbnail} alt={magazine.title} />
-							<h3>{magazine.title}</h3>
-						</motion.div>
-					))}
-				</div>
+			<div className="magazine-button">
+				<h2>Magazine</h2>
+				{availableMagazines.map((magazine) => (
+					<motion.div
+						key={magazine.id}
+						className={`magazine-card ${openMagazine?.id === magazine.id ? "selected" : ""}`}
+						onClick={() => handleMagazineOpen(magazine)}
+						whileHover={{ scale: 1.02 }}
+					>
+						<img src={magazine.thumbnail} alt={magazine.title} />
+						<h3>{magazine.title}</h3>
+					</motion.div>
+				))}
 			</div>
 
 			{openMagazine && (
 				<div className="pdf-modal-overlay" onClick={() => setOpenMagazine(null)}>
-					<div className={`pdf-modal${isFullscreen ? " fullscreen" : ""}`} ref={(modalRef, fullscreenRef)} onClick={(e) => e.stopPropagation()}>
+					<div
+						className={`pdf-modal${isFullscreen ? " fullscreen" : ""}`}
+						ref={(modalRef, fullscreenRef)}
+						onClick={(e) => e.stopPropagation()}
+					>
 						{!isMobile && (
 							<div className="pdf-zoom-overlay">
 								<span>
@@ -180,7 +187,17 @@ export const Magazine = () => {
 									<button onClick={() => handleZoom(Math.max(initialScale, zoom - 0.1))}>
 										<img src="/zoom-out.svg" alt="" />
 									</button>
-									<input type="range" min={initialScale} max={2} step={0.01} value={zoom} onChange={(e) => handleZoom(Number(e.target.value))} className="slider" id="myRange" style={{ width: 100 }} />
+									<input
+										type="range"
+										min={initialScale}
+										max={2}
+										step={0.01}
+										value={zoom}
+										onChange={(e) => handleZoom(Number(e.target.value))}
+										className="slider"
+										id="myRange"
+										style={{ width: 100 }}
+									/>
 									<button onClick={() => handleZoom(Math.min(2, zoom + 0.1))}>
 										<img src="/zoom-in.svg" alt="" />
 									</button>
@@ -200,7 +217,9 @@ export const Magazine = () => {
 								onLoadSuccess={handleDocumentLoad}
 								onLoadError={handleError}
 								loading={<div className="status-message">Loading magazine...</div>}
-								error={<div className="status-message error">{error || "Could not load magazine"}</div>}
+								error={
+									<div className="status-message error">{error || "Could not load magazine"}</div>
+								}
 							>
 								{isMobile ? (
 									<TransformWrapper
@@ -218,7 +237,14 @@ export const Magazine = () => {
 														{ length: totalPages },
 														(_, idx) => (
 															console.log(`Mobile mode page: ${idx} /n total pages: ${totalPages}`), // Mobile logic
-															(<Page key={idx + 1} pageNumber={idx + 1} width={window.innerWidth - 32} style={{ minWidth: window.innerWidth - 32 }} />)
+															(
+																<Page
+																	key={idx + 1}
+																	pageNumber={idx + 1}
+																	width={window.innerWidth - 32}
+																	style={{ minWidth: window.innerWidth - 32 }}
+																/>
+															)
 														)
 													)}
 												</div>
@@ -227,7 +253,13 @@ export const Magazine = () => {
 									</TransformWrapper>
 								) : (
 									// Desktop logic
-									<TransformWrapper minScale={initialScale} maxScale={2} wheel={{ step: 0.1 }} onZoom={(ref) => setZoom(ref.state.scale)} onInit={({ setTransform }) => setSetTransformFunc(() => setTransform)}>
+									<TransformWrapper
+										minScale={initialScale}
+										maxScale={2}
+										wheel={{ step: 0.1 }}
+										onZoom={(ref) => setZoom(ref.state.scale)}
+										onInit={({ setTransform }) => setSetTransformFunc(() => setTransform)}
+									>
 										{() => (
 											<TransformComponent>
 												<div style={{ display: "flex", gap: "16px" }}>
@@ -236,7 +268,9 @@ export const Magazine = () => {
 													) : (
 														<>
 															<Page pageNumber={currentPage} width={pdfWidth / 2} />
-															{currentPage + 1 <= totalPages && <Page pageNumber={currentPage + 1} width={pdfWidth / 2} />}
+															{currentPage + 1 <= totalPages && (
+																<Page pageNumber={currentPage + 1} width={pdfWidth / 2} />
+															)}
 														</>
 													)}
 												</div>
