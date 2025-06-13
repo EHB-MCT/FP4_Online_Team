@@ -12,9 +12,11 @@
 	}
 }
 
-h3 {
-	color: white !important;
-	font-size: 15px;
+.program-wrapper{
+	h3 {
+		color: white !important;
+		font-size: 15pt;
+	}
 }
 
 p {
@@ -123,9 +125,11 @@ p {
 		}
 	}
 
-	h3 {
-		color: white;
-		font-size: 16pt;
+	.inner-wrapper{
+		h3 {
+			color: white;
+			font-size: 16pt;
+		}
 	}
 	p {
 		font-size: 14pt;

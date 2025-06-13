@@ -11,7 +11,7 @@ export const Program = () => {
 
 	return (
 		<>
-			<section className="inner-wrapper">
+			<section className="inner-wrapper program-wrapper">
 				<section className="title-wrapper">
 					<h1 style={{ color: "black" }}>Programma</h1>
 				</section>

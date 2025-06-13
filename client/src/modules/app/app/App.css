@@ -152,6 +152,7 @@ a {
 section {
 	margin: var(--section-margin);
 	padding: var(--section-padding);
+	
 }
 
 section.pink-wrapper {
