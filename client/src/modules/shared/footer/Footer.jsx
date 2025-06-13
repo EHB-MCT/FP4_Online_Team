@@ -21,7 +21,7 @@ export const Footer = () => {
 						<p>Erasmushogeschool Brussel - 2025</p>
 						<p>Nijverheidskaai 170, 1070 Anderlecht</p>
 						<p>20 juni 2025</p>
-						<p>17:00 &gt; 22:00</p>
+						<p>17:00 &gt; 21:00</p>
 					</div>
 				</div>
 				<div className="footer-right-wrapper">

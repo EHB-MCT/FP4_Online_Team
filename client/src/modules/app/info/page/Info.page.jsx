@@ -58,7 +58,7 @@ export const Info = () => {
 					<div className={clsx(homeStyles["practical-info-wrapper--practical-info-location-wrapper--specific-info"])}>
 						<div className={clsx(homeStyles["practical-info-wrapper--practical-info-location-wrapper--specific-info--specific-info-upper-wrapper"])}>
 							<h2>20 juni 2025</h2>
-							<h3>17:00 &gt; 22:00</h3>
+							<h3 className="black-text">17:00 &gt; 21:00</h3>
 						</div>
 						<div className={clsx(homeStyles["practical-info-wrapper--practical-info-location-wrapper--specific-info--specific-info-lower-wrapper"])}>
 							<p>Gratis, maar inschrijven verplicht</p>

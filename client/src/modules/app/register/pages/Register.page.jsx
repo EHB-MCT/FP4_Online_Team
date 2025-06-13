@@ -67,7 +67,7 @@ export const Register = () => {
 	};
 
 	return (
-		<div className={clsx(styles["wrapper"])}>
+		<div className={clsx(styles["wrapper"])} style={{paddingTop: "132px"}}>
 			{/* <img src="/public/figure_pink.png" alt="" className="blob-pink" />
 			<img src="/public/figure_orange.png" alt="" className="blob-orange" /> */}
 
