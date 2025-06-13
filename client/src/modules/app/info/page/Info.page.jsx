@@ -129,9 +129,7 @@ export const Info = () => {
                                 `,
 							}}
 						></p>
-						<NavLink to={"https://www.erasmushogeschool.be/nl/opleidingen/multimedia-en-creatieve-technologie"} target="_blank" className={"button"}>
-							Meer
-						</NavLink>
+						<Button destinationUrl={"https://www.erasmushogeschool.be/nl/opleidingen/multimedia-en-creatieve-technologie"} copy={"Meer"} className={"button"} backgroundColor={"#ec6230"} hoverColor={"#FFF"}></Button>
 					</div>
 					<div className={clsx(styles["course-info-wrapper--course-info-inner-wrapper--image-wrapper"])}>
 						<img className={"image"} src="opleiding-image.png" alt="" />

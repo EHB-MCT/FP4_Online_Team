@@ -56,19 +56,19 @@ export const NavigationFase2 = () => {
 							onMouseEnter={() => setIsDropdownOpen(true)}
 							onMouseLeave={() => setIsDropdownOpen(false)}
 						> */}
-							{/* <span className="link cursor-pointer"> */}
-								{/* <Link to={ PROJECTS_ROUTE.path } className="link">
+						{/* <span className="link cursor-pointer"> */}
+						{/* <Link to={ PROJECTS_ROUTE.path } className="link">
 
 									Eindprojecten ▾
 
 								</Link> */}
-								{/* <Link to={ PROJECTS_ROUTE.path } className="link">
+						{/* <Link to={ PROJECTS_ROUTE.path } className="link">
 
 									Eindprojecten
 
 								</Link> */}
-							{/* </span> */}
-							{/* {isDropdownOpen && (
+						{/* </span> */}
+						{/* {isDropdownOpen && (
 								<ul className="dropdown-menu">
 									<li>
 										<Link to="/projects/app-web" className="dropdown-link">
@@ -100,12 +100,7 @@ export const NavigationFase2 = () => {
 							</Link>
 						</li>
 					</ul>
-					<button
-						className="hamburger-menu"
-						style={{ color: "#000" }}
-						aria-label="Open navigation"
-						onClick={() => setIsDropdownOpen((open) => !open)}
-					>
+					<button className="hamburger-menu" style={{ color: "#000" }} aria-label="Open navigation" onClick={() => setIsDropdownOpen((open) => !open)}>
 						{/* {
 							isScrolled ? (
 								<>
@@ -127,22 +122,14 @@ export const NavigationFase2 = () => {
 					</button>
 				</div>
 				{isDropdownOpen && (
-					<ul className="mobile-nav-links" >
+					<ul className="mobile-nav-links">
 						<li>
-							<Link
-								to={PROGRAM_ROUTE.path}
-								className="link"
-								onClick={() => setIsDropdownOpen(false)}
-							>
+							<Link to={PROGRAM_ROUTE.path} className="link" onClick={() => setIsDropdownOpen(false)}>
 								Programma
 							</Link>
 						</li>
 						<li>
-							<Link
-								to={PROJECTS_ROUTE.path}
-								className="link"
-								onClick={() => setIsDropdownOpen(false)}
-							>
+							<Link to={PROJECTS_ROUTE.path} className="link" onClick={() => setIsDropdownOpen(false)}>
 								Eindprojecten
 							</Link>
 						</li>
