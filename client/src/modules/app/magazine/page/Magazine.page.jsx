@@ -155,7 +155,7 @@ export const Magazine = () => {
 	}, [isMobile, openMagazine, totalPages]);
 
 	return (
-		<section className="inner-wrapper" style={{paddingTop: "64px"}}>
+		<section className="inner-wrapper">
 			<div className="magazine-button">
 				<h2>Magazine</h2>
 				{availableMagazines.map((magazine) => (

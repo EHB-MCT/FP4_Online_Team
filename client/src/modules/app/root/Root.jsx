@@ -76,14 +76,14 @@ export const Root = () => {
 					path: PROGRAM_ROUTE.path,
 					element: PROGRAM_ROUTE.element
 				},
-				// {
-				// 	path: PROJECTS_ROUTE.path,
-				// 	element: PROJECTS_ROUTE.element
-				// },
-				// {
-				// 	path: PROJECTSDETAIL_ROUTE.path,
-				// 	element: PROJECTSDETAIL_ROUTE.element,
-				// },
+				{
+					path: PROJECTS_ROUTE.path,
+					element: PROJECTS_ROUTE.element
+				},
+				{
+					path: PROJECTSDETAIL_ROUTE.path,
+					element: PROJECTSDETAIL_ROUTE.element,
+				},
 				{
 					path: REGISTER_ROUTE.path,
 					element: REGISTER_ROUTE.element,

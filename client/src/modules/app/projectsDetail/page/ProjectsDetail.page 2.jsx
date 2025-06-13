@@ -13,7 +13,7 @@ export const ProjectsDetail = () => {
 	const allProjects = projects;
 
 	return (
-		<section>
+		<section className="project-detail-page">
 			<div className="inner-wrapper">
 				{isLoading ? (
 					"Loading..."
