@@ -93,18 +93,26 @@ section .pink-wrapper {
 
 		&--specific-info {
 			margin-top: 24px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			p {
 				text-align: center;
 				margin: 0;
+			}
+
+			&--specific-info-lower-wrapper {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				p {
+					margin: 0;
+					text-align: center;
+				}
 			}
 		}
 
-		&--specific-info-lower-wrapper {
-			p {
-				margin: 0;
-				text-align: center;
-			}
-		}
+		
 	}
 
 	&--maps-frame {
@@ -293,6 +301,10 @@ section .pink-wrapper {
 			}
 
 			&--specific-info {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
 				&--specific-info-upper-wrapper {
 					h3 {
 						text-align: start;
@@ -391,5 +403,64 @@ section .pink-wrapper {
 		// 		background-size: 16%;
 		// 	}
 		// }
+	}
+	.practical-info-wrapper {
+		// &--practical-info-outer-wrapper {
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	align-items: center;
+		// 	justify-content: center;
+		// 	text-align: start;
+		// }
+
+		// &--background-image-top-left{
+		//     background-position: 0% 0%;
+		//     background-size: 20%;
+
+		//     &--background-image-top-right{
+		//         background-position: 100% 0%;
+		//         background-size: 16%;
+		//     }
+		// }
+
+		// &--practical-info-text-wrapper {
+		// 	position: relative;
+		// 	background: #eb6c33;
+		// 	border-radius: 36px;
+		// 	padding: 48px 48px 36px 48px;
+		// 	margin: 64px auto 0 auto;
+		// 	max-width: 1100px;
+		// 	color: #fff;
+		// 	overflow: visible;
+		// 	min-height: 210px;
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	align-items: start;
+		// 	gap: 24px;
+		// 	margin-bottom: 50px;
+		// }
+		&--practical-info-location-wrapper {
+
+			&--specific-info {
+				display: inline;
+				
+
+				&--specific-info-upper-wrapper {
+					h3 {
+						text-align: end;
+					}
+					text-align: end;
+				}
+				&--specific-info-lower-wrapper {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
+					p {
+						margin: 0;
+						text-align: end;
+					}
+				}
+			}
+		}
 	}
 }

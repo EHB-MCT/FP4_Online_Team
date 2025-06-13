@@ -59,7 +59,9 @@ export const Info = () => {
 					</div>
 					<div className={clsx(homeStyles["practical-info-wrapper--practical-info-location-wrapper--specific-info"])}>
 						<div className={clsx(homeStyles["practical-info-wrapper--practical-info-location-wrapper--specific-info--specific-info-upper-wrapper"])}>
-							<h2>20 juni 2025</h2>
+							<h2 className="black-text" style={{ textAlign: "start" }}>
+								20 juni 2025
+							</h2>
 							<h3 className="black-text">17:00 &gt; 21:00</h3>
 						</div>
 						<div className={clsx(homeStyles["practical-info-wrapper--practical-info-location-wrapper--specific-info--specific-info-lower-wrapper"])}>
@@ -69,8 +71,8 @@ export const Info = () => {
 								<br />
 								Campus Kaai
 							</p>
+							<Button destinationUrl={REGISTER_ROUTE.path} copy={"Inschrijven"} className={"button"} />
 						</div>
-						<Button destinationUrl={REGISTER_ROUTE.path} copy={"Inschrijven"} className={"button"} />
 					</div>
 				</div>
 			</section>
@@ -121,10 +123,7 @@ export const Info = () => {
 							className="white-text"
 							dangerouslySetInnerHTML={{
 								__html: `
-                                    Wil je leren programmeren en ontwerpen om zelf je websites en apps te maken?<br/>
-                                    Interesse in het maken van 3D games voor Virtual Reality of Metaverse?<br/>
-                                    Wil je kunnen vliegen en filmen met drones of een virtuele filmstudio maken?<br/>
-                                    Zou je graag Motion Graphics kunnen maken en videobeelden monteren en bewerken?<br/><br/>
+                                    Wil je leren programmeren en ontwerpen om zelf je websites en apps te maken? Interesse in het maken van 3D games voor Virtual Reality of Metaverse? Wil je kunnen vliegen en filmen met drones of een virtuele filmstudio maken? Zou je graag Motion Graphics kunnen maken en videobeelden monteren en bewerken?<br/><br/>
                                     Ontdek meer over onze opleiding.<br/>Infodag: zaterdag 28 juni
                                 `,
 							}}

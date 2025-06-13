@@ -78,14 +78,14 @@
 }
 
 .teaser-video-wrapper {
-	width: 100%;
-	margin: 64px 0;
+	// width: 100%;
+	margin: var(--section-margin);
 
 	&--teaser-video-inner-wrapper {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 		gap: 24px;
 
 		&--teaser-video {
@@ -145,6 +145,9 @@
 
 			&--image-wrapper {
 				margin-left: 32px;
+			}
+			&--main-info-wrapper {
+				max-width: 50%;
 			}
 		}
 	}
