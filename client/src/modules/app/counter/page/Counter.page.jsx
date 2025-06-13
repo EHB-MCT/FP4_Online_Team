@@ -19,9 +19,9 @@ export const Counter = () => {
     return (
         <section className="inner-wrapper large" style={{minHeight: "40dvh", display: "flex", alignItems: "center", justifyContent: "center"}}>
             <div className="wrapper">
-                <h1 className="green-text">
+                <h2 className="green-text">
                     Totale inschrijvingen <br /> {count}
-                </h1>
+                </h2>
             </div>
         </section>
     );

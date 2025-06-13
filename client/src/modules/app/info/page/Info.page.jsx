@@ -19,7 +19,7 @@ export const Info = () => {
 			<div className={clsx(styles["header"])}>
 				<div className="inner-wrapper">
 					<div className={clsx(styles["info-hero-wrapper"])}>
-						<h1 className="black-text">Info</h1>
+						<h2 className="black-text">Info</h2>
 						<div className={clsx(styles["info-hero-wrapper--hero-image-wrapper"])}>
 							<img src="/infoBanner.png" alt="Info Banner" className="w-full h-auto" />
 						</div>

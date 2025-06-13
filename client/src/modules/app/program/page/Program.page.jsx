@@ -13,7 +13,7 @@ export const Program = () => {
 		<>
 			<section className="inner-wrapper program-wrapper">
 				<section className="title-wrapper">
-					<h1 style={{ color: "black" }}>Programma</h1>
+					<h2 style={{ color: "black" }}>Programma</h2>
 				</section>
 				<section className="inner-wrapper programs">
 					<div className="program-container">

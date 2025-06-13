@@ -38,7 +38,7 @@ export const ProjectsDetail = () => {
 
 									{/* overlay HTML text */}
 									<div className="badge__text">
-										<h1>{project.student}</h1>
+										<h2>{project.student}</h2>
 										<h3>{project.project_name}</h3>
 									</div>
 								</div>

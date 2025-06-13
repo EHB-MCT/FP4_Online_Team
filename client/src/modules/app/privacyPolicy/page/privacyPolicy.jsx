@@ -1,7 +1,7 @@
 export function PrivacyPolicy() {
 	return (
 		<div style={{ padding: "2rem" }}>
-			<h1>Privacy Policy</h1>
+			<h2>Privacy Policy</h2>
 			<p>Last updated: April 2, 2025</p>
 
 			<h2>What Data We Collect</h2>

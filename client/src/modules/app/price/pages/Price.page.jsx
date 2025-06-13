@@ -7,7 +7,7 @@ export const Price = () => {
 		<>
 			<section className="hero-wrapper">
 				<div className="inner-wrapper hero">
-					<h1 id="quick-info">Prijzen </h1>
+					<h2 id="quick-info">Prijzen </h2>
 					<p>
 						Op deze pagina presenteren we met trots de drie bijzondere prijzen die worden uitgereikt aan initiatieven die écht het verschil maken. De Publieksprijs, gekozen door het publiek, de Juryprijs, toegekend door een deskundige vakjury, en de
 						Impactprijs, voor het initiatief met de grootste maatschappelijke impact. <br />

@@ -56,6 +56,57 @@ export const Home = () => {
 			</section>
 
 			{/* projects preview */}
+			<div className={clsx(styles["projects-preview-wrapper--background-image-top-left"])}>
+				<div
+					className={clsx(
+						styles[
+							"projects-preview-wrapper--background-image-top-left--background-image-top-right"
+						]
+					)}
+				>
+					<div className={clsx(styles["projects-preview-wrapper--projects-inner-wrapper"])}>
+						<h2>Eindprojecten</h2>
+						<div
+							className={clsx(
+								styles["projects-preview-wrapper--projects-inner-wrapper--project-category-wrapper"]
+							)}
+						>
+							<div
+								className={clsx(
+									styles[
+										"projects-preview-wrapper--projects-inner-wrapper--project-category-wrapper--projects-horizontal-wrapper"
+									]
+								)}
+							>
+								{isLoading ? (
+									<p>Loading...</p>
+								) : (
+									projects.map((project) => (
+										<ProjectCard
+											id={project.id}
+											key={project.project_name}
+											project_name={project.project_name}
+											student={project.student}
+											banner_image={project.banner_image}
+											project_category={project.category}
+										/>
+									))
+								)}
+							</div>
+							<div className="spacer" style={{ width: "145vw" }}></div>
+						</div>
+						<div
+							className={clsx(
+								styles["projects-preview-wrapper--projects-inner-wrapper--button-wrapper"]
+							)}
+						>
+							{/* <NavLink to={ PROJECTS_ROUTE.path } target="_blank" className="blue-button">Ontdek</NavLink> */}
+							<Button destinationUrl={PROJECTS_ROUTE.path} copy={"Ontdek"} className={"button"} />
+						</div>
+					</div>
+				</div>
+			</div>
+
 
 			<section className={clsx(styles["practical-info-wrapper"])}>
 				<div className={clsx(styles["practical-info-wrapper--practical-info-outer-wrapper"], "inner-wrapper")}>

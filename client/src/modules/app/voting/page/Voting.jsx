@@ -36,7 +36,7 @@ export const Voting = () => {
 
 	return (
 		<div>
-			<h1>Stem op jouw favoriete project</h1>
+			<h2>Stem op jouw favoriete project</h2>
 			<CategorySelector selected={selected} onSelect={handleSelect} />
 
 			{}
