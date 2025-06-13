@@ -10,6 +10,8 @@ import homeStyles from "../../home/pages/home.module.scss";
 import { strToU8 } from "three/examples/jsm/libs/fflate.module.js";
 import { AwardsInfo } from "../components/AwardsInfo";
 import { Timetable } from "../../../shared/timetable/Timetable";
+import Button from "../../../shared/button/Button";
+import { REGISTER_ROUTE } from "../../register/register.route";
 
 export const Info = () => {
 	return (
@@ -68,6 +70,7 @@ export const Info = () => {
 								Campus Kaai
 							</p>
 						</div>
+						<Button destinationUrl={REGISTER_ROUTE.path} copy={"Inschrijven"} className={"button"} />
 					</div>
 				</div>
 			</section>
