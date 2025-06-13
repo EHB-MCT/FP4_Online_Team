@@ -4,7 +4,6 @@ import { useParams } from "react-router";
 import Swal from "sweetalert2";
 
 //Components
-import { NextProject } from "../components/NextProject";
 import { Magazine } from "../../magazine/page/Magazine.page";
 
 //Hooks
