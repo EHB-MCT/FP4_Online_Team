@@ -4,10 +4,13 @@ import { Link, NavLink } from "react-router";
 import Button from "../button/Button.jsx";
 
 //Route
+import { INFO_ROUTE } from "../../app/info/info.route.jsx";
+import { PROGRAM_ROUTE } from "../../app/program/program.route.jsx";
 import { REGISTER_ROUTE } from "../../app/register/register.route.jsx";
 
 //Images
 import Image from "/Logo_white.svg";
+
 
 export const Footer = () => {
 	return (
@@ -25,6 +28,8 @@ export const Footer = () => {
 					</div>
 				</div>
 				<div className="footer-right-wrapper">
+					<NavLink to={ INFO_ROUTE.path }>Info</NavLink>
+					<NavLink to={ PROGRAM_ROUTE.path }>Programma</NavLink>
 					<Button
 						destinationUrl={REGISTER_ROUTE.path}
 						copy={"Inschrijven"}

@@ -273,6 +273,18 @@ footer {
 		}
 	}
 
+	.footer-right-wrapper{
+		border-top: 2pt solid var(--white-font-color);
+		padding-top: 32px;
+		
+		a{
+			font-family: var(--main-font);
+			font-weight: var(--title-weight);
+			font-size: var(--button-size);
+			margin: 6px 0;
+		}
+	}
+
 	img {
 		width: 150px;
 	}
@@ -385,6 +397,9 @@ footer {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
+
+			border: none;
+			padding-top: 0;
 		}
 
 		img {
