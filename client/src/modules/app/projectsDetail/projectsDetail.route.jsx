@@ -4,8 +4,6 @@ import { ProjectsDetail } from ".";
 
 export const PROJECTSDETAIL_ROUTE = {
 
-	path: "project/:id",
-
-
+	path: "projects/:id",
 	element: <ProjectsDetail />,
 };

@@ -12,7 +12,7 @@ class ProjectsService {
 
         const DATA = await response.json();
         DATA.sort(() => Math.random() - 0.5);
-        console.log(DATA)
+        // console.log(DATA)
         return DATA
     }
 }
