@@ -76,22 +76,22 @@ export const Root = () => {
 					path: PROGRAM_ROUTE.path,
 					element: PROGRAM_ROUTE.element
 				},
-				{
-					path: PROJECTS_ROUTE.path,
-					element: PROJECTS_ROUTE.element
-				},
-				{
-					path: PROJECTSDETAIL_ROUTE.path,
-					element: PROJECTSDETAIL_ROUTE.element,
-				},
+				// {
+				// 	path: PROJECTS_ROUTE.path,
+				// 	element: PROJECTS_ROUTE.element
+				// },
+				// {
+				// 	path: PROJECTSDETAIL_ROUTE.path,
+				// 	element: PROJECTSDETAIL_ROUTE.element,
+				// },
 				{
 					path: REGISTER_ROUTE.path,
 					element: REGISTER_ROUTE.element,
 				},
-				{
-					path: VOTING_DASHBOARD_ROUTE.path,
-					element: VOTING_DASHBOARD_ROUTE.element
-				},
+				// {
+				// 	path: VOTING_DASHBOARD_ROUTE.path,
+				// 	element: VOTING_DASHBOARD_ROUTE.element
+				// },
 				// {
 				// 	path: VOTING_ROUTE.path,
 				// 	element: VOTING_ROUTE.element,
@@ -103,16 +103,16 @@ export const Root = () => {
 
 			]
 		},
-		{
-			path: "/voteReGRfguugXNEmMm/",
-			element: <App />,
-			children: [
-				{
-					path: AUTH_TEACHER_ROUTE.path,
-					element: AUTH_TEACHER_ROUTE.element,
-				},
-			]
-		}
+		// {
+		// 	path: "/voteReGRfguugXNEmMm/",
+		// 	element: <App />,
+		// 	children: [
+		// 		{
+		// 			path: AUTH_TEACHER_ROUTE.path,
+		// 			element: AUTH_TEACHER_ROUTE.element,
+		// 		},
+		// 	]
+		// }
 	]);
 
 	return (
