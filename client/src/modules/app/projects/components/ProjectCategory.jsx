@@ -17,11 +17,11 @@ export const ProjectCategory = ({ data, title }) => {
                         data.map((project) => (
                             <ProjectCard
                                 id={ project.id }
-                                key={ project.student }
-                                project_name={ project.project_name }
-                                student={ project.student }
-                                banner_image={ project.banner_image }
-                                project_category={ project.category }
+                                key={ project.creator_name }
+                                name={ project.name }
+                                creator_name={ project.creator_name }
+                                key_image_path={ project.key_image_path }
+                                category={ project.category }
                             />
                         ))
                     }

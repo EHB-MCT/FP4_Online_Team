@@ -29,8 +29,6 @@ export const NavigationFase2 = () => {
 				nav.classList.remove("scrolled");
 				setIsScrolled(false);
 			}
-
-			console.log(window.scrollY);
 		};
 		window.addEventListener("scroll", onScroll);
 		return () => window.removeEventListener("scroll", onScroll);

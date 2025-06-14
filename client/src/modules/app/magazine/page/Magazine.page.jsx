@@ -17,8 +17,7 @@ const availableMagazines = [
 	},
 ];
 
-export const Magazine = () => {
-	document.title = "Magazine | Shift Festival";
+export const Magazine = ({ id ,magazine_path, project_name, key_image }) => {
 
 	const [openMagazine, setOpenMagazine] = useState(null);
 	const [currentPage, setCurrentPage] = useState(1);
@@ -160,13 +159,13 @@ export const Magazine = () => {
 				<h2>Magazine</h2>
 				{availableMagazines.map((magazine) => (
 					<motion.div
-						key={magazine.id}
-						className={`magazine-card ${openMagazine?.id === magazine.id ? "selected" : ""}`}
+						key={id}
+						className={`magazine-card ${openMagazine?.id === id ? "selected" : ""}`}
 						onClick={() => handleMagazineOpen(magazine)}
 						whileHover={{ scale: 1.02 }}
 					>
-						<img src={magazine.thumbnail} alt={magazine.title} />
-						<h3 className="black-text">{magazine.title}</h3>
+						<img src={ key_image } alt={ project_name } />
+						<h3 className="black-text">{ project_name }</h3>
 					</motion.div>
 				))}
 			</div>
@@ -213,7 +212,7 @@ export const Magazine = () => {
 						</button>
 						<div className="pdf-center-overlay">
 							<Document
-								file={openMagazine.url}
+								file={ magazine_path }
 								onLoadSuccess={handleDocumentLoad}
 								onLoadError={handleError}
 								loading={<div className="status-message">Loading magazine...</div>}

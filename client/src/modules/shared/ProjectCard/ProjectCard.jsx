@@ -6,44 +6,44 @@ import styles from "./projectCard.module.scss";
 import { useEffect, useState } from "react";
 
 
-export const ProjectCard = ({ id ,project_name, student, banner_image, project_category }) => {
+export const ProjectCard = ({ id, name, creator_name, key_image_path, category }) => {
 
-	const [projectColor, setProjectColor] = useState("")
+	const [projectColor, setProjectColor] = useState("");
 
 	useEffect(() => {
 
-		if(project_category === "Experience Design"){
+		if(category === "Experience Design"){
 			setProjectColor("#5269BC")
-		}else if(project_category === "Web & Mobile"){
+		}else if(category === "Web & Mobile"){
 			setProjectColor("#E61453")
-		}else if(project_category === "XR & 3D"){
+		}else if(category === "XR & 3D"){
 			setProjectColor("#B54A98")
-		}else if(project_category === "Digital Design"){
+		}else if(category === "Digital Design"){
 			setProjectColor("#D83D0E")
 		}
 
 	}, []);
+
     return (
         
 		<div className={clsx(styles["card-wrapper"])}>
-			<NavLink to={ `/project/${id}` }>
+			<NavLink to={ `/project/${creator_name}` }>
 				<div 
 					className={clsx(styles["card-wrapper--image-wrapper"])}
 					style={{ paddingBottom: "8px", backgroundColor: projectColor }}
 				>
 					<img 
                         className={clsx(styles["card-wrapper--image-wrapper--image"])} 
-                        // src={banner_image || "temp-card/temp.png"} 
-						src={"temp-card/temp.png"}
-                        alt={`Project: ${project_name}`}  
+                        src={key_image_path || "temp-card/temp.png"} 
+                        alt={`Project: ${name}`}  
                     />
                 </div>
 				<div 
 					className={clsx(styles["card-wrapper--student-info"])}
 				>	
-					<p className="black-text">{ student }</p>			
+					<p className="black-text">{ creator_name }</p>			
 					<div className={clsx(styles["card-wrapper--student-info--bottom-wrapper"])} >
-						<h5 className="black-text">{ project_name }</h5>
+						<h5 className="black-text">{ name }</h5>
 						<div className={clsx(styles["card-wrapper--student-info--bottom-wrapper--svg-wrapper"])}>
 							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 59 59" fill="none">
 								<path 
