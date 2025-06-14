@@ -44,30 +44,6 @@ section .pink-wrapper {
 	}
 }
 
-.hero-wrapper {
-	h2 {
-		text-align: center;
-	}
-	p {
-		text-align: center;
-		max-width: 650px;
-	}
-	h4 {
-		text-align: center;
-	}
-	.hero {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 75dvh;
-
-		&--mouse-wrapper img {
-			width: 50px;
-		}
-	}
-}
-
 .practical-info-wrapper {
 	&--practical-info-text-wrapper {
 		position: relative;
@@ -244,9 +220,15 @@ section .pink-wrapper {
 }
 
 @media (min-width: 1024px) {
-	.hero-wrapper {
-		p {
-			max-width: 650px;
+	section .pink-wrapper {
+		&--large-wrapper {
+			&--hero-wrapper {
+				&--hero {
+					&--hero-copy {
+						width: 650px;
+					}
+				}
+			}
 		}
 	}
 	.purple-wrapper {

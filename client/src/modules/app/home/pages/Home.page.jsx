@@ -45,7 +45,7 @@ export const Home = () => {
 						<div className={clsx(styles["pink-wrapper--large-wrapper--hero-wrapper--hero"])}>
 							<h4>Expo 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20 juni&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Campus Kaai</h4>
 							<CountDown />
-							<p className="white-text">Beleef interactieve installaties, verbluffende afstudeerprojecten en de beste werken van onze Multimedia & Creative Technology-studenten.</p>
+							<p className={clsx(styles["pink-wrapper--large-wrapper--hero-wrapper--hero--hero-copy"], "white-text")}>Beleef interactieve installaties, verbluffende afstudeerprojecten en de beste werken van onze Multimedia & Creative Technology-studenten.</p>
 							<Button destinationUrl={"/register"} copy={"Inschrijven"} className={"button"} color={"#FFF"} hoverColor={"#FFF"} />
 							<div className={clsx(styles["hero--mouse-wrapper"])}>
 								<img src="/scroll-icon.png" alt="" />
