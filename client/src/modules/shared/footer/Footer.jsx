@@ -43,7 +43,7 @@ export const Footer = () => {
 							target="_blank"
 							href="https://www.erasmushogeschool.be/nl/opleidingen/multimedia-en-creatieve-technologie"
 						>
-							<img src="/ehb-logo-wit.png" className="socials-ehb" alt="logo-school" />
+							<img src="/ehb-logo-wit.png" className="socials" alt="logo-school" />
 						</a>
 						<a
 							target="_blank"

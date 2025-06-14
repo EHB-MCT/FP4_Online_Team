@@ -223,6 +223,12 @@ section.pink-wrapper {
   background-color: var(--button-hover-color);
 } */
 
+.logo-shift:hover,
+.socials:hover {
+	transform: translateY(-5px);
+	transition: transform 0.3s ease;
+}
+
 .button:hover {
 	color: var(--button-font-color-hover);
 	background-color: transparent;
@@ -290,10 +296,6 @@ footer {
 	}
 
 	.socials {
-		width: 30px;
-		margin: 10px;
-	}
-	.socials-ehb {
 		width: 30px;
 		margin: 10px;
 	}
@@ -379,9 +381,6 @@ footer {
 		}
 
 		.inner-wrapper {
-			padding-top: 64px;
-			padding-bottom: 124px;
-			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
@@ -404,11 +403,6 @@ footer {
 
 		img {
 			width: 150px;
-		}
-
-		.logo-shift:hover {
-			transform: translateY(-5px);
-			transition: transform 0.3s ease;
 		}
 	}
 }
