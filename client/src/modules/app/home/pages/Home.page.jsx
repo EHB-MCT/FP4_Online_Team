@@ -99,7 +99,9 @@ export const Home = () => {
 							<h2 className="black-text" style={{ textAlign: "start" }}>
 								Programma
 							</h2>
-							<p className="black-text">Ontdek onze programma van de festival en al onze workshops</p>
+							<p className="black-text">
+								Ontdek het volledige programma van het festival, inclusief alle workshops.
+							</p>
 							<Button destinationUrl={PROGRAM_ROUTE.path} copy={"Programma"} className={"button"} />
 						</div>
 					</div>

@@ -32,7 +32,7 @@ const faqData = [
 						<strong>Parking 1:</strong> vooraan de campus, inclusief 2 plaatsen voor personen met beperkte mobiliteit.
 					</li>
 					<li>
-						<strong>Parking 2:</strong> achteraan.
+						<strong>Parking 2:</strong> achteraan de campusx².
 					</li> 
 					<li>
 						<strong>Parking Abattoir:</strong> op wandelafstand van de campus. Dit is een publieke, betalende parking met ruime capaciteit.
