@@ -36,7 +36,7 @@ export const ProjectCard = ({ id, name, creator_name, key_image_path, category }
 				>
 					<img 
                         className={clsx(styles["card-wrapper--image-wrapper--image"])} 
-                        src={key_image_path || "temp-card/temp.png"} 
+                        src={key_image_path} 
                         alt={`Project: ${name}`}  
                     />
                 </div>
