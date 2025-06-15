@@ -282,29 +282,39 @@ section .pink-wrapper {
 		&--practical-info-location-wrapper {
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
 
 			width: 100%;
 
+
 			img {
-				max-width: 650px;
+				width: 50%;
 				border-radius: 20px;
+
 			}
 
 			&--specific-info {
+				align-items: start;
+				width: 40%;
+
 				display: flex;
 				flex-direction: column;
-				align-items: center;
+				align-items: flex-end;
 
 				&--specific-info-upper-wrapper {
-					h3 {
-						text-align: start;
+					h2{
+						text-align: end !important;
 					}
-					text-align: start;
+
+					h3 {
+						text-align: end;
+					}
 				}
 				&--specific-info-lower-wrapper {
+					align-items: flex-end;
 					p {
 						margin: 0;
-						text-align: start;
+						text-align: end;
 					}
 				}
 			}
