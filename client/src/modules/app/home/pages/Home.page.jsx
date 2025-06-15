@@ -91,9 +91,7 @@ export const Home = () => {
 						</div>
 					</div>
 				</div>
-			</section>
-
-			<section className={clsx(styles["large-info-wrapper"])}>
+				<div className={clsx(styles["large-info-wrapper"])}>
 				<div className="inner-wrapper">
 					<div className={clsx(styles["large-info-wrapper--programma-info-wrapper"])}>
 						<img src="programma-img.jpg" alt="" />
@@ -106,7 +104,9 @@ export const Home = () => {
 						</div>
 					</div>
 				</div>
+			</div>
 			</section>
+
 
 			<section className={clsx(styles["FAQ-section"])}>
 				<div className="inner-wrapper">

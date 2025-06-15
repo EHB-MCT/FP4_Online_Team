@@ -50,7 +50,6 @@ section .pink-wrapper {
 		background: #eb6c33;
 		border-radius: 36px;
 		padding: 48px 48px 36px 48px;
-		margin: 64px auto 0 auto;
 		max-width: 1100px;
 		color: #fff;
 		overflow: visible;
@@ -59,9 +58,12 @@ section .pink-wrapper {
 		flex-direction: column;
 		align-items: start;
 		gap: 24px;
-		margin-bottom: 50px;
+
+		margin-bottom: 24px;
 	}
 	&--practical-info-location-wrapper {
+		margin: 24px 0;
+		
 		img {
 			width: 100%;
 			border-radius: 20px;
@@ -154,6 +156,9 @@ section .pink-wrapper {
 }
 
 .large-info-wrapper {
+
+	margin-top: 24px;
+
 	&--mct-info-wrapper {
 		h2 {
 			text-align: start;
@@ -268,7 +273,6 @@ section .pink-wrapper {
 			background: #eb6c33;
 			border-radius: 36px;
 			padding: 48px 48px 36px 48px;
-			margin: 64px auto 0 auto;
 			max-width: 1100px;
 			color: #fff;
 			overflow: visible;
@@ -277,7 +281,8 @@ section .pink-wrapper {
 			flex-direction: column;
 			align-items: start;
 			gap: 24px;
-			margin-bottom: 50px;
+			
+			margin-bottom: 32px;
 		}
 		&--practical-info-location-wrapper {
 			display: flex;
@@ -286,6 +291,7 @@ section .pink-wrapper {
 
 			width: 100%;
 
+			margin: 32px 0;
 
 			img {
 				width: 50%;
@@ -296,6 +302,8 @@ section .pink-wrapper {
 			&--specific-info {
 				align-items: start;
 				width: 40%;
+
+				margin-top: 0;
 
 				display: flex;
 				flex-direction: column;
@@ -344,6 +352,9 @@ section .pink-wrapper {
 		}
 	}
 	.large-info-wrapper {
+
+		margin-top: 32px;
+
 		&--mct-info-wrapper {
 			width: 850px;
 			// margin: 0 auto;
@@ -409,40 +420,7 @@ section .pink-wrapper {
 		// }
 	}
 	.practical-info-wrapper {
-		// &--practical-info-outer-wrapper {
-		// 	display: flex;
-		// 	flex-direction: column;
-		// 	align-items: center;
-		// 	justify-content: center;
-		// 	text-align: start;
-		// }
 
-		// &--background-image-top-left{
-		//     background-position: 0% 0%;
-		//     background-size: 20%;
-
-		//     &--background-image-top-right{
-		//         background-position: 100% 0%;
-		//         background-size: 16%;
-		//     }
-		// }
-
-		// &--practical-info-text-wrapper {
-		// 	position: relative;
-		// 	background: #eb6c33;
-		// 	border-radius: 36px;
-		// 	padding: 48px 48px 36px 48px;
-		// 	margin: 64px auto 0 auto;
-		// 	max-width: 1100px;
-		// 	color: #fff;
-		// 	overflow: visible;
-		// 	min-height: 210px;
-		// 	display: flex;
-		// 	flex-direction: column;
-		// 	align-items: start;
-		// 	gap: 24px;
-		// 	margin-bottom: 50px;
-		// }
 		&--practical-info-location-wrapper {
 
 			&--specific-info {
