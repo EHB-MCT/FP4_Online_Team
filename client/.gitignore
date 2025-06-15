@@ -7,6 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+/public/pdf
+/public/key-image
+/public/showreel
+
 node_modules
 dist
 dist-ssr

@@ -165,7 +165,7 @@ export const Magazine = ({ id ,magazine_path, project_name, key_image }) => {
 						whileHover={{ scale: 1.02 }}
 					>
 						<img src={ key_image } alt={ project_name } />
-						<h3 className="black-text">{ project_name }</h3>
+						<h3 className="white-text">{ project_name }</h3>
 					</motion.div>
 				))}
 			</div>

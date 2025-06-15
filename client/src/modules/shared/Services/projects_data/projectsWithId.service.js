@@ -11,7 +11,7 @@ class ProjectsWithIdService {
         }
 
         const DATA = await response.json();
-        // console.log(DATA)
+        console.log(DATA)
         return DATA;
     }
 }
