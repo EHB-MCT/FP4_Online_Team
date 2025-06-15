@@ -1,10 +1,12 @@
-import { NavLink } from "react-router";
 import clsx from "clsx";
+import { NavLink } from "react-router";
+import { useEffect, useState } from "react";
+
+//ROUTES
+import { PROJECTS_ROUTE } from "../../app/projects/projects.route";
 
 //CSS
 import styles from "./projectCard.module.scss";
-import { useEffect, useState } from "react";
-
 
 export const ProjectCard = ({ id, name, creator_name, key_image_path, category }) => {
 
@@ -27,7 +29,7 @@ export const ProjectCard = ({ id, name, creator_name, key_image_path, category }
     return (
         
 		<div className={clsx(styles["card-wrapper"])}>
-			<NavLink to={ `/project/${creator_name}` }>
+			<NavLink to={ `/${PROJECTS_ROUTE.path}/${creator_name}` }>
 				<div 
 					className={clsx(styles["card-wrapper--image-wrapper"])}
 					style={{ paddingBottom: "8px", backgroundColor: projectColor }}

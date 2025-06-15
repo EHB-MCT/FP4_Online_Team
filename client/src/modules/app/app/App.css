@@ -49,8 +49,8 @@
 	/* --background-color: #c169aa; */
 
 	/* Section margin */
-	--section-margin: 64px 0;
-	--section-padding: 64px 0;
+	--section-margin: 32px 0;
+	--section-padding: 32px 0;
 }
 
 body,
@@ -270,7 +270,7 @@ footer {
 		/* justify-content: start; */
 
 		.footer-event-info {
-			margin: 20px 0;
+			padding: 32px 0;
 
 			p {
 				margin: 5px 0;

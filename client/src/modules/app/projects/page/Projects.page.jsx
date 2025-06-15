@@ -44,8 +44,8 @@ export const Projects = () => {
 		if (searchQuery) {
 			filteredData = filteredData.filter(
 				(project) =>
-					project.student.toLowerCase().includes(searchQuery) ||
-					project.project_name.toLowerCase().includes(searchQuery)
+					project.creator_name.toLowerCase().includes(searchQuery) ||
+					project.name.toLowerCase().includes(searchQuery)
 			);
 		}
 	
@@ -99,26 +99,3 @@ export const Projects = () => {
 		</>
 	);
 };
-
-
-// <div className="inner-wrapper">
-                //     <h2 className="">Eindjaarprojecten</h2>
-                //     <Search />
-                //     <div className="filter-button-wrapper">
-				// 		{
-				// 			categories.map((category) => (
-				// 				<FilterButton 
-				// 					key={ category }
-				// 					category={ category}
-				// 					onClick={() => setSelectedCategory(category)}
-				// 				/>
-				// 			))
-				// 		}
-				// 		<FilterButton 
-                //             key="all"
-                //             category="All"
-                //             onClick={() => setSelectedCategory(null)}
-                //         />
-				// 	</div>
-                    
-                // </div>
