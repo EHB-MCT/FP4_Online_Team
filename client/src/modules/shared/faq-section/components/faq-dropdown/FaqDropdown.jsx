@@ -8,22 +8,37 @@ const faqData = [
     {
         question: "Wat is Shift?",
         answer:
-           "De Shift EXPO is een tentoonstelling van eindprojecten van studenten met workshops, awardshows en meer.De Shift EXPO is een tentoonstelling van eindprojecten van studenten met workshops, awardshows en meer."
+           `De Shift EXPO is een <strong>tentoonstelling van afstudeerprojecten </strong> van onze derdejaarsstudenten, aangevuld met workshops, awardshows en meer.`
     },
     {
-        question: "Waar is Shift?",
+        question: "Waar vind Shift plaats?",
         answer:
-            "Op de campus van Erasmushogeschool Brussel, Nijverheidskaai 170, 1070 Anderlecht.",
+            `Shift gaat door op <strong>Campus Kaai</strong> van de Erasmushogeschool Brussel, gelegen aan de <strong>Nijverheidskaai 170, 1070 Anderlecht</strong>. Deze campus ligt vlak bij het kanaal en is vlot bereikbaar met de auto, fiets en het openbaar vervoer.`,
     },
     {
         question: "Hoe bereik ik Shift?",
         answer:
-            "De campus is makkelijk bereikbaar met het openbaar vervoer. Vlakbij station Brussel-Zuid.",
+            `
+				Campus Kaai is vlot bereikbaar met het openbaar vervoer. De campus ligt op 20 minuten wandelen van station Brussel-Zuid, of op slechts 5 minuten stappen van metrostation Delacroix (lijn 2 of 6), rechtstreeks bereikbaar vanuit het Zuidstation.
+			`,
     },
     {
         question: "Waar kan ik mijn auto parkeren?",
         answer:
-            "Er is een parking beschikbaar op de campus van de school. Volg de borden of meld je aan bij het onthaal bij aankomst.",
+            `
+				Er zijn drie parkings beschikbaar: <br>
+				<ul> 
+					<li>
+						<strong>Parking 1:</strong> vooraan de campus, inclusief 2 plaatsen voor personen met beperkte mobiliteit.
+					</li>
+					<li>
+						<strong>Parking 2:</strong> achteraan.
+					</li> 
+					<li>
+						<strong>Parking Abattoir:</strong> op wandelafstand van de campus. Dit is een publieke, betalende parking met ruime capaciteit.
+					</li>
+				</ul>
+			`,
     },
 ];
 
@@ -62,9 +77,8 @@ export const FaqDropdown = () => {
 						</svg>
 					</button>
 					{openIndex === index && (
-						<div className={clsx(styles["faq-drop-info"])}
-						>
-                            <p>{item.answer}</p>
+						<div className={clsx(styles["faq-drop-info"])}>
+							<p dangerouslySetInnerHTML={{ __html: item.answer }}></p>
 						</div>
 					)}
 				</div>
